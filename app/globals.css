@@ -2,27 +2,88 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  --cursor-color: #333
-}
-
-html.dark-mode {
-  --cursor-color: #fff
-}
 :root {
-  --background: #ffffff;
-  /*--foreground: #171717;*/
+    --cursor-color: #333;
+    --background: #ffffff;
+    --foreground: #171717;
+    --primary: #171717;
+    --secondary: #4b5563;
+    --accent: #f3f4f6;
+    --hover: #d1d5db;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
+.dark {
+    --cursor-color: #fff;
     --background: #0a0a0a;
-    /*--foreground: #ededed;*/
-  }
+    --foreground: #ededed;
+    --primary: #ededed;
+    --secondary: #9ca3af;
+    --accent: #1f2937;
+    --hover: #374151;
 }
 
 body {
-  /*color: var(--foreground);*/
-  /*background: var(--background);*/
-  font-family: Arial, Helvetica, sans-serif;
+    color: var(--foreground);
+    background: var(--background);
+    font-family: Arial, Helvetica, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-item {
+    color: var(--secondary);
+    position: relative;
+    padding: 6px 8px;
+    transition: color 0.2s ease;
+}
+
+.nav-item:hover {
+    background-color: transparent;
+    color: var(--primary);
+}
+
+.nav-item.active {
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.nav-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary);
+    transform: scaleX(0);
+    transition: transform 0.2s ease;
+}
+
+.nav-item:hover::after,
+.nav-item.active::after {
+    transform: scaleX(1);
+}
+
+/* Add this at the end of your existing CSS */
+
+main {
+    position: relative;
+    min-height: calc(100vh - 64px); /* Adjust based on your navbar height */
+}
+
+.page-transition-enter {
+    opacity: 0;
+}
+
+.page-transition-enter-active {
+    opacity: 1;
+    transition: opacity 300ms ease-in;
+}
+
+.page-transition-exit {
+    opacity: 1;
+}
+
+.page-transition-exit-active {
+    opacity: 0;
+    transition: opacity 300ms ease-in;
 }

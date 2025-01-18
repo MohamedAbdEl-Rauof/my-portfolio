@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from 'next-themes';
+import AnimatedCursor from "react-animated-cursor";
+import NavBar from "@/app/components/NavBar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +30,24 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+      <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <NavBar />
+
+          {children}
+      </ThemeProvider>
+      <AnimatedCursor
+            innerSize={8}
+            outerSize={35}
+            innerScale={1}
+            outerScale={2}
+            outerAlpha={0}
+            innerStyle={{
+                backgroundColor: 'var(--cursor-color)'
+            }}
+            outerStyle={{
+                border: '3px solid var(--cursor-color)'
+            }}
+        />
       </body>
     </html>
   );

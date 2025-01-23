@@ -148,7 +148,7 @@ export default function Home() {
                         </motion.div>
                         <motion.div
                             variants={itemVariants}
-                            whileHover={{scale: 1.05}}
+                            // whileHover={{scale: 1.05}}
                             transition={{type: "spring", stiffness: 400, damping: 10}}
                         >
                             <Typography variant="body1" paragraph>
@@ -159,7 +159,7 @@ export default function Home() {
                         </motion.div>
                         <motion.div
                             variants={itemVariants}
-                            whileHover={{scale: 1.05}}
+                            // whileHover={{scale: 1.05}}
                             transition={{type: "spring", stiffness: 400, damping: 10}}
                         >
                             <Typography variant="body1" paragraph>

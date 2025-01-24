@@ -1,11 +1,13 @@
 "use client";
-import Content from "@/app/about/components/content";
+import TimelineComp from "./components/TimelineComp";
+import InfiniteLogoSlider from "./components/InfiniteLogoSlider";
 
 export default function Home() {
 
     return (
         <div>
-            <Content/>
+            <TimelineComp/>
+            <InfiniteLogoSlider/>
         </div>
     );
 }

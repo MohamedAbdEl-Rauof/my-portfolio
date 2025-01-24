@@ -27,7 +27,7 @@ const StyledTimeline = styled(Timeline)(({theme}) => ({
     },
 }));
 
-const Content = () => {
+const TimelineComp = () => {
     const {theme} = useTheme();
 
     const containerVariants = {
@@ -127,4 +127,4 @@ const Content = () => {
     );
 };
 
-export default Content;
+export default TimelineComp;

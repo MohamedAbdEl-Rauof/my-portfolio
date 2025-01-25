@@ -1,0 +1,71 @@
+{
+  "categories": [
+    {
+      "name": "All",
+      "id": "all"
+    },
+    {
+      "name": "Professional",
+      "id": "professional"
+    },
+    {
+      "name": "Freelance",
+      "id": "freelance"
+    },
+    {
+      "name": "Personal",
+      "id": "personal"
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "E-commerce Platform",
+      "paragraph": "A full-featured e-commerce solution",
+      "image": "/images/c6ec5772-efdc-4e68-8107-b05d842b7296.jpeg",
+      "about": "Developed a scalable e-commerce platform for a large retail client",
+      "description": "This project involved creating a robust e-commerce solution with features like product management, user authentication, shopping cart, and payment integration.",
+      "technologies": [
+        "React",
+        "Node.js",
+        "MongoDB",
+        "Stripe"
+      ],
+      "website": "https://example-ecommerce.com",
+      "src": "https://github.com/yourusername/ecommerce-project",
+      "category": "professional"
+    },
+    {
+      "id": 2,
+      "title": "Portfolio Website",
+      "paragraph": "A personal portfolio showcasing my work",
+      "image": "/images/c6ec5772-efdc-4e68-8107-b05d842b7296.jpeg",
+      "about": "Designed and developed a personal portfolio website",
+      "description": "Created a responsive portfolio website to showcase my projects and skills, featuring a clean and modern design.",
+      "technologies": [
+        "Next.js",
+        "Tailwind CSS",
+        "Framer Motion"
+      ],
+      "website": "https://yourportfolio.com",
+      "src": "https://github.com/yourusername/portfolio",
+      "category": "personal"
+    },
+    {
+      "id": 3,
+      "title": "Task Management App",
+      "paragraph": "A collaborative task management solution",
+      "image": "/images/c6ec5772-efdc-4e68-8107-b05d842b7296.jpeg",
+      "about": "Freelance project for a startup",
+      "description": "Developed a task management application with real-time collaboration features, user roles, and project tracking.",
+      "technologies": [
+        "Vue.js",
+        "Firebase",
+        "Vuex"
+      ],
+      "website": "https://task-app-example.com",
+      "src": "https://github.com/yourusername/task-management-app",
+      "category": "freelance"
+    }
+  ]
+}

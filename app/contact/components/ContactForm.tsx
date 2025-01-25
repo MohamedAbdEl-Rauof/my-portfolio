@@ -1,14 +1,12 @@
+"use client";
+
 import {Box, Button, TextField, Typography} from "@mui/material";
 import {toast, Toaster} from 'react-hot-toast';
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
 import * as z from "zod";
-import {useTheme} from 'next-themes';
-import {useEffect, useState} from 'react';
 import emailjs from "@emailjs/browser";
 
-
-// Define the schema for form validation
 const schema = z.object({
     name: z.string().min(2, {message: "Name is required"}),
     email: z.string().email({message: "Invalid email address"}),
@@ -18,12 +16,6 @@ const schema = z.object({
 type FormData = z.infer<typeof schema>;
 
 const ContactForm = () => {
-    const {theme, systemTheme} = useTheme();
-    const [mounted, setMounted] = useState(false);
-
-    useEffect(() => {
-        setMounted(true);
-    }, []);
 
     const {register, handleSubmit, formState: {errors, isValid}, reset} = useForm<FormData>({
         resolver: zodResolver(schema),
@@ -63,18 +55,30 @@ const ContactForm = () => {
         }
     };
 
-    if (!mounted) return null;
-
-    const currentTheme = theme === 'system' ? systemTheme : theme;
-    const isDarkTheme = currentTheme === 'dark';
-
-    const themeColors = {
-        background: isDarkTheme ? '#0a0a0a' : '#ffffff',
-        foreground: isDarkTheme ? '#ededed' : '#171717',
-        primary: isDarkTheme ? '#4a90e2' : '#3366cc',
-        secondary: isDarkTheme ? '#6c757d' : '#495057',
-        hover: isDarkTheme ? '#357ae8' : '#2a52a2',
-        accent: isDarkTheme ? '#28a745' : '#218838',
+    const textFieldSx = {
+        '& .MuiOutlinedInput-root': {
+            '& fieldset': {
+                borderColor: 'var(--secondary)',
+            },
+            '&:hover fieldset': {
+                borderColor: 'var(--primary)',
+            },
+            '&.Mui-focused fieldset': {
+                borderColor: 'var(--primary)',
+            },
+        },
+        '& .MuiInputLabel-root': {
+            color: 'var(--foreground)',
+            '&.Mui-focused': {
+                color: 'var(--primary)',
+            },
+        },
+        '& .MuiInputBase-input': {
+            color: 'var(--foreground)',
+        },
+        '& .MuiFormHelperText-root': {
+            color: 'var(--error)',
+        },
     };
 
     return (
@@ -83,11 +87,14 @@ const ContactForm = () => {
                  display: 'flex',
                  flexDirection: 'column',
                  gap: 2,
-                 color: themeColors.foreground,
-                 backgroundColor: themeColors.background,
+                 color: 'var(--foreground)',
+                 backgroundColor: 'var(--background)',
+                 padding: '2rem',
+                 borderRadius: '8px',
+                 boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
              }}>
-            <Toaster position="top-center" reverseOrder={false}/>
-            <Typography variant="h6" gutterBottom sx={{color: themeColors.primary}}>
+            <Toaster position="top-right" reverseOrder={false}/>
+            <Typography variant="h6" gutterBottom sx={{color: 'var(--primary)'}}>
                 Contact Us
             </Typography>
             <TextField
@@ -98,25 +105,7 @@ const ContactForm = () => {
                 error={!!errors.name}
                 helperText={errors.name?.message}
                 {...register("name")}
-                sx={{
-                    '& .MuiOutlinedInput-root': {
-                        '& fieldset': {
-                            borderColor: themeColors.secondary,
-                        },
-                        '&:hover fieldset': {
-                            borderColor: themeColors.primary,
-                        },
-                        '&.Mui-focused fieldset': {
-                            borderColor: themeColors.primary,
-                        },
-                    },
-                    '& .MuiInputLabel-root': {
-                        color: themeColors.secondary,
-                    },
-                    '& .MuiInputBase-input': {
-                        color: themeColors.foreground,
-                    },
-                }}
+                sx={textFieldSx}
             />
             <TextField
                 id="outlined-email"
@@ -126,25 +115,7 @@ const ContactForm = () => {
                 error={!!errors.email}
                 helperText={errors.email?.message}
                 {...register("email")}
-                sx={{
-                    '& .MuiOutlinedInput-root': {
-                        '& fieldset': {
-                            borderColor: themeColors.secondary,
-                        },
-                        '&:hover fieldset': {
-                            borderColor: themeColors.primary,
-                        },
-                        '&.Mui-focused fieldset': {
-                            borderColor: themeColors.primary,
-                        },
-                    },
-                    '& .MuiInputLabel-root': {
-                        color: themeColors.secondary,
-                    },
-                    '& .MuiInputBase-input': {
-                        color: themeColors.foreground,
-                    },
-                }}
+                sx={textFieldSx}
             />
             <TextField
                 id="outlined-message"
@@ -156,33 +127,15 @@ const ContactForm = () => {
                 error={!!errors.message}
                 helperText={errors.message?.message}
                 {...register("message")}
-                sx={{
-                    '& .MuiOutlinedInput-root': {
-                        '& fieldset': {
-                            borderColor: themeColors.secondary,
-                        },
-                        '&:hover fieldset': {
-                            borderColor: themeColors.primary,
-                        },
-                        '&.Mui-focused fieldset': {
-                            borderColor: themeColors.primary,
-                        },
-                    },
-                    '& .MuiInputLabel-root': {
-                        color: themeColors.secondary,
-                    },
-                    '& .MuiInputBase-input': {
-                        color: themeColors.foreground,
-                    },
-                }}
+                sx={textFieldSx}
             />
             <Button
                 variant="contained"
                 type="submit"
                 disabled={!isValid}
                 sx={{
-                    bgcolor: themeColors.primary,
-                    color: themeColors.background,
+                    bgcolor: 'var(--primary)',
+                    color: 'var(--background)',
                     width: '11rem',
                     padding: '10px 20px',
                     fontSize: '1rem',
@@ -192,7 +145,7 @@ const ContactForm = () => {
                     boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
                     transition: 'all 0.3s ease',
                     '&:hover': {
-                        bgcolor: themeColors.hover,
+                        bgcolor: 'var(--hover)',
                         transform: 'translateY(-2px)',
                         boxShadow: '0 6px 8px rgba(0, 0, 0, 0.15)',
                     },
@@ -201,8 +154,8 @@ const ContactForm = () => {
                         boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
                     },
                     '&:disabled': {
-                        bgcolor: themeColors.secondary,
-                        color: themeColors.background,
+                        bgcolor: 'var(--secondary)',
+                        color: 'var(--background)',
                         opacity: 0.7,
                         cursor: 'not-allowed',
                     },

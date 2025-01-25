@@ -1,17 +1,12 @@
 "use client";
-import {useEffect, useState} from 'react';
+import Projects from "./components/Projects";
 
 export default function Page() {
-    const [currentTime, setCurrentTime] = useState('');
-
-    useEffect(() => {
-        setCurrentTime(new Date().toLocaleString());
-    }, []);
 
     return (
         <div>
-            <h1>Welcome to my portfolio</h1>
-            <p>Current time: {currentTime}</p>
+            <Projects/>
         </div>
     );
 }
+

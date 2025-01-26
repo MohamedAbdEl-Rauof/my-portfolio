@@ -5,7 +5,6 @@ import aboutContent from '../../../public/data/about-content.json';
 import CodeTwoToneIcon from '@mui/icons-material/CodeTwoTone';
 import SentimentVerySatisfiedIcon from '@mui/icons-material/SentimentVerySatisfied';
 import WhatshotIcon from '@mui/icons-material/Whatshot';
-import {useTheme} from 'next-themes';
 import {motion} from 'framer-motion';
 
 const iconMap: { [key: string]: React.ComponentType } = {
@@ -14,7 +13,7 @@ const iconMap: { [key: string]: React.ComponentType } = {
     WhatshotIcon: WhatshotIcon,
 };
 
-const StyledTimeline = styled(Timeline)(({theme}) => ({
+const StyledTimeline = styled(Timeline)(() => ({
     padding: 0,
     '& .MuiTimelineItem-root': {
         minHeight: 70,
@@ -28,7 +27,6 @@ const StyledTimeline = styled(Timeline)(({theme}) => ({
 }));
 
 const TimelineComp = () => {
-    const {theme} = useTheme();
 
     const containerVariants = {
         hidden: {opacity: 0},

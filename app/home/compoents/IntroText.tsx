@@ -24,8 +24,8 @@ const IntroText: React.FC = () => (
             transition={{type: "spring", stiffness: 400, damping: 10}}
         >
             <Typography variant="body1" paragraph>
-                Bona fide photochromic Lens enthusiast - sunlight or indoors, I've got it covered. I
-                tread the path of minimalism, finding beauty in simplicity and order. When I'm not
+                Bona fide photochromic Lens enthusiast - sunlight or indoors, I`&#39;`ve got it covered. I
+                tread the path of minimalism, finding beauty in simplicity and order. When I`&#39;` m not
                 crafting beautiful web experiences, you can find me reading Articles or swaying to the
                 rhythm of Pop Music & Jazz, losing myself in the captivating flow of melodies. Anyways, you can
                 <Link href="/contact">

@@ -1,5 +1,5 @@
 "use client";
-import React, {useState} from 'react';
+import React, {useCallback, useMemo, useState} from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import {usePathname} from 'next/navigation';
@@ -9,22 +9,22 @@ import ThemeToggle from "@/app/components/ThemeToggle";
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 
+const navItems = [
+    {name: 'About', path: '/about'},
+    {name: 'Projects', path: '/projects'},
+    {name: 'Contact', path: '/contact'},
+];
+
 const NavBar: React.FC = () => {
     const pathname = usePathname();
     const {theme, systemTheme} = useTheme();
     const [mobileOpen, setMobileOpen] = useState(false);
 
-    const currentTheme = theme === 'system' ? systemTheme : theme;
+    const currentTheme = useMemo(() => theme === 'system' ? systemTheme : theme, [theme, systemTheme]);
 
-    const navItems = [
-        {name: 'About', path: '/about'},
-        {name: 'Projects', path: '/projects'},
-        {name: 'Contact', path: '/contact'},
-    ];
-
-    const handleDrawerToggle = () => {
-        setMobileOpen(!mobileOpen);
-    };
+    const handleDrawerToggle = useCallback(() => {
+        setMobileOpen((prevState) => !prevState);
+    }, []);
 
     return (
         <AppBar
@@ -40,6 +40,8 @@ const NavBar: React.FC = () => {
                     <Link href="/" passHref legacyBehavior>
                         <Box
                             component="a"
+                            title="Home"
+                            aria-label="Home"
                             sx={{
                                 flexGrow: 0,
                                 display: 'flex',
@@ -65,9 +67,15 @@ const NavBar: React.FC = () => {
                                 <Button
                                     component="a"
                                     className={`nav-item ${pathname === item.path ? 'active' : ''}`}
+                                    aria-current={pathname === item.path ? 'page' : undefined}
                                     sx={{
                                         position: 'relative',
                                         overflow: 'hidden',
+                                        color: 'var(--foreground)',
+                                        '&:hover': {
+                                            color: 'var(--primary)',
+                                            backgroundColor: 'transparent',
+                                        },
                                         '&::after': {
                                             content: '""',
                                             position: 'absolute',
@@ -108,6 +116,7 @@ const NavBar: React.FC = () => {
                         variant="temporary"
                         anchor="right"
                         open={mobileOpen}
+                        aria-label="Mobile Navigation Menu"
                         onClose={handleDrawerToggle}
                         ModalProps={{
                             keepMounted: true,
@@ -133,6 +142,8 @@ const NavBar: React.FC = () => {
                                     key={item.name}
                                     disablePadding
                                     className={pathname === item.path ? 'active' : ''}
+                                    component="li"
+                                    role="menuitem"
                                     sx={{
                                         '&:active': {
                                             '& .MuiTypography-root::hover': {
@@ -168,6 +179,12 @@ const NavBar: React.FC = () => {
                                                 },
                                             }}
                                             onClick={handleDrawerToggle}
+                                            onKeyPress={(event) => {
+                                                if (event.key === 'Enter') {
+                                                    handleDrawerToggle();
+                                                }
+                                            }}
+                                            tabIndex={0}
                                         />
                                     </Link>
                                 </ListItem>

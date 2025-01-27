@@ -1,6 +1,6 @@
 import React from 'react';
 import {motion} from 'framer-motion';
-import {Typography} from '@mui/material';
+import {Box, Typography} from '@mui/material';
 import Link from "next/link";
 import Head from 'next/head';
 import {itemVariants} from './animations';
@@ -38,10 +38,12 @@ const IntroText: React.FC = () => (
             transition={{type: "spring", stiffness: 400, damping: 10}}
         >
             <Typography variant="body1" paragraph>
-                Minimalist in design and code, always adapting to new challenges. When not coding, I'm exploring tech,
+                Minimalist in design and code, always adapting to new challenges. When not coding, I&apos;m exploring
+                tech,
                 enjoying music, and finding inspiration in everyday life.
                 Ready to bring your ideas to life? <Link href="/contact">
-                <span className="font-bold hover:underline" aria-label="Contact me">Let's connect</span>
+                <Box component="span" sx={{fontWeight: 'bold', '&:hover': {textDecoration: 'underline'}}}
+                     aria-label="Contact me">Let&apos;s connect</Box>
             </Link> and create something amazing together.
             </Typography>
         </motion.div>

@@ -1,32 +1,32 @@
 {
-  "title": "About Me.",
+  "title": "About Me",
   "sections": [
     {
-      "title": "Engineering",
-      "icon": "Coding",
+      "title": "Professional Journey",
+      "icon": "Timeline",
       "link": {
-        "url": "https://github.com/YourGitHubUsername",
+        "url": "https://github.com/MohamedAbdEl-Rauof",
         "text": "View Github"
       },
-      "content": "As a seasoned software engineer, I specialize in crafting exceptional websites that make lasting first impressions. My expertise goes beyond aesthetics, focusing on seamless functionality and user-friendly navigation. I excel at tackling intricate technical challenges while creating visually appealing and sleek web solutions. With extensive knowledge of recognized technical standards and proficiency in modern building practices, I ensure every aspect of your website is optimized for peak performance and user experience."
+      "content": "As a passionate full-stack engineer, I've dedicated my career to crafting innovative digital solutions. My journey began with a fascination for technology, which evolved into a deep expertise in both front-end and back-end development. Over the years, I've honed my skills across various technologies, tackling complex challenges and delivering high-performance applications. My experience spans from startups to enterprise-level projects, each contributing to my holistic understanding of the software development lifecycle."
     },
     {
-      "title": "Soft Skills",
-      "icon": "SentimentVerySatisfiedIcon",
+      "title": "Personal Approach",
+      "icon": "Psychology",
       "link": {
         "url": "/projects",
         "text": "View Projects"
       },
-      "content": "My diverse skill set extends beyond coding, encompassing research, product design, and coordination. As an analytical thinker, I excel at maintaining a product's vision throughout its development journey. I bridge the gap between technical and product aspects, effectively driving growth from inception to completion. My ability to navigate complex challenges and think strategically allows me to guide projects from 0 to 1, ensuring success at every stage of the product lifecycle."
+      "content": "I believe in the power of continuous learning and adaptability in the ever-evolving tech landscape. My approach combines analytical thinking with creative problem-solving, allowing me to see both the big picture and the crucial details. I'm driven by the desire to create meaningful impact through technology, always striving to bridge the gap between complex technical concepts and real-world user needs. My commitment to excellence and user-centric design is reflected in every project I undertake."
     },
     {
-      "title": "Ambitious Design",
-      "icon": "WhatshotIcon",
+      "title": "Beyond the Code",
+      "icon": "Explore",
       "link": {
-        "url": "https://yourportfolio.com",
-        "text": "View Portfolio"
+        "url": "/Mohamed Abd El-Raouf Full Stack Resume.pdf",
+        "text": "View Resume"
       },
-      "content": "My approach to design is ambitious and unconventional. With exceptional visual abilities, I excel in presenting and conveying design concepts to stakeholders and teams. My conceptualization skills allow me to envision and create stunning digital experiences. I specialize in fine-tuning stylesheets and crafting seamless user interfaces that not only look impressive but also function flawlessly. My passion for innovative design drives me to push boundaries and deliver exceptional results in every project."
+      "content": "Outside of coding, I'm a tech enthusiast and lifelong learner. I explore cutting-edge technologies, contribute to open-source projects, and have a keen interest in UI/UX design. I'm passionate about mentoring aspiring developers. In my free time, I enjoy reading to expand my knowledge and driving to unwind. These diverse interests inspire fresh perspectives in my tech work, fostering creativity and innovative problem-solving."
     }
   ]
 }

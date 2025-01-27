@@ -1,16 +1,20 @@
-import React from 'react';
-import {Box, Card, CardContent, Container, Link, styled, Typography} from '@mui/material';
+import React, {useCallback} from 'react';
+import {Box, Card, CardContent, Container, styled, Typography} from '@mui/material';
 import {Timeline, TimelineConnector, TimelineContent, TimelineDot, TimelineItem, TimelineSeparator} from '@mui/lab';
 import aboutContent from '../../../public/data/about-content.json';
-import CodeTwoToneIcon from '@mui/icons-material/CodeTwoTone';
-import SentimentVerySatisfiedIcon from '@mui/icons-material/SentimentVerySatisfied';
-import WhatshotIcon from '@mui/icons-material/Whatshot';
 import {motion} from 'framer-motion';
+import dynamic from 'next/dynamic';
+import MuiLink from '@mui/material/Link';
+import NextLink from 'next/link';
+
+const TimelineIcon = dynamic(() => import('@mui/icons-material/Timeline'));
+const PsychologyIcon = dynamic(() => import('@mui/icons-material/Psychology'));
+const TravelExploreIcon = dynamic(() => import('@mui/icons-material/TravelExplore'));
 
 const iconMap: { [key: string]: React.ComponentType } = {
-    Coding: CodeTwoToneIcon,
-    SentimentVerySatisfiedIcon: SentimentVerySatisfiedIcon,
-    WhatshotIcon: WhatshotIcon,
+    Timeline: TimelineIcon,
+    Psychology: PsychologyIcon,
+    Explore: TravelExploreIcon,
 };
 
 const StyledTimeline = styled(Timeline)(() => ({
@@ -26,7 +30,10 @@ const StyledTimeline = styled(Timeline)(() => ({
     },
 }));
 
-const TimelineComp = () => {
+const TimelineComp = React.memo(() => {
+    const isExternalLink = useCallback((url: string) => {
+        return url.startsWith('http://') || url.startsWith('https://');
+    }, []);
 
     const containerVariants = {
         hidden: {opacity: 0},
@@ -50,9 +57,7 @@ const TimelineComp = () => {
     };
 
     return (
-        <Container maxWidth="lg" sx={{
-            paddingTop: '100px',
-        }}>
+        <Container maxWidth="lg" sx={{paddingTop: '100px'}}>
             <motion.div
                 initial="hidden"
                 animate="visible"
@@ -94,18 +99,50 @@ const TimelineComp = () => {
                                                     <CardContent>
                                                         <Box sx={{
                                                             display: 'flex',
-                                                            justifyContent: 'space-between',
-                                                            alignItems: 'center',
+                                                            flexDirection: {xs: 'column', sm: 'row'},
+                                                            justifyContent: {xs: 'center', sm: 'space-between'},
+                                                            alignItems: {xs: 'flex-start', sm: 'center'},
+                                                            gap: {xs: 2, sm: 0},
                                                             mb: 2
                                                         }}>
-                                                            <Typography variant="h6" component="h2">
+                                                            <Typography variant="h6" component="h2"
+                                                                        sx={{textAlign: {xs: 'center', sm: 'left'}}}>
                                                                 {section.title}
                                                             </Typography>
-                                                            <Link href={section.link.url} target="_blank"
-                                                                  rel="noopener noreferrer"
-                                                                  sx={{color: 'var(--primary)'}}>
-                                                                {section.link.text}
-                                                            </Link>
+                                                            {isExternalLink(section.link.url) ? (
+                                                                <MuiLink
+                                                                    href={section.link.url}
+                                                                    target="_blank"
+                                                                    rel="noopener noreferrer"
+                                                                    aria-label={`External link to ${section.link.text}`}
+                                                                    sx={{
+                                                                        color: 'var(--secondary)',
+                                                                        textDecoration: 'underline',
+                                                                        '&:hover': {
+                                                                            color: 'var(--primary)',
+                                                                            backgroundColor: 'transparent',
+                                                                        },
+                                                                    }}
+                                                                >
+                                                                    {section.link.text}
+                                                                </MuiLink>
+                                                            ) : (
+                                                                <NextLink href={section.link.url} passHref>
+                                                                    <MuiLink
+                                                                        aria-label={`Internal link to ${section.link.text}`}
+                                                                        sx={{
+                                                                            color: 'var(--secondary)',
+                                                                            textDecoration: 'underline',
+                                                                            '&:hover': {
+                                                                                color: 'var(--primary)',
+                                                                                backgroundColor: 'transparent',
+                                                                            },
+                                                                        }}
+                                                                    >
+                                                                        {section.link.text}
+                                                                    </MuiLink>
+                                                                </NextLink>
+                                                            )}
                                                         </Box>
                                                         <Typography variant="body1" sx={{textAlign: 'left'}}>
                                                             {section.content}
@@ -123,6 +160,8 @@ const TimelineComp = () => {
             </motion.div>
         </Container>
     );
-};
+});
+
+TimelineComp.displayName = 'TimelineComp';
 
 export default TimelineComp;

@@ -1,13 +1,12 @@
-"use client";
-
 import React from 'react';
 import HomeContent from "./compoents/HomeContent"
 
-export default function Home() {
-
+const Home: React.FC = () => {
     return (
-        <div>
+        <main>
             <HomeContent/>
-        </div>
+        </main>
     );
 }
+
+export default Home;

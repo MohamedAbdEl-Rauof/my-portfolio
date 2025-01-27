@@ -1,7 +1,7 @@
 "use client";
 
 import {useTheme} from 'next-themes';
-import React, {useState} from 'react';
+import React, {useCallback, useMemo, useState} from 'react';
 import Image from "next/image";
 import {Button} from "@mui/material";
 import styled from '@emotion/styled';
@@ -14,24 +14,36 @@ const RotatingImage = styled(Image)`
     }
 `;
 
+const ROTATION_DURATION = 500;
+
 const ThemeToggle = () => {
     const {theme, setTheme} = useTheme();
     const [rotating, setRotating] = useState(false);
 
-    const toggleTheme = () => {
+    const toggleTheme = useCallback(() => {
         setRotating(true);
-        setTheme(theme === 'dark' ? 'light' : 'dark');
-        setTimeout(() => setRotating(false), 500);
-    };
+        setTheme(theme === 'light' ? 'dark' : 'light');
+        setTimeout(() => setRotating(false), ROTATION_DURATION);
+    }, [theme, setTheme]);
+
+
+    const imageSrc = useMemo(() =>
+            theme === 'dark' ? "/svg/darkIcon.svg" : "/svg/lightIcon.svg",
+        [theme]);
 
     return (
         <Button
-            aria-label="Toggle theme"
+            aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`}
             className="p-2 rounded-full transition-colors hover:bg-primary/10 dark:hover:bg-primary/20"
             onClick={toggleTheme}
-        >
+            onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    toggleTheme();
+                }
+            }}>
             <RotatingImage
-                src={theme === 'dark' ? "/svg/darkIcon.svg" : "/svg/lightIcon.svg"}
+                src={imageSrc}
                 alt="Theme toggle"
                 width={40}
                 height={65}

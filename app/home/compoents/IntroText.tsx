@@ -2,22 +2,10 @@ import React from 'react';
 import {motion} from 'framer-motion';
 import {Box, Typography} from '@mui/material';
 import Link from "next/link";
-import Head from 'next/head';
 import {itemVariants} from './animations';
 
 const IntroText: React.FC = () => (
     <>
-        <Head>
-            <script type="application/ld+json">
-                {JSON.stringify({
-                    "@context": "http://schema.org",
-                    "@type": "Person",
-                    "name": "Mohamed Abd El-Raouf",
-                    "jobTitle": "Full-stack Developer",
-                    "url": "https://your-website.com",
-                })}
-            </script>
-        </Head>
         <motion.div
             variants={itemVariants}
             transition={{type: "spring", stiffness: 400, damping: 10}}

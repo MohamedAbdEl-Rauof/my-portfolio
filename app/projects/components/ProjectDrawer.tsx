@@ -1,3 +1,4 @@
+import AnimatedCursor from 'react-animated-cursor';
 import {Box, Button, CardMedia, Chip, Drawer, IconButton, Typography} from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import CodeIcon from '@mui/icons-material/Code';
@@ -11,7 +12,6 @@ interface ProjectDrawerProps {
 }
 
 const ProjectDrawer = ({open, onClose, project}: ProjectDrawerProps) => {
-
     return (
         <Drawer
             anchor="right"
@@ -24,11 +24,10 @@ const ProjectDrawer = ({open, onClose, project}: ProjectDrawerProps) => {
                     bgcolor: 'var(--background)',
                     color: 'var(--foreground)',
                     boxShadow: 3,
-                    cursor: 'default',
                 }
             }}
         >
-            <Box sx={{display: 'flex', flexDirection: 'column', height: '100%'}}>
+            <Box sx={{display: 'flex', flexDirection: 'column', height: '100%', cursor: 'none'}}>
                 <Box
                     sx={{
                         display: 'flex',
@@ -36,11 +35,20 @@ const ProjectDrawer = ({open, onClose, project}: ProjectDrawerProps) => {
                         alignItems: 'center',
                         p: 2,
                         borderBottom: 1,
-                        borderColor: 'var(--accent)'
+                        borderColor: 'var(--accent)',
                     }}
                 >
-                    <IconButton onClick={onClose} aria-label="close drawer" sx={{color: 'var(--primary)'}}>
-                        <ArrowBackIcon className="cursor-pointer"/>
+                    <IconButton
+                        onClick={onClose}
+                        aria-label="close drawer"
+                        sx={{
+                            color: 'var(--primary)',
+                            '&:hover': {
+                                backgroundColor: 'var(--accent)',
+                            }
+                        }}
+                    >
+                        <ArrowBackIcon/>
                     </IconButton>
                     <Typography variant="h6" sx={{fontWeight: 'bold', color: 'var(--primary)'}}>
                         Project Details
@@ -88,13 +96,13 @@ const ProjectDrawer = ({open, onClose, project}: ProjectDrawerProps) => {
                                 rel="noopener noreferrer"
                                 startIcon={<LaunchIcon/>}
                                 fullWidth
-                                className="cursor-pointer"
                                 sx={{
                                     bgcolor: 'var(--primary)',
                                     color: 'var(--background)',
                                     '&:hover': {
-                                        bgcolor: 'var(--hover)',
-                                    }
+                                        transform: 'scale(1.05)',
+                                    },
+                                    transition: 'transform 0.3s ease-in-out',
                                 }}
                             >
                                 Visit Website
@@ -106,13 +114,14 @@ const ProjectDrawer = ({open, onClose, project}: ProjectDrawerProps) => {
                                 rel="noopener noreferrer"
                                 startIcon={<CodeIcon/>}
                                 fullWidth
-                                className="cursor-pointer"
                                 sx={{
                                     color: 'var(--primary)',
                                     borderColor: 'var(--primary)',
                                     '&:hover': {
                                         bgcolor: 'var(--accent)',
-                                    }
+                                        transform: 'scale(1.05)',
+                                    },
+                                    transition: 'transform 0.3s ease-in-out',
                                 }}
                             >
                                 View Source
@@ -121,6 +130,19 @@ const ProjectDrawer = ({open, onClose, project}: ProjectDrawerProps) => {
                     </Box>
                 )}
             </Box>
+            <AnimatedCursor
+                innerSize={8}
+                outerSize={35}
+                innerScale={1}
+                outerScale={1.7}
+                outerAlpha={0}
+                innerStyle={{
+                    backgroundColor: 'var(--primary)'
+                }}
+                outerStyle={{
+                    border: '3px solid var(--primary)'
+                }}
+            />
         </Drawer>
     );
 };

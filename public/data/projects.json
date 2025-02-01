@@ -55,7 +55,7 @@
       "id": 3,
       "title": "Bouncing Dot Animation",
       "paragraph": "A simple and elegant CSS animation",
-      "image": "/images/bouncing-dot.png",
+      "image": "/images/projects/bouncing-dot.gif",
       "about": "Freelance project showcasing CSS animation skills",
       "description": "Created a visually appealing bouncing dot animation using HTML and CSS. The project demonstrates proficiency in CSS animations and responsive design.",
       "technologies": [
@@ -71,7 +71,7 @@
       "id": 4,
       "title": "Pulsating Ring Animation",
       "paragraph": "An eye-catching CSS animation effect",
-      "image": "/images/pulsating-ring.png",
+      "image": "/images/projects/pulsating-ring.gif",
       "about": "Freelance project demonstrating advanced CSS animation techniques",
       "description": "Developed a captivating pulsating ring animation using HTML and CSS. This project showcases the ability to create complex, smooth animations with pure CSS, enhancing user interface design.",
       "technologies": [
@@ -88,7 +88,7 @@
       "id": 5,
       "title": "Spinning Circle Animation",
       "paragraph": "A smooth and dynamic CSS loading animation",
-      "image": "/images/spinning-circle.png",
+      "image": "/images/projects/spinning-circle.gif",
       "about": "Freelance project showcasing CSS animation for loading indicators",
       "description": "Developed a sleek spinning circle animation using HTML and CSS. This project demonstrates the ability to create efficient, lightweight loading animations that enhance user experience during wait times.",
       "technologies": [

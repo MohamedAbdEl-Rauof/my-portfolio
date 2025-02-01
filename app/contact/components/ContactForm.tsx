@@ -8,9 +8,9 @@ import * as z from "zod";
 import emailjs from "@emailjs/browser";
 
 const schema = z.object({
-    name: z.string().min(2, {message: "Name is required"}),
+    name: z.string().min(2, {message: "Name is required"}).max(15, {message: "Name should not exceed 12 characters"}),
     email: z.string().email({message: "Invalid email address"}),
-    message: z.string().min(1, {message: "Message is required"}),
+    message: z.string().min(2, {message: "Message is required"}).max(100, {message: "Message should not exceed 100 characters"}),
 });
 
 type FormData = z.infer<typeof schema>;
@@ -142,17 +142,6 @@ const ContactForm = () => {
                     fontWeight: 'bold',
                     textTransform: 'none',
                     borderRadius: '8px',
-                    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
-                    transition: 'all 0.3s ease',
-                    '&:hover': {
-                        bgcolor: 'var(--hover)',
-                        transform: 'translateY(-2px)',
-                        boxShadow: '0 6px 8px rgba(0, 0, 0, 0.15)',
-                    },
-                    '&:active': {
-                        transform: 'translateY(1px)',
-                        boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
-                    },
                     '&:disabled': {
                         bgcolor: 'var(--secondary)',
                         color: 'var(--background)',

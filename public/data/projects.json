@@ -22,7 +22,7 @@
       "id": 1,
       "title": "E-commerce Platform",
       "paragraph": "A full-featured e-commerce solution",
-      "image": "/images/c6ec5772-efdc-4e68-8107-b05d842b7296.jpeg",
+      "image": "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
       "about": "Developed a scalable e-commerce platform for a large retail client",
       "description": "This project involved creating a robust e-commerce solution with features like product management, user authentication, shopping cart, and payment integration.",
       "technologies": [
@@ -53,18 +53,52 @@
     },
     {
       "id": 3,
-      "title": "Task Management App",
-      "paragraph": "A collaborative task management solution",
-      "image": "/images/c6ec5772-efdc-4e68-8107-b05d842b7296.jpeg",
-      "about": "Freelance project for a startup",
-      "description": "Developed a task management application with real-time collaboration features, user roles, and project tracking.",
+      "title": "Bouncing Dot Animation",
+      "paragraph": "A simple and elegant CSS animation",
+      "image": "/images/projects/bouncing-dot.gif",
+      "about": "Freelance project showcasing CSS animation skills",
+      "description": "Created a visually appealing bouncing dot animation using HTML and CSS. The project demonstrates proficiency in CSS animations and responsive design.",
       "technologies": [
-        "Vue.js",
-        "Firebase",
-        "Vuex"
+        "HTML",
+        "CSS",
+        "CSS Animations"
       ],
-      "website": "https://task-app-example.com",
-      "src": "https://github.com/yourusername/task-management-app",
+      "website": "https://example.com/bouncing-dot",
+      "src": "https://github.com/yourusername/bouncing-dot-animation",
+      "category": "freelance"
+    },
+    {
+      "id": 4,
+      "title": "Pulsating Ring Animation",
+      "paragraph": "An eye-catching CSS animation effect",
+      "image": "/images/projects/pulsating-ring.gif",
+      "about": "Freelance project demonstrating advanced CSS animation techniques",
+      "description": "Developed a captivating pulsating ring animation using HTML and CSS. This project showcases the ability to create complex, smooth animations with pure CSS, enhancing user interface design.",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "CSS Animations",
+        "Responsive Design"
+      ],
+      "website": "https://example.com/pulsating-ring",
+      "src": "https://github.com/yourusername/pulsating-ring-animation",
+      "category": "freelance"
+    },
+    {
+      "id": 5,
+      "title": "Spinning Circle Animation",
+      "paragraph": "A smooth and dynamic CSS loading animation",
+      "image": "/images/projects/spinning-circle.gif",
+      "about": "Freelance project showcasing CSS animation for loading indicators",
+      "description": "Developed a sleek spinning circle animation using HTML and CSS. This project demonstrates the ability to create efficient, lightweight loading animations that enhance user experience during wait times.",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "CSS Animations",
+        "Responsive Design"
+      ],
+      "website": "https://example.com/spinning-circle",
+      "src": "https://github.com/yourusername/spinning-circle-animation",
       "category": "freelance"
     }
   ]

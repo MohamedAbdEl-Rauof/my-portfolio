@@ -20,39 +20,23 @@
   "projects": [
     {
       "id": 1,
-      "title": "E-commerce Platform",
-      "paragraph": "A full-featured e-commerce solution",
-      "image": "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
-      "about": "Developed a scalable e-commerce platform for a large retail client",
-      "description": "This project involved creating a robust e-commerce solution with features like product management, user authentication, shopping cart, and payment integration.",
+      "title": "Full-Stack E-commerce Platform",
+      "paragraph": "A comprehensive, scalable e-commerce solution",
+      "image": "/images/projects/e-commerce-platform.gif",
+      "about": "Developed a robust, full-stack e-commerce platform with advanced features and optimized performance",
+      "description": "This project showcases a comprehensive e-commerce ecosystem, built with a responsive React frontend, a robust Node.js backend, and a scalable MongoDB database. Key features include real-time inventory tracking, secure user authentication with JWT, and an intuitive shopping cart system. The platform offers a seamless user experience with a user-friendly checkout process supporting multiple payment options. Advanced functionalities such as intelligent product search and personalized recommendations enhance the shopping experience. The architecture emphasizes scalability, performance, and security, making it suitable for both small businesses and large-scale operations. This full-stack solution demonstrates proficiency in modern web development practices and the ability to create complex, production-ready applications.",
       "technologies": [
         "React",
+        "Context API",
         "Node.js",
-        "MongoDB",
-        "Stripe"
+        "MongoDB"
       ],
-      "website": "https://example-ecommerce.com",
-      "src": "https://github.com/yourusername/ecommerce-project",
-      "category": "professional"
-    },
-    {
-      "id": 2,
-      "title": "Portfolio Website",
-      "paragraph": "A personal portfolio showcasing my work",
-      "image": "/images/c6ec5772-efdc-4e68-8107-b05d842b7296.jpeg",
-      "about": "Designed and developed a personal portfolio website",
-      "description": "Created a responsive portfolio website to showcase my projects and skills, featuring a clean and modern design.",
-      "technologies": [
-        "Next.js",
-        "Tailwind CSS",
-        "Framer Motion"
-      ],
-      "website": "https://yourportfolio.com",
-      "src": "https://github.com/yourusername/portfolio",
+      "website": "https://e-commerce-platform-website.netlify.app/",
+      "src": "https://github.com/MohamedAbdEl-Rauof/E-Commerce-Platform",
       "category": "personal"
     },
     {
-      "id": 3,
+      "id": 2,
       "title": "Bouncing Dot Animation",
       "paragraph": "A simple and elegant CSS animation",
       "image": "/images/projects/bouncing-dot.gif",
@@ -64,11 +48,11 @@
         "CSS Animations"
       ],
       "website": "https://example.com/bouncing-dot",
-      "src": "https://github.com/yourusername/bouncing-dot-animation",
+      "src": "https://github.com/MohamedAbdEl-Rauof/bouncing-dot",
       "category": "freelance"
     },
     {
-      "id": 4,
+      "id": 3,
       "title": "Pulsating Ring Animation",
       "paragraph": "An eye-catching CSS animation effect",
       "image": "/images/projects/pulsating-ring.gif",
@@ -81,11 +65,11 @@
         "Responsive Design"
       ],
       "website": "https://example.com/pulsating-ring",
-      "src": "https://github.com/yourusername/pulsating-ring-animation",
+      "src": "https://github.com/MohamedAbdEl-Rauof/pulsating-ring",
       "category": "freelance"
     },
     {
-      "id": 5,
+      "id": 4,
       "title": "Spinning Circle Animation",
       "paragraph": "A smooth and dynamic CSS loading animation",
       "image": "/images/projects/spinning-circle.gif",
@@ -98,7 +82,7 @@
         "Responsive Design"
       ],
       "website": "https://example.com/spinning-circle",
-      "src": "https://github.com/yourusername/spinning-circle-animation",
+      "src": "https://github.com/MohamedAbdEl-Rauof/spinning-circle",
       "category": "freelance"
     }
   ]

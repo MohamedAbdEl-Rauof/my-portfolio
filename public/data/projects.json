@@ -84,6 +84,43 @@
       "website": "https://example.com/spinning-circle",
       "src": "https://github.com/MohamedAbdEl-Rauof/spinning-circle",
       "category": "freelance"
+    },
+    {
+      "id": 5,
+      "title": "Vconnct Website",
+      "paragraph": "A professional platform connecting users through a seamless digital experience.",
+      "image": "/images/projects/vonnctWebsite.gif",
+      "about": "Collaborated with a development team to build key components of a professional connection platform.",
+      "description": "Worked as part of a team of developers on the Vconnct website project. My primary contributions included implementing secure Single Sign-On (SSO) authentication, building the login and registration systems, and co-developing various frontend components and 'Contact Us' forms. Additionally, I handled the integration and management of Strapi, a headless CMS, to facilitate dynamic content management. The project emphasized clean architecture, reusable components, and a responsive, user-centered design approach using Next.js, TypeScript, Tailwind CSS, and Strapi. This experience highlights my ability to collaborate within a team, build secure authentication systems, and manage content effectively in professional-grade applications.",
+      "technologies": [
+        "TypeScript",
+        "Next.js",
+        "Tailwind CSS",
+        "Strapi",
+        "CSS Animations"
+      ],
+      "website": "https://vconnct.me",
+      "src": "",
+      "category": "professional"
+    },
+    {
+      "id": 6,
+      "title": "VCloud Control Panel",
+      "paragraph": "VCloud is a developer-focused project that provides access to the Vconnct API, enabling the creation of virtual meetings and collaborative tools.",
+      "image": "/images/projects/vcloud.gif",
+      "about": "Collaborated with a development team to build key components of a professional connection platform featuring beautiful animations and an intuitive user experience.",
+      "description": "Contributed to the VCloud Control Panel project as part of a cross-functional development team. My key responsibilities included implementing secure Single Sign-On (SSO) authentication, building the login and registration systems, and integrating multiple payment gateways such as Stripe, Fawry, and Paymob. I also developed automated receipt and invoice generation for users upon successful payment completion, ensuring a seamless and professional user experience.",
+      "technologies": [
+        "TypeScript",
+        "Next.js",
+        "Tailwind CSS",
+        "Strapi",
+        "Vuexy"
+      ],
+      "website": "https://vcloud.vconnct.me",
+      "src": "",
+      "category": "professional"
     }
+    
   ]
 }

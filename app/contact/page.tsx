@@ -54,7 +54,7 @@ const ContactUs = () => {
                                     paragraph
                                     sx={{color: 'var(--secondary)'}}
                                 >
-                                    Have a question or want to work together? Fill out the form below and I`&#39;`ll get
+                                    Have a question or want to work together? Fill out the form below and I&#39;ll get
                                     back
                                     to you
                                     as soon as possible.

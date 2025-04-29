@@ -78,6 +78,10 @@
         "alt": "PostgreSQL"
       },
       {
+        "src": "/images/logos/strapi.svg",
+        "alt": "Strapi"
+      },
+      {
         "src": "/images/logos/git.svg",
         "alt": "Git"
       },

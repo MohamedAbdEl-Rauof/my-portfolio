@@ -125,18 +125,38 @@ const NavBar: React.FC = () => {
                             display: {xs: 'block', md: 'none'},
                             '& .MuiDrawer-paper': {
                                 boxSizing: 'border-box',
-                                width: '100%',
+                                width: {xs: '80%', sm: '50%'},
                                 backgroundColor: 'var(--background)',
                                 color: 'var(--foreground)',
+                                borderLeft: '1px solid var(--border)',
+                            },
+                            '& .MuiBackdrop-root': {
+                                backgroundColor: 'rgba(0, 0, 0, 0.5)',
                             },
                         }}
                     >
-                        <Box sx={{textAlign: 'right', p: 2}}>
-                            <IconButton onClick={handleDrawerToggle} sx={{color: 'var(--foreground)'}}>
-                                <CloseIcon/>
+                        <Box
+                            sx={{
+                                textAlign: 'right',
+                                p: 2,
+                                borderBottom: '1px solid var(--border)',
+                                cursor: 'default'
+                            }}
+                        >
+                            <IconButton
+                                onClick={handleDrawerToggle}
+                                sx={{
+                                    color: 'var(--foreground)',
+                                    cursor: 'pointer',
+                                    '&:hover': {
+                                        backgroundColor: 'rgba(var(--primary-rgb), 0.1)',
+                                    }
+                                }}
+                            >
+                                <CloseIcon sx={{ cursor: 'pointer' }} />
                             </IconButton>
                         </Box>
-                        <List>
+                        <List sx={{ pt: 2 }}>
                             {navItems.map((item) => (
                                 <ListItem
                                     key={item.name}
@@ -145,25 +165,35 @@ const NavBar: React.FC = () => {
                                     component="li"
                                     role="menuitem"
                                     sx={{
-                                        '&:active': {
-                                            '& .MuiTypography-root::hover': {
-                                                transform: 'scaleX(1)',
-                                            },
+                                        mb: 2,
+                                        cursor: 'pointer',
+                                        '&:hover': {
+                                            backgroundColor: 'rgba(var(--primary-rgb), 0.05)',
                                         },
                                     }}
                                 >
-                                    <Link href={item.path} passHref style={{width: '100%'}}>
+                                    <Link
+                                        href={item.path}
+                                        passHref
+                                        style={{
+                                            width: '100%',
+                                            textDecoration: 'none',
+                                            cursor: 'pointer',
+                                        }}
+                                    >
                                         <ListItemText
                                             primary={item.name}
                                             sx={{
                                                 textAlign: 'center',
                                                 py: 2,
                                                 color: 'var(--foreground)',
+                                                cursor: 'pointer',
                                                 '& .MuiTypography-root': {
                                                     fontSize: '1.5rem',
                                                     position: 'relative',
                                                     display: 'inline-block',
                                                     padding: '0.25em 0',
+                                                    cursor: 'pointer',
                                                     '&::after': {
                                                         content: '""',
                                                         position: 'absolute',
@@ -172,14 +202,17 @@ const NavBar: React.FC = () => {
                                                         width: '100%',
                                                         height: '2px',
                                                         backgroundColor: 'var(--primary)',
-                                                        transform: 'scaleX(0)',
+                                                        transform: pathname === item.path ? 'scaleX(1)' : 'scaleX(0)',
                                                         transformOrigin: 'center',
                                                         transition: 'transform 0.3s ease',
+                                                    },
+                                                    '&:hover::after': {
+                                                        transform: 'scaleX(1)',
                                                     },
                                                 },
                                             }}
                                             onClick={handleDrawerToggle}
-                                            onKeyPress={(event) => {
+                                            onKeyDown={(event) => {
                                                 if (event.key === 'Enter') {
                                                     handleDrawerToggle();
                                                 }
@@ -189,8 +222,16 @@ const NavBar: React.FC = () => {
                                     </Link>
                                 </ListItem>
                             ))}
-                            <ListItem sx={{justifyContent: 'center', mt: 2}}>
-                                <ThemeToggle/>
+                            <ListItem
+                                sx={{
+                                    justifyContent: 'center',
+                                    mt: 4,
+                                    cursor: 'default'
+                                }}
+                            >
+                                <Box sx={{ cursor: 'pointer' }}>
+                                    <ThemeToggle />
+                                </Box>
                             </ListItem>
                         </List>
                     </Drawer>

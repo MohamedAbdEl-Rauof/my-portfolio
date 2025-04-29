@@ -120,7 +120,24 @@
       "website": "https://vcloud.vconnct.me",
       "src": "",
       "category": "professional"
+    },
+    {
+      "id": 7,
+      "title": "E-commerce Admin Dashboard",
+      "paragraph": "A comprehensive admin panel for managing e-commerce operations",
+      "image": "/images/projects/e-commerce-controlpanal.gif",
+      "about": "A powerful administrative dashboard for complete e-commerce management with real-time analytics and inventory control",
+      "description": "Developed a feature-rich admin dashboard that serves as the nerve center for e-commerce operations. This control panel provides administrators with comprehensive tools to manage products, track inventory, process orders, and manage user accounts. The dashboard features an intuitive interface with real-time analytics, sales reports, and customer insights to facilitate data-driven decision making. Security is implemented through role-based access control, ensuring that sensitive operations are only accessible to authorized personnel. The system includes automated notifications for low stock items and order status changes. For demonstration purposes, you can access the dashboard using the credentials: admin@gmail.com (password: admin123456). This project demonstrates my ability to create complex administrative interfaces that balance functionality with user experience.",
+      "technologies": [
+        "Next.js",
+        "Context API",
+        "Node.js",
+        "MongoDB",
+        "JWT Authentication"
+      ],
+      "website": "https://e-commerce-platform-website.netlify.app/admin",
+      "src": "https://github.com/MohamedAbdEl-Rauof/E-Commerce-Platform",
+      "category": "personal"
     }
-    
   ]
 }

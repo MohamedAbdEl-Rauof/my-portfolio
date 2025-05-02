@@ -138,6 +138,23 @@
       "website": "https://e-commerce-platform-website.netlify.app/admin",
       "src": "https://github.com/MohamedAbdEl-Rauof/E-Commerce-Platform",
       "category": "personal"
+    },
+    {
+      "id": 8,
+      "title": "Invest in Tech",
+      "paragraph": "A landing page designed to guide users through the benefits of investing in technology.",
+      "image": "/images/projects/investInTech.gif",
+      "about": "Professional project developed to promote tech investment opportunities through an engaging and informative user experience.",
+      "description": "Developed as part of my role at Variance, this landing page serves as a guided introduction for users exploring technology investment. The project includes several informative and visually appealing components designed to educate users on the benefits of tech investments. I contributed to the frontend development using Next.js and Tailwind CSS, focusing on responsive layout, smooth animations, and a user-centric design approach to maximize clarity and engagement.",
+      "technologies": [
+        "TypeScript",
+        "Next.js",
+        "Tailwind CSS"
+      ],
+      "website": "https://investntech.net",
+      "src": "",
+      "category": "professional"
     }
+    
   ]
 }

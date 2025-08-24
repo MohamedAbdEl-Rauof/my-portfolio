@@ -41,7 +41,7 @@
       "paragraph": "A simple and elegant CSS animation",
       "image": "/images/projects/bouncing-dot.gif",
       "about": "Freelance project showcasing CSS animation skills",
-      "description": "Created a visually appealing bouncing dot animation using HTML and CSS. The project demonstrates proficiency in CSS animations and responsive design.",
+      "description": "Created a visually appealing bouncing dot animation using HTML and CSS. The project demonstrates proficiency in CSS animations and responsive design. This task was in a freelance yard in DEPI development to train us on how to learn from the freelance world.",
       "technologies": [
         "HTML",
         "CSS",
@@ -57,7 +57,7 @@
       "paragraph": "An eye-catching CSS animation effect",
       "image": "/images/projects/pulsating-ring.gif",
       "about": "Freelance project demonstrating advanced CSS animation techniques",
-      "description": "Developed a captivating pulsating ring animation using HTML and CSS. This project showcases the ability to create complex, smooth animations with pure CSS, enhancing user interface design.",
+      "description": "Developed a captivating pulsating ring animation using HTML and CSS. This project showcases the ability to create complex, smooth animations with pure CSS, enhancing user interface design. This task was in a freelance yard in DEPI development to train us on how to learn from the freelance world.",
       "technologies": [
         "HTML",
         "CSS",
@@ -74,7 +74,7 @@
       "paragraph": "A smooth and dynamic CSS loading animation",
       "image": "/images/projects/spinning-circle.gif",
       "about": "Freelance project showcasing CSS animation for loading indicators",
-      "description": "Developed a sleek spinning circle animation using HTML and CSS. This project demonstrates the ability to create efficient, lightweight loading animations that enhance user experience during wait times.",
+      "description": "Developed a sleek spinning circle animation using HTML and CSS. This project demonstrates the ability to create efficient, lightweight loading animations that enhance user experience during wait times. This task was in a freelance yard in DEPI development to train us on how to learn from the freelance world.",
       "technologies": [
         "HTML",
         "CSS",
@@ -154,7 +154,42 @@
       "website": "https://investntech.net",
       "src": "",
       "category": "professional"
+    },
+    {
+      "id": 8,
+      "title": "Vcloud Landing Page",
+      "paragraph": "#1 White-Label Audio/Video Integration for All Platforms",
+      "image": "/images/projects/vcloudLandingPage.gif",
+      "about": "Professional project developed to promote Vcloud's comprehensive communication solutions through an engaging and informative user experience.",
+      "description": "Vcloud offers a developer-first solution for seamless real-time video integration, featuring powerful APIs and developer-friendly documentation. The platform provides a complete solution to build modern communication apps with real-time engagement features like video, audio, screen sharing, chat panel, and streaming. Vcloud's pay-as-you-go model starts with 2,000 free credits per month, making it flexible for developers. The platform ensures top-tier security with end-to-end encryption and customizable options like password protection. Vcloud's infrastructure supports exceptional communication experiences with sub-100ms latency and unmatched performance. The customer success process includes understanding goals, onboarding teams, co-building, code review, and scaling support.",
+      "technologies": [
+        "TypeScript",
+        "Next.js",
+        "Tailwind CSS",
+        "Radix UI",
+        "React Hook Form"
+      ],
+      "website": "https://pages.vconnct.com/en/vcloud-landing-page",
+      "src": "",
+      "category": "professional"
+    },
+    {
+      "id": 9,
+      "title": "Education Landing Page",
+      "paragraph": "Online Classrooms with Arabic identity",
+      "image": "/images/projects/educationLandingPage.gif",
+      "about": "Professional project developed to enhance virtual learning environments with V.Connect, an Arabic meeting tool.",
+      "description": "Transform your virtual classes into interactive and engaging learning environments with V.Connect. This platform allows educators to monitor and analyze student performance effectively. Key features include an analytics dashboard for insights into student engagement, comprehensive controls for managing participation, high-definition audio and video, and an interactive whiteboard for enhanced lesson delivery. The platform also offers fixed room links for easy access and recording capabilities to allow students to rewatch lectures. Experience the difference in communication and elevate your educational institution to new heights.",
+      "technologies": [
+        "TypeScript",
+        "Next.js",
+        "Tailwind CSS",
+        "Radix UI",
+        "React Hook Form"
+      ],
+      "website": "https://pages.vconnct.com/en/education",
+      "src": "",
+      "category": "professional"
     }
-    
   ]
 }

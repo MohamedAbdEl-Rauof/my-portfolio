@@ -184,10 +184,81 @@
         "TypeScript",
         "Next.js",
         "Tailwind CSS",
-        "Radix UI",
-        "React Hook Form"
+        "Radix UI"
       ],
       "website": "https://pages.vconnct.com/en/education",
+      "src": "",
+      "category": "professional"
+    },
+    {
+      "id": 10,
+      "title": "Ahl Al Quran Landing Page",
+      "paragraph": "First platform in the Arab and Islamic world for Quran teachers and students, offering an unlimited interactive teaching experience online!",
+      "image": "/images/projects/ahlAlQuranLandingPage.gif",
+      "about": "Professional project developed to enhance virtual learning environments for Quranic education with V.Connct, an Arabic meeting tool.",
+      "description": "V.Connct provides an engaging and comprehensive educational experience for Quran teachers and students, allowing teaching without the constraints of time or place. The platform features an interactive whiteboard for Tajweed and pronunciation training, screen sharing for direct content display, breakout rooms for group discussions, and customizable student role permissions. V.Connct offers affordable pricing with flexible payment options, including local currency payments. The platform also includes polls for student evaluation and encourages competition and interaction. V.Connct is a 100% Arabic meeting tool, offering features like room lock settings, STT/TTS solutions, analysis reports, and more, making it a superior choice over Zoom for Arabic-speaking users.",
+      "technologies": [
+        "TypeScript",
+        "Next.js",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "website": "https://pages.vconnct.com/ar/ahl-al-quran",
+      "src": "",
+      "category": "professional"
+    },
+    {
+      "id": 11,
+      "title": "Comparison Zoom Landing Page",
+      "paragraph": "Why Settle for Generic When You Can Have Tailored?",
+      "image": "/images/projects/comparisonZoomLandingPage.gif",
+      "about": "Professional project developed to highlight the advantages of V.Connct over Zoom, focusing on Arabic language support and enhanced security.",
+      "description": "V.Connct offers a fully Arabic, privacy-focused platform that elevates online meetings beyond Zoom's limitations. Key features include full Arabic language support, end-to-end encryption, and protection against cyber attacks. V.Connct provides seamless API integration, flexible pricing options, and supports up to 400 participants, making it ideal for large-scale events. The platform is designed to offer a superior meeting experience with features like room lock settings, STT/TTS solutions, analysis reports, and more. V.Connct is a 100% Arabic meeting tool, blending innovation and flexibility to bring real meeting results to the virtual world with ease.",
+      "technologies": [
+        "TypeScript",
+        "Next.js",
+        "Tailwind CSS",
+        "Radix UI"
+      ],
+      "website": "https://pages.vconnct.com/en/comparison-zoom",
+      "src": "",
+      "category": "professional"
+    },
+    {
+      "id": 12,
+      "title": "Tawteen",
+      "paragraph": "A comprehensive Arab initiative for independent technological alternatives.",
+      "image": "/images/projects/tawteen.gif",
+      "about": "Tawteen is an Arab initiative aimed at building independent technological alternatives developed within the region, aligned with our identity and needs.",
+      "description": "Tawteen Technology is a comprehensive Arab initiative that aims to build independent technological alternatives developed within the region, aligned with our identity and needs. The initiative was launched in response to the clear reality that today's tools are made outside our Arab region, used to shape our awareness and control our data without real representation for us. Our goal is not only to reduce dependence on the outside but to regain the ability to make technical decisions and enable institutions and individuals to own their tools, in their language, and from their reality. We believe that privacy is a fundamental right and digital awareness is the foundation of freedom. Therefore, we simplify knowledge and open its doors to everyone, aspiring to digital sovereignty that protects our data and respects our identity and values without imposition. Technology is a tool, and the decision is in our hands to choose and direct it, not to be led by it and follow it.",
+      "technologies": [
+        "TypeScript",
+        "Next.js",
+        "Tailwind CSS",
+        "Radix UI",
+        "React Hook Form",
+        "Strapi",
+        "Wordpress"
+      ],
+      "website": "https://tawteen.tech",
+      "src": "",
+      "category": "professional"
+    },
+    {
+      "id": 13,
+      "title": "Vconnct Dashboard",
+      "paragraph": "Manage meetings, create, edit, delete rooms, and handle subscriptions.",
+      "image": "/images/projects/vconnctDashboard.gif",
+      "about": "The Vconnct Dashboard is a comprehensive tool for managing virtual meetings and subscriptions, tailored for the Arab region.",
+      "description": "The Vconnct Dashboard provides a robust platform for managing virtual meetings, allowing users to create, edit, and delete meeting rooms with ease. It also includes features for managing subscriptions, ensuring users have access to the services they need. The dashboard is designed with a user-friendly interface, offering seamless navigation and efficient management of meeting logistics. Built with a focus on privacy and security, the Vconnct Dashboard supports end-to-end encryption and customizable user permissions, making it a reliable choice for organizations looking to enhance their virtual communication capabilities.",
+      "technologies": [
+        "React.js",
+        "Tailwind CSS",
+        "Material UI",
+        "React Hook Form",
+        "Strapi"
+      ],
+      "website": "https://dashboard.vconnct.me",
       "src": "",
       "category": "professional"
     }

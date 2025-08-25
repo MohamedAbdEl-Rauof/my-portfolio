@@ -256,11 +256,32 @@
         "Tailwind CSS",
         "Material UI",
         "React Hook Form",
-        "Strapi"
+        "Stripe"
       ],
       "website": "https://dashboard.vconnct.me",
       "src": "",
       "category": "professional"
+    },
+    {
+      "id": 14,
+      "title": "Cozy Loops E-commerce Frontend",
+      "paragraph": "A modern, full-featured e-commerce platform for artisans and craft makers.",
+      "image": "/images/projects/cozyLoops.gif",
+      "about": "Cozy Loops is an artisan marketplace that connects you with local artisans across Egypt and the Middle East, offering unique, handcrafted pieces.",
+      "description": "Cozy Loops is a modern e-commerce platform built with Next.js, TypeScript, and Material-UI, designed for artisans and craft makers to showcase and sell their unique handmade products. The platform features a comprehensive shopping experience with product catalogs, reviews, real-time cart updates, and secure payment processing through Stripe. It supports multi-provider authentication, including Google OAuth, and offers a responsive design for all devices. Cozy Loops is committed to supporting local artisans by bringing their unique creations to a wider audience.",
+      "technologies": [
+        "Next.js",
+        "React.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Material UI",
+        "React Hook Form",
+        "Stripe",
+        "Socket.io"
+      ],
+      "website": "https://cozyloopstore.vercel.app",
+      "src": "",
+      "category": "freelance"
     }
   ]
 }

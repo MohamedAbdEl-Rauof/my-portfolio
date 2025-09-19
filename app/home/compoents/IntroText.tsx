@@ -13,7 +13,7 @@ const IntroText: React.FC = () => (
             <Typography variant="body1" component="h1" paragraph>
                 Full-stack developer. Passionate about crafting seamless web experiences
                 from front to back.
-                Check out my <Link href="/Mohamed Abd El-Raouf Full Stack Resume.pdf" target="_blank"
+                Check out my <Link href="/Mohamed AbdEl-Rauof - React Developer.pdf" target="_blank"
                                    rel="noopener noreferrer">
                 <span className="font-bold p-1 hover:underline" aria-label="View my CV (opens in a new tab)">CV</span>
             </Link> and <Link href="/projects">

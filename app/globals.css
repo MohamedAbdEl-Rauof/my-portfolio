@@ -10,6 +10,9 @@
     --secondary: #4b5563;
     --accent: #f3f4f6;
     --hover: #d1d5db;
+    --button-bg: #171717;
+    --button-text: #ffffff;
+    --button-border: #171717;
 }
 
 .dark {
@@ -20,6 +23,9 @@
     --secondary: #9ca3af;
     --accent: #1f2937;
     --hover: #374151;
+    --button-bg: #ededed;
+    --button-text: #0a0a0a;
+    --button-border: #ededed;
 }
 
 body {

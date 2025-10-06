@@ -24,8 +24,8 @@ const CVButton: React.FC = () => (
         target="_blank"
         rel="noopener noreferrer"
         sx={{
-          backgroundColor: "var(--primary)",
-          color: "white",
+          backgroundColor: "var(--button-bg)",
+          color: "var(--button-text)",
           px: 3,
           py: 1.5,
           borderRadius: 2,
@@ -35,11 +35,12 @@ const CVButton: React.FC = () => (
           boxShadow: "0 4px 12px rgba(0, 0, 0, 0.15)",
           transition: "all 0.3s ease",
           "&:hover": {
-            transform: "translateY(-2px)",
             boxShadow: "0 6px 20px rgba(0, 0, 0, 0.2)",
+            backgroundColor: "var(--button-bg)",
+            opacity: 0.9,
           },
           "&:focus": {
-            outline: "2px solid var(--primary)",
+            outline: "2px solid var(--button-border)",
             outlineOffset: "2px",
           },
         }}
@@ -54,8 +55,9 @@ const CVButton: React.FC = () => (
         href="/Mohamed AbdEl-Rauof - React Developer.pdf"
         download="Mohamed AbdEl-Rauof - React Developer.pdf"
         sx={{
-          borderColor: "var(--primary)",
-          color: "var(--primary)",
+          borderColor: "var(--button-border)",
+          color: "var(--button-border)",
+          backgroundColor: "transparent",
           px: 3,
           py: 1.5,
           borderRadius: 2,
@@ -64,11 +66,11 @@ const CVButton: React.FC = () => (
           fontWeight: 600,
           transition: "all 0.3s ease",
           "&:hover": {
-            transform: "translateY(-2px)",
             boxShadow: "0 4px 12px rgba(0, 0, 0, 0.15)",
+            borderColor: "var(--button-bg)",
           },
           "&:focus": {
-            outline: "2px solid var(--primary)",
+            outline: "2px solid var(--button-border)",
             outlineOffset: "2px",
           },
         }}

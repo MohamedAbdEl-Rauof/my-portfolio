@@ -59,50 +59,98 @@ const Projects = () => {
     };
 
     return (
-        <Container maxWidth="md" sx={{marginTop: '30px'}}>
+        <Container maxWidth="lg" sx={{py: 8}}>
             <motion.div
                 initial="hidden"
                 animate="visible"
                 variants={containerVariants}
             >
-                <Box sx={{
-                    padding: 4,
-                    backgroundColor: 'var(--background)',
-                    color: 'var(--foreground)',
-                    transition: 'background-color 0.3s, color 0.3s'
-                }}>
-                    <motion.div variants={itemVariants}>
-                        <Typography variant="h4" gutterBottom sx={{color: 'var(--primary)'}}>
+                <motion.div variants={itemVariants}>
+                    <Box sx={{textAlign: 'center', mb: 6}}>
+                        <Typography 
+                            variant="h3" 
+                            component="h1" 
+                            gutterBottom 
+                            sx={{
+                                fontWeight: 'bold',
+                                color: 'var(--primary)',
+                                mb: 2
+                            }}
+                        >
                             My Projects
                         </Typography>
-                    </motion.div>
-                    <motion.div variants={itemVariants}>
-                        <CategoryFilter
-                            categories={projectsData.categories}
-                            selectedCategory={category}
-                            onCategoryChange={setCategory}
+                        <Typography 
+                            variant="h6" 
+                            sx={{
+                                color: 'var(--secondary)',
+                                maxWidth: '600px',
+                                mx: 'auto',
+                                lineHeight: 1.6
+                            }}
+                        >
+                            A showcase of my professional work, personal projects, and freelance endeavors. Each project represents a unique challenge and learning opportunity.
+                        </Typography>
+                    </Box>
+                </motion.div>
+
+                <motion.div variants={itemVariants}>
+                    <CategoryFilter
+                        categories={projectsData.categories}
+                        selectedCategory={category}
+                        onCategoryChange={setCategory}
+                    />
+                </motion.div>
+
+                <motion.div variants={itemVariants}>
+                    {/* Results Count */}
+                    <Box sx={{mb: 3, textAlign: 'center'}}>
+                        <Typography variant="body1" sx={{color: 'var(--secondary)'}}>
+                            Showing {filteredProjects.length} project{filteredProjects.length !== 1 ? 's' : ''}
+                            {category !== 'all' && ` in ${projectsData.categories.find(cat => cat.id === category)?.name}`}
+                        </Typography>
+                    </Box>
+                </motion.div>
+
+                <AnimatePresence mode="wait">
+                    <motion.div
+                        key={category}
+                        initial={{opacity: 0, y: 20}}
+                        animate={{opacity: 1, y: 0}}
+                        exit={{opacity: 0, y: -20}}
+                        transition={{duration: 0.3}}
+                    >
+                        <ProjectList
+                            projects={filteredProjects}
+                            onProjectClick={handleProjectClick}
                         />
                     </motion.div>
-                    <AnimatePresence mode="wait">
+                </AnimatePresence>
+
+                {/* No Results */}
+                <AnimatePresence>
+                    {filteredProjects.length === 0 && (
                         <motion.div
-                            key={category}
-                            initial={{opacity: 0, y: 20}}
-                            animate={{opacity: 1, y: 0}}
-                            exit={{opacity: 0, y: -20}}
-                            transition={{duration: 0.3}}
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            exit={{ opacity: 0, scale: 0.8 }}
                         >
-                            <ProjectList
-                                projects={filteredProjects}
-                                onProjectClick={handleProjectClick}
-                            />
+                            <Box sx={{textAlign: 'center', py: 8}}>
+                                <Typography variant="h5" sx={{color: 'var(--secondary)', mb: 2}}>
+                                    No projects found
+                                </Typography>
+                                <Typography variant="body1" sx={{color: 'var(--secondary)'}}>
+                                    Try selecting a different category to view more projects.
+                                </Typography>
+                            </Box>
                         </motion.div>
-                    </AnimatePresence>
-                    <ProjectDrawer
-                        open={drawerOpen}
-                        onClose={() => setDrawerOpen(false)}
-                        project={selectedProject}
-                    />
-                </Box>
+                    )}
+                </AnimatePresence>
+
+                <ProjectDrawer
+                    open={drawerOpen}
+                    onClose={() => setDrawerOpen(false)}
+                    project={selectedProject}
+                />
             </motion.div>
         </Container>
     );

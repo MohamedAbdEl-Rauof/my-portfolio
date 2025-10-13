@@ -107,25 +107,27 @@ const ProjectDrawer = ({open, onClose, project}: ProjectDrawerProps) => {
                             >
                                 Visit Website
                             </Button>
-                            <Button
-                                variant="outlined"
-                                href={project.src}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                startIcon={<CodeIcon/>}
-                                fullWidth
-                                sx={{
-                                    color: 'var(--primary)',
-                                    borderColor: 'var(--primary)',
-                                    '&:hover': {
-                                        bgcolor: 'var(--accent)',
-                                        transform: 'scale(1.05)',
-                                    },
-                                    transition: 'transform 0.3s ease-in-out',
-                                }}
-                            >
-                                View Source
-                            </Button>
+                            {project.src && project.src.trim() !== '' && (
+                                <Button
+                                    variant="outlined"
+                                    href={project.src}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    startIcon={<CodeIcon/>}
+                                    fullWidth
+                                    sx={{
+                                        color: 'var(--primary)',
+                                        borderColor: 'var(--primary)',
+                                        '&:hover': {
+                                            bgcolor: 'var(--accent)',
+                                            transform: 'scale(1.05)',
+                                        },
+                                        transition: 'transform 0.3s ease-in-out',
+                                    }}
+                                >
+                                    View Source
+                                </Button>
+                            )}
                         </Box>
                     </Box>
                 )}

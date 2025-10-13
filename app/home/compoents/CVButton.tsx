@@ -12,72 +12,102 @@ const CVButton: React.FC = () => (
         display: "flex",
         gap: 2,
         flexWrap: "wrap",
-        justifyContent: "start",
-        mt: 7,
-        mb: 7,
+        justifyContent: "center",
+        mt: 4,
+        mb: 4,
       }}
     >
-      <Button
-        variant="contained"
-        startIcon={<DescriptionIcon />}
-        href="/Mohamed AbdEl-Rauof - React Developer.pdf"
-        target="_blank"
-        rel="noopener noreferrer"
-        sx={{
-          backgroundColor: "var(--button-bg)",
-          color: "var(--button-text)",
-          px: 3,
-          py: 1.5,
-          borderRadius: 2,
-          textTransform: "none",
-          fontSize: "1rem",
-          fontWeight: 600,
-          boxShadow: "0 4px 12px rgba(0, 0, 0, 0.15)",
-          transition: "all 0.3s ease",
-          "&:hover": {
-            boxShadow: "0 6px 20px rgba(0, 0, 0, 0.2)",
-            backgroundColor: "var(--button-bg)",
-            opacity: 0.9,
-          },
-          "&:focus": {
-            outline: "2px solid var(--button-border)",
-            outlineOffset: "2px",
-          },
-        }}
-        aria-label="View my CV (opens in a new tab)"
+      <motion.div
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
       >
-        View My CV
-      </Button>
+        <Button
+          variant="contained"
+          startIcon={<DescriptionIcon />}
+          href="/Mohamed AbdEl-Rauof - React Developer.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          sx={{
+            background: "var(--gradient-primary)",
+            color: "var(--primary-foreground)",
+            px: 4,
+            py: 2,
+            borderRadius: 3,
+            textTransform: "none",
+            fontSize: "1.1rem",
+            fontWeight: 600,
+            boxShadow: "var(--shadow-lg)",
+            border: "none",
+            position: "relative",
+            overflow: "hidden",
+            transition: "all 0.3s ease",
+            "&:hover": {
+              boxShadow: "var(--shadow-xl)",
+              transform: "translateY(-2px)",
+              "&::before": {
+                opacity: 1,
+              },
+            },
+            "&::before": {
+              content: '""',
+              position: "absolute",
+              top: 0,
+              left: "-100%",
+              width: "100%",
+              height: "100%",
+              background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent)",
+              transition: "left 0.5s ease",
+            },
+            "&:focus": {
+              outline: "2px solid var(--ring)",
+              outlineOffset: "2px",
+            },
+          }}
+          aria-label="View my CV (opens in a new tab)"
+        >
+          View My CV
+        </Button>
+      </motion.div>
 
-      <Button
-        variant="outlined"
-        startIcon={<DownloadIcon />}
-        href="/Mohamed AbdEl-Rauof - React Developer.pdf"
-        download="Mohamed AbdEl-Rauof - React Developer.pdf"
-        sx={{
-          borderColor: "var(--button-border)",
-          color: "var(--button-border)",
-          backgroundColor: "transparent",
-          px: 3,
-          py: 1.5,
-          borderRadius: 2,
-          textTransform: "none",
-          fontSize: "1rem",
-          fontWeight: 600,
-          transition: "all 0.3s ease",
-          "&:hover": {
-            boxShadow: "0 4px 12px rgba(0, 0, 0, 0.15)",
-            borderColor: "var(--button-bg)",
-          },
-          "&:focus": {
-            outline: "2px solid var(--button-border)",
-            outlineOffset: "2px",
-          },
-        }}
-        aria-label="Download my CV"
+      <motion.div
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
       >
-        Download CV
-      </Button>
+        <Button
+          variant="outlined"
+          startIcon={<DownloadIcon />}
+          href="/Mohamed AbdEl-Rauof - React Developer.pdf"
+          download="Mohamed AbdEl-Rauof - React Developer.pdf"
+          sx={{
+            borderColor: "var(--primary)",
+            color: "var(--primary)",
+            backgroundColor: "transparent",
+            px: 4,
+            py: 2,
+            borderRadius: 3,
+            textTransform: "none",
+            fontSize: "1.1rem",
+            fontWeight: 600,
+            border: "2px solid var(--primary)",
+            position: "relative",
+            overflow: "hidden",
+            transition: "all 0.3s ease",
+            "&:hover": {
+              background: "var(--primary)",
+              color: "var(--primary-foreground)",
+              boxShadow: "var(--shadow-lg)",
+              transform: "translateY(-2px)",
+            },
+            "&:focus": {
+              outline: "2px solid var(--ring)",
+              outlineOffset: "2px",
+            },
+          }}
+          aria-label="Download my CV"
+        >
+          Download CV
+        </Button>
+      </motion.div>
     </Box>
   </motion.div>
 );

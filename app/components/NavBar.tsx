@@ -12,6 +12,7 @@ import CloseIcon from '@mui/icons-material/Close';
 const navItems = [
     {name: 'About', path: '/about'},
     {name: 'Projects', path: '/projects'},
+    {name: 'Certificates', path: '/certificates'},
     {name: 'Contact', path: '/contact'},
 ];
 

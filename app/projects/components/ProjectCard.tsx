@@ -1,5 +1,6 @@
-import {Box, Card, CardMedia, Chip, Typography} from '@mui/material';
+import {Box, Card, CardMedia, Chip, Typography, Skeleton} from '@mui/material';
 import {Project} from './Projects';
+import {useState} from 'react';
 
 interface ProjectCardProps {
     project: Project;
@@ -7,6 +8,8 @@ interface ProjectCardProps {
 }
 
 const ProjectCard = ({project, onClick}: ProjectCardProps) => {
+    const [imageLoading, setImageLoading] = useState(true);
+    const [imageError, setImageError] = useState(false);
     const isVideo = project.image.endsWith('.mp4') || project.image.endsWith('.webm');
 
     return (
@@ -44,16 +47,56 @@ const ProjectCard = ({project, onClick}: ProjectCardProps) => {
                     <source src={project.image} type={`video/${project.image.split('.').pop()}`}/>
                 </Box>
             ) : (
-                <CardMedia
-                    component="img"
-                    sx={{
-                        width: '100%',
-                        height: '100%',
-                        objectFit: 'cover',
-                    }}
-                    image={project.image}
-                    alt={project.title}
-                />
+                <Box sx={{ position: 'relative', width: '100%', height: '100%' }}>
+                    {imageLoading && (
+                        <Skeleton
+                            variant="rectangular"
+                            width="100%"
+                            height="100%"
+                            sx={{
+                                position: 'absolute',
+                                top: 0,
+                                left: 0,
+                                zIndex: 1,
+                            }}
+                        />
+                    )}
+                    <CardMedia
+                        component="img"
+                        sx={{
+                            width: '100%',
+                            height: '100%',
+                            objectFit: 'cover',
+                            opacity: imageLoading ? 0 : 1,
+                            transition: 'opacity 0.3s ease',
+                        }}
+                        image={project.image}
+                        alt={project.title}
+                        onLoad={() => setImageLoading(false)}
+                        onError={() => {
+                            setImageLoading(false);
+                            setImageError(true);
+                        }}
+                    />
+                    {imageError && (
+                        <Box
+                            sx={{
+                                position: 'absolute',
+                                top: 0,
+                                left: 0,
+                                width: '100%',
+                                height: '100%',
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                backgroundColor: 'var(--muted)',
+                                color: 'var(--muted-foreground)',
+                            }}
+                        >
+                            <Typography variant="body2">Image failed to load</Typography>
+                        </Box>
+                    )}
+                </Box>
             )}
             <Box
                 className="projectInfo"

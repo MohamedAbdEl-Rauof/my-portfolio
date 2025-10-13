@@ -3,36 +3,266 @@
 @tailwind utilities;
 
 :root {
-    --cursor-color: #333;
+    /* Light theme colors */
+    --cursor-color: #171717;
     --background: #ffffff;
     --foreground: #171717;
     --primary: #171717;
+    --primary-foreground: #ffffff;
     --secondary: #4b5563;
+    --secondary-foreground: #ffffff;
     --accent: #f3f4f6;
+    --accent-foreground: #171717;
+    --muted: #f9fafb;
+    --muted-foreground: #6b7280;
+    --border: #e5e7eb;
+    --input: #e5e7eb;
+    --ring: #171717;
     --hover: #d1d5db;
     --button-bg: #171717;
     --button-text: #ffffff;
     --button-border: #171717;
+    --card: #ffffff;
+    --card-foreground: #171717;
+    --popover: #ffffff;
+    --popover-foreground: #171717;
+    --destructive: #ef4444;
+    --destructive-foreground: #ffffff;
+    --success: #10b981;
+    --warning: #f59e0b;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, #171717 0%, #374151 100%);
+    --gradient-secondary: linear-gradient(135deg, #4b5563 0%, #6b7280 100%);
+    --gradient-accent: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    
+    /* Border radius */
+    --radius: 0.5rem;
+    --radius-sm: 0.25rem;
+    --radius-md: 0.375rem;
+    --radius-lg: 0.75rem;
+    --radius-xl: 1rem;
 }
 
 .dark {
-    --cursor-color: #fff;
+    /* Dark theme colors */
+    --cursor-color: #ededed;
     --background: #0a0a0a;
     --foreground: #ededed;
     --primary: #ededed;
+    --primary-foreground: #0a0a0a;
     --secondary: #9ca3af;
+    --secondary-foreground: #ededed;
     --accent: #1f2937;
+    --accent-foreground: #ededed;
+    --muted: #111827;
+    --muted-foreground: #9ca3af;
+    --border: #374151;
+    --input: #374151;
+    --ring: #ededed;
     --hover: #374151;
     --button-bg: #ededed;
     --button-text: #0a0a0a;
     --button-border: #ededed;
+    --card: #111827;
+    --card-foreground: #ededed;
+    --popover: #111827;
+    --popover-foreground: #ededed;
+    --destructive: #f87171;
+    --destructive-foreground: #0a0a0a;
+    --success: #34d399;
+    --warning: #fbbf24;
+    
+    /* Dark gradients */
+    --gradient-primary: linear-gradient(135deg, #ededed 0%, #9ca3af 100%);
+    --gradient-secondary: linear-gradient(135deg, #9ca3af 0%, #6b7280 100%);
+    --gradient-accent: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+    
+    /* Dark shadows */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+    --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.4), 0 1px 2px -1px rgb(0 0 0 / 0.4);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.4), 0 2px 4px -2px rgb(0 0 0 / 0.4);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.4), 0 4px 6px -4px rgb(0 0 0 / 0.4);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.4), 0 8px 10px -6px rgb(0 0 0 / 0.4);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
     color: var(--foreground);
     background: var(--background);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     transition: background-color 0.3s ease, color 0.3s ease;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Modern utility classes */
+.glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glass-dark {
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.card {
+    background: var(--card);
+    color: var(--card-foreground);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius);
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background: var(--gradient-primary);
+    color: var(--primary-foreground);
+    padding: 0.75rem 1.5rem;
+}
+
+.btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn-secondary {
+    background: var(--secondary);
+    color: var(--secondary-foreground);
+    padding: 0.75rem 1.5rem;
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    padding: 0.75rem 1.5rem;
+}
+
+.btn-outline:hover {
+    background: var(--primary);
+    color: var(--primary-foreground);
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+.animate-slide-up {
+    animation: slideUp 0.6s ease-out;
+}
+
+.animate-slide-in-left {
+    animation: slideInLeft 0.6s ease-out;
+}
+
+.animate-slide-in-right {
+    animation: slideInRight 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { 
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from { 
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from { 
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Focus styles for accessibility */
+.focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--muted);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: var(--radius);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary);
 }
 
 .nav-item {
@@ -69,11 +299,10 @@ body {
     transform: scaleX(1);
 }
 
-/* Add this at the end of your existing CSS */
 
 main {
     position: relative;
-    min-height: calc(100vh - 64px); /* Adjust based on your navbar height */
+    min-height: calc(100vh - 64px); 
 }
 
 .page-transition-enter {

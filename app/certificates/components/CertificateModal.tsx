@@ -1,17 +1,27 @@
 import AnimatedCursor from 'react-animated-cursor';
 import {Box, Button, CardMedia, Chip, Drawer, IconButton, Typography} from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import CodeIcon from '@mui/icons-material/Code';
 import LaunchIcon from '@mui/icons-material/Launch';
-import {Project} from './Projects';
 
-interface ProjectDrawerProps {
-    open: boolean;
-    onClose: () => void;
-    project: Project | null;
+export interface Certificate {
+    id: number;
+    title: string;
+    issuer: string;
+    date: string;
+    description: string;
+    skills: string[];
+    thumbnail: string;
+    fullImage: string;
+    category: string;
 }
 
-const ProjectDrawer = ({open, onClose, project}: ProjectDrawerProps) => {
+interface CertificateModalProps {
+    open: boolean;
+    onClose: () => void;
+    certificate: Certificate | null;
+}
+
+const CertificateModal = ({open, onClose, certificate}: CertificateModalProps) => {
     return (
         <Drawer
             anchor="right"
@@ -19,7 +29,7 @@ const ProjectDrawer = ({open, onClose, project}: ProjectDrawerProps) => {
             onClose={onClose}
             PaperProps={{
                 sx: {
-                    width: {xs: '100%', sm: '50%', md: 400, lg: 550},
+                    width: {xs: '100%', sm: '60%', md: 500, lg: 600},
                     maxWidth: '100%',
                     bgcolor: 'var(--background)',
                     color: 'var(--foreground)',
@@ -51,83 +61,88 @@ const ProjectDrawer = ({open, onClose, project}: ProjectDrawerProps) => {
                         <ArrowBackIcon/>
                     </IconButton>
                     <Typography variant="h6" sx={{fontWeight: 'bold', color: 'var(--primary)'}}>
-                        Project Details
+                        Certificate Details
                     </Typography>
                 </Box>
 
-                {project && (
+                {certificate && (
                     <Box sx={{flexGrow: 1, overflow: 'auto', p: 3}}>
-                        <Typography variant="h5" gutterBottom sx={{fontWeight: 'bold', mb: 2, color: 'var(--primary)'}}>
-                            {project.title}
+                        <Typography variant="h5" gutterBottom sx={{fontWeight: 'bold', mb: 1, color: 'var(--primary)'}}>
+                            {certificate.title}
                         </Typography>
-                        <Typography variant="body1" paragraph sx={{mb: 2, color: 'var(--secondary)'}}>
-                            {project.about}
+                        <Typography variant="h6" gutterBottom sx={{mb: 2, color: 'var(--secondary)'}}>
+                            {certificate.issuer}
                         </Typography>
+                        
+                        <Box sx={{mb: 2, display: 'flex', alignItems: 'center', gap: 1}}>
+                            <Typography variant="body2" sx={{color: 'var(--secondary)'}}>
+                                Issued: {new Date(certificate.date).toLocaleDateString('en-US', { 
+                                    year: 'numeric', 
+                                    month: 'long',
+                                    day: 'numeric'
+                                })}
+                            </Typography>
+                        </Box>
+
                         <CardMedia
                             component="img"
-                            height="100%"
-                            image={project.image}
-                            alt={project.title}
-                            className="rounded-2xl"
+                            height="300"
+                            image={certificate.fullImage}
+                            alt={certificate.title}
+                            sx={{
+                                borderRadius: 2,
+                                mb: 3,
+                                border: '1px solid var(--accent)',
+                                boxShadow: '0 4px 8px rgba(0,0,0,0.1)'
+                            }}
                         />
-                        <Typography variant="h6" gutterBottom sx={{fontWeight: 'bold', mt: 2, color: 'var(--primary)'}}>
-                            About:
-                        </Typography>
-                        <Typography variant="body2" paragraph sx={{mb: 3, color: 'var(--secondary)'}}>
-                            {project.description}
-                        </Typography>
+                        
                         <Typography variant="h6" gutterBottom sx={{fontWeight: 'bold', mb: 2, color: 'var(--primary)'}}>
-                            Technologies:
+                            Description:
+                        </Typography>
+                        <Typography variant="body2" paragraph sx={{mb: 3, color: 'var(--secondary)', lineHeight: 1.6}}>
+                            {certificate.description}
+                        </Typography>
+                        
+                        <Typography variant="h6" gutterBottom sx={{fontWeight: 'bold', mb: 2, color: 'var(--primary)'}}>
+                            Skills & Technologies:
                         </Typography>
                         <Box sx={{mb: 3}}>
-                            {project.technologies.map((tech, index) => (
+                            {certificate.skills.map((skill: string, index: number) => (
                                 <Chip
                                     key={index}
-                                    label={tech}
-                                    sx={{mr: 1, mb: 1, bgcolor: 'var(--accent)', color: 'var(--primary)'}}
+                                    label={skill}
+                                    sx={{
+                                        mr: 1, 
+                                        mb: 1, 
+                                        bgcolor: 'var(--accent)', 
+                                        color: 'var(--primary)',
+                                        fontWeight: 'medium'
+                                    }}
                                 />
                             ))}
                         </Box>
+                        
                         <Box sx={{display: 'flex', flexDirection: {xs: 'column', sm: 'row'}, gap: 2}}>
                             <Button
-                                variant="contained"
-                                href={project.website}
+                                variant="outlined"
+                                href={certificate.fullImage}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 startIcon={<LaunchIcon/>}
                                 fullWidth
                                 sx={{
-                                    bgcolor: 'var(--primary)',
-                                    color: 'var(--background)',
+                                    color: 'var(--primary)',
+                                    borderColor: 'var(--primary)',
                                     '&:hover': {
+                                        bgcolor: 'var(--accent)',
                                         transform: 'scale(1.05)',
                                     },
                                     transition: 'transform 0.3s ease-in-out',
                                 }}
                             >
-                                Visit Website
+                                View Full Size
                             </Button>
-                            {project.src && project.src.trim() !== '' && (
-                                <Button
-                                    variant="outlined"
-                                    href={project.src}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    startIcon={<CodeIcon/>}
-                                    fullWidth
-                                    sx={{
-                                        color: 'var(--primary)',
-                                        borderColor: 'var(--primary)',
-                                        '&:hover': {
-                                            bgcolor: 'var(--accent)',
-                                            transform: 'scale(1.05)',
-                                        },
-                                        transition: 'transform 0.3s ease-in-out',
-                                    }}
-                                >
-                                    View Source
-                                </Button>
-                            )}
                         </Box>
                     </Box>
                 )}
@@ -149,4 +164,4 @@ const ProjectDrawer = ({open, onClose, project}: ProjectDrawerProps) => {
     );
 };
 
-export default ProjectDrawer;
+export default CertificateModal;

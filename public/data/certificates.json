@@ -1,0 +1,155 @@
+{
+  "categories": [
+    {
+      "name": "All",
+      "id": "all"
+    },
+    {
+      "name": "Web Development",
+      "id": "web-development"
+    },
+    {
+      "name": "Data Science & AI",
+      "id": "data-science"
+    },
+    {
+      "name": "Academic",
+      "id": "academic"
+    },
+    {
+      "name": "Professional Skills",
+      "id": "professional-skills"
+    }
+  ],
+  "certificates": [
+    {
+      "id": 1,
+      "title": "Software Development - React Web Developer",
+      "issuer": "Ministry of Communication and Information Technology",
+      "date": "2024-10-31",
+      "description": "This certification represents the completion of the Software Development Track, specializing in React Frontend Web Development. It covers core web technologies such as HTML, CSS, and JavaScript, along with advanced skills in building dynamic React applications. The program also includes practical experience with Git and GitHub for version control, Node.js for server-side scripting, and containerization concepts using Docker and Kubernetes. The track concludes with a capstone project integrating React and Node.js to develop a real-world web application.",
+      "skills": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "TypeScript",
+        "React",
+        "Next.js",
+        "Node.js",
+        "Express.js",
+        "Context API",
+        "Redux Toolkit",
+        "Git",
+        "GitHub",
+        "Docker",
+        "Kubernetes",
+        "MongoDB"
+      ],
+      "thumbnail": "/images/certificates/full-size/DEPICertificate.jpeg",
+      "fullImage": "/images/certificates/full-size/DEPICertificate.jpeg",
+      "category": "web-development"
+    },    
+    {
+      "id": 2,
+      "title": "Certificate of Academic Graduation",
+      "issuer": "Modern University for Technology and Information (MTI)",
+      "date": "2024-06-30",
+      "description": "Academic graduation certificate from Modern University for Technology and Information (MTI). Completed Bachelor's degree in Computer & AI department from September 2020 to June 2024.",
+      "skills": [
+        "Computer Science",
+        "Artificial Intelligence",
+        "Programming Fundamentals",
+        "Data Structures",
+        "Algorithms",
+        "Software Engineering"
+      ],
+      "thumbnail": "/images/certificates/full-size/graduateCertificate.jpeg",
+      "fullImage": "/images/certificates/full-size/graduateCertificate.jpeg",
+      "category": "academic"
+    },
+    {
+      "id": 3,
+      "title": "Developing Web Applications Using PHP",
+      "issuer": "Information Technology Institute (ITI)",
+      "date": "2023-08-31",
+      "description": "This course provides a solid foundation in developing dynamic web applications using PHP. It explores the structure of web applications and how web browsers interact with web servers through the request/response cycle, including GET, POST, and Redirect methods. The program covers PHP syntax, variables, logic, loops, arrays, error handling, and superglobal variables. Students also learn to use cookies, manage session data, and handle MySQL databases. By the end of the course, participants will be able to build complete web applications with user authentication, registration, data validation, and CRUD operations, and refactor their projects following Object-Oriented Programming (OOP) principles.",
+      "skills": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "PHP",
+        "MySQL",
+        "OOP",
+        "CRUD Operations",
+        "Session Management",
+        "Authentication",
+        "Postman",
+        "Web Development"
+      ],
+      "thumbnail": "/images/certificates/full-size/ITICertificate.jpeg",
+      "fullImage": "/images/certificates/full-size/ITICertificate.jpeg",
+      "category": "web-development"
+    },
+    {
+      "id": 4,
+      "title": "Meshwary Program - Life and Career Skills Development",
+      "issuer": "Ministry of Youth and Sports & UNICEF",
+      "date": "2020-01-30",
+      "description": "Meshwary is a national youth empowerment program implemented by the Ministry of Youth and Sports in collaboration with UNICEF, and supported by the Dutch and Swiss Embassies in Egypt. Since its launch in 2013, the program has aimed to support and empower youth by helping them plan their career paths effectively and develop resilient personalities capable of adapting to challenges. Meshwary provides life skills workshops and career counseling sessions across 18 governorates, targeting different age groups: 10–14 years for personal development, and 15–24 years for skill enhancement and professional guidance. The program also includes Innovation Labs—dedicated spaces within youth centers in selected governorates—designed to foster creativity and entrepreneurship by supporting young people in transforming their ideas into real projects through training, technical support, and mentorship.",
+      "skills": [
+        "Time Management",
+        "Communication",
+        "Creative Thinking",
+        "Problem Solving",
+        "Learning How to Learn",
+        "Motivational Techniques",
+        "Financial Literacy",
+        "Teamwork",
+        "Positive Thinking",
+        "Adaptability",
+        "Innovation",
+        "Entrepreneurship",
+        "Career Planning"
+      ],
+      "thumbnail": "/images/certificates/full-size/meshwareCertificate.jpeg",
+      "fullImage": "/images/certificates/full-size/meshwareCertificate.jpeg",
+      "category": "professional-skills"
+    },
+    {
+      "id": 5,
+      "title": "Introduction to Artificial Intelligence and Application Training",
+      "issuer": "Zewail City University & Impact Platform",
+      "date": "2023-8-15",
+      "description": "Comprehensive introduction to Artificial Intelligence and application training from Zewail City University in collaboration with Impact Platform. This program covered fundamental AI concepts, machine learning, and deep learning applications.",
+      "skills": [
+        "Artificial Intelligence",
+        "Machine Learning",
+        "Deep Learning",
+        "Data Science",
+        "Neural Networks",
+        "AI Applications"
+      ],
+      "thumbnail": "/images/certificates/full-size/zewailCertificate.jpeg",
+      "fullImage": "/images/certificates/full-size/zewailCertificate.jpeg",
+      "category": "data-science"
+    },
+    {
+      "id": 6,
+      "title": "React HackerRank Certification",
+      "issuer": "HackerRank",
+      "date": "2025-10-10",
+      "description": "React certification obtained after successfully completing the HackerRank React assessment. This certification demonstrates proficiency in React development through comprehensive testing and evaluation.",
+      "skills": [
+        "React",
+        "JavaScript",
+        "Component Development",
+        "State Management",
+        "React Hooks",
+        "Problem Solving"
+      ],
+      "thumbnail": "/images/certificates/full-size/ReactHackerRankCertificate.png",
+      "fullImage": "/images/certificates/full-size/ReactHackerRankCertificate.png",
+      "category": "web-development"
+    }
+  ]
+}

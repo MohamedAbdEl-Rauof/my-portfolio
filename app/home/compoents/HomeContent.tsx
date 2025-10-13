@@ -12,7 +12,7 @@ import SocialIcons from "./SocialIcons";
 
 export default function HomeContent() {
   return (
-    <Container maxWidth="md" sx={{ paddingTop: "100px" }}>
+    <Container maxWidth="md" sx={{ paddingTop: "30px" }}>
       <motion.div
         variants={containerVariants}
         initial="hidden"

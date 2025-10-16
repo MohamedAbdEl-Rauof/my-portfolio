@@ -13,10 +13,6 @@
       "id": "data-science"
     },
     {
-      "name": "Academic",
-      "id": "academic"
-    },
-    {
       "name": "Professional Skills",
       "id": "professional-skills"
     }
@@ -49,24 +45,6 @@
       "fullImage": "/images/certificates/full-size/DEPICertificate.jpeg",
       "category": "web-development"
     },    
-    {
-      "id": 2,
-      "title": "Certificate of Academic Graduation",
-      "issuer": "Modern University for Technology and Information (MTI)",
-      "date": "2024-06-30",
-      "description": "Academic graduation certificate from Modern University for Technology and Information (MTI). Completed Bachelor's degree in Computer & AI department from September 2020 to June 2024.",
-      "skills": [
-        "Computer Science",
-        "Artificial Intelligence",
-        "Programming Fundamentals",
-        "Data Structures",
-        "Algorithms",
-        "Software Engineering"
-      ],
-      "thumbnail": "/images/certificates/full-size/graduateCertificate.jpeg",
-      "fullImage": "/images/certificates/full-size/graduateCertificate.jpeg",
-      "category": "academic"
-    },
     {
       "id": 3,
       "title": "Developing Web Applications Using PHP",
@@ -150,6 +128,55 @@
       "thumbnail": "/images/certificates/full-size/ReactHackerRankCertificate.png",
       "fullImage": "/images/certificates/full-size/ReactHackerRankCertificate.png",
       "category": "web-development"
+    },
+    {
+      "id": 7,
+      "title": "InnovEgypt - Innovation and Entrepreneurship Program",
+      "issuer": "Technology Innovation and Entrepreneurship Center (TIEC)",
+      "date": "2023-12-15",
+      "description": "InnovEgypt is a comprehensive capacity building program for university students and graduates in innovation and entrepreneurship. The program focuses on developing innovative and entrepreneurial capabilities in the ICT sector through three main modules: Innovation and Technology Management, Idea Design, and Entrepreneurship. The 44-hour program includes interactive workshops covering innovation processes, idea generation methodologies, intellectual property protection, and startup fundamentals to create a base of potential entrepreneurs with skills required by local and multinational companies.",
+      "skills": [
+        "Innovation Management",
+        "Technology Management",
+        "Idea Generation",
+        "Design Thinking",
+        "Entrepreneurship",
+        "Business Development",
+        "Intellectual Property",
+        "Startup Fundamentals",
+        "Problem Solving",
+        "Creative Thinking",
+        "Project Management",
+        "Leadership",
+        "Team Collaboration"
+      ],
+      "thumbnail": "/images/certificates/full-size/innovEgyptCertificate.png",
+      "fullImage": "/images/certificates/full-size/innovEgyptCertificate.png",
+      "category": "professional-skills"
+    }
+  ],
+  "_commented_certificates": [
+        {
+      "name": "Academic",
+      "id": "academic"
+    },
+        {
+      "id": 2,
+      "title": "Certificate of Academic Graduation",
+      "issuer": "Modern University for Technology and Information (MTI)",
+      "date": "2024-06-30",
+      "description": "Academic graduation certificate from Modern University for Technology and Information (MTI). Completed Bachelor's degree in Computer & AI department from September 2020 to June 2024.",
+      "skills": [
+        "Computer Science",
+        "Artificial Intelligence",
+        "Programming Fundamentals",
+        "Data Structures",
+        "Algorithms",
+        "Software Engineering"
+      ],
+      "thumbnail": "/images/certificates/full-size/graduateCertificate.jpeg",
+      "fullImage": "/images/certificates/full-size/graduateCertificate.jpeg",
+      "category": "academic"
     }
   ]
 }

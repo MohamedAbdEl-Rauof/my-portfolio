@@ -38,7 +38,7 @@ const AnimatedName: React.FC = React.memo(() => {
                 alignItems: 'center',
                 textAlign: 'center',
                 marginBottom: '2rem',
-                padding: '2rem 0',
+                padding: '2rem 0.7rem',
             }}
         >
             <motion.div

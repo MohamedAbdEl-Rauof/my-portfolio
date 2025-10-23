@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { Box, Typography } from '@mui/material';
-import { colorAnimation, letterAnimation, textAnimation } from './animations';
+import { letterAnimation, textAnimation } from './animations';
 
 const AnimatedName: React.FC = React.memo(() => {
     const animatedText = useMemo(() => (
@@ -9,7 +9,6 @@ const AnimatedName: React.FC = React.memo(() => {
             <motion.span
                 key={`${char}-${index}`}
                 variants={letterAnimation}
-                animate={colorAnimation.animate}
                 style={{
                     display: 'inline-block',
                     marginRight: char === ' ' ? '0.25em' : '0',
@@ -19,8 +18,9 @@ const AnimatedName: React.FC = React.memo(() => {
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
                     backgroundClip: 'text',
-                    textShadow: '0 0 30px rgba(23, 23, 23, 0.3)',
                     letterSpacing: '0.05em',
+                    willChange: 'transform',
+                    transform: 'translateZ(0)',
                 }}
             >
                 {char}

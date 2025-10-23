@@ -17,6 +17,10 @@ export default function HomeContent() {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
+        style={{
+          willChange: "opacity",
+          transform: "translateZ(0)",
+        }}
       >
         <Box my={4} role="main" aria-label="Home content">
           <AnimatedName />

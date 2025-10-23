@@ -38,67 +38,66 @@ const NavBar: React.FC = () => {
         >
             <Container maxWidth="lg">
                 <Toolbar disableGutters className="mt-10 justify-between">
-                    <Link href="/" passHref legacyBehavior>
-                        <Box
-                            component="a"
-                            title="Home"
-                            aria-label="Home"
-                            sx={{
-                                flexGrow: 0,
-                                display: 'flex',
-                                alignItems: 'center',
-                                mr: 2,
-                                textDecoration: 'none',
+                    <Link
+                        href="/"
+                        title="Home"
+                        aria-label="Home"
+                        style={{
+                            flexGrow: 0,
+                            display: 'flex',
+                            alignItems: 'center',
+                            marginRight: '16px',
+                            textDecoration: 'none',
+                        }}
+                    >
+                        <Image
+                            src="/svg/logo.svg"
+                            alt="Logo"
+                            width={40}
+                            height={65}
+                            style={{
+                                filter: currentTheme === 'dark' ? 'invert(1)' : 'none'
                             }}
-                        >
-                            <Image
-                                src="/svg/logo.svg"
-                                alt="Logo"
-                                width={40}
-                                height={65}
-                                style={{
-                                    filter: currentTheme === 'dark' ? 'invert(1)' : 'none'
-                                }}
-                            />
-                        </Box>
+                        />
                     </Link>
                     <Box sx={{display: {xs: 'none', md: 'flex'}}} gap={3}>
                         {navItems.map((item) => (
-                            <Link key={item.name} href={item.path} passHref legacyBehavior>
-                                <Button
-                                    component="a"
-                                    className={`nav-item ${pathname === item.path ? 'active' : ''}`}
-                                    aria-current={pathname === item.path ? 'page' : undefined}
-                                    sx={{
-                                        position: 'relative',
-                                        overflow: 'hidden',
-                                        color: 'var(--foreground)',
-                                        '&:hover': {
-                                            color: 'var(--primary)',
-                                            backgroundColor: 'transparent',
-                                        },
-                                        '&::after': {
-                                            content: '""',
-                                            position: 'absolute',
-                                            bottom: 0,
-                                            left: 0,
-                                            width: '100%',
-                                            height: '2px',
-                                            backgroundColor: 'var(--primary)',
-                                            transform: 'scaleX(0)',
-                                            transformOrigin: 'center',
-                                            transition: 'transform 0.9s ease',
-                                        },
-                                        '&:hover::after, &.active::after': {
-                                            transform: 'scaleX(1)',
-                                            transformOrigin: 'center',
-                                            transition: 'transform 0.4s ease',
-                                        },
-                                    }}
-                                >
-                                    {item.name}
-                                </Button>
-                            </Link>
+                            <Button
+                                key={item.name}
+                                component={Link}
+                                href={item.path}
+                                className={`nav-item ${pathname === item.path ? 'active' : ''}`}
+                                aria-current={pathname === item.path ? 'page' : undefined}
+                                sx={{
+                                    position: 'relative',
+                                    overflow: 'hidden',
+                                    color: 'var(--foreground)',
+                                    textDecoration: 'none',
+                                    '&:hover': {
+                                        color: 'var(--primary)',
+                                        backgroundColor: 'transparent',
+                                    },
+                                    '&::after': {
+                                        content: '""',
+                                        position: 'absolute',
+                                        bottom: 0,
+                                        left: 0,
+                                        width: '100%',
+                                        height: '2px',
+                                        backgroundColor: 'var(--primary)',
+                                        transform: 'scaleX(0)',
+                                        transformOrigin: 'center',
+                                        transition: 'transform 0.9s ease',
+                                    },
+                                    '&:hover::after, &.active::after': {
+                                        transform: 'scaleX(1)',
+                                        transformOrigin: 'center',
+                                        transition: 'transform 0.4s ease',
+                                    },
+                                }}
+                            >
+                                {item.name}
+                            </Button>
                         ))}
                         <ThemeToggle/>
                     </Box>
@@ -175,7 +174,7 @@ const NavBar: React.FC = () => {
                                 >
                                     <Link
                                         href={item.path}
-                                        passHref
+                                        onClick={handleDrawerToggle}
                                         style={{
                                             width: '100%',
                                             textDecoration: 'none',
@@ -212,13 +211,6 @@ const NavBar: React.FC = () => {
                                                     },
                                                 },
                                             }}
-                                            onClick={handleDrawerToggle}
-                                            onKeyDown={(event) => {
-                                                if (event.key === 'Enter') {
-                                                    handleDrawerToggle();
-                                                }
-                                            }}
-                                            tabIndex={0}
                                         />
                                     </Link>
                                 </ListItem>

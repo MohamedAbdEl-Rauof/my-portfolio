@@ -72,7 +72,7 @@ const IntroText: React.FC = () => (
         }}
       >
         Check out my{" "}
-        <Link href="/projects" className="inline-block">
+        <Link href="/projects" style={{ display: 'inline-block', textDecoration: 'none' }}>
           <motion.span
             className="font-bold text-primary hover:underline cursor-pointer"
             whileHover={{ scale: 1.05 }}
@@ -101,7 +101,7 @@ const IntroText: React.FC = () => (
       >
         Always learning and adapting to new challenges. When not coding, I&apos;m exploring tech,
         enjoying music, and finding inspiration in everyday life. Ready to bring your ideas to life?{" "}
-        <Link href="/contact" className="inline-block">
+        <Link href="/contact" style={{ display: 'inline-block', textDecoration: 'none' }}>
           <motion.span
             className="font-bold text-primary hover:underline cursor-pointer"
             whileHover={{ scale: 1.05 }}

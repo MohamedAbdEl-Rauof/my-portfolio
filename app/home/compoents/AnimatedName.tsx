@@ -1,7 +1,7 @@
-import React, {useMemo} from 'react';
-import {motion} from 'framer-motion';
-import {Box, Typography} from '@mui/material';
-import {colorAnimation, letterAnimation, textAnimation} from './animations';
+import React, { useMemo } from 'react';
+import { motion } from 'framer-motion';
+import { Box, Typography } from '@mui/material';
+import { colorAnimation, letterAnimation, textAnimation } from './animations';
 
 const AnimatedName: React.FC = React.memo(() => {
     const animatedText = useMemo(() => (
@@ -29,10 +29,10 @@ const AnimatedName: React.FC = React.memo(() => {
     ), []);
 
     return (
-        <Box 
-            component="section" 
+        <Box
+            component="section"
             sx={{
-                position: 'relative', 
+                position: 'relative',
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
@@ -61,7 +61,7 @@ const AnimatedName: React.FC = React.memo(() => {
                 >
                     {animatedText}
                 </Typography>
-                
+
                 {/* Decorative elements */}
                 <motion.div
                     initial={{ scale: 0, opacity: 0 }}
@@ -94,7 +94,7 @@ const AnimatedName: React.FC = React.memo(() => {
                     }}
                 />
             </motion.div>
-            
+
             {/* Subtitle */}
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -111,7 +111,7 @@ const AnimatedName: React.FC = React.memo(() => {
                         opacity: 0.9,
                     }}
                 >
-                    Full Stack Developer & React Specialist
+                    Frontend Developer | React.js & Next.js Specialist
                 </Typography>
             </motion.div>
         </Box>

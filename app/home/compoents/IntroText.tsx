@@ -10,9 +10,9 @@ const IntroText: React.FC = () => (
       variants={itemVariants}
       transition={{ type: "spring", stiffness: 400, damping: 10 }}
     >
-      <Typography 
-        variant="h6" 
-        component="p" 
+      <Typography
+        variant="h6"
+        component="p"
         paragraph
         sx={{
           fontSize: 'clamp(1rem, 2.5vw, 1.25rem)',
@@ -21,8 +21,7 @@ const IntroText: React.FC = () => (
           marginBottom: '2rem',
         }}
       >
-        Passionate <span className="gradient-text font-bold">Full-Stack Developer</span> crafting seamless web experiences 
-        from front to back. I specialize in React, Next.js, Node.js, and modern web technologies.
+        <span className="gradient-text font-bold">Front-End Developer</span>  passionate about building fast, responsive, and visually engaging web applications using React.js, Next.js, and modern JavaScript tools.
       </Typography>
     </motion.div>
 
@@ -62,8 +61,8 @@ const IntroText: React.FC = () => (
       variants={itemVariants}
       transition={{ type: "spring", stiffness: 400, damping: 10, delay: 0.2 }}
     >
-      <Typography 
-        variant="body1" 
+      <Typography
+        variant="body1"
         paragraph
         sx={{
           fontSize: 'clamp(0.9rem, 2vw, 1.1rem)',
@@ -91,8 +90,8 @@ const IntroText: React.FC = () => (
       variants={itemVariants}
       transition={{ type: "spring", stiffness: 400, damping: 10, delay: 0.3 }}
     >
-      <Typography 
-        variant="body1" 
+      <Typography
+        variant="body1"
         paragraph
         sx={{
           fontSize: 'clamp(0.9rem, 2vw, 1.1rem)',
@@ -100,7 +99,7 @@ const IntroText: React.FC = () => (
           color: 'var(--muted-foreground)',
         }}
       >
-        Always learning and adapting to new challenges. When not coding, I&apos;m exploring tech, 
+        Always learning and adapting to new challenges. When not coding, I&apos;m exploring tech,
         enjoying music, and finding inspiration in everyday life. Ready to bring your ideas to life?{" "}
         <Link href="/contact" className="inline-block">
           <motion.span

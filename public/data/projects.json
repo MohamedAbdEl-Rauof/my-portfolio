@@ -36,6 +36,46 @@
       "category": "personal"
     },
     {
+      "id": 14,
+      "title": "Cozy Loops E-commerce Frontend",
+      "paragraph": "A modern, full-featured e-commerce platform for artisans and craft makers.",
+      "image": "/images/projects/cozyLoops.gif",
+      "about": "Cozy Loops is an artisan marketplace that connects you with local artisans across Egypt and the Middle East, offering unique, handcrafted pieces.",
+      "description": "Cozy Loops is a modern e-commerce platform built with Next.js, TypeScript, and Material-UI, designed for artisans and craft makers to showcase and sell their unique handmade products. The platform features a comprehensive shopping experience with product catalogs, reviews, real-time cart updates, and secure payment processing through Stripe. It supports multi-provider authentication, including Google OAuth, and offers a responsive design for all devices. Cozy Loops is committed to supporting local artisans by bringing their unique creations to a wider audience.",
+      "technologies": [
+        "Next.js",
+        "React.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Material UI",
+        "React Hook Form",
+        "Stripe",
+        "Socket.io"
+      ],
+      "website": "https://cozyloopstore.vercel.app",
+      "src": "",
+      "category": "freelance"
+    },
+    {
+      "id": 15,
+      "title": "Real-Time Chat Application",
+      "paragraph": "A modern, real-time messaging platform with rich features",
+      "image": "/images/projects/chat-app.gif",
+      "about": "A full-featured chat application with real-time messaging, file sharing, and user presence indicators",
+      "description": "Developed a comprehensive real-time chat application that enables seamless communication between users. The application features instant messaging with WebSocket technology for real-time updates, typing indicators, and read receipts. Users can create private and group conversations, share files and images, and receive instant notifications. The interface is designed with a modern, intuitive UI that provides an excellent user experience across all devices. The application includes user authentication, profile management, and chat history with message search functionality. Built with performance and scalability in mind, the chat system handles multiple concurrent connections efficiently while maintaining low latency for real-time communication.",
+      "technologies": [
+        "React.js",
+        "Socket.io",
+        "Node.js",
+        "MongoDB",
+        "Material UI",
+        "JWT Authentication"
+      ],
+      "website": "https://chat-app-pz4n.onrender.com",
+      "src": "https://github.com/MohamedAbdEl-Rauof/Chat-App.git",
+      "category": "freelance"
+    },
+    {
       "id": 2,
       "title": "Bouncing Dot Animation",
       "paragraph": "A simple and elegant CSS animation",
@@ -261,27 +301,6 @@
       "website": "https://dashboard.vconnct.me",
       "src": "",
       "category": "professional"
-    },
-    {
-      "id": 14,
-      "title": "Cozy Loops E-commerce Frontend",
-      "paragraph": "A modern, full-featured e-commerce platform for artisans and craft makers.",
-      "image": "/images/projects/cozyLoops.gif",
-      "about": "Cozy Loops is an artisan marketplace that connects you with local artisans across Egypt and the Middle East, offering unique, handcrafted pieces.",
-      "description": "Cozy Loops is a modern e-commerce platform built with Next.js, TypeScript, and Material-UI, designed for artisans and craft makers to showcase and sell their unique handmade products. The platform features a comprehensive shopping experience with product catalogs, reviews, real-time cart updates, and secure payment processing through Stripe. It supports multi-provider authentication, including Google OAuth, and offers a responsive design for all devices. Cozy Loops is committed to supporting local artisans by bringing their unique creations to a wider audience.",
-      "technologies": [
-        "Next.js",
-        "React.js",
-        "TypeScript",
-        "Tailwind CSS",
-        "Material UI",
-        "React Hook Form",
-        "Stripe",
-        "Socket.io"
-      ],
-      "website": "https://cozyloopstore.vercel.app",
-      "src": "",
-      "category": "freelance"
     }
   ]
 }

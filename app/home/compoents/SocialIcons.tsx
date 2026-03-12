@@ -6,6 +6,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import {itemVariants, socialIconAnimation} from './animations';
 
 const socialLinks = [
@@ -14,6 +15,7 @@ const socialLinks = [
     {icon: <EmailIcon/>, link: "mailto:mohamedabdelrauof112@gmail.com", label: "Email", color: "#ea4335"},
     {icon: <InstagramIcon/>, link: "https://www.instagram.com/mohamed.abdelrauoff/", label: "Instagram", color: "#e4405f"},
     {icon: <FacebookIcon/>, link: "https://www.facebook.com/profile.php?id=100040578035349", label: "Facebook", color: "#1877f2"},
+    {icon: <WhatsAppIcon/>, link: "https://wa.me/966569447804", label: "WhatsApp", color: "#25D366"},
 ];
 
 const SocialIcons: React.FC = () => (

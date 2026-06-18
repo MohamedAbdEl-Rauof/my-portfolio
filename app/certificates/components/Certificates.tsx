@@ -5,6 +5,7 @@ import {Box, Container, Typography, Grid, Button} from '@mui/material';
 import {AnimatePresence, motion} from 'framer-motion';
 import CertificateCard from './CertificateCard';
 import CertificateModal from './CertificateModal';
+import LoadingSpinner from '@/app/components/LoadingSpinner';
 
 export interface Certificate {
     id: number;
@@ -51,15 +52,18 @@ const Certificates = () => {
     const [selectedCategory, setSelectedCategory] = useState<string>('all');
     const [selectedCertificate, setSelectedCertificate] = useState<Certificate | null>(null);
     const [modalOpen, setModalOpen] = useState(false);
+    const [error, setError] = useState(false);
 
     useEffect(() => {
         const fetchCertificates = async () => {
             try {
                 const response = await fetch('/data/certificates.json');
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
                 const data = await response.json();
                 setCertificatesData(data);
             } catch (error) {
                 console.error('Error fetching certificates:', error);
+                setError(true);
             }
         };
 
@@ -80,9 +84,25 @@ const Certificates = () => {
         setSelectedCertificate(null);
     };
 
+    if (error) {
+        return (
+            <Container maxWidth="lg" sx={{py: 8}}>
+                <Box sx={{textAlign: 'center', py: 8}}>
+                    <Typography variant="h5" sx={{color: 'var(--secondary)', mb: 2}}>
+                        Couldn&apos;t load certificates
+                    </Typography>
+                    <Typography variant="body1" sx={{color: 'var(--secondary)'}}>
+                        Please refresh the page or try again later.
+                    </Typography>
+                </Box>
+            </Container>
+        );
+    }
+
     if (!certificatesData) {
         return (
             <Container maxWidth="lg" sx={{py: 8}}>
+                <LoadingSpinner message="Loading certificates..." />
             </Container>
         );
     }

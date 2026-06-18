@@ -127,21 +127,21 @@ const TimelineComp = React.memo(() => {
                                                                     {section.link.text}
                                                                 </MuiLink>
                                                             ) : (
-                                                                <NextLink href={section.link.url} passHref>
-                                                                    <MuiLink
-                                                                        aria-label={`Internal link to ${section.link.text}`}
-                                                                        sx={{
-                                                                            color: 'var(--secondary)',
-                                                                            textDecoration: 'underline',
-                                                                            '&:hover': {
-                                                                                color: 'var(--primary)',
-                                                                                backgroundColor: 'transparent',
-                                                                            },
-                                                                        }}
-                                                                    >
-                                                                        {section.link.text}
-                                                                    </MuiLink>
-                                                                </NextLink>
+                                                                <MuiLink
+                                                                    component={NextLink}
+                                                                    href={section.link.url}
+                                                                    aria-label={`Internal link to ${section.link.text}`}
+                                                                    sx={{
+                                                                        color: 'var(--secondary)',
+                                                                        textDecoration: 'underline',
+                                                                        '&:hover': {
+                                                                            color: 'var(--primary)',
+                                                                            backgroundColor: 'transparent',
+                                                                        },
+                                                                    }}
+                                                                >
+                                                                    {section.link.text}
+                                                                </MuiLink>
                                                             )}
                                                         </Box>
                                                         <Typography variant="body1" sx={{textAlign: 'left'}}>

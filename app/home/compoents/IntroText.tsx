@@ -21,7 +21,7 @@ const IntroText: React.FC = () => (
           marginBottom: '2rem',
         }}
       >
-        <span className="gradient-text font-bold">Front-End Developer</span>  passionate about building fast, responsive, and visually engaging web applications using React.js, Next.js, and modern JavaScript tools.
+        <span className="gradient-text font-bold">Full-Stack Developer</span> who builds fast, responsive web apps with React &amp; Next.js — and ships the backend, automation, and AI behind them. I design APIs, automate real-world workflows with n8n, and integrate AI assistants and messaging platforms that save teams hours every day.
       </Typography>
     </motion.div>
 
@@ -30,7 +30,7 @@ const IntroText: React.FC = () => (
       transition={{ type: "spring", stiffness: 400, damping: 10, delay: 0.1 }}
     >
       <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, justifyContent: 'center', marginBottom: '2rem' }}>
-        {['React', 'Next.js', 'TypeScript', 'Node.js', 'MongoDB', 'Tailwind CSS'].map((tech, index) => (
+        {['React', 'Next.js', 'TypeScript', 'Node.js', 'MongoDB', 'REST APIs', 'n8n', 'Automation', 'AI Integration'].map((tech, index) => (
           <motion.div
             key={tech}
             initial={{ opacity: 0, scale: 0.8 }}

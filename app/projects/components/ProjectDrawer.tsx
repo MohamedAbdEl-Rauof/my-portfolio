@@ -12,6 +12,10 @@ interface ProjectDrawerProps {
 }
 
 const ProjectDrawer = ({open, onClose, project}: ProjectDrawerProps) => {
+    const isVideo = !!project && (project.image.endsWith('.mp4') || project.image.endsWith('.webm'));
+    const hasWebsite = !!project?.website && project.website.trim() !== '';
+    const hasSrc = !!project?.src && project.src.trim() !== '';
+
     return (
         <Drawer
             anchor="right"
@@ -63,13 +67,27 @@ const ProjectDrawer = ({open, onClose, project}: ProjectDrawerProps) => {
                         <Typography variant="body1" paragraph sx={{mb: 2, color: 'var(--secondary)'}}>
                             {project.about}
                         </Typography>
-                        <CardMedia
-                            component="img"
-                            height="100%"
-                            image={project.image}
-                            alt={project.title}
-                            className="rounded-2xl"
-                        />
+                        {isVideo ? (
+                            <Box
+                                component="video"
+                                autoPlay
+                                loop
+                                muted
+                                playsInline
+                                className="rounded-2xl"
+                                sx={{width: '100%', height: 'auto', display: 'block'}}
+                            >
+                                <source src={project.image} type={`video/${project.image.split('.').pop()}`}/>
+                            </Box>
+                        ) : (
+                            <CardMedia
+                                component="img"
+                                height="100%"
+                                image={project.image}
+                                alt={project.title}
+                                className="rounded-2xl"
+                            />
+                        )}
                         <Typography variant="h6" gutterBottom sx={{fontWeight: 'bold', mt: 2, color: 'var(--primary)'}}>
                             About:
                         </Typography>
@@ -89,28 +107,30 @@ const ProjectDrawer = ({open, onClose, project}: ProjectDrawerProps) => {
                             ))}
                         </Box>
                         <Box sx={{display: 'flex', flexDirection: {xs: 'column', sm: 'row'}, gap: 2}}>
-                            <Button
-                                variant="contained"
-                                href={project.website}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                startIcon={<LaunchIcon/>}
-                                fullWidth
-                                sx={{
-                                    bgcolor: 'var(--primary)',
-                                    color: 'var(--background)',
-                                    '&:hover': {
-                                        transform: 'scale(1.05)',
-                                    },
-                                    transition: 'transform 0.3s ease-in-out',
-                                }}
-                            >
-                                Visit Website
-                            </Button>
-                            {project.src && project.src.trim() !== '' && (
+                            {hasWebsite && (
+                                <Button
+                                    variant="contained"
+                                    href={project.website!}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    startIcon={<LaunchIcon/>}
+                                    fullWidth
+                                    sx={{
+                                        bgcolor: 'var(--primary)',
+                                        color: 'var(--background)',
+                                        '&:hover': {
+                                            transform: 'scale(1.05)',
+                                        },
+                                        transition: 'transform 0.3s ease-in-out',
+                                    }}
+                                >
+                                    Visit Website
+                                </Button>
+                            )}
+                            {hasSrc && (
                                 <Button
                                     variant="outlined"
-                                    href={project.src}
+                                    href={project.src!}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     startIcon={<CodeIcon/>}
@@ -127,6 +147,18 @@ const ProjectDrawer = ({open, onClose, project}: ProjectDrawerProps) => {
                                 >
                                     View Source
                                 </Button>
+                            )}
+                            {!hasWebsite && !hasSrc && (
+                                <Typography
+                                    variant="body2"
+                                    sx={{
+                                        color: 'var(--muted-foreground)',
+                                        fontStyle: 'italic',
+                                        py: 1,
+                                    }}
+                                >
+                                    {project.note || 'Internal project — live walkthrough available on request.'}
+                                </Typography>
                             )}
                         </Box>
                     </Box>

@@ -111,7 +111,7 @@ const AnimatedName: React.FC = React.memo(() => {
                         opacity: 0.9,
                     }}
                 >
-                    Frontend Developer | React.js & Next.js Specialist
+                    Full-Stack Developer | Automation & AI
                 </Typography>
             </motion.div>
         </Box>

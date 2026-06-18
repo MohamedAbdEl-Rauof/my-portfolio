@@ -20,8 +20,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
     metadataBase: new URL('https://developer-moraouf.vercel.app'),
-    title: "Mohamed AbdEl-Rauof - Full Stack Developer | React & Next.js Expert",
-    description: "Portfolio of Mohamed AbdEl-Rauof, a passionate full-stack developer specializing in React, Next.js, Node.js, and modern web technologies. Explore my projects, certifications, and professional journey.",
+    title: "Mohamed AbdEl-Rauof - Full-Stack Developer | Automation & AI",
+    description: "Portfolio of Mohamed AbdEl-Rauof, a full-stack developer specializing in React, Next.js, and Node.js — building web apps, automation workflows (n8n), and AI-powered integrations. Explore my projects, certifications, and professional journey.",
     keywords: [
         "Mohamed AbdEl-Rauof",
         "Full Stack Developer",
@@ -34,6 +34,12 @@ export const metadata: Metadata = {
         "Node.js",
         "MongoDB",
         "Web Development",
+        "Automation",
+        "n8n",
+        "Workflow Automation",
+        "AI Integration",
+        "Chatbot",
+        "WhatsApp API",
         "Portfolio",
         "Software Engineer"
     ],
@@ -56,7 +62,7 @@ export const metadata: Metadata = {
         locale: 'en_US',
         url: 'https://developer-moraouf.vercel.app',
         title: 'Mohamed AbdEl-Rauof - Full Stack Developer',
-        description: 'Portfolio of Mohamed AbdEl-Rauof, a passionate full-stack developer specializing in React, Next.js, Node.js, and modern web technologies.',
+        description: 'Full-stack developer building web apps, automation workflows (n8n), and AI-powered integrations with React, Next.js, and Node.js.',
         siteName: 'Mohamed AbdEl-Rauof Portfolio',
         images: [
             {
@@ -70,7 +76,7 @@ export const metadata: Metadata = {
     twitter: {
         card: 'summary_large_image',
         title: 'Mohamed AbdEl-Rauof - Full Stack Developer',
-        description: 'Portfolio of Mohamed AbdEl-Rauof, a passionate full-stack developer specializing in React, Next.js, Node.js, and modern web technologies.',
+        description: 'Full-stack developer building web apps, automation workflows (n8n), and AI-powered integrations with React, Next.js, and Node.js.',
         images: ['/images/og-image.jpg'],
     },
 };
@@ -103,7 +109,7 @@ export default function RootLayout({
         <body
             className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
             <ErrorBoundary>
                 <PerformanceMonitor />
                 <NavBar/>

@@ -22,7 +22,7 @@
       "id": 1,
       "title": "Full-Stack E-commerce Platform",
       "paragraph": "A comprehensive, scalable e-commerce solution",
-      "image": "/images/projects/e-commerce-platform.gif",
+      "image": "/images/projects/e-commerce-platform.mp4",
       "about": "Developed a robust, full-stack e-commerce platform with advanced features and optimized performance",
       "description": "This project showcases a comprehensive e-commerce ecosystem, built with a responsive React frontend, a robust Node.js backend, and a scalable MongoDB database. Key features include real-time inventory tracking, secure user authentication with JWT, and an intuitive shopping cart system. The platform offers a seamless user experience with a user-friendly checkout process supporting multiple payment options. Advanced functionalities such as intelligent product search and personalized recommendations enhance the shopping experience. The architecture emphasizes scalability, performance, and security, making it suitable for both small businesses and large-scale operations. This full-stack solution demonstrates proficiency in modern web development practices and the ability to create complex, production-ready applications.",
       "technologies": [
@@ -39,7 +39,7 @@
       "id": 14,
       "title": "Cozy Loops E-commerce Frontend",
       "paragraph": "A modern, full-featured e-commerce platform for artisans and craft makers.",
-      "image": "/images/projects/cozyLoops.gif",
+      "image": "/images/projects/cozyLoops.mp4",
       "about": "Cozy Loops is an artisan marketplace that connects you with local artisans across Egypt and the Middle East, offering unique, handcrafted pieces.",
       "description": "Cozy Loops is a modern e-commerce platform built with Next.js, TypeScript, and Material-UI, designed for artisans and craft makers to showcase and sell their unique handmade products. The platform features a comprehensive shopping experience with product catalogs, reviews, real-time cart updates, and secure payment processing through Stripe. It supports multi-provider authentication, including Google OAuth, and offers a responsive design for all devices. Cozy Loops is committed to supporting local artisans by bringing their unique creations to a wider audience.",
       "technologies": [
@@ -60,7 +60,7 @@
       "id": 15,
       "title": "Real-Time Chat Application",
       "paragraph": "A modern, real-time messaging platform with rich features",
-      "image": "/images/projects/chat-app.gif",
+      "image": "/images/projects/chat-app.mp4",
       "about": "A full-featured chat application with real-time messaging, file sharing, and user presence indicators",
       "description": "Developed a comprehensive real-time chat application that enables seamless communication between users. The application features instant messaging with WebSocket technology for real-time updates, typing indicators, and read receipts. Users can create private and group conversations, share files and images, and receive instant notifications. The interface is designed with a modern, intuitive UI that provides an excellent user experience across all devices. The application includes user authentication, profile management, and chat history with message search functionality. Built with performance and scalability in mind, the chat system handles multiple concurrent connections efficiently while maintaining low latency for real-time communication.",
       "technologies": [
@@ -76,60 +76,10 @@
       "category": "freelance"
     },
     {
-      "id": 2,
-      "title": "Bouncing Dot Animation",
-      "paragraph": "A simple and elegant CSS animation",
-      "image": "/images/projects/bouncing-dot.gif",
-      "about": "Freelance project showcasing CSS animation skills",
-      "description": "Created a visually appealing bouncing dot animation using HTML and CSS. The project demonstrates proficiency in CSS animations and responsive design. This task was in a freelance yard in DEPI development to train us on how to learn from the freelance world.",
-      "technologies": [
-        "HTML",
-        "CSS",
-        "CSS Animations"
-      ],
-      "website": "https://example.com/bouncing-dot",
-      "src": "https://github.com/MohamedAbdEl-Rauof/bouncing-dot",
-      "category": "freelance"
-    },
-    {
-      "id": 3,
-      "title": "Pulsating Ring Animation",
-      "paragraph": "An eye-catching CSS animation effect",
-      "image": "/images/projects/pulsating-ring.gif",
-      "about": "Freelance project demonstrating advanced CSS animation techniques",
-      "description": "Developed a captivating pulsating ring animation using HTML and CSS. This project showcases the ability to create complex, smooth animations with pure CSS, enhancing user interface design. This task was in a freelance yard in DEPI development to train us on how to learn from the freelance world.",
-      "technologies": [
-        "HTML",
-        "CSS",
-        "CSS Animations",
-        "Responsive Design"
-      ],
-      "website": "https://example.com/pulsating-ring",
-      "src": "https://github.com/MohamedAbdEl-Rauof/pulsating-ring",
-      "category": "freelance"
-    },
-    {
-      "id": 4,
-      "title": "Spinning Circle Animation",
-      "paragraph": "A smooth and dynamic CSS loading animation",
-      "image": "/images/projects/spinning-circle.gif",
-      "about": "Freelance project showcasing CSS animation for loading indicators",
-      "description": "Developed a sleek spinning circle animation using HTML and CSS. This project demonstrates the ability to create efficient, lightweight loading animations that enhance user experience during wait times. This task was in a freelance yard in DEPI development to train us on how to learn from the freelance world.",
-      "technologies": [
-        "HTML",
-        "CSS",
-        "CSS Animations",
-        "Responsive Design"
-      ],
-      "website": "https://example.com/spinning-circle",
-      "src": "https://github.com/MohamedAbdEl-Rauof/spinning-circle",
-      "category": "freelance"
-    },
-    {
       "id": 5,
       "title": "Vconnct Website",
       "paragraph": "A professional platform connecting users through a seamless digital experience.",
-      "image": "/images/projects/vonnctWebsite.gif",
+      "image": "/images/projects/vonnctWebsite.mp4",
       "about": "Collaborated with a development team to build key components of a professional connection platform.",
       "description": "Worked as part of a team of developers on the Vconnct website project. My primary contributions included implementing secure Single Sign-On (SSO) authentication, building the login and registration systems, and co-developing various frontend components and 'Contact Us' forms. Additionally, I handled the integration and management of Strapi, a headless CMS, to facilitate dynamic content management. The project emphasized clean architecture, reusable components, and a responsive, user-centered design approach using Next.js, TypeScript, Tailwind CSS, and Strapi. This experience highlights my ability to collaborate within a team, build secure authentication systems, and manage content effectively in professional-grade applications.",
       "technologies": [
@@ -147,7 +97,7 @@
       "id": 6,
       "title": "VCloud Control Panel",
       "paragraph": "VCloud is a developer-focused project that provides access to the Vconnct API, enabling the creation of virtual meetings and collaborative tools.",
-      "image": "/images/projects/vcloud.gif",
+      "image": "/images/projects/vcloud.mp4",
       "about": "Collaborated with a development team to build key components of a professional connection platform featuring beautiful animations and an intuitive user experience.",
       "description": "Contributed to the VCloud Control Panel project as part of a cross-functional development team. My key responsibilities included implementing secure Single Sign-On (SSO) authentication, building the login and registration systems, and integrating multiple payment gateways such as Stripe, Fawry, and Paymob. I also developed automated receipt and invoice generation for users upon successful payment completion, ensuring a seamless and professional user experience.",
       "technologies": [
@@ -165,7 +115,7 @@
       "id": 7,
       "title": "E-commerce Admin Dashboard",
       "paragraph": "A comprehensive admin panel for managing e-commerce operations",
-      "image": "/images/projects/e-commerce-controlpanal.gif",
+      "image": "/images/projects/e-commerce-controlpanal.mp4",
       "about": "A powerful administrative dashboard for complete e-commerce management with real-time analytics and inventory control",
       "description": "Developed a feature-rich admin dashboard that serves as the nerve center for e-commerce operations. This control panel provides administrators with comprehensive tools to manage products, track inventory, process orders, and manage user accounts. The dashboard features an intuitive interface with real-time analytics, sales reports, and customer insights to facilitate data-driven decision making. Security is implemented through role-based access control, ensuring that sensitive operations are only accessible to authorized personnel. The system includes automated notifications for low stock items and order status changes. For demonstration purposes, you can access the dashboard using the credentials: admin@gmail.com (password: admin123456). This project demonstrates my ability to create complex administrative interfaces that balance functionality with user experience.",
       "technologies": [
@@ -183,7 +133,7 @@
       "id": 8,
       "title": "Invest in Tech",
       "paragraph": "A landing page designed to guide users through the benefits of investing in technology.",
-      "image": "/images/projects/investInTech.gif",
+      "image": "/images/projects/investInTech.mp4",
       "about": "Professional project developed to promote tech investment opportunities through an engaging and informative user experience.",
       "description": "Developed as part of my role at Variance, this landing page serves as a guided introduction for users exploring technology investment. The project includes several informative and visually appealing components designed to educate users on the benefits of tech investments. I contributed to the frontend development using Next.js and Tailwind CSS, focusing on responsive layout, smooth animations, and a user-centric design approach to maximize clarity and engagement.",
       "technologies": [
@@ -191,15 +141,16 @@
         "Next.js",
         "Tailwind CSS"
       ],
-      "website": "https://investntech.net",
+      "website": "",
       "src": "",
+      "note": "Live demo no longer hosted by the client — preview shown above.",
       "category": "professional"
     },
     {
-      "id": 8,
+      "id": 16,
       "title": "Vcloud Landing Page",
       "paragraph": "#1 White-Label Audio/Video Integration for All Platforms",
-      "image": "/images/projects/vcloudLandingPage.gif",
+      "image": "/images/projects/vcloudLandingPage.mp4",
       "about": "Professional project developed to promote Vcloud's comprehensive communication solutions through an engaging and informative user experience.",
       "description": "Vcloud offers a developer-first solution for seamless real-time video integration, featuring powerful APIs and developer-friendly documentation. The platform provides a complete solution to build modern communication apps with real-time engagement features like video, audio, screen sharing, chat panel, and streaming. Vcloud's pay-as-you-go model starts with 2,000 free credits per month, making it flexible for developers. The platform ensures top-tier security with end-to-end encryption and customizable options like password protection. Vcloud's infrastructure supports exceptional communication experiences with sub-100ms latency and unmatched performance. The customer success process includes understanding goals, onboarding teams, co-building, code review, and scaling support.",
       "technologies": [
@@ -209,15 +160,16 @@
         "Radix UI",
         "React Hook Form"
       ],
-      "website": "https://pages.vconnct.com/en/vcloud-landing-page",
+      "website": "",
       "src": "",
+      "note": "Live demo no longer hosted by the client — preview shown above.",
       "category": "professional"
     },
     {
       "id": 9,
       "title": "Education Landing Page",
       "paragraph": "Online Classrooms with Arabic identity",
-      "image": "/images/projects/educationLandingPage.gif",
+      "image": "/images/projects/educationLandingPage.mp4",
       "about": "Professional project developed to enhance virtual learning environments with V.Connect, an Arabic meeting tool.",
       "description": "Transform your virtual classes into interactive and engaging learning environments with V.Connect. This platform allows educators to monitor and analyze student performance effectively. Key features include an analytics dashboard for insights into student engagement, comprehensive controls for managing participation, high-definition audio and video, and an interactive whiteboard for enhanced lesson delivery. The platform also offers fixed room links for easy access and recording capabilities to allow students to rewatch lectures. Experience the difference in communication and elevate your educational institution to new heights.",
       "technologies": [
@@ -226,15 +178,16 @@
         "Tailwind CSS",
         "Radix UI"
       ],
-      "website": "https://pages.vconnct.com/en/education",
+      "website": "",
       "src": "",
+      "note": "Live demo no longer hosted by the client — preview shown above.",
       "category": "professional"
     },
     {
       "id": 10,
       "title": "Ahl Al Quran Landing Page",
       "paragraph": "First platform in the Arab and Islamic world for Quran teachers and students, offering an unlimited interactive teaching experience online!",
-      "image": "/images/projects/ahlAlQuranLandingPage.gif",
+      "image": "/images/projects/ahlAlQuranLandingPage.mp4",
       "about": "Professional project developed to enhance virtual learning environments for Quranic education with V.Connct, an Arabic meeting tool.",
       "description": "V.Connct provides an engaging and comprehensive educational experience for Quran teachers and students, allowing teaching without the constraints of time or place. The platform features an interactive whiteboard for Tajweed and pronunciation training, screen sharing for direct content display, breakout rooms for group discussions, and customizable student role permissions. V.Connct offers affordable pricing with flexible payment options, including local currency payments. The platform also includes polls for student evaluation and encourages competition and interaction. V.Connct is a 100% Arabic meeting tool, offering features like room lock settings, STT/TTS solutions, analysis reports, and more, making it a superior choice over Zoom for Arabic-speaking users.",
       "technologies": [
@@ -243,15 +196,16 @@
         "Tailwind CSS",
         "Radix UI"
       ],
-      "website": "https://pages.vconnct.com/ar/ahl-al-quran",
+      "website": "",
       "src": "",
+      "note": "Live demo no longer hosted by the client — preview shown above.",
       "category": "professional"
     },
     {
       "id": 11,
       "title": "Comparison Zoom Landing Page",
       "paragraph": "Why Settle for Generic When You Can Have Tailored?",
-      "image": "/images/projects/comparisonZoomLandingPage.gif",
+      "image": "/images/projects/comparisonZoomLandingPage.mp4",
       "about": "Professional project developed to highlight the advantages of V.Connct over Zoom, focusing on Arabic language support and enhanced security.",
       "description": "V.Connct offers a fully Arabic, privacy-focused platform that elevates online meetings beyond Zoom's limitations. Key features include full Arabic language support, end-to-end encryption, and protection against cyber attacks. V.Connct provides seamless API integration, flexible pricing options, and supports up to 400 participants, making it ideal for large-scale events. The platform is designed to offer a superior meeting experience with features like room lock settings, STT/TTS solutions, analysis reports, and more. V.Connct is a 100% Arabic meeting tool, blending innovation and flexibility to bring real meeting results to the virtual world with ease.",
       "technologies": [
@@ -260,15 +214,16 @@
         "Tailwind CSS",
         "Radix UI"
       ],
-      "website": "https://pages.vconnct.com/en/comparison-zoom",
+      "website": "",
       "src": "",
+      "note": "Live demo no longer hosted by the client — preview shown above.",
       "category": "professional"
     },
     {
       "id": 12,
       "title": "Tawteen",
       "paragraph": "A comprehensive Arab initiative for independent technological alternatives.",
-      "image": "/images/projects/tawteen.gif",
+      "image": "/images/projects/tawteen.mp4",
       "about": "Tawteen is an Arab initiative aimed at building independent technological alternatives developed within the region, aligned with our identity and needs.",
       "description": "Tawteen Technology is a comprehensive Arab initiative that aims to build independent technological alternatives developed within the region, aligned with our identity and needs. The initiative was launched in response to the clear reality that today's tools are made outside our Arab region, used to shape our awareness and control our data without real representation for us. Our goal is not only to reduce dependence on the outside but to regain the ability to make technical decisions and enable institutions and individuals to own their tools, in their language, and from their reality. We believe that privacy is a fundamental right and digital awareness is the foundation of freedom. Therefore, we simplify knowledge and open its doors to everyone, aspiring to digital sovereignty that protects our data and respects our identity and values without imposition. Technology is a tool, and the decision is in our hands to choose and direct it, not to be led by it and follow it.",
       "technologies": [
@@ -288,7 +243,7 @@
       "id": 13,
       "title": "Vconnct Dashboard",
       "paragraph": "Manage meetings, create, edit, delete rooms, and handle subscriptions.",
-      "image": "/images/projects/vconnctDashboard.gif",
+      "image": "/images/projects/vconnctDashboard.mp4",
       "about": "The Vconnct Dashboard is a comprehensive tool for managing virtual meetings and subscriptions, tailored for the Arab region.",
       "description": "The Vconnct Dashboard provides a robust platform for managing virtual meetings, allowing users to create, edit, and delete meeting rooms with ease. It also includes features for managing subscriptions, ensuring users have access to the services they need. The dashboard is designed with a user-friendly interface, offering seamless navigation and efficient management of meeting logistics. Built with a focus on privacy and security, the Vconnct Dashboard supports end-to-end encryption and customizable user permissions, making it a reliable choice for organizations looking to enhance their virtual communication capabilities.",
       "technologies": [
@@ -300,6 +255,114 @@
       ],
       "website": "https://dashboard.vconnct.me",
       "src": "",
+      "category": "professional"
+    },
+    {
+      "id": 17,
+      "title": "WhatsApp Patient Communication Platform",
+      "paragraph": "Centralized WhatsApp support for a medical complex, built on Chatwoot.",
+      "image": "/images/projects/placeholder.svg",
+      "about": "An official WhatsApp Business platform that unifies patient conversations and helps the team respond faster and more consistently.",
+      "description": "Verified the medical complex's landline as an official WhatsApp Business number and built a patient-communication platform on top of Chatwoot. The system centralizes every incoming conversation into a single shared inbox, lets staff collaborate on replies, and standardizes responses with saved replies and routing. This replaced scattered, personal-phone messaging with an auditable, team-based workflow — improving response time and the quality of patient communication across the complex.",
+      "technologies": [
+        "Chatwoot",
+        "WhatsApp Business API",
+        "Docker",
+        "Node.js",
+        "Webhooks"
+      ],
+      "website": "",
+      "src": "",
+      "note": "Internal healthcare system — live walkthrough available on request.",
+      "category": "professional"
+    },
+    {
+      "id": 18,
+      "title": "Lab Results Automation (n8n)",
+      "paragraph": "Automated delivery of laboratory results to patients.",
+      "image": "/images/projects/placeholder.svg",
+      "about": "An n8n automation that sends lab results to patients automatically, removing manual, error-prone hand-delivery.",
+      "description": "Designed and built an automated workflow with n8n that picks up finalized laboratory results and delivers them to patients automatically, instead of staff sending each result by hand. The pipeline connects the lab's output to the complex's messaging channels via webhooks and APIs, with conditional routing and notifications. It cut turnaround time, reduced human error, and freed lab staff from repetitive manual work.",
+      "technologies": [
+        "n8n",
+        "REST APIs",
+        "Webhooks",
+        "Automation"
+      ],
+      "website": "",
+      "src": "",
+      "note": "Internal healthcare automation — live walkthrough available on request.",
+      "category": "professional"
+    },
+    {
+      "id": 19,
+      "title": "AI Auto-Reply Assistant (Typebot)",
+      "paragraph": "AI-powered assistant that answers common patient inquiries instantly.",
+      "image": "/images/projects/placeholder.svg",
+      "about": "A conversational assistant that handles routine patient questions automatically, around the clock.",
+      "description": "Built an AI-driven auto-reply assistant using Typebot to handle the most common patient inquiries — hours, services, directions, and booking guidance — without staff involvement. The bot provides instant, consistent answers and hands off to a human agent when a conversation needs it. Integrated with the complex's WhatsApp channel, it reduced repetitive workload on the front desk while keeping patients informed at any time of day.",
+      "technologies": [
+        "Typebot",
+        "AI / LLM",
+        "WhatsApp Business API",
+        "Automation"
+      ],
+      "website": "",
+      "src": "",
+      "note": "Internal healthcare system — live walkthrough available on request.",
+      "category": "professional"
+    },
+    {
+      "id": 20,
+      "title": "Ultrasound Imaging Transfer System",
+      "paragraph": "Networked image hand-off for the ultrasound department, replacing flash drives.",
+      "image": "/images/projects/placeholder.svg",
+      "about": "A program that moves ultrasound images over the network instead of physically carrying them on USB drives.",
+      "description": "Developed a system for the ultrasound (sonar) department that transfers captured images directly over the network to where they are needed, replacing the old process of copying studies onto flash drives and walking them between rooms. I also built a companion tool that lets the ultrasound team send completed results straight to patients. Together these removed a manual bottleneck, sped up reporting, and reduced the risk of lost or mixed-up studies.",
+      "technologies": [
+        "Node.js",
+        "Networking",
+        "Automation",
+        "File Transfer"
+      ],
+      "website": "",
+      "src": "",
+      "note": "Internal healthcare system — live walkthrough available on request.",
+      "category": "professional"
+    },
+    {
+      "id": 21,
+      "title": "Dental Lab Accounting App",
+      "paragraph": "Custom accounting software for the dental laboratory.",
+      "image": "/images/projects/placeholder.svg",
+      "about": "A tailored accounting application that tracks the dental lab's work, costs, and billing.",
+      "description": "Built a custom accounting application for the medical complex's dental laboratory to track jobs, materials, costs, and billing in one place — replacing manual bookkeeping. The app gives the lab clear, reliable financial records and makes day-to-day reconciliation fast and accurate, tailored to how the lab actually operates rather than forcing a generic off-the-shelf tool.",
+      "technologies": [
+        "React",
+        "Node.js",
+        "MySQL"
+      ],
+      "website": "",
+      "src": "",
+      "note": "Internal healthcare system — live walkthrough available on request.",
+      "category": "professional"
+    },
+    {
+      "id": 22,
+      "title": "qrrib — Dashboard & Website",
+      "paragraph": "Client dashboard and marketing website.",
+      "image": "/images/projects/placeholder.svg",
+      "about": "Designed and built the qrrib product dashboard and its public-facing website.",
+      "description": "Delivered both the qrrib management dashboard and its public marketing website. The dashboard provides an admin interface for managing the product's day-to-day operations, while the website presents the brand and converts visitors. Built with a modern React/Next.js stack and a reusable component system, with a responsive, user-centered design across both surfaces.",
+      "technologies": [
+        "Next.js",
+        "React.js",
+        "TypeScript",
+        "Tailwind CSS"
+      ],
+      "website": "",
+      "src": "",
+      "note": "Client project — live walkthrough available on request.",
       "category": "professional"
     }
   ]

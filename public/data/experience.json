@@ -1,0 +1,34 @@
+{
+  "title": "Experience",
+  "roles": [
+    {
+      "company": "Nova International Medical Complex",
+      "role": "Full-Stack Developer & IT Systems Lead",
+      "period": "Apr 2026 – Present",
+      "location": "Saudi Arabia",
+      "summary": "Trusted by management to own the complex's internal systems and IT — I build software, automate clinical and administrative workflows, and integrate AI and messaging tools that save the team hours every day.",
+      "highlights": [
+        "Appointed by management as the responsible owner of IT and social-media account security across the complex.",
+        "Led research, vendor meetings, and price-quote comparison for a Hospital Information System (HIS), a patient Queue Management System, and the complex's website — driving systems-analysis and procurement decisions.",
+        "Verified the complex's official WhatsApp Business number and built a WhatsApp patient-communication platform on Chatwoot to centralize conversations and improve response quality.",
+        "Automated lab result delivery with n8n, so results reach patients automatically instead of being sent by hand.",
+        "Deployed an AI auto-reply assistant (Typebot) that answers common patient inquiries instantly.",
+        "Built a networked transfer system for the ultrasound (sonar) department, replacing manual flash-drive handoffs, plus a tool for the team to send results directly to patients.",
+        "Developed a custom accounting application for the dental laboratory.",
+        "Provide hands-on hardware and device troubleshooting and support across branches."
+      ]
+    },
+    {
+      "company": "Vconnct",
+      "role": "Front-End / Full-Stack Developer",
+      "period": "Jun 2024 – Mar 2026",
+      "location": "Egypt",
+      "summary": "Built product and marketing experiences for an Arabic-first real-time communication platform and its clients.",
+      "highlights": [
+        "Implemented Single Sign-On (SSO) authentication, login/registration, and multi-gateway payments (Stripe, Fawry, Paymob) with automated invoicing for the Vconnct/VCloud platform.",
+        "Developed the Vconnct dashboard and multiple high-conversion marketing landing pages with Next.js, TypeScript, and Tailwind CSS.",
+        "Built client dashboards and websites — including the qrrib dashboard and website — and integrated Strapi for dynamic content management."
+      ]
+    }
+  ]
+}

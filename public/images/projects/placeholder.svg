@@ -1,0 +1,15 @@
+<svg width="800" height="500" viewBox="0 0 800 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="800" y2="500" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1f2937"/>
+      <stop offset="1" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#g)"/>
+  <g fill="none" stroke="#64748b" stroke-width="3" opacity="0.5">
+    <rect x="300" y="190" width="200" height="140" rx="12"/>
+    <circle cx="350" cy="235" r="16"/>
+    <path d="M315 320 L385 260 L435 300 L485 250 L485 320 Z" fill="#64748b" stroke="none" opacity="0.8"/>
+  </g>
+  <text x="400" y="385" font-family="system-ui, sans-serif" font-size="26" font-weight="600" fill="#94a3b8" text-anchor="middle">Preview coming soon</text>
+</svg>

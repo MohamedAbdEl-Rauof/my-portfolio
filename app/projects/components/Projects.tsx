@@ -16,9 +16,10 @@ export interface Project {
     about: string;
     description: string;
     technologies: string[];
-    website: string;
-    src: string;
+    website?: string;
+    src?: string;
     category: string;
+    note?: string;
 }
 
 const containerVariants = {

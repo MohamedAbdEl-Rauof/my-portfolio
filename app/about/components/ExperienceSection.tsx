@@ -1,9 +1,25 @@
+"use client";
+
 import React from 'react';
 import {Box, Card, CardContent, Chip, Container, styled, Typography} from '@mui/material';
 import {Timeline, TimelineConnector, TimelineContent, TimelineDot, TimelineItem, TimelineSeparator} from '@mui/lab';
 import WorkOutlineIcon from '@mui/icons-material/WorkOutline';
-import experienceData from '../../../public/data/experience.json';
 import {motion} from 'framer-motion';
+import {useLocalizedData} from '@/app/i18n/useLocalizedData';
+
+interface ExperienceRole {
+    company: string;
+    role: string;
+    period: string;
+    location: string;
+    summary: string;
+    highlights: string[];
+}
+
+interface ExperienceData {
+    title: string;
+    roles: ExperienceRole[];
+}
 
 const StyledTimeline = styled(Timeline)(() => ({
     padding: 0,
@@ -38,6 +54,10 @@ const itemVariants = {
 };
 
 const ExperienceSection = React.memo(() => {
+    const {data: experienceData} = useLocalizedData<ExperienceData>('experience');
+
+    if (!experienceData) return null;
+
     return (
         <Container maxWidth="lg" sx={{py: {xs: 8, md: 12}}}>
             <motion.div

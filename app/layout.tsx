@@ -1,11 +1,12 @@
 import type {Metadata, Viewport} from "next";
-import {Geist, Geist_Mono} from "next/font/google";
+import {Geist, Geist_Mono, IBM_Plex_Sans_Arabic} from "next/font/google";
 import "./globals.css";
 import {ThemeProvider} from 'next-themes';
 import AnimatedCursor from "react-animated-cursor";
 import NavBar from "@/app/components/NavBar";
 import ErrorBoundary from "@/app/components/ErrorBoundary";
 import PerformanceMonitor from "@/app/components/PerformanceMonitor";
+import AppProviders from "@/app/providers/AppProviders";
 
 
 const geistSans = Geist({
@@ -16,6 +17,12 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
     variable: "--font-geist-mono",
     subsets: ["latin"],
+});
+
+const ibmPlexArabic = IBM_Plex_Sans_Arabic({
+    variable: "--font-arabic",
+    subsets: ["arabic"],
+    weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -107,15 +114,17 @@ export default function RootLayout({
             <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
         </head>
         <body
-            className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+            className={`${geistSans.variable} ${geistMono.variable} ${ibmPlexArabic.variable} antialiased`}
         >
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
-            <ErrorBoundary>
-                <PerformanceMonitor />
-                <NavBar/>
-                {children}
-            </ErrorBoundary>
-        </ThemeProvider>
+        <AppProviders>
+            <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
+                <ErrorBoundary>
+                    <PerformanceMonitor />
+                    <NavBar/>
+                    {children}
+                </ErrorBoundary>
+            </ThemeProvider>
+        </AppProviders>
         <AnimatedCursor
             innerSize={8}
             outerSize={35}

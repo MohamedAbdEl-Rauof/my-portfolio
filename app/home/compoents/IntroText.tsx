@@ -1,7 +1,10 @@
+"use client";
+
 import React from "react";
 import { motion } from "framer-motion";
 import { Box, Typography, Chip } from "@mui/material";
 import Link from "next/link";
+import { Trans } from "react-i18next";
 import { itemVariants } from "./animations";
 
 const IntroText: React.FC = () => (
@@ -21,7 +24,10 @@ const IntroText: React.FC = () => (
           marginBottom: '2rem',
         }}
       >
-        <span className="gradient-text font-bold">Full-Stack Developer</span> who builds fast, responsive web apps with React &amp; Next.js — and ships the backend, automation, and AI behind them. I design APIs, automate real-world workflows with n8n, and integrate AI assistants and messaging platforms that save teams hours every day.
+        <Trans
+          i18nKey="home.intro"
+          components={{highlight: <span className="gradient-text font-bold" />}}
+        />
       </Typography>
     </motion.div>
 
@@ -71,18 +77,19 @@ const IntroText: React.FC = () => (
           marginBottom: '2rem',
         }}
       >
-        Check out my{" "}
-        <Link href="/projects" style={{ display: 'inline-block', textDecoration: 'none' }}>
-          <motion.span
-            className="font-bold text-primary hover:underline cursor-pointer"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            aria-label="View my projects"
-          >
-            Projects
-          </motion.span>
-        </Link>{" "}
-        to see how I turn complex problems into elegant, user-friendly solutions.
+        <Trans
+          i18nKey="home.projectsLine"
+          components={{
+            plink: (
+              <Link
+                href="/projects"
+                className="font-bold text-primary hover:underline cursor-pointer"
+                style={{ textDecoration: 'none' }}
+                aria-label="View my projects"
+              />
+            ),
+          }}
+        />
       </Typography>
     </motion.div>
 
@@ -99,19 +106,19 @@ const IntroText: React.FC = () => (
           color: 'var(--muted-foreground)',
         }}
       >
-        Always learning and adapting to new challenges. When not coding, I&apos;m exploring tech,
-        enjoying music, and finding inspiration in everyday life. Ready to bring your ideas to life?{" "}
-        <Link href="/contact" style={{ display: 'inline-block', textDecoration: 'none' }}>
-          <motion.span
-            className="font-bold text-primary hover:underline cursor-pointer"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            aria-label="Contact me"
-          >
-            Let&apos;s connect
-          </motion.span>
-        </Link>{" "}
-        and create something amazing together.
+        <Trans
+          i18nKey="home.closingLine"
+          components={{
+            clink: (
+              <Link
+                href="/contact"
+                className="font-bold text-primary hover:underline cursor-pointer"
+                style={{ textDecoration: 'none' }}
+                aria-label="Contact me"
+              />
+            ),
+          }}
+        />
       </Typography>
     </motion.div>
   </Box>

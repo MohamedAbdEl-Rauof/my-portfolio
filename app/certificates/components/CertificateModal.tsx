@@ -2,6 +2,7 @@ import AnimatedCursor from 'react-animated-cursor';
 import {Box, Button, CardMedia, Chip, Drawer, IconButton, Typography} from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import LaunchIcon from '@mui/icons-material/Launch';
+import {useTranslation} from 'react-i18next';
 
 export interface Certificate {
     id: number;
@@ -22,6 +23,7 @@ interface CertificateModalProps {
 }
 
 const CertificateModal = ({open, onClose, certificate}: CertificateModalProps) => {
+    const {t} = useTranslation();
     return (
         <Drawer
             anchor="right"
@@ -61,7 +63,7 @@ const CertificateModal = ({open, onClose, certificate}: CertificateModalProps) =
                         <ArrowBackIcon/>
                     </IconButton>
                     <Typography variant="h6" sx={{fontWeight: 'bold', color: 'var(--primary)'}}>
-                        Certificate Details
+                        {t('certificates.details')}
                     </Typography>
                 </Box>
 
@@ -76,8 +78,8 @@ const CertificateModal = ({open, onClose, certificate}: CertificateModalProps) =
                         
                         <Box sx={{mb: 2, display: 'flex', alignItems: 'center', gap: 1}}>
                             <Typography variant="body2" sx={{color: 'var(--secondary)'}}>
-                                Issued: {new Date(certificate.date).toLocaleDateString('en-US', { 
-                                    year: 'numeric', 
+                                {t('certificates.issued')}: {new Date(certificate.date).toLocaleDateString(undefined, {
+                                    year: 'numeric',
                                     month: 'long',
                                     day: 'numeric'
                                 })}
@@ -98,14 +100,14 @@ const CertificateModal = ({open, onClose, certificate}: CertificateModalProps) =
                         />
                         
                         <Typography variant="h6" gutterBottom sx={{fontWeight: 'bold', mb: 2, color: 'var(--primary)'}}>
-                            Description:
+                            {t('certificates.description')}
                         </Typography>
                         <Typography variant="body2" paragraph sx={{mb: 3, color: 'var(--secondary)', lineHeight: 1.6}}>
                             {certificate.description}
                         </Typography>
                         
                         <Typography variant="h6" gutterBottom sx={{fontWeight: 'bold', mb: 2, color: 'var(--primary)'}}>
-                            Skills & Technologies:
+                            {t('certificates.skills')}
                         </Typography>
                         <Box sx={{mb: 3}}>
                             {certificate.skills.map((skill: string, index: number) => (
@@ -141,7 +143,7 @@ const CertificateModal = ({open, onClose, certificate}: CertificateModalProps) =
                                     transition: 'transform 0.3s ease-in-out',
                                 }}
                             >
-                                View Full Size
+                                {t('certificates.viewFullSize')}
                             </Button>
                         </Box>
                     </Box>

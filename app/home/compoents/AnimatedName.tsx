@@ -1,32 +1,45 @@
+"use client";
+
 import React, { useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { Box, Typography } from '@mui/material';
+import { useTranslation } from 'react-i18next';
+import { useLanguage } from '@/app/providers/AppProviders';
 import { letterAnimation, textAnimation } from './animations';
 
 const AnimatedName: React.FC = React.memo(() => {
-    const animatedText = useMemo(() => (
-        "I'M Mohamed Abd El-Raouf".toUpperCase().split("").map((char, index) => (
+    const { t } = useTranslation();
+    const { dir } = useLanguage();
+
+    const animatedText = useMemo(() => {
+        const fullText = `${t('home.greeting')} ${t('home.name')}`;
+        // Arabic is cursive — splitting into characters breaks letter joining.
+        // Animate per-word for RTL (preserves shaping) and per-letter for LTR.
+        const isArabic = dir === 'rtl';
+        const tokens = isArabic ? fullText.split(' ') : fullText.toUpperCase().split('');
+
+        return tokens.map((token, index) => (
             <motion.span
-                key={`${char}-${index}`}
+                key={`${token}-${index}`}
                 variants={letterAnimation}
                 style={{
                     display: 'inline-block',
-                    marginRight: char === ' ' ? '0.25em' : '0',
+                    marginRight: isArabic ? '0.25em' : (token === ' ' ? '0.25em' : '0'),
                     fontSize: 'clamp(1.5rem, 4vw, 3rem)',
                     fontWeight: '800',
                     background: 'var(--gradient-primary)',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
                     backgroundClip: 'text',
-                    letterSpacing: '0.05em',
+                    letterSpacing: isArabic ? 'normal' : '0.05em',
                     willChange: 'transform',
                     transform: 'translateZ(0)',
                 }}
             >
-                {char}
+                {token === ' ' ? ' ' : token}
             </motion.span>
-        ))
-    ), []);
+        ));
+    }, [t, dir]);
 
     return (
         <Box
@@ -111,7 +124,7 @@ const AnimatedName: React.FC = React.memo(() => {
                         opacity: 0.9,
                     }}
                 >
-                    Full-Stack Developer | Automation & AI
+                    {t('home.role')}
                 </Typography>
             </motion.div>
         </Box>

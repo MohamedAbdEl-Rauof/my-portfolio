@@ -1,11 +1,16 @@
+"use client";
+
 import React from "react";
 import { motion } from "framer-motion";
 import { Button, Box } from "@mui/material";
 import DownloadIcon from "@mui/icons-material/Download";
 import DescriptionIcon from "@mui/icons-material/Description";
+import { useTranslation } from "react-i18next";
 import { itemVariants } from "./animations";
 
-const CVButton: React.FC = () => (
+const CVButton: React.FC = () => {
+  const { t } = useTranslation();
+  return (
   <motion.div variants={itemVariants}>
     <Box
       sx={{
@@ -65,7 +70,7 @@ const CVButton: React.FC = () => (
           }}
           aria-label="View my CV (opens in a new tab)"
         >
-          View My CV
+          {t('home.viewCV')}
         </Button>
       </motion.div>
 
@@ -105,11 +110,12 @@ const CVButton: React.FC = () => (
           }}
           aria-label="Download my CV"
         >
-          Download CV
+          {t('home.downloadCV')}
         </Button>
       </motion.div>
     </Box>
   </motion.div>
-);
+  );
+};
 
 export default CVButton;

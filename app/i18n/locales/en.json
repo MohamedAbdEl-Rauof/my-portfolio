@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "about": "About",
+    "projects": "Projects",
+    "certificates": "Certificates",
+    "contact": "Contact",
+    "home": "Home",
+    "language": "Language"
+  },
+  "home": {
+    "greeting": "I'M",
+    "name": "Mohamed Abd El-Raouf",
+    "role": "Full-Stack Developer | Automation & AI",
+    "intro": "<highlight>Full-Stack Developer</highlight> who builds fast, responsive web apps with React & Next.js — and ships the backend, automation, and AI behind them. I design APIs, automate real-world workflows with n8n, and integrate AI assistants and messaging platforms that save teams hours every day.",
+    "projectsLine": "Check out my <plink>Projects</plink> to see how I turn complex problems into elegant, user-friendly solutions.",
+    "closingLine": "Always learning and adapting to new challenges. When not coding, I'm exploring tech, enjoying music, and finding inspiration in everyday life. Ready to bring your ideas to life? <clink>Let's connect</clink> and create something amazing together.",
+    "viewCV": "View My CV",
+    "downloadCV": "Download CV",
+    "aboutMe": "See More About Me",
+    "connectWithMe": "Connect with me"
+  },
+  "projects": {
+    "title": "My Projects",
+    "subtitle": "A showcase of my professional work, personal projects, and freelance endeavors. Each project represents a unique challenge and learning opportunity.",
+    "showing_one": "Showing {{count}} project",
+    "showing_other": "Showing {{count}} projects",
+    "inCategory": "in {{category}}",
+    "noResults": "No projects found",
+    "noResultsHint": "Try selecting a different category to view more projects.",
+    "visitWebsite": "Visit Website",
+    "viewSource": "View Source",
+    "details": "Project Details",
+    "about": "About:",
+    "technologies": "Technologies:"
+  },
+  "certificates": {
+    "title": "My Certificates",
+    "subtitle": "A collection of professional certifications and achievements that demonstrate my expertise and commitment to continuous learning.",
+    "showing_one": "Showing {{count}} certificate",
+    "showing_other": "Showing {{count}} certificates",
+    "inCategory": "in {{category}}",
+    "noResults": "No certificates found",
+    "noResultsHint": "Try selecting a different category to view more certificates.",
+    "errorTitle": "Couldn't load certificates",
+    "errorHint": "Please refresh the page or try again later.",
+    "loading": "Loading certificates...",
+    "details": "Certificate Details",
+    "issued": "Issued",
+    "description": "Description:",
+    "skills": "Skills & Technologies:",
+    "viewFullSize": "View Full Size"
+  },
+  "contact": {
+    "pageTitle": "Contact Us",
+    "heading": "Get in Touch",
+    "subtitle": "Have a question or want to work together? Fill out the form below and I'll get back to you as soon as possible.",
+    "formTitle": "Contact Us",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send Message",
+    "success": "Email sent successfully! We will contact you soon.",
+    "failure": "Failed to send email. Please try again later.",
+    "validation": {
+      "nameRequired": "Name is required",
+      "nameMax": "Name should not exceed 12 characters",
+      "emailInvalid": "Invalid email address",
+      "messageRequired": "Message is required",
+      "messageMax": "Message should not exceed 100 characters"
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "retry": "Try again"
+  }
+}

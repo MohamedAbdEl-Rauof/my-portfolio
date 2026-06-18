@@ -1,11 +1,25 @@
+"use client";
+
 import React, {useCallback} from 'react';
 import {Box, Card, CardContent, Container, styled, Typography} from '@mui/material';
 import {Timeline, TimelineConnector, TimelineContent, TimelineDot, TimelineItem, TimelineSeparator} from '@mui/lab';
-import aboutContent from '../../../public/data/about-content.json';
 import {motion} from 'framer-motion';
 import dynamic from 'next/dynamic';
 import MuiLink from '@mui/material/Link';
 import NextLink from 'next/link';
+import {useLocalizedData} from '@/app/i18n/useLocalizedData';
+
+interface AboutSection {
+    title: string;
+    icon: string;
+    link: {url: string; text: string};
+    content: string;
+}
+
+interface AboutContent {
+    title: string;
+    sections: AboutSection[];
+}
 
 const TimelineIcon = dynamic(() => import('@mui/icons-material/Timeline'));
 const PsychologyIcon = dynamic(() => import('@mui/icons-material/Psychology'));
@@ -31,6 +45,8 @@ const StyledTimeline = styled(Timeline)(() => ({
 }));
 
 const TimelineComp = React.memo(() => {
+    const {data: aboutContent} = useLocalizedData<AboutContent>('about-content');
+
     const isExternalLink = useCallback((url: string) => {
         return url.startsWith('http://') || url.startsWith('https://');
     }, []);
@@ -55,6 +71,8 @@ const TimelineComp = React.memo(() => {
             transition: {duration: 0.5}
         }
     };
+
+    if (!aboutContent) return null;
 
     return (
         <Container maxWidth="lg" sx={{paddingTop: '100px'}}>

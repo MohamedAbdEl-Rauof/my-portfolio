@@ -1,6 +1,9 @@
+"use client";
+
 import React from 'react';
 import {motion} from 'framer-motion';
 import {Box, IconButton, Typography} from '@mui/material';
+import {useTranslation} from 'react-i18next';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
@@ -18,7 +21,9 @@ const socialLinks = [
     {icon: <WhatsAppIcon/>, link: "https://wa.me/966569447804", label: "WhatsApp", color: "#25D366"},
 ];
 
-const SocialIcons: React.FC = () => (
+const SocialIcons: React.FC = () => {
+    const {t} = useTranslation();
+    return (
     <motion.div variants={itemVariants}>
         <Box sx={{ 
             display: 'flex', 
@@ -37,7 +42,7 @@ const SocialIcons: React.FC = () => (
                     letterSpacing: '0.1em'
                 }}
             >
-                Connect with me
+                {t('home.connectWithMe')}
             </Typography>
             
             <Box sx={{ 
@@ -91,6 +96,7 @@ const SocialIcons: React.FC = () => (
             </Box>
         </Box>
     </motion.div>
-);
+    );
+};
 
 export default React.memo(SocialIcons);

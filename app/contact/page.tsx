@@ -3,8 +3,10 @@
 import ContactForm from "./components/ContactForm";
 import {Box, Container, Paper, Typography} from "@mui/material";
 import {motion} from "framer-motion";
+import {useTranslation} from "react-i18next";
 
 const ContactUs = () => {
+    const {t} = useTranslation();
     return (
         <Container maxWidth="md">
             <motion.div
@@ -24,7 +26,7 @@ const ContactUs = () => {
                             gutterBottom
                             sx={{color: 'var(--primary)'}}
                         >
-                            Contact Us
+                            {t('contact.pageTitle')}
                         </Typography>
                     </motion.div>
                     <motion.div
@@ -47,17 +49,14 @@ const ContactUs = () => {
                                     gutterBottom
                                     sx={{color: 'var(--primary)'}}
                                 >
-                                    Get in Touch
+                                    {t('contact.heading')}
                                 </Typography>
                                 <Typography
                                     variant="body1"
                                     paragraph
                                     sx={{color: 'var(--secondary)'}}
                                 >
-                                    Have a question or want to work together? Fill out the form below and I&#39;ll get
-                                    back
-                                    to you
-                                    as soon as possible.
+                                    {t('contact.subtitle')}
                                 </Typography>
                                 <ContactForm/>
                             </Box>

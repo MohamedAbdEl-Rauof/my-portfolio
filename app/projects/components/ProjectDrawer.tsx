@@ -3,6 +3,7 @@ import {Box, Button, CardMedia, Chip, Drawer, IconButton, Typography} from '@mui
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import CodeIcon from '@mui/icons-material/Code';
 import LaunchIcon from '@mui/icons-material/Launch';
+import {useTranslation} from 'react-i18next';
 import {Project} from './Projects';
 
 interface ProjectDrawerProps {
@@ -12,6 +13,7 @@ interface ProjectDrawerProps {
 }
 
 const ProjectDrawer = ({open, onClose, project}: ProjectDrawerProps) => {
+    const {t} = useTranslation();
     const isVideo = !!project && (project.image.endsWith('.mp4') || project.image.endsWith('.webm'));
     const hasWebsite = !!project?.website && project.website.trim() !== '';
     const hasSrc = !!project?.src && project.src.trim() !== '';
@@ -55,7 +57,7 @@ const ProjectDrawer = ({open, onClose, project}: ProjectDrawerProps) => {
                         <ArrowBackIcon/>
                     </IconButton>
                     <Typography variant="h6" sx={{fontWeight: 'bold', color: 'var(--primary)'}}>
-                        Project Details
+                        {t('projects.details')}
                     </Typography>
                 </Box>
 
@@ -89,13 +91,13 @@ const ProjectDrawer = ({open, onClose, project}: ProjectDrawerProps) => {
                             />
                         )}
                         <Typography variant="h6" gutterBottom sx={{fontWeight: 'bold', mt: 2, color: 'var(--primary)'}}>
-                            About:
+                            {t('projects.about')}
                         </Typography>
                         <Typography variant="body2" paragraph sx={{mb: 3, color: 'var(--secondary)'}}>
                             {project.description}
                         </Typography>
                         <Typography variant="h6" gutterBottom sx={{fontWeight: 'bold', mb: 2, color: 'var(--primary)'}}>
-                            Technologies:
+                            {t('projects.technologies')}
                         </Typography>
                         <Box sx={{mb: 3}}>
                             {project.technologies.map((tech, index) => (
@@ -124,7 +126,7 @@ const ProjectDrawer = ({open, onClose, project}: ProjectDrawerProps) => {
                                         transition: 'transform 0.3s ease-in-out',
                                     }}
                                 >
-                                    Visit Website
+                                    {t('projects.visitWebsite')}
                                 </Button>
                             )}
                             {hasSrc && (
@@ -145,7 +147,7 @@ const ProjectDrawer = ({open, onClose, project}: ProjectDrawerProps) => {
                                         transition: 'transform 0.3s ease-in-out',
                                     }}
                                 >
-                                    View Source
+                                    {t('projects.viewSource')}
                                 </Button>
                             )}
                             {!hasWebsite && !hasSrc && (

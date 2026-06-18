@@ -3,10 +3,12 @@
 import {useEffect, useState} from 'react';
 import {Box, Container, Typography} from '@mui/material';
 import {AnimatePresence, motion} from 'framer-motion';
-import projectsData from '../../../public/data/projects.json';
+import {useTranslation} from 'react-i18next';
 import ProjectList from './ProjectList';
 import ProjectDrawer from './ProjectDrawer';
 import CategoryFilter from './CategoryFilter';
+import {useLocalizedData} from '@/app/i18n/useLocalizedData';
+import LoadingSpinner from '@/app/components/LoadingSpinner';
 
 export interface Project {
     id: number;
@@ -40,24 +42,38 @@ const itemVariants = {
     }
 };
 
+interface ProjectsData {
+    categories: {name: string; id: string}[];
+    projects: Project[];
+}
+
 const Projects = () => {
+    const {t} = useTranslation();
+    const {data, loading} = useLocalizedData<ProjectsData>('projects');
     const [category, setCategory] = useState('all');
     const [filteredProjects, setFilteredProjects] = useState<Project[]>([]);
     const [selectedProject, setSelectedProject] = useState<Project | null>(null);
     const [drawerOpen, setDrawerOpen] = useState(false);
 
+    const categories = data?.categories ?? [];
+
     useEffect(() => {
+        if (!data) return;
         setFilteredProjects(
             category === 'all'
-                ? projectsData.projects
-                : projectsData.projects.filter((project) => project.category === category)
+                ? data.projects
+                : data.projects.filter((project) => project.category === category)
         );
-    }, [category]);
+    }, [category, data]);
 
     const handleProjectClick = (project: Project) => {
         setSelectedProject(project);
         setDrawerOpen(true);
     };
+
+    if (loading) {
+        return <LoadingSpinner message={t('common.loading')} />;
+    }
 
     return (
         <Container maxWidth="lg" sx={{py: 8}}>
@@ -78,7 +94,7 @@ const Projects = () => {
                                 mb: 2
                             }}
                         >
-                            My Projects
+                            {t('projects.title')}
                         </Typography>
                         <Typography 
                             variant="h6" 
@@ -89,14 +105,14 @@ const Projects = () => {
                                 lineHeight: 1.6
                             }}
                         >
-                            A showcase of my professional work, personal projects, and freelance endeavors. Each project represents a unique challenge and learning opportunity.
+                            {t('projects.subtitle')}
                         </Typography>
                     </Box>
                 </motion.div>
 
                 <motion.div variants={itemVariants}>
                     <CategoryFilter
-                        categories={projectsData.categories}
+                        categories={categories}
                         selectedCategory={category}
                         onCategoryChange={setCategory}
                     />
@@ -106,8 +122,8 @@ const Projects = () => {
                     {/* Results Count */}
                     <Box sx={{mb: 3, textAlign: 'center'}}>
                         <Typography variant="body1" sx={{color: 'var(--secondary)'}}>
-                            Showing {filteredProjects.length} project{filteredProjects.length !== 1 ? 's' : ''}
-                            {category !== 'all' && ` in ${projectsData.categories.find(cat => cat.id === category)?.name}`}
+                            {t('projects.showing', {count: filteredProjects.length})}
+                            {category !== 'all' && ` ${t('projects.inCategory', {category: categories.find(cat => cat.id === category)?.name ?? ''})}`}
                         </Typography>
                     </Box>
                 </motion.div>
@@ -137,10 +153,10 @@ const Projects = () => {
                         >
                             <Box sx={{textAlign: 'center', py: 8}}>
                                 <Typography variant="h5" sx={{color: 'var(--secondary)', mb: 2}}>
-                                    No projects found
+                                    {t('projects.noResults')}
                                 </Typography>
                                 <Typography variant="body1" sx={{color: 'var(--secondary)'}}>
-                                    Try selecting a different category to view more projects.
+                                    {t('projects.noResultsHint')}
                                 </Typography>
                             </Box>
                         </motion.div>

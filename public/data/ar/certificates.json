@@ -1,0 +1,158 @@
+{
+  "categories": [
+    {
+      "name": "الكل",
+      "id": "all"
+    },
+    {
+      "name": "تطوير الويب",
+      "id": "web-development"
+    },
+    {
+      "name": "علم البيانات والذكاء الاصطناعي",
+      "id": "data-science"
+    },
+    {
+      "name": "المهارات المهنية",
+      "id": "professional-skills"
+    }
+  ],
+  "certificates": [
+    {
+      "id": 1,
+      "title": "تطوير البرمجيات — مطوّر ويب React",
+      "issuer": "وزارة الاتصالات وتقنية المعلومات",
+      "date": "2024-10-31",
+      "description": "تمثّل هذه الشهادة إتمام مسار تطوير البرمجيات بتخصّص تطوير واجهات الويب الأمامية بـ React. يغطّي المسار تقنيات الويب الأساسية مثل HTML و CSS و JavaScript، إلى جانب مهارات متقدّمة في بناء تطبيقات React الديناميكية. ويشمل البرنامج أيضًا خبرة عملية في Git و GitHub لإدارة الإصدارات، و Node.js للبرمجة من جهة الخادم، ومفاهيم الحاويات باستخدام Docker و Kubernetes. ويُختتم المسار بمشروع تخرّج يدمج React و Node.js لتطوير تطبيق ويب واقعي.",
+      "skills": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "TypeScript",
+        "React",
+        "Next.js",
+        "Node.js",
+        "Express.js",
+        "Context API",
+        "Redux Toolkit",
+        "Git",
+        "GitHub",
+        "Docker",
+        "Kubernetes",
+        "MongoDB"
+      ],
+      "thumbnail": "/images/certificates/full-size/DEPICertificate.jpeg",
+      "fullImage": "/images/certificates/full-size/DEPICertificate.jpeg",
+      "category": "web-development"
+    },
+    {
+      "id": 3,
+      "title": "تطوير تطبيقات الويب باستخدام PHP",
+      "issuer": "معهد تكنولوجيا المعلومات (ITI)",
+      "date": "2023-08-31",
+      "description": "يوفّر هذا المساق أساسًا متينًا في تطوير تطبيقات الويب الديناميكية باستخدام PHP. يستكشف بنية تطبيقات الويب وكيفية تفاعل المتصفّحات مع الخوادم عبر دورة الطلب والاستجابة، بما في ذلك أساليب GET و POST و Redirect. ويغطّي البرنامج صياغة PHP والمتغيّرات والمنطق والحلقات والمصفوفات ومعالجة الأخطاء والمتغيّرات الفائقة (superglobals). كما يتعلّم الدارسون استخدام ملفات تعريف الارتباط (cookies)، وإدارة بيانات الجلسات، والتعامل مع قواعد بيانات MySQL. وبنهاية المساق يصبح المشاركون قادرين على بناء تطبيقات ويب كاملة بمصادقة المستخدمين والتسجيل والتحقق من البيانات وعمليات CRUD، وإعادة هيكلة مشاريعهم وفق مبادئ البرمجة كائنية التوجّه (OOP).",
+      "skills": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "PHP",
+        "MySQL",
+        "OOP",
+        "CRUD Operations",
+        "Session Management",
+        "Authentication",
+        "Postman",
+        "Web Development"
+      ],
+      "thumbnail": "/images/certificates/full-size/ITICertificate.jpeg",
+      "fullImage": "/images/certificates/full-size/ITICertificate.jpeg",
+      "category": "web-development"
+    },
+    {
+      "id": 4,
+      "title": "برنامج مشواري — تنمية المهارات الحياتية والمهنية",
+      "issuer": "وزارة الشباب والرياضة و اليونيسف",
+      "date": "2020-01-30",
+      "description": "مشواري برنامج وطني لتمكين الشباب تنفّذه وزارة الشباب والرياضة بالتعاون مع اليونيسف وبدعم من السفارتين الهولندية والسويسرية في مصر. منذ انطلاقه عام 2013، يهدف البرنامج إلى دعم الشباب وتمكينهم عبر مساعدتهم على تخطيط مساراتهم المهنية بفاعلية وبناء شخصيات مرنة قادرة على التكيّف مع التحديات. يقدّم مشواري ورش مهارات حياتية وجلسات إرشاد مهني في 18 محافظة، مستهدفًا فئات عمرية مختلفة: 10–14 سنة للتنمية الشخصية، و15–24 سنة لتطوير المهارات والتوجيه المهني. كما يشمل البرنامج مختبرات ابتكار — مساحات مخصّصة داخل مراكز الشباب في محافظات مختارة — مصمّمة لتعزيز الإبداع وريادة الأعمال عبر دعم الشباب في تحويل أفكارهم إلى مشاريع حقيقية من خلال التدريب والدعم الفني والإرشاد.",
+      "skills": [
+        "Time Management",
+        "Communication",
+        "Creative Thinking",
+        "Problem Solving",
+        "Learning How to Learn",
+        "Motivational Techniques",
+        "Financial Literacy",
+        "Teamwork",
+        "Positive Thinking",
+        "Adaptability",
+        "Innovation",
+        "Entrepreneurship",
+        "Career Planning"
+      ],
+      "thumbnail": "/images/certificates/full-size/meshwareCertificate.jpeg",
+      "fullImage": "/images/certificates/full-size/meshwareCertificate.jpeg",
+      "category": "professional-skills"
+    },
+    {
+      "id": 5,
+      "title": "مقدمة في الذكاء الاصطناعي وتدريب التطبيقات",
+      "issuer": "جامعة زويل سيتي و منصة Impact",
+      "date": "2023-8-15",
+      "description": "مقدمة شاملة في الذكاء الاصطناعي وتدريب على تطبيقاته من جامعة زويل سيتي بالتعاون مع منصة Impact. غطّى هذا البرنامج المفاهيم الأساسية للذكاء الاصطناعي وتعلّم الآلة وتطبيقات التعلّم العميق.",
+      "skills": [
+        "Artificial Intelligence",
+        "Machine Learning",
+        "Deep Learning",
+        "Data Science",
+        "Neural Networks",
+        "AI Applications"
+      ],
+      "thumbnail": "/images/certificates/full-size/zewailCertificate.jpeg",
+      "fullImage": "/images/certificates/full-size/zewailCertificate.jpeg",
+      "category": "data-science"
+    },
+    {
+      "id": 6,
+      "title": "شهادة React من HackerRank",
+      "issuer": "HackerRank",
+      "date": "2025-10-10",
+      "description": "شهادة React تم الحصول عليها بعد اجتياز اختبار React على منصة HackerRank بنجاح. تُثبت هذه الشهادة الكفاءة في تطوير React عبر اختبار وتقييم شاملين.",
+      "skills": [
+        "React",
+        "JavaScript",
+        "Component Development",
+        "State Management",
+        "React Hooks",
+        "Problem Solving"
+      ],
+      "thumbnail": "/images/certificates/full-size/ReactHackerRankCertificate.png",
+      "fullImage": "/images/certificates/full-size/ReactHackerRankCertificate.png",
+      "category": "web-development"
+    },
+    {
+      "id": 7,
+      "title": "InnovEgypt — برنامج الابتكار وريادة الأعمال",
+      "issuer": "مركز ابتكار وريادة الأعمال التقنية (TIEC)",
+      "date": "2023-12-15",
+      "description": "InnovEgypt برنامج شامل لبناء قدرات طلاب الجامعات والخرّيجين في الابتكار وريادة الأعمال. يركّز البرنامج على تطوير القدرات الابتكارية والريادية في قطاع تقنية المعلومات والاتصالات عبر ثلاثة محاور رئيسية: إدارة الابتكار والتكنولوجيا، وتصميم الأفكار، وريادة الأعمال. يتضمّن البرنامج البالغ 44 ساعة ورشًا تفاعلية تغطّي عمليات الابتكار ومنهجيات توليد الأفكار وحماية الملكية الفكرية وأساسيات الشركات الناشئة، بهدف بناء قاعدة من روّاد الأعمال المحتملين بالمهارات التي تطلبها الشركات المحلية والعالمية.",
+      "skills": [
+        "Innovation Management",
+        "Technology Management",
+        "Idea Generation",
+        "Design Thinking",
+        "Entrepreneurship",
+        "Business Development",
+        "Intellectual Property",
+        "Startup Fundamentals",
+        "Problem Solving",
+        "Creative Thinking",
+        "Project Management",
+        "Leadership",
+        "Team Collaboration"
+      ],
+      "thumbnail": "/images/certificates/full-size/innovEgyptCertificate.png",
+      "fullImage": "/images/certificates/full-size/innovEgyptCertificate.png",
+      "category": "professional-skills"
+    }
+  ]
+}

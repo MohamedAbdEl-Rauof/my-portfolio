@@ -1,11 +1,16 @@
+"use client";
+
 import React from 'react';
 import {motion} from 'framer-motion';
 import {Button, Box} from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Link from 'next/link';
+import {useTranslation} from 'react-i18next';
 import {arrowAnimation, itemVariants} from './animations';
 
-const AboutMeButton: React.FC = () => (
+const AboutMeButton: React.FC = () => {
+    const {t} = useTranslation();
+    return (
     <motion.div variants={itemVariants}>
         <Box sx={{ display: 'flex', justifyContent: 'center', mt: 3 }}>
             <motion.div
@@ -45,7 +50,7 @@ const AboutMeButton: React.FC = () => (
                         },
                     }}
                 >
-                    <span style={{marginRight: '8px'}}>See More About Me</span>
+                    <span style={{marginRight: '8px'}}>{t('home.aboutMe')}</span>
                     <motion.div 
                         className="arrow-icon"
                         animate={arrowAnimation}
@@ -57,6 +62,7 @@ const AboutMeButton: React.FC = () => (
             </motion.div>
         </Box>
     </motion.div>
-);
+    );
+};
 
 export default AboutMeButton;

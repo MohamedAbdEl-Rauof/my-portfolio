@@ -337,3 +337,17 @@ main {
         scroll-behavior: auto !important;
     }
 }
+
+/* ---------- RTL / Arabic ---------- */
+/* When Arabic is active, swap the body font to the Arabic webfont. The emotion
+   RTL cache (stylis-plugin-rtl) handles MUI spacing/layout mirroring; these rules
+   cover the font and the few spots that don't go through emotion. */
+html[dir="rtl"] body {
+    font-family: var(--font-arabic), 'Segoe UI', Tahoma, sans-serif;
+}
+
+/* The nav underline indicator uses physical `left`; anchor it logically in RTL. */
+html[dir="rtl"] .nav-item::after {
+    left: auto;
+    right: 0;
+}

@@ -5,20 +5,23 @@ import Link from 'next/link';
 import {usePathname} from 'next/navigation';
 import {AppBar, Box, Button, Container, Drawer, IconButton, List, ListItem, ListItemText, Toolbar} from '@mui/material';
 import {useTheme} from 'next-themes';
+import {useTranslation} from 'react-i18next';
 import ThemeToggle from "@/app/components/ThemeToggle";
+import LanguageSwitcher from "@/app/components/LanguageSwitcher";
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 
 const navItems = [
-    {name: 'About', path: '/about'},
-    {name: 'Projects', path: '/projects'},
-    {name: 'Certificates', path: '/certificates'},
-    {name: 'Contact', path: '/contact'},
+    {key: 'about', path: '/about'},
+    {key: 'projects', path: '/projects'},
+    {key: 'certificates', path: '/certificates'},
+    {key: 'contact', path: '/contact'},
 ];
 
 const NavBar: React.FC = () => {
     const pathname = usePathname();
     const {theme, systemTheme} = useTheme();
+    const {t} = useTranslation();
     const [mobileOpen, setMobileOpen] = useState(false);
 
     const currentTheme = useMemo(() => theme === 'system' ? systemTheme : theme, [theme, systemTheme]);
@@ -63,7 +66,7 @@ const NavBar: React.FC = () => {
                     <Box sx={{display: {xs: 'none', md: 'flex'}}} gap={3}>
                         {navItems.map((item) => (
                             <Button
-                                key={item.name}
+                                key={item.key}
                                 component={Link}
                                 href={item.path}
                                 className={`nav-item ${pathname === item.path ? 'active' : ''}`}
@@ -96,9 +99,10 @@ const NavBar: React.FC = () => {
                                     },
                                 }}
                             >
-                                {item.name}
+                                {t(`nav.${item.key}`)}
                             </Button>
                         ))}
+                        <LanguageSwitcher/>
                         <ThemeToggle/>
                     </Box>
                     <Box sx={{display: {xs: 'flex', md: 'none'}}}>
@@ -159,7 +163,7 @@ const NavBar: React.FC = () => {
                         <List sx={{ pt: 2 }}>
                             {navItems.map((item) => (
                                 <ListItem
-                                    key={item.name}
+                                    key={item.key}
                                     disablePadding
                                     className={pathname === item.path ? 'active' : ''}
                                     component="li"
@@ -182,7 +186,7 @@ const NavBar: React.FC = () => {
                                         }}
                                     >
                                         <ListItemText
-                                            primary={item.name}
+                                            primary={t(`nav.${item.key}`)}
                                             sx={{
                                                 textAlign: 'center',
                                                 py: 2,
@@ -218,10 +222,14 @@ const NavBar: React.FC = () => {
                             <ListItem
                                 sx={{
                                     justifyContent: 'center',
+                                    gap: 2,
                                     mt: 4,
                                     cursor: 'default'
                                 }}
                             >
+                                <Box sx={{ cursor: 'pointer' }}>
+                                    <LanguageSwitcher />
+                                </Box>
                                 <Box sx={{ cursor: 'pointer' }}>
                                     <ThemeToggle />
                                 </Box>

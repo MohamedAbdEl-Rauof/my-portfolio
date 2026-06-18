@@ -3,9 +3,11 @@
 import {useState, useEffect} from 'react';
 import {Box, Container, Typography, Grid, Button} from '@mui/material';
 import {AnimatePresence, motion} from 'framer-motion';
+import {useTranslation} from 'react-i18next';
 import CertificateCard from './CertificateCard';
 import CertificateModal from './CertificateModal';
 import LoadingSpinner from '@/app/components/LoadingSpinner';
+import {useLanguage} from '@/app/providers/AppProviders';
 
 export interface Certificate {
     id: number;
@@ -48,6 +50,8 @@ const itemVariants = {
 };
 
 const Certificates = () => {
+    const {t} = useTranslation();
+    const {lang} = useLanguage();
     const [certificatesData, setCertificatesData] = useState<CertificatesData | null>(null);
     const [selectedCategory, setSelectedCategory] = useState<string>('all');
     const [selectedCertificate, setSelectedCertificate] = useState<Certificate | null>(null);
@@ -55,20 +59,26 @@ const Certificates = () => {
     const [error, setError] = useState(false);
 
     useEffect(() => {
+        let cancelled = false;
         const fetchCertificates = async () => {
+            setError(false);
+            setCertificatesData(null);
             try {
-                const response = await fetch('/data/certificates.json');
+                const response = await fetch(`/data/${lang}/certificates.json`);
                 if (!response.ok) throw new Error(`HTTP ${response.status}`);
                 const data = await response.json();
-                setCertificatesData(data);
+                if (!cancelled) setCertificatesData(data);
             } catch (error) {
                 console.error('Error fetching certificates:', error);
-                setError(true);
+                if (!cancelled) setError(true);
             }
         };
 
         fetchCertificates();
-    }, []);
+        return () => {
+            cancelled = true;
+        };
+    }, [lang]);
 
     const handleCategoryChange = (categoryId: string) => {
         setSelectedCategory(categoryId);
@@ -89,10 +99,10 @@ const Certificates = () => {
             <Container maxWidth="lg" sx={{py: 8}}>
                 <Box sx={{textAlign: 'center', py: 8}}>
                     <Typography variant="h5" sx={{color: 'var(--secondary)', mb: 2}}>
-                        Couldn&apos;t load certificates
+                        {t('certificates.errorTitle')}
                     </Typography>
                     <Typography variant="body1" sx={{color: 'var(--secondary)'}}>
-                        Please refresh the page or try again later.
+                        {t('certificates.errorHint')}
                     </Typography>
                 </Box>
             </Container>
@@ -102,7 +112,7 @@ const Certificates = () => {
     if (!certificatesData) {
         return (
             <Container maxWidth="lg" sx={{py: 8}}>
-                <LoadingSpinner message="Loading certificates..." />
+                <LoadingSpinner message={t('certificates.loading')} />
             </Container>
         );
     }
@@ -130,7 +140,7 @@ const Certificates = () => {
                                 mb: 2
                             }}
                         >
-                            My Certificates
+                            {t('certificates.title')}
                         </Typography>
                         <Typography 
                             variant="h6" 
@@ -141,7 +151,7 @@ const Certificates = () => {
                                 lineHeight: 1.6
                             }}
                         >
-                            A collection of professional certifications and achievements that demonstrate my expertise and commitment to continuous learning.
+                            {t('certificates.subtitle')}
                         </Typography>
                     </Box>
                 </motion.div>
@@ -185,8 +195,8 @@ const Certificates = () => {
                     {/* Results Count */}
                     <Box sx={{mb: 3, textAlign: 'center'}}>
                         <Typography variant="body1" sx={{color: 'var(--secondary)'}}>
-                            Showing {filteredCertificates.length} certificate{filteredCertificates.length !== 1 ? 's' : ''}
-                            {selectedCategory !== 'all' && ` in ${certificatesData.categories.find(cat => cat.id === selectedCategory)?.name}`}
+                            {t('certificates.showing', {count: filteredCertificates.length})}
+                            {selectedCategory !== 'all' && ` ${t('certificates.inCategory', {category: certificatesData.categories.find(cat => cat.id === selectedCategory)?.name ?? ''})}`}
                         </Typography>
                     </Box>
                 </motion.div>
@@ -229,10 +239,10 @@ const Certificates = () => {
                         >
                             <Box sx={{textAlign: 'center', py: 8}}>
                                 <Typography variant="h5" sx={{color: 'var(--secondary)', mb: 2}}>
-                                    No certificates found
+                                    {t('certificates.noResults')}
                                 </Typography>
                                 <Typography variant="body1" sx={{color: 'var(--secondary)'}}>
-                                    Try selecting a different category to view more certificates.
+                                    {t('certificates.noResultsHint')}
                                 </Typography>
                             </Box>
                         </motion.div>

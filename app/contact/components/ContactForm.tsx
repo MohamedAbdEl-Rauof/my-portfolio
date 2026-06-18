@@ -6,21 +6,28 @@ import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
 import * as z from "zod";
 import emailjs from "@emailjs/browser";
+import {useTranslation} from "react-i18next";
 
+// Messages are i18n keys, resolved with t() at render time — keeps the schema
+// at module scope while still localizing validation errors.
 const schema = z.object({
-    name: z.string().min(2, {message: "Name is required"}).max(15, {message: "Name should not exceed 12 characters"}),
-    email: z.string().email({message: "Invalid email address"}),
-    message: z.string().min(2, {message: "Message is required"}).max(100, {message: "Message should not exceed 100 characters"}),
+    name: z.string().min(2, {message: "contact.validation.nameRequired"}).max(15, {message: "contact.validation.nameMax"}),
+    email: z.string().email({message: "contact.validation.emailInvalid"}),
+    message: z.string().min(2, {message: "contact.validation.messageRequired"}).max(100, {message: "contact.validation.messageMax"}),
 });
 
 type FormData = z.infer<typeof schema>;
 
 const ContactForm = () => {
+    const {t} = useTranslation();
 
     const {register, handleSubmit, formState: {errors, isValid}, reset} = useForm<FormData>({
         resolver: zodResolver(schema),
         mode: "onChange",
     });
+
+    // Translate a zod error message key (falls back to raw text if not a key).
+    const errMsg = (key?: string) => (key ? t(key) : undefined);
 
     const sendEmail = async (data: FormData) => {
         const templateParams = {
@@ -37,7 +44,7 @@ const ContactForm = () => {
                 templateParams,
                 process.env.NEXT_PUBLIC_EMAILJS_USER_ID
             );
-            toast.success("Email sent successfully! We will contact you soon.", {
+            toast.success(t('contact.success'), {
                 style: {
                     background: 'var(--accent)',
                     color: 'var(--foreground)',
@@ -46,7 +53,7 @@ const ContactForm = () => {
             reset();
         } catch (error) {
             console.error(error);
-            toast.error("Failed to send email. Please try again later.", {
+            toast.error(t('contact.failure'), {
                 style: {
                     background: 'var(--accent)',
                     color: 'var(--foreground)',
@@ -95,37 +102,37 @@ const ContactForm = () => {
              }}>
             <Toaster position="top-right" reverseOrder={false}/>
             <Typography variant="h6" gutterBottom sx={{color: 'var(--primary)'}}>
-                Contact Us
+                {t('contact.formTitle')}
             </Typography>
             <TextField
                 id="outlined-name"
-                label="Name"
+                label={t('contact.name')}
                 variant="outlined"
                 fullWidth
                 error={!!errors.name}
-                helperText={errors.name?.message}
+                helperText={errMsg(errors.name?.message)}
                 {...register("name")}
                 sx={textFieldSx}
             />
             <TextField
                 id="outlined-email"
-                label="Email"
+                label={t('contact.email')}
                 variant="outlined"
                 fullWidth
                 error={!!errors.email}
-                helperText={errors.email?.message}
+                helperText={errMsg(errors.email?.message)}
                 {...register("email")}
                 sx={textFieldSx}
             />
             <TextField
                 id="outlined-message"
-                label="Message"
+                label={t('contact.message')}
                 variant="outlined"
                 multiline
                 rows={4}
                 fullWidth
                 error={!!errors.message}
-                helperText={errors.message?.message}
+                helperText={errMsg(errors.message?.message)}
                 {...register("message")}
                 sx={textFieldSx}
             />
@@ -150,7 +157,7 @@ const ContactForm = () => {
                     },
                 }}
             >
-                Send Message
+                {t('contact.send')}
             </Button>
         </Box>
     );

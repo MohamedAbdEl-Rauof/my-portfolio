@@ -261,7 +261,7 @@
       "id": 17,
       "title": "WhatsApp Patient Communication Platform",
       "paragraph": "Centralized WhatsApp support for a medical complex, built on Chatwoot.",
-      "image": "/images/projects/placeholder.svg",
+      "image": "/images/projects/chatwoot.mp4",
       "about": "An official WhatsApp Business platform that unifies patient conversations and helps the team respond faster and more consistently.",
       "description": "Verified the medical complex's landline as an official WhatsApp Business number and built a patient-communication platform on top of Chatwoot. The system centralizes every incoming conversation into a single shared inbox, lets staff collaborate on replies, and standardizes responses with saved replies and routing. This replaced scattered, personal-phone messaging with an auditable, team-based workflow — improving response time and the quality of patient communication across the complex.",
       "technologies": [
@@ -280,7 +280,7 @@
       "id": 18,
       "title": "Lab Results Automation (n8n)",
       "paragraph": "Automated delivery of laboratory results to patients.",
-      "image": "/images/projects/placeholder.svg",
+      "image": "/images/projects/n8n.mp4",
       "about": "An n8n automation that sends lab results to patients automatically, removing manual, error-prone hand-delivery.",
       "description": "Designed and built an automated workflow with n8n that picks up finalized laboratory results and delivers them to patients automatically, instead of staff sending each result by hand. The pipeline connects the lab's output to the complex's messaging channels via webhooks and APIs, with conditional routing and notifications. It cut turnaround time, reduced human error, and freed lab staff from repetitive manual work.",
       "technologies": [
@@ -298,7 +298,7 @@
       "id": 19,
       "title": "AI Auto-Reply Assistant (Typebot)",
       "paragraph": "AI-powered assistant that answers common patient inquiries instantly.",
-      "image": "/images/projects/placeholder.svg",
+      "image": "/images/projects/typobot.mp4",
       "about": "A conversational assistant that handles routine patient questions automatically, around the clock.",
       "description": "Built an AI-driven auto-reply assistant using Typebot to handle the most common patient inquiries — hours, services, directions, and booking guidance — without staff involvement. The bot provides instant, consistent answers and hands off to a human agent when a conversation needs it. Integrated with the complex's WhatsApp channel, it reduced repetitive workload on the front desk while keeping patients informed at any time of day.",
       "technologies": [
@@ -314,16 +314,22 @@
     },
     {
       "id": 20,
-      "title": "Ultrasound Imaging Transfer System",
-      "paragraph": "Networked image hand-off for the ultrasound department, replacing flash drives.",
-      "image": "/images/projects/placeholder.svg",
-      "about": "A program that moves ultrasound images over the network instead of physically carrying them on USB drives.",
-      "description": "Developed a system for the ultrasound (sonar) department that transfers captured images directly over the network to where they are needed, replacing the old process of copying studies onto flash drives and walking them between rooms. I also built a companion tool that lets the ultrasound team send completed results straight to patients. Together these removed a manual bottleneck, sped up reporting, and reduced the risk of lost or mixed-up studies.",
+      "title": "Nova Bill — Lab Management & ZATCA Invoicing",
+      "paragraph": "Full-RTL Arabic lab management system with ZATCA-compliant e-invoicing for a medical complex.",
+      "image": "/images/projects/nova-bill-lab.mp4",
+      "about": "A production-grade LMS built for the dental lab at Nova International Medical Complex — covering invoicing, billing, role management, and full ZATCA tax compliance.",
+      "description": "Built a complete Laboratory Management System (LMS) with ZATCA-compliant electronic invoicing for Saudi Arabia's tax authority. The system handles the full invoice lifecycle — creation, status tracking, partial payments, credit notes, and a no-delete audit trail with SHA-256 hash chaining and QR-code TLV encoding per ZATCA spec. Features a full Arabic RTL UI, 4 role tiers (admin, manager, accountant, employee) with per-page CRUD permission control enforced by Supabase Row Level Security, an accountant panel with a ZATCA tax report, 4 printable quotation templates, and Excel/PDF export throughout. Covers 10+ pages including clinic accounts, representative statements, expenses, and reports.",
       "technologies": [
-        "Node.js",
-        "Networking",
-        "Automation",
-        "File Transfer"
+        "Next.js",
+        "TypeScript",
+        "React",
+        "Supabase",
+        "PostgreSQL",
+        "shadcn/ui",
+        "Tailwind CSS",
+        "React Hook Form",
+        "Zod",
+        "ZATCA Compliance"
       ],
       "website": "",
       "src": "",
@@ -332,37 +338,39 @@
     },
     {
       "id": 21,
-      "title": "Dental Lab Accounting App",
-      "paragraph": "Custom accounting software for the dental laboratory.",
-      "image": "/images/projects/placeholder.svg",
-      "about": "A tailored accounting application that tracks the dental lab's work, costs, and billing.",
-      "description": "Built a custom accounting application for the medical complex's dental laboratory to track jobs, materials, costs, and billing in one place — replacing manual bookkeeping. The app gives the lab clear, reliable financial records and makes day-to-day reconciliation fast and accurate, tailored to how the lab actually operates rather than forcing a generic off-the-shelf tool.",
+      "title": "Qriib — Web App & Admin Portal",
+      "paragraph": "Dual-surface dashboard for Qriib: a user web app and a full admin control center.",
+      "image": "/images/projects/qriib-dashboard.mp4",
+      "about": "Built both the end-user web app and the admin control panel for Qriib, a unified communications platform for meetings, webinars, and team collaboration.",
+      "description": "Developed two connected portals for the Qriib platform. The user-facing web app lets members start or schedule instant meetings, join via ID or link, manage recordings, and view their calendar — all from a clean, responsive interface. The admin panel gives organization owners a full control center: monitor meeting activity, manage team licenses, handle billing and plan upgrades, configure workspace storage, oversee webinars, and audit platform usage across the organization. Both surfaces share a consistent design system and were built to support a growing team-communications product at scale.",
       "technologies": [
-        "React",
-        "Node.js",
-        "MySQL"
+        "Next.js",
+        "React.js",
+        "TypeScript",
+        "Express.js",
+        "Material UI",
+        "React Hook Form",
+        "Stripe"
       ],
-      "website": "",
+      "website": "https://qriib.me",
       "src": "",
-      "note": "Internal healthcare system — live walkthrough available on request.",
       "category": "professional"
     },
     {
       "id": 22,
-      "title": "qrrib — Dashboard & Website",
-      "paragraph": "Client dashboard and marketing website.",
-      "image": "/images/projects/placeholder.svg",
-      "about": "Designed and built the qrrib product dashboard and its public-facing website.",
-      "description": "Delivered both the qrrib management dashboard and its public marketing website. The dashboard provides an admin interface for managing the product's day-to-day operations, while the website presents the brand and converts visitors. Built with a modern React/Next.js stack and a reusable component system, with a responsive, user-centered design across both surfaces.",
+      "title": "Qriib — Unified Communications Website",
+      "paragraph": "Marketing website for Qriib — one platform for VoIP calls, meetings, and chat.",
+      "image": "/images/projects/qrrib-website.mp4",
+      "about": "Built the public marketing website for Qriib, a unified communications platform covering HD meetings, webinars, recording, and real-time collaboration.",
+      "description": "Developed the marketing website for Qriib (by Tawteen Tech Inc.) — a unified communications platform that brings VoIP calls, HD video meetings, webinars, real-time collaboration, and smart scheduling into one product. The site presents the full feature set across desktop and mobile, drives visitors toward sign-up and pricing, and serves as the primary brand touchpoint for a product trusted by teams globally. Built with Next.js, TypeScript, and Tailwind CSS, with a focus on responsive layout, smooth animations, and fast load times to match the quality of the product it promotes.",
       "technologies": [
         "Next.js",
         "React.js",
         "TypeScript",
         "Tailwind CSS"
       ],
-      "website": "",
+      "website": "https://qriib.com",
       "src": "",
-      "note": "Client project — live walkthrough available on request.",
       "category": "professional"
     }
   ]

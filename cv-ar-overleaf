@@ -1,0 +1,202 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8
+
+%-------------------------
+% السيرة الذاتية — محمد عبد الرءوف
+% المحرر: XeLaTeX (مطلوب لدعم العربية)
+%-------------------------
+
+\documentclass[a4paper,10.5pt]{article}
+
+%----- اللغة والخط -----
+\usepackage{polyglossia}
+\setmainlanguage{arabic}
+\setotherlanguage{english}
+
+\usepackage{fontspec}
+\setmainfont{Amiri}[Script=Arabic, Scale=1.0, WordSpace=1.3]
+\newfontfamily\arabicfont{Amiri}[Script=Arabic]
+\newfontfamily\englishfont{Source Sans Pro}
+
+%----- الحزم -----
+\usepackage[a4paper, top=0.7cm, bottom=0.7cm, left=1.6cm, right=1.6cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{setspace}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, urlcolor=black, linkcolor=black, pdfnewwindow=true}
+
+%----- إعدادات الصفحة -----
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\setstretch{1.25}
+\setlength{\parindent}{0pt}
+
+%----- تنسيق العناوين -----
+\titleformat{\section}{
+  \vspace{-4pt}\large\bfseries
+}{}{0em}{}[\titlerule \vspace{-4pt}]
+\titlespacing*{\section}{0pt}{12pt}{5pt}
+
+%----- أوامر مخصصة -----
+\newcommand{\resumeItem}[1]{\item\small{#1 \vspace{-2pt}}}
+
+% hfill approach — works correctly in both RTL and LTR
+% No \textenglish on args 2/4 — they can contain Arabic (dates like "حتى الآن", cities)
+\newcommand{\resumeSubheading}[4]{%
+  \vspace{1pt}\item
+  {\bfseries #1 \hfill \bfseries\small #2}\\[-3pt]
+  {\small\itshape #3 \hfill \small\itshape #4}%
+  \vspace{-4pt}%
+}
+
+\newcommand{\resumeProjectHeading}[2]{%
+  \item
+  {\small\bfseries #1 \hfill \small #2}%
+  \vspace{-4pt}%
+}
+
+\newcommand{\resumeTechStack}[1]{%
+  \resumeItem{\textbf{التقنيات:} \textenglish{#1}}%
+}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[rightmargin=0pt, leftmargin=0pt, label={}, itemsep=0pt, parsep=0pt]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-3pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[rightmargin=0.2in, leftmargin=0pt, label={$\bullet$}, itemsep=0pt, parsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+
+%-------------------------------------------
+\begin{document}
+
+%----------الرأس----------
+\begin{center}
+{\huge\bfseries محمد عبد الرءوف} \\[2pt]
+{\large مطور ويب متكامل \ | \ أتمتة وذكاء اصطناعي} \\[3pt]
+\footnotesize
+\href{mailto:mohamedabdelrauof112@gmail.com}{\faEnvelope\ \textenglish{mohamedabdelrauof112@gmail.com}}
+\,|\,\textenglish{+966 56 944 7804}
+\,|\,\href{https://www.linkedin.com/in/mohamed-abd-el-raouf-6b5b3b235}{\faLinkedin\ لينكدإن}
+\,|\,\faMapMarker*\ جدة، السعودية
+\,|\,\href{https://github.com/MohamedAbdEl-Rauof}{\faGithub\ \textenglish{GitHub}}
+\,|\,\href{https://developer-moraouf.vercel.app}{\faGlobe\ ملف أعمالي}
+\end{center}
+
+\vspace{-6pt}
+
+%-----------الملخص المهني-----------
+\section{الملخص المهني}
+\begin{itemize}[rightmargin=0.1in, leftmargin=0.0in, label={}, itemsep=0pt, parsep=0pt]
+\item\small{
+مطور ويب متكامل يبني تطبيقات ويب سريعة ومتجاوبة باستخدام \textenglish{React} و\textenglish{Next.js}، ويُسلّم الجانب الخلفي وسير عمل الأتمتة وتكاملات الذكاء الاصطناعي معًا. أقود حاليًا أنظمة تقنية المعلومات والتطوير في مجمع طبي دولي بجدة: نشر منصات تواصل مع المرضى، وأتمتة سير العمل السريري بـ\textenglish{n8n}، وبناء أدوات داخلية متوافقة مع متطلبات هيئة الزكاة والضريبة والجمارك.
+\textbf{مقيم بجدة بإقامة قابلة للنقل. متاح للعمل فورًا.}
+}
+\end{itemize}
+
+\vspace{-4pt}
+
+%-----------المهارات التقنية-----------
+\section{المهارات التقنية}
+\begin{itemize}[rightmargin=0.1in, leftmargin=0.0in, label={}, itemsep=0pt, parsep=0pt]
+\small{\item{
+\textbf{الواجهة الأمامية:} \textenglish{React.js, Next.js, TypeScript, JavaScript (ES6+), Redux Toolkit, Zustand, Context API,} تخطيطات \textenglish{RTL} \\
+\textbf{الواجهة الخلفية:} \textenglish{Node.js, Express.js, REST APIs, MongoDB, PostgreSQL, Supabase, JWT Authentication} \\
+\textbf{الأتمتة والذكاء الاصطناعي:} \textenglish{n8n, Typebot, Chatwoot, WhatsApp Business API, Webhooks, Docker} \\
+\textbf{أنظمة الواجهة:} \textenglish{Tailwind CSS, shadcn/ui, Radix UI, Material-UI, Vuexy, SASS/SCSS} \\
+\textbf{المعايير:} فاتورة إلكترونية (زكاة وضريبة وجمارك)، التعريب \textenglish{(i18n)}، إمكانية الوصول \textenglish{(a11y)} \\
+\textbf{الأدوات:} \textenglish{Git/GitHub, Agile/Scrum, Vercel, Netlify, Supabase} \quad
+\textbf{اللغات:} العربية (لغة أم)، الإنجليزية (مستوى مهني)
+}}
+\end{itemize}
+
+\vspace{-8pt}
+
+%-----------الخبرة المهنية-----------
+\section{الخبرة المهنية}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{مجمع نوفا الدولي الطبي}{04/2026 -- حتى الآن}
+{مطور ويب متكامل ورئيس أنظمة تقنية المعلومات}{جدة، المملكة العربية السعودية}
+\resumeItemListStart
+\resumeItem{التحقق من الرقم الرسمي للمجمع على \textenglish{WhatsApp Business}؛ نشر منصة \textenglish{Chatwoot} لتوحيد المحادثات مع المرضى وتحسين جودة الاستجابة.}
+\resumeItem{بناء خط أتمتة بـ\textenglish{n8n} لإرسال نتائج المختبر إلى المرضى تلقائيًا، والتخلص التام من التسليم اليدوي.}
+\resumeItem{نشر مساعد ذكاء اصطناعي بـ\textenglish{Typebot} للرد الفوري على استفسارات المرضى الشائعة مدار الساعة.}
+\resumeItem{تطوير \textbf{نوفا بيل} — نظام إدارة مختبر طبي بواجهة عربية كاملة، متوافق مع هيئة الزكاة والضريبة، مع فواتير ضريبية مُؤمَّنة بتشفير \textenglish{SHA-256}، إشعارات دائنة، 4 مستويات صلاحيات، وحماية \textenglish{RLS} على قاعدة البيانات.}
+\resumeItem{قيادة بحث الموردين ومقارنة عروض الأسعار لاقتناء نظام معلومات المستشفى (\textenglish{HIS}) وبوابة إدارة قوائم الانتظار.}
+\resumeItemListEnd
+
+\resumeSubheading
+{Vconnct}{06/2024 -- 03/2026}
+{مطور واجهات أمامية وخلفية (حضوري)}{مصر}
+\resumeItemListStart
+\resumeItem{بناء نظام تسجيل الدخول الموحد (\textenglish{SSO}) وبوابات الدفع المتعددة (\textenglish{Stripe, Fawry, Paymob}) مع إصدار فواتير تلقائية للوحة تحكم \textenglish{VCloud}.}
+\resumeItem{تسليم تطبيق ويب ولوحة إدارة لمنصة \textenglish{Qriib} (اجتماعات، ندوات ويب، إدارة التراخيص والفواتير) وموقعها التسويقي.}
+\resumeItem{بناء لوحة تحكم وموقع \textenglish{qrrib} لصالح عميل، وتكامل \textenglish{Strapi CMS} عبر صفحات هبوط تسويقية متعددة.}
+\resumeItemListEnd
+
+\resumeSubheading
+{معهد تكنولوجيا المعلومات (ITI)}{06/2023 -- 08/2023}
+{متدرب مطور ويب متكامل}{القاهرة، مصر}
+\resumeItemListStart
+\resumeItem{بناء تطبيق مدونة بنظام مصادقة وإدارة منشورات باستخدام \textenglish{PHP/MySQL} مع واجهة مستخدم متجاوبة.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------أبرز المشاريع-----------
+\section{أبرز المشاريع}
+\resumeSubHeadingListStart
+
+\resumeProjectHeading
+{\textbf{نوفا بيل — نظام إدارة مختبر طبي (متوافق مع هيئة الزكاة والضريبة)} \quad {\small داخلي — جولة توضيحية عند الطلب}}{}
+\resumeItemListStart
+\resumeItem{واجهة عربية \textenglish{RTL} كاملة، فاتورة إلكترونية وفق مواصفات هيئة الزكاة والضريبة (\textenglish{SHA-256 hash, QR TLV})، إشعارات دائنة، 4 أدوار مستخدمين، لوحة محاسب، قوالب عروض أسعار، تصدير \textenglish{Excel/PDF}.}
+\resumeTechStack{Next.js, TypeScript, Supabase, PostgreSQL, shadcn/ui, Tailwind CSS, React Hook Form, Zod}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\href{https://cozyloopstore.vercel.app}{\textbf{Cozy Loops} — متجر إلكتروني للحرف اليدوية\ \faExternalLink*}}{}
+\resumeItemListStart
+\resumeItem{منصة تجارة إلكترونية للحرفيين بكتالوجات منتجات، وسلة تسوق فورية، ودفع إلكتروني عبر \textenglish{Stripe}، وتسجيل دخول بحساب \textenglish{Google}.}
+\resumeTechStack{Next.js, TypeScript, Material-UI, React Hook Form, Stripe, Socket.io}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\href{https://e-commerce-platform-website.netlify.app}{\textbf{منصة تجارة إلكترونية متكاملة}\ \faExternalLink*}}{}
+\resumeItemListStart
+\resumeItem{منصة شاملة من الطرف إلى الطرف بمصادقة \textenglish{JWT}، وتتبع مخزون فوري، ولوحة تحكم إدارية.}
+\resumeTechStack{React, Node.js, MongoDB, Context API, JWT Authentication}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-6pt}
+
+%-----------التعليم-----------
+\section{التعليم}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{جامعة المعلومات والتكنولوجيا الحديثة}{2020 -- 2024}
+{بكالوريوس في علوم الحاسب}{القاهرة، مصر}
+\resumeItemListStart
+\resumeItem{تكريم التميز في مشروع التخرج.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-6pt}
+
+%-----------الشهادات-----------
+\section{التطوير المهني والشهادات}
+\resumeSubHeadingListStart
+\resumeItem{مبادرة رواد مصر الرقمية (\textenglish{DEPI}) — دبلومة \textenglish{MERN Stack} (2024)}
+\resumeItem{برنامج \textenglish{InnovEgypt} — مركز إبداع مصر (\textenglish{TIEC}) (2024)}
+\resumeItem{معهد تكنولوجيا المعلومات (\textenglish{ITI}) — مطور ويب متكامل — وزارة الاتصالات (2023)}
+\resumeItem{تدريب الذكاء الاصطناعي — جامعة زويل (2023)}
+\resumeSubHeadingListEnd
+
+\end{document}

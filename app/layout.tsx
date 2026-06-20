@@ -132,10 +132,12 @@ export default function RootLayout({
             outerScale={2}
             outerAlpha={0}
             innerStyle={{
-                backgroundColor: 'var(--cursor-color)'
+                backgroundColor: 'var(--cursor-color)',
+                zIndex: 9999
             }}
             outerStyle={{
-                border: '3px solid var(--cursor-color)'
+                border: '3px solid var(--cursor-color)',
+                zIndex: 9999
             }}
         />
         </body>

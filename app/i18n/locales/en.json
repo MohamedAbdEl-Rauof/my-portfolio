@@ -16,6 +16,8 @@
     "closingLine": "Always learning and adapting to new challenges. When not coding, I'm exploring tech, enjoying music, and finding inspiration in everyday life. Ready to bring your ideas to life? <clink>Let's connect</clink> and create something amazing together.",
     "viewCV": "View My CV",
     "downloadCV": "Download CV",
+    "cvEnglish": "English",
+    "cvArabic": "Arabic (عربي)",
     "aboutMe": "See More About Me",
     "connectWithMe": "Connect with me"
   },
@@ -73,5 +75,10 @@
     "loading": "Loading...",
     "error": "Something went wrong",
     "retry": "Try again"
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "subtitle": "Looks like you've wandered off the map. The page you're looking for doesn't exist.",
+    "backHome": "Back to Home"
   }
 }

@@ -6,7 +6,7 @@ import {CacheProvider} from '@emotion/react';
 import createCache, {EmotionCache} from '@emotion/cache';
 import {prefixer} from 'stylis';
 import rtlPlugin from 'stylis-plugin-rtl';
-import i18n, {getInitialLanguage, isRtl, Language, STORAGE_KEY} from '@/app/i18n/config';
+import i18n, {DEFAULT_LANGUAGE, getInitialLanguage, isRtl, Language, STORAGE_KEY} from '@/app/i18n/config';
 
 interface LanguageContextValue {
     lang: Language;
@@ -28,7 +28,7 @@ const ltrCache: EmotionCache = createCache({key: 'mui', prepend: true, stylisPlu
 const rtlCache: EmotionCache = createCache({key: 'muirtl', prepend: true, stylisPlugins: [prefixer, rtlPlugin]});
 
 const AppProviders: React.FC<{children: React.ReactNode}> = ({children}) => {
-    const [lang, setLangState] = useState<Language>('en');
+    const [lang, setLangState] = useState<Language>(DEFAULT_LANGUAGE);
 
     // Sync to the persisted language after mount (avoids SSR/client mismatch).
     useEffect(() => {

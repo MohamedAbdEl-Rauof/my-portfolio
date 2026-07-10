@@ -6,10 +6,18 @@ import {Button, Box} from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Link from 'next/link';
 import {useTranslation} from 'react-i18next';
+import {useLanguage} from '@/app/providers/AppProviders';
 import {arrowAnimation, itemVariants} from './animations';
 
 const AboutMeButton: React.FC = () => {
     const {t} = useTranslation();
+    const {dir} = useLanguage();
+    const isRtl = dir === 'rtl';
+    // "Forward" points left in RTL — flip the drift animation and mirror the icon.
+    const directedArrowAnimation = {
+        ...arrowAnimation,
+        x: (arrowAnimation.x as number[]).map((v) => (isRtl ? -v : v)),
+    };
     return (
     <motion.div variants={itemVariants}>
         <Box sx={{ display: 'flex', justifyContent: 'center', mt: 3 }}>
@@ -41,7 +49,7 @@ const AboutMeButton: React.FC = () => {
                             boxShadow: 'var(--shadow-md)',
                             transform: 'translateY(-1px)',
                             '& .arrow-icon': {
-                                transform: 'translateX(4px)',
+                                transform: isRtl ? 'translateX(-4px)' : 'translateX(4px)',
                             },
                         },
                         '&:focus': {
@@ -50,13 +58,14 @@ const AboutMeButton: React.FC = () => {
                         },
                     }}
                 >
-                    <span style={{marginRight: '8px'}}>{t('home.aboutMe')}</span>
-                    <motion.div 
+                    {/* marginInlineEnd: logical property — inline styles bypass the emotion RTL cache */}
+                    <span style={{marginInlineEnd: '8px'}}>{t('home.aboutMe')}</span>
+                    <motion.div
                         className="arrow-icon"
-                        animate={arrowAnimation}
-                        style={{ transition: 'transform 0.3s ease' }}
+                        animate={directedArrowAnimation}
+                        style={{ transition: 'transform 0.3s ease', display: 'flex' }}
                     >
-                        <ArrowForwardIcon fontSize="small"/>
+                        <ArrowForwardIcon fontSize="small" sx={{transform: isRtl ? 'scaleX(-1)' : 'none'}}/>
                     </motion.div>
                 </Button>
             </motion.div>

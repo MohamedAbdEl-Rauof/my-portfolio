@@ -10,10 +10,13 @@
   "home": {
     "greeting": "I'M",
     "name": "Mohamed Abd El-Raouf",
-    "role": "Full-Stack Developer | Automation & AI",
-    "intro": "<highlight>Full-Stack Developer</highlight> who builds fast, responsive web apps with React & Next.js — and ships the backend, automation, and AI behind them. I design APIs, automate real-world workflows with n8n, and integrate AI assistants and messaging platforms that save teams hours every day.",
-    "projectsLine": "Check out my <plink>Projects</plink> to see how I turn complex problems into elegant, user-friendly solutions.",
-    "closingLine": "Always learning and adapting to new challenges. When not coding, I'm exploring tech, enjoying music, and finding inspiration in everyday life. Ready to bring your ideas to life? <clink>Let's connect</clink> and create something amazing together.",
+    "role": "Full-Stack Developer — Web Apps, Automation & AI",
+    "intro": "<highlight>Full-Stack Developer</highlight> building fast, bilingual (Arabic/English) web applications with React & Next.js — delivered end to end, from polished interfaces to APIs, databases, and deployment. Today I lead the digital systems of an international medical complex in Jeddah: ZATCA-compliant e-invoicing, WhatsApp patient communication, and n8n automations that save the team hours every single day.",
+    "projectsLine": "Explore my <plink>Projects</plink> — real systems running in production, not demos: e-commerce platforms, SaaS dashboards, and healthcare automation.",
+    "closingLine": "Have a project in mind or a role to fill? <clink>Let's talk</clink> — I reply quickly and I'm ready to start immediately.",
+    "availableBadge": "Open to work — Jeddah, Saudi Arabia",
+    "whatsapp": "Chat on WhatsApp",
+    "whatsappMessage": "Hello Mohamed, I saw your portfolio and would like to talk with you.",
     "viewCV": "View My CV",
     "downloadCV": "Download CV",
     "cvEnglish": "English",
@@ -23,7 +26,7 @@
   },
   "projects": {
     "title": "My Projects",
-    "subtitle": "A showcase of my professional work, personal projects, and freelance endeavors. Each project represents a unique challenge and learning opportunity.",
+    "subtitle": "Production systems, freelance work, and personal builds — each one shipped, live, and solving a real problem.",
     "showing_one": "Showing {{count}} project",
     "showing_other": "Showing {{count}} projects",
     "inCategory": "in {{category}}",
@@ -33,11 +36,12 @@
     "viewSource": "View Source",
     "details": "Project Details",
     "about": "About:",
-    "technologies": "Technologies:"
+    "technologies": "Technologies:",
+    "imageError": "Image failed to load"
   },
   "certificates": {
     "title": "My Certificates",
-    "subtitle": "A collection of professional certifications and achievements that demonstrate my expertise and commitment to continuous learning.",
+    "subtitle": "Certifications and achievements that back up my expertise — and my commitment to keep learning.",
     "showing_one": "Showing {{count}} certificate",
     "showing_other": "Showing {{count}} certificates",
     "inCategory": "in {{category}}",
@@ -55,7 +59,7 @@
   "contact": {
     "pageTitle": "Contact Us",
     "heading": "Get in Touch",
-    "subtitle": "Have a question or want to work together? Fill out the form below and I'll get back to you as soon as possible.",
+    "subtitle": "Have a question or a project in mind? Fill out the form below — I reply quickly, usually the same day.",
     "formTitle": "Contact Us",
     "name": "Name",
     "email": "Email",

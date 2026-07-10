@@ -8,7 +8,7 @@ export type Language = (typeof SUPPORTED_LANGUAGES)[number];
 
 export const RTL_LANGUAGES: Language[] = ['ar'];
 export const STORAGE_KEY = 'lang';
-export const DEFAULT_LANGUAGE: Language = 'en';
+export const DEFAULT_LANGUAGE: Language = 'ar';
 
 export const isRtl = (lang: string): boolean => RTL_LANGUAGES.includes(lang as Language);
 

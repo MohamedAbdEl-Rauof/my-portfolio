@@ -1,6 +1,7 @@
 import {Box, Card, CardMedia, Chip, Typography, Skeleton} from '@mui/material';
 import {Project} from './Projects';
 import {useState} from 'react';
+import {useTranslation} from 'react-i18next';
 
 interface ProjectCardProps {
     project: Project;
@@ -8,6 +9,7 @@ interface ProjectCardProps {
 }
 
 const ProjectCard = ({project, onClick}: ProjectCardProps) => {
+    const {t} = useTranslation();
     const [imageLoading, setImageLoading] = useState(true);
     const [imageError, setImageError] = useState(false);
     const isVideo = project.image.endsWith('.mp4') || project.image.endsWith('.webm');
@@ -93,7 +95,7 @@ const ProjectCard = ({project, onClick}: ProjectCardProps) => {
                                 color: 'var(--muted-foreground)',
                             }}
                         >
-                            <Typography variant="body2">Image failed to load</Typography>
+                            <Typography variant="body2">{t('projects.imageError')}</Typography>
                         </Box>
                     )}
                 </Box>

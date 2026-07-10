@@ -4,6 +4,7 @@ import "./globals.css";
 import {ThemeProvider} from 'next-themes';
 import AnimatedCursor from "react-animated-cursor";
 import NavBar from "@/app/components/NavBar";
+import FloatingWhatsApp from "@/app/components/FloatingWhatsApp";
 import ErrorBoundary from "@/app/components/ErrorBoundary";
 import PerformanceMonitor from "@/app/components/PerformanceMonitor";
 import AppProviders from "@/app/providers/AppProviders";
@@ -104,7 +105,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
+        <html lang="ar" dir="rtl">
         <head>
             <link rel="manifest" href="/manifest.json" />
             <meta name="theme-color" content="#171717" />
@@ -122,6 +123,7 @@ export default function RootLayout({
                     <PerformanceMonitor />
                     <NavBar/>
                     {children}
+                    <FloatingWhatsApp/>
                 </ErrorBoundary>
             </ThemeProvider>
         </AppProviders>

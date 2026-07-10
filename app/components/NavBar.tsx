@@ -12,6 +12,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 
 const navItems = [
+    {key: 'home', path: '/'},
     {key: 'about', path: '/about'},
     {key: 'projects', path: '/projects'},
     {key: 'certificates', path: '/certificates'},
@@ -49,7 +50,7 @@ const NavBar: React.FC = () => {
                             flexGrow: 0,
                             display: 'flex',
                             alignItems: 'center',
-                            marginRight: '16px',
+                            marginInlineEnd: '16px',
                             textDecoration: 'none',
                         }}
                     >

@@ -4,10 +4,14 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Box, Typography, Chip } from "@mui/material";
 import Link from "next/link";
-import { Trans } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 import { itemVariants } from "./animations";
 
-const IntroText: React.FC = () => (
+const IntroText: React.FC = () => {
+  // Trans alone doesn't subscribe to language changes — useTranslation does,
+  // so the intro re-renders instantly when the language switches.
+  const { t } = useTranslation();
+  return (
   <Box sx={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
     <motion.div
       variants={itemVariants}
@@ -25,6 +29,7 @@ const IntroText: React.FC = () => (
         }}
       >
         <Trans
+          t={t}
           i18nKey="home.intro"
           components={{highlight: <span className="gradient-text font-bold" />}}
         />
@@ -78,6 +83,7 @@ const IntroText: React.FC = () => (
         }}
       >
         <Trans
+          t={t}
           i18nKey="home.projectsLine"
           components={{
             plink: (
@@ -107,6 +113,7 @@ const IntroText: React.FC = () => (
         }}
       >
         <Trans
+          t={t}
           i18nKey="home.closingLine"
           components={{
             clink: (
@@ -122,6 +129,7 @@ const IntroText: React.FC = () => (
       </Typography>
     </motion.div>
   </Box>
-);
+  );
+};
 
 export default IntroText;

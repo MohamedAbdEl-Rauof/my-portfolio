@@ -54,6 +54,47 @@ const AnimatedName: React.FC = React.memo(() => {
                 padding: '2rem 0.7rem',
             }}
         >
+            {/* Availability badge — recruiters see it before anything else */}
+            <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+            >
+                <Box
+                    component="span"
+                    sx={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '0.5em',
+                        marginBottom: '1.25rem',
+                        padding: '0.4em 1em',
+                        borderRadius: '999px',
+                        border: '1px solid var(--border)',
+                        background: 'var(--gradient-accent)',
+                        color: 'var(--foreground)',
+                        fontSize: '0.85rem',
+                        fontWeight: 600,
+                        letterSpacing: '0.02em',
+                    }}
+                >
+                    <Box
+                        component="span"
+                        sx={{
+                            width: 8,
+                            height: 8,
+                            borderRadius: '50%',
+                            backgroundColor: '#22c55e',
+                            boxShadow: '0 0 0 3px rgba(34, 197, 94, 0.25)',
+                            animation: 'pulse 2s ease-in-out infinite',
+                            '@keyframes pulse': {
+                                '0%, 100%': { opacity: 1 },
+                                '50%': { opacity: 0.5 },
+                            },
+                        }}
+                    />
+                    {t('home.availableBadge')}
+                </Box>
+            </motion.div>
             <motion.div
                 variants={textAnimation}
                 initial="hidden"

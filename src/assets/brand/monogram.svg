@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Mohamed Abd El-Raouf">
-  <!-- An M drawn as four display-board segments, borrowing the vocabulary of
-       the amber clinic display boards behind the healthcare work. -->
-  <rect width="64" height="64" rx="14" fill="#0B1220" />
-  <g fill="#F5B841">
+  <!-- An M drawn as four segments. Monochrome: the favicon is the only place
+       the mark appears; the header uses the name as text. -->
+  <rect width="64" height="64" rx="14" fill="#171717" />
+  <g fill="#ffffff">
     <rect x="14" y="16" width="7" height="32" rx="3.5" />
     <rect x="43" y="16" width="7" height="32" rx="3.5" />
     <rect x="24.5" y="22" width="6.5" height="17" rx="3.25" transform="rotate(-18 27.75 30.5)" />

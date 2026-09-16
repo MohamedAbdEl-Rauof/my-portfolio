@@ -56,7 +56,7 @@ for (const [file, size, padded] of ICONS) {
       bottom: pad,
       left: pad,
       right: pad,
-      background: "#0B1220",
+      background: "#171717",
     });
   }
   await image.png().toFile(path.join(PUBLIC, "icons", file));

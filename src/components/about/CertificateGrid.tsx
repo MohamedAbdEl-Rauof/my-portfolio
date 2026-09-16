@@ -18,8 +18,13 @@ type Item = {
   image: string;
 };
 
+/**
+ * The thumbnail box is a fixed 4:3 frame the scan sits inside, so a portrait
+ * certificate shows whole instead of losing its bottom two thirds to a crop.
+ */
 export function CertificateGrid({ items }: { items: Item[] }) {
   const t = useTranslations("about");
+  const common = useTranslations("common");
   const [open, setOpen] = useState<string | null>(null);
 
   return (
@@ -34,38 +39,38 @@ export function CertificateGrid({ items }: { items: Item[] }) {
               <button
                 type="button"
                 aria-label={`${t("viewCertificate")}: ${item.title}`}
-                className="group h-full w-full space-y-3 rounded-xl border bg-card p-3 text-start transition-colors hover:border-signal/40"
+                className="group w-full text-start"
               >
-                <Image
-                  src={item.image}
-                  alt=""
-                  width={640}
-                  height={452}
-                  sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 100vw"
-                  className="aspect-3/2 w-full rounded-md border object-cover object-top"
-                />
-                <span className="block space-y-1 px-1 pb-1">
-                  <span className="block font-medium text-balance">
-                    {item.title}
-                  </span>
-                  <span className="block text-sm text-muted-foreground">
-                    {item.issuer}
-                  </span>
-                  <span className="numeric block text-xs text-muted-foreground">
-                    {item.date}
-                  </span>
+                <span className="flex aspect-4/3 items-center justify-center rounded-sm border bg-muted p-2 transition-colors group-hover:bg-accent">
+                  <Image
+                    src={item.image}
+                    alt=""
+                    width={600}
+                    height={450}
+                    sizes="(min-width: 640px) 240px, 100vw"
+                    className="h-full w-full object-contain"
+                  />
+                </span>
+                <span className="mt-2 block text-sm font-medium text-balance">
+                  {item.title}
+                </span>
+                <span className="block text-xs text-muted-foreground">
+                  {item.issuer} · <span className="numeric">{item.date}</span>
                 </span>
               </button>
             </DialogTrigger>
-            <DialogContent className="max-w-4xl p-2 sm:p-3">
+            <DialogContent
+              className="max-w-3xl p-2"
+              closeLabel={common("close")}
+            >
               <DialogTitle className="sr-only">{item.title}</DialogTitle>
               <Image
                 src={item.image}
                 alt={item.title}
-                width={1600}
-                height={1130}
+                width={1200}
+                height={900}
                 sizes="90vw"
-                className="h-auto w-full rounded-md"
+                className="h-auto max-h-[85vh] w-full rounded-sm object-contain"
               />
             </DialogContent>
           </Dialog>

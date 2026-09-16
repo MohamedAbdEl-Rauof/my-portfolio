@@ -3,88 +3,65 @@ import { Link } from "@/i18n/navigation";
 import { getExperience, getProjects } from "@/lib/content";
 import { formatRange } from "@/lib/format";
 import type { Locale } from "@/i18n/routing";
-import { cn } from "@/lib/utils";
 
 /**
- * Roles as a vertical timeline.
- *
- * `compact` drops the highlight bullets and the linked projects, which is what
- * the home page shows; the About page renders the full entry.
+ * Roles as a divided list. `compact` drops the highlight bullets and the
+ * linked projects, which is what the home page shows; `limit` caps the count.
  */
 export async function ExperienceTimeline({
   compact = false,
+  limit,
 }: {
   compact?: boolean;
+  limit?: number;
 }) {
   const t = await getTranslations("project");
   const locale = (await getLocale()) as Locale;
-  const { roles } = getExperience();
+  const roles = getExperience().roles.slice(0, limit);
   const projects = getProjects();
 
   return (
-    <ol className="relative space-y-10 border-s ps-6">
+    <ol className="divide-y">
       {roles.map((role) => {
         const linked = role.projectSlugs
           .map((slug) => projects.find((project) => project.slug === slug))
           .filter((project) => project !== undefined);
 
         return (
-          <li key={`${role.company.en}-${role.start}`} className="relative">
-            <span
-              aria-hidden="true"
-              className={cn(
-                "absolute -start-[1.6875rem] top-1.5 size-3 rounded-full border-2 border-background",
-                role.end === null ? "bg-live" : "bg-signal",
-              )}
-            />
-
-            <div className="space-y-1">
-              <p className="numeric eyebrow text-muted-foreground">
+          <li key={`${role.company.en}-${role.start}`} className="py-4">
+            <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+              <h3 className="text-base font-medium">{role.role[locale]}</h3>
+              <span className="numeric text-xs text-muted-foreground">
                 {formatRange(role.start, role.end, locale, t("present"))}
-              </p>
-              <h3 className="font-display text-xl font-semibold">
-                {role.role[locale]}
-              </h3>
-              <p className="text-sm text-signal">{role.company[locale]}</p>
-              <p className="text-sm text-muted-foreground">
-                {role.location[locale]}
-              </p>
+              </span>
             </div>
-
-            <p className="mt-3 max-w-[64ch] text-muted-foreground">
-              {role.summary[locale]}
+            <p className="text-sm text-muted-foreground">
+              {role.company[locale]} · {role.location[locale]}
             </p>
+            <p className="mt-2 max-w-[64ch] text-sm">{role.summary[locale]}</p>
 
             {!compact ? (
               <>
-                <ul className="mt-4 space-y-2">
+                <ul className="mt-3 list-disc space-y-1 ps-5 text-sm">
                   {role.highlights.map((highlight) => (
-                    <li
-                      key={highlight.en}
-                      className="flex gap-3 text-sm text-muted-foreground"
-                    >
-                      <span
-                        aria-hidden="true"
-                        className="mt-2 size-1 shrink-0 rounded-full bg-signal"
-                      />
-                      <span className="max-w-[60ch]">{highlight[locale]}</span>
+                    <li key={highlight.en} className="max-w-[62ch]">
+                      {highlight[locale]}
                     </li>
                   ))}
                 </ul>
-
                 {linked.length > 0 ? (
-                  <ul className="mt-4 flex flex-wrap gap-2">
+                  <p className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-sm">
                     {linked.map((project) => (
-                      <li key={project.slug}>
-                        <Link
-                          href={`/projects/${project.slug}`}
-                          className="inline-block rounded-md border px-2.5 py-1 text-xs transition-colors hover:border-signal/40 hover:text-signal"
-                        >
-                          {project.title[locale]}
-                        </Link>
-                      </li>
+                      <Link
+                        key={project.slug}
+                        href={`/projects/${project.slug}`}
+                        prefetch={false}
+                        className="underline underline-offset-4 hover:text-muted-foreground"
+                      >
+                        {project.title[locale]}
+                      </Link>
                     ))}
-                  </ul>
+                  </p>
                 ) : null}
               </>
             ) : null}

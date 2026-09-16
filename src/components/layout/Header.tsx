@@ -1,18 +1,11 @@
 import { getTranslations } from "next-intl/server";
-import { MessageCircle } from "lucide-react";
-import { getProfile, whatsappUrl } from "@/lib/content";
-import { Button } from "@/components/ui/button";
 import { BrandMark } from "./BrandMark";
 import { NavLinks, type NavItem } from "./NavLinks";
-import { MobileNav } from "./MobileNav";
 import { LocaleSwitcher } from "./LocaleSwitcher";
 import { ThemeToggle } from "./ThemeToggle";
 
 export async function Header() {
   const t = await getTranslations("nav");
-  const home = await getTranslations("home");
-  const profile = getProfile();
-
   const items: NavItem[] = [
     { href: "/projects", label: t("work") },
     { href: "/about", label: t("about") },
@@ -20,40 +13,28 @@ export async function Header() {
   ];
 
   return (
-    <header className="glass sticky top-0 z-40 border-b">
-      <div className="mx-auto flex h-16 max-w-(--container-content) items-center gap-4 px-4">
-        <BrandMark />
-
+    <header className="sticky top-0 z-40 border-b bg-background/92">
+      <div className="wrap flex h-15 items-center gap-4">
+        {/* On phones the three links and two controls take the whole bar; the
+            name is the first thing in the hero anyway. */}
+        <div
+          className="rise hidden sm:block"
+          style={{ "--d": "0ms" } as React.CSSProperties}
+        >
+          <BrandMark />
+        </div>
         <NavLinks
           items={items}
           label={t("menu")}
-          className="ms-6 hidden items-center gap-6 md:flex"
+          className="rise flex items-center gap-4 sm:gap-5"
+          style={{ "--d": "60ms" } as React.CSSProperties}
         />
-
-        <div className="ms-auto flex items-center gap-1">
+        <div
+          className="rise ms-auto flex items-center gap-1"
+          style={{ "--d": "120ms" } as React.CSSProperties}
+        >
           <LocaleSwitcher />
           <ThemeToggle />
-          <Button
-            asChild
-            size="sm"
-            variant="signal"
-            className="hidden h-11 sm:inline-flex"
-          >
-            <a
-              href={whatsappUrl(profile.whatsapp, home("whatsappMessage"))}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <MessageCircle className="size-4" aria-hidden="true" />
-              {home("primaryCta")}
-            </a>
-          </Button>
-          <MobileNav
-            items={items}
-            title={t("menu")}
-            openLabel={t("openMenu")}
-            closeLabel={t("closeMenu")}
-          />
         </div>
       </div>
     </header>

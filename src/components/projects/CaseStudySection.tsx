@@ -1,9 +1,9 @@
 import Image from "next/image";
-import type { ReactNode } from "react";
 
 /**
- * One block of a case study: a heading, paragraphs, optional bullets and one
- * optional image.
+ * One block of a case study. The sequence marker sits inside the heading at
+ * every width, so it always relates to the text beside it; the old version
+ * indented the body on desktop only, leaving the numeral floating on phones.
  */
 export function CaseStudySection({
   heading,
@@ -18,42 +18,33 @@ export function CaseStudySection({
   body: string[];
   bullets?: string[];
   image?: { src: string; alt: string; caption?: string };
-  children?: ReactNode;
 }) {
   return (
-    <section className="space-y-4">
-      <div className="flex items-baseline gap-4">
+    <section>
+      <h2 className="text-xl font-semibold text-balance">
         {marker ? (
           <span
             aria-hidden="true"
-            className="numeric tabular font-mono text-sm text-signal"
+            className="numeric me-3 text-sm text-muted-foreground"
           >
             {marker}
           </span>
         ) : null}
-        <h2 className="font-display text-2xl font-semibold text-balance">
-          {heading}
-        </h2>
-      </div>
+        {heading}
+      </h2>
 
-      <div className={marker ? "space-y-4 ps-0 sm:ps-10" : "space-y-4"}>
+      <div className="mt-3 space-y-3">
         {body.map((paragraph) => (
-          <p key={paragraph} className="max-w-[66ch] text-muted-foreground">
+          <p key={paragraph} className="max-w-[66ch] text-base">
             {paragraph}
           </p>
         ))}
 
         {bullets && bullets.length > 0 ? (
-          <ul className="space-y-3">
+          <ul className="list-disc space-y-1.5 ps-5 text-base">
             {bullets.map((bullet) => (
-              <li key={bullet} className="flex gap-3">
-                <span
-                  aria-hidden="true"
-                  className="mt-2.5 size-1.5 shrink-0 rounded-full bg-signal"
-                />
-                <span className="max-w-[64ch] text-muted-foreground">
-                  {bullet}
-                </span>
+              <li key={bullet} className="max-w-[64ch]">
+                {bullet}
               </li>
             ))}
           </ul>
@@ -66,8 +57,8 @@ export function CaseStudySection({
               alt={image.alt}
               width={1600}
               height={1000}
-              sizes="(min-width: 1024px) 60vw, 100vw"
-              className="w-full rounded-lg border object-cover"
+              sizes="(min-width: 768px) 720px, 100vw"
+              className="w-full rounded-md border object-cover"
             />
             {image.caption ? (
               <figcaption className="text-sm text-muted-foreground">

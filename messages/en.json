@@ -1,10 +1,6 @@
 {
   "common": {
-    "loading": "Loading",
-    "error": "Something went wrong",
-    "retry": "Try again",
-    "viewAll": "View all",
-    "readCaseStudy": "Read the case study",
+    "readCaseStudy": "Case study",
     "visitSite": "Visit site",
     "viewSource": "View source",
     "close": "Close"
@@ -15,8 +11,7 @@
     "about": "About",
     "contact": "Contact",
     "menu": "Menu",
-    "openMenu": "Open menu",
-    "closeMenu": "Close menu"
+    "footer": "Footer"
   },
   "a11y": {
     "skipToContent": "Skip to content",
@@ -24,41 +19,27 @@
     "themeLight": "light",
     "themeDark": "dark",
     "switchLanguage": "Switch language to Arabic",
-    "pauseMarquee": "Pause the logo animation",
-    "playMarquee": "Resume the logo animation",
     "homeLink": "Mohamed Abd El-Raouf, home"
   },
   "home": {
-    "badge": "Open to work · Jeddah, Saudi Arabia",
-    "name": "Mohamed Abd El-Raouf",
     "headline": "I build bilingual web systems that run in production.",
     "intro": "Full-stack developer working in React and Next.js, end to end: interface, API, database, deployment. I lead the digital systems of an international medical complex in Jeddah, from a ZATCA-compliant invoicing system to WhatsApp patient communication and automations that save the team hours every day.",
-    "primaryCta": "Start a WhatsApp chat",
-    "cv": "Curriculum vitae",
-    "cvEnglish": "English",
-    "cvArabic": "Arabic",
+    "primaryCta": "Message on WhatsApp",
+    "cv": "Download CV (PDF)",
     "photoAlt": "Portrait of Mohamed Abd El-Raouf",
-    "signalBoard": "Live systems",
     "selectedWork": "Selected work",
-    "selectedWorkLead": "Systems in daily use by real teams, not demos.",
-    "services": "What I do",
-    "stack": "Stack",
+    "stack": "Skills",
     "experience": "Experience",
+    "whatsappMessage": "Hello Mohamed, I saw your portfolio and would like to talk with you.",
+    "viewAllWork": "All work",
+    "readMore": "More about me",
+    "openToWork": "Open to work",
+    "services": "What I do",
     "ctaTitle": "Have a project or a role in mind?",
     "ctaBody": "WhatsApp reaches me fastest. I usually reply the same day.",
-    "whatsappMessage": "Hello Mohamed, I saw your portfolio and would like to talk with you.",
-    "boardLive": "In production",
-    "boardLighthouse": "Lighthouse",
-    "boardLighthouseNote": "Performance, accessibility and SEO, measured on production",
-    "boardRedirects": "Legacy URLs recovered",
-    "boardRedirectsNote": "Checked against production after every deploy",
-    "boardTests": "Deletable invoices",
-    "boardTestsNote": "Nova Bill corrects by credit note, never by deletion",
-    "servicesLead": "Four kinds of work, all of it shipped rather than prototyped.",
-    "stackLead": "What I reach for, grouped by where it sits in a system.",
-    "experienceLead": "Two roles, and the systems each one produced.",
-    "viewAllWork": "See all work",
-    "readMore": "More about me"
+    "statProjects": "Projects shipped",
+    "statYears": "Years building",
+    "statLive": "Systems in production"
   },
   "projects": {
     "title": "Work",
@@ -101,8 +82,6 @@
     "experience": "Experience",
     "education": "Education",
     "certificates": "Certificates",
-    "issued": "Issued",
-    "skillsShown": "Skills",
     "viewCertificate": "View certificate"
   },
   "contact": {
@@ -115,15 +94,7 @@
     "openWhatsApp": "Open WhatsApp",
     "email": "Email",
     "location": "Location",
-    "locationValue": "Jeddah, Saudi Arabia",
     "defaultMessage": "Hello Mohamed, I saw your portfolio and would like to talk with you."
-  },
-  "footer": {
-    "tagline": "Full-stack developer, Jeddah.",
-    "builtWith": "Built with Next.js and Tailwind CSS.",
-    "rights": "All rights reserved.",
-    "sections": "Sections",
-    "elsewhere": "Elsewhere"
   },
   "notFound": {
     "title": "Page not found",

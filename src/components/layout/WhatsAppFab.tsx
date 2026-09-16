@@ -5,11 +5,11 @@ import { useTranslations } from "next-intl";
 import { usePathname } from "@/i18n/navigation";
 
 /**
- * Floating WhatsApp shortcut.
+ * Floating WhatsApp shortcut, kept quiet.
  *
- * Hidden on /contact, where the page is already one large WhatsApp call to
- * action and the button would only cover it. Wrapped in a landmark so someone
- * navigating by region reaches it instead of skipping straight past.
+ * The header no longer carries a call to action, and a project page can run
+ * to several thousand pixels, so this is the one always-present path to the
+ * single contact channel. Hidden on /contact, which is already that path.
  */
 export function WhatsAppFab({ href }: { href: string }) {
   const t = useTranslations("home");
@@ -24,9 +24,9 @@ export function WhatsAppFab({ href }: { href: string }) {
         target="_blank"
         rel="noopener noreferrer"
         aria-label={t("primaryCta")}
-        className="fixed end-5 bottom-5 z-30 flex size-14 items-center justify-center rounded-full bg-signal text-signal-foreground shadow-lg transition-transform duration-200 hover:scale-105 active:scale-95 motion-reduce:transition-none motion-reduce:hover:scale-100"
+        className="fixed end-4 bottom-4 z-30 flex size-11 items-center justify-center rounded-full bg-primary text-primary-foreground transition-colors hover:bg-primary/85"
       >
-        <MessageCircle className="size-6" aria-hidden="true" />
+        <MessageCircle className="size-5" aria-hidden="true" />
       </a>
     </aside>
   );

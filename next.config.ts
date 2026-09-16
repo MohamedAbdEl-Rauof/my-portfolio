@@ -34,12 +34,6 @@ assertSiteUrl();
 const nextConfig: NextConfig = {
   // Stray lockfiles elsewhere in $HOME confuse workspace-root inference.
   turbopack: { root: import.meta.dirname },
-  /* The card routes read their TTFs with readFile, which the bundler cannot
-     see. They render at build time today, but should one ever render on
-     demand, the fonts have to be in the function. */
-  outputFileTracingIncludes: {
-    "/**/opengraph-image": ["./src/assets/fonts/**"],
-  },
   images: {
     formats: ["image/avif", "image/webp"],
     // Next 16 ignores any quality not listed here.

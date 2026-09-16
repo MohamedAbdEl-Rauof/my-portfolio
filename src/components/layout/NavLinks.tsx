@@ -1,54 +1,41 @@
 "use client";
 
-import { usePathname } from "@/i18n/navigation";
-import { Link } from "@/i18n/navigation";
+import type { CSSProperties } from "react";
+import { Link, usePathname } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 
 export type NavItem = { href: string; label: string };
 
-/**
- * The nav is a client component only because the active item depends on the
- * current path. The labels are resolved on the server and passed in.
- */
 export function NavLinks({
   items,
-  className,
   label,
-  onNavigate,
+  className,
+  style,
 }: {
   items: NavItem[];
-  className?: string;
-  /** Distinguishes this navigation from others on the page. */
   label: string;
-  onNavigate?: () => void;
+  className?: string;
+  style?: CSSProperties;
 }) {
   const pathname = usePathname();
 
   return (
-    <nav aria-label={label} className={className}>
+    <nav aria-label={label} className={className} style={style}>
       {items.map((item) => {
-        const active =
-          item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
-
+        const active = pathname.startsWith(item.href);
         return (
           <Link
             key={item.href}
             href={item.href}
-            onClick={onNavigate}
             aria-current={active ? "page" : undefined}
             className={cn(
-              "relative py-1 text-sm transition-colors hover:text-foreground",
-              active ? "text-foreground" : "text-muted-foreground",
+              "nav-link inline-flex min-h-11 items-center text-sm transition-colors hover:text-foreground",
+              active
+                ? "font-semibold text-foreground"
+                : "text-muted-foreground",
             )}
           >
             {item.label}
-            <span
-              aria-hidden="true"
-              className={cn(
-                "absolute inset-x-0 -bottom-0.5 h-px origin-center scale-x-0 bg-signal transition-transform duration-200",
-                active && "scale-x-100",
-              )}
-            />
           </Link>
         );
       })}

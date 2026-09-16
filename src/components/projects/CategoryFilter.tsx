@@ -2,16 +2,9 @@ import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 
-/**
- * Category filter.
- *
- * Plain links carrying a query parameter, not client state. That keeps the
- * grid a server component, makes every filtered view a shareable URL, and
- * means the filter works before any JavaScript has run.
- */
+/** Pills carrying a query parameter: shareable, server-rendered, no JS needed. */
 export async function CategoryFilter({ active }: { active: string }) {
   const t = await getTranslations("projects");
-
   const categories = [
     { id: "all", label: t("all") },
     { id: "professional", label: t("professional") },
@@ -38,10 +31,10 @@ export async function CategoryFilter({ active }: { active: string }) {
                 scroll={false}
                 aria-current={selected ? "true" : undefined}
                 className={cn(
-                  "inline-flex min-h-11 items-center rounded-md border px-4 text-sm transition-colors",
+                  "inline-flex min-h-11 items-center rounded-full border px-4 text-sm font-medium transition-[transform,background,color] duration-200 hover:-translate-y-0.5",
                   selected
-                    ? "border-signal/40 bg-signal-soft text-signal"
-                    : "text-muted-foreground hover:border-signal/30 hover:text-foreground",
+                    ? "border-foreground bg-foreground text-background"
+                    : "bg-card text-muted-foreground hover:text-foreground",
                 )}
               >
                 {category.label}

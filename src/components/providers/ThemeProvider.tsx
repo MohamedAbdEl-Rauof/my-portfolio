@@ -2,12 +2,12 @@
 
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 
-/** Dark is the designed default; the system preference still wins if set. */
+/** Follows the system preference; either theme is a plain grey. */
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   return (
     <NextThemesProvider
       attribute="class"
-      defaultTheme="dark"
+      defaultTheme="system"
       enableSystem
       disableTransitionOnChange
     >

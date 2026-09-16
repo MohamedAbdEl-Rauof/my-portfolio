@@ -55,8 +55,18 @@ who scrolls past.
 and converts the profile photo. The photo source is 640×640 and is never
 upscaled.
 
+## Certificates
+
+`pnpm media:certificates` reads the scans from `media-sources/certificates/`,
+named by certificate id, resizes each to at most 1200px, flattens the PNGs
+onto white and writes WebP to `public/certificates/`, then points
+`content/certificates.json` at the new paths. Seven scans went from 2.4 MB to
+about 0.5 MB. The grid shows them in a fixed 4:3 frame with `object-contain`,
+so a portrait scan is shown whole rather than cropped.
+
 ## Fonts
 
-`src/assets/fonts/` holds TTF copies of Readex Pro and JetBrains Mono, used by
-the card scripts. They are vendored because a renderer needs font data as a
-buffer, which `next/font` does not expose. Both are SIL Open Font License.
+Geist (variable) and IBM Plex Sans Arabic (400, 700) via `next/font`, the
+pairing from the owner's original portfolio. `src/assets/fonts/` still holds
+TTF copies of Readex Pro and JetBrains Mono from an earlier pass; nothing reads
+them and they can be deleted.

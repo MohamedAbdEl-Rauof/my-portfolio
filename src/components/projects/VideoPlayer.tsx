@@ -1,17 +1,14 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Play } from "lucide-react";
 
 /**
- * A walkthrough recording behind its poster.
- *
- * The `<video>` element has no `src` until the visitor presses play, so the
- * file is never fetched for someone who only scrolls past. It also never
- * autoplays: these are silent screen recordings that explain something, and
- * starting one unasked is noise, not information.
+ * A walkthrough recording behind its poster. The <video> has no src until
+ * the visitor presses play, so the file is never fetched by someone who only
+ * scrolls past. It never autoplays.
  */
 export function VideoPlayer({
   src,
@@ -24,27 +21,26 @@ export function VideoPlayer({
 }) {
   const t = useTranslations("project");
   const [active, setActive] = useState(false);
-  const ref = useRef<HTMLVideoElement>(null);
 
   if (!active) {
     return (
       <button
         type="button"
         onClick={() => setActive(true)}
-        className="group relative block w-full overflow-hidden rounded-xl border"
+        className="group relative block w-full overflow-hidden rounded-md border"
       >
         <Image
           src={poster}
           alt={alt}
           width={1600}
           height={1000}
-          sizes="(min-width: 1024px) 60vw, 100vw"
+          sizes="(min-width: 768px) 720px, 100vw"
           className="aspect-16/10 w-full object-cover object-top"
         />
-        <span className="absolute inset-0 flex items-center justify-center bg-[#0b1220]/45 transition-colors group-hover:bg-[#0b1220]/30">
-          <span className="flex items-center gap-3 rounded-full bg-signal px-5 py-3 text-signal-foreground">
-            <Play className="size-5" aria-hidden="true" />
-            <span className="text-sm font-medium">{t("watchDemo")}</span>
+        <span className="absolute inset-0 flex items-center justify-center bg-black/40 transition-colors group-hover:bg-black/30">
+          <span className="flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-medium text-primary-foreground">
+            <Play className="size-4" aria-hidden="true" />
+            {t("watchDemo")}
           </span>
         </span>
       </button>
@@ -52,10 +48,8 @@ export function VideoPlayer({
   }
 
   return (
-    /* A silent screen recording: there is no speech to caption, and the
-       surrounding text carries what it shows. */
+    /* A silent screen recording: nothing to caption. */
     <video
-      ref={ref}
       src={src}
       poster={poster}
       controls
@@ -64,7 +58,7 @@ export function VideoPlayer({
       muted
       loop
       preload="none"
-      className="aspect-16/10 w-full rounded-xl border object-cover"
+      className="aspect-16/10 w-full rounded-md border object-cover"
     />
   );
 }

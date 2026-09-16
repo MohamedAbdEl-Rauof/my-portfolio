@@ -11,7 +11,7 @@
         "ar": "وزارة الاتصالات وتقنية المعلومات"
       },
       "date": "2024-10",
-      "image": "/certificates/DEPICertificate.jpeg",
+      "image": "/certificates/mcit-react-web-developer.webp",
       "skills": ["react", "javascript", "nodejs", "mongodb"]
     },
     {
@@ -25,7 +25,7 @@
         "ar": "جامعة الحداثة للتكنولوجيا والمعلومات"
       },
       "date": "2024-06",
-      "image": "/certificates/graduateCertificate.jpeg",
+      "image": "/certificates/mti-graduation.webp",
       "skills": []
     },
     {
@@ -39,7 +39,7 @@
         "ar": "HackerRank"
       },
       "date": "2025-10",
-      "image": "/certificates/ReactHackerRankCertificate.png",
+      "image": "/certificates/hackerrank-react.webp",
       "skills": ["react", "javascript"]
     },
     {
@@ -53,7 +53,7 @@
         "ar": "مركز ابتكار وريادة الأعمال التقنية (TIEC)"
       },
       "date": "2023-12",
-      "image": "/certificates/innovEgyptCertificate.png",
+      "image": "/certificates/innovegypt.webp",
       "skills": []
     },
     {
@@ -67,7 +67,7 @@
         "ar": "معهد تكنولوجيا المعلومات (ITI)"
       },
       "date": "2023-08",
-      "image": "/certificates/ITICertificate.jpeg",
+      "image": "/certificates/iti-php.webp",
       "skills": []
     },
     {
@@ -81,7 +81,7 @@
         "ar": "جامعة زويل سيتي ومنصة Impact"
       },
       "date": "2023-08",
-      "image": "/certificates/zewailCertificate.jpeg",
+      "image": "/certificates/zewail-ai.webp",
       "skills": []
     },
     {
@@ -95,7 +95,7 @@
         "ar": "وزارة الشباب والرياضة واليونيسف"
       },
       "date": "2020-01",
-      "image": "/certificates/meshwareCertificate.jpeg",
+      "image": "/certificates/meshwary.webp",
       "skills": []
     }
   ]

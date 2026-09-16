@@ -76,6 +76,11 @@ origin fails on purpose rather than silently shipping wrong canonicals.
 `robots.ts` closes any non-production deployment to crawlers, so preview builds
 cannot compete with the live site in search results.
 
+The bare domain serves a small page carrying the social card and forwards to
+`/ar`, so a link shared as `developer-moraouf.vercel.app` gets a preview. Note
+that WhatsApp caches a failed preview for days; after a deploy, test with a
+variant such as `?v=2` or purge it in Facebook's Sharing Debugger.
+
 ## What the old site was
 
 Version one was a client-rendered single page app on MUI and Tailwind 3, with

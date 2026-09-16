@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import {
   Dialog,
   DialogContent,
@@ -12,10 +13,11 @@ import {
 type Item = { src: string; alt: string; caption?: string };
 
 export function Gallery({ items }: { items: Item[] }) {
+  const common = useTranslations("common");
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <ul className="grid gap-4 sm:grid-cols-2">
+    <ul className="grid gap-3 sm:grid-cols-2">
       {items.map((item, index) => (
         <li key={item.src}>
           <Dialog
@@ -32,8 +34,8 @@ export function Gallery({ items }: { items: Item[] }) {
                   alt={item.alt}
                   width={1600}
                   height={1000}
-                  sizes="(min-width: 640px) 45vw, 100vw"
-                  className="aspect-16/10 w-full rounded-lg border object-cover object-top transition group-hover:border-signal/40"
+                  sizes="(min-width: 640px) 360px, 100vw"
+                  className="aspect-16/10 w-full rounded-sm border object-cover object-top transition-opacity group-hover:opacity-90"
                 />
                 {item.caption ? (
                   <span className="block text-sm text-muted-foreground">
@@ -42,7 +44,10 @@ export function Gallery({ items }: { items: Item[] }) {
                 ) : null}
               </button>
             </DialogTrigger>
-            <DialogContent className="max-w-5xl p-2 sm:p-3">
+            <DialogContent
+              className="max-w-4xl p-2"
+              closeLabel={common("close")}
+            >
               <DialogTitle className="sr-only">{item.alt}</DialogTitle>
               <Image
                 src={item.src}
@@ -50,7 +55,7 @@ export function Gallery({ items }: { items: Item[] }) {
                 width={1600}
                 height={1000}
                 sizes="90vw"
-                className="h-auto w-full rounded-md"
+                className="h-auto w-full rounded-sm"
               />
               {item.caption ? (
                 <p className="px-2 pb-2 text-sm text-muted-foreground">

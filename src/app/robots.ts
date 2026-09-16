@@ -19,8 +19,8 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
-      // Nothing under here renders a page worth indexing.
-      disallow: ["/api/", "/ar/dev/", "/en/dev/"],
+      // No API routes today, but a stray one should not be indexed.
+      disallow: "/api/",
     },
     sitemap: absoluteUrl("/sitemap.xml"),
   };

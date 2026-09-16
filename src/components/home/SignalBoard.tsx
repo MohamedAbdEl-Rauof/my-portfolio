@@ -4,9 +4,9 @@ import { cn } from "@/lib/utils";
 type Row = { label: string; value: string; note?: string; live?: boolean };
 
 /**
- * The signature element: a strip modelled on the clinic queue-display boards
- * this portfolio's flagship project puts on the wall. Amber tabular figures on
- * ink, four true facts, no animation.
+ * The signature element: a strip modelled on the amber clinic display boards
+ * behind this developer's healthcare work. Tabular figures on ink, four true
+ * facts, no animation.
  *
  * It is a list, not a marquee. An earlier version ticked between rows, which
  * meant three of the four facts were hidden at any moment and the one thing a
@@ -27,7 +27,7 @@ export async function SignalBoard({ className }: { className?: string }) {
       value: "74 / 74",
       note: t("boardRedirectsNote"),
     },
-    { label: t("boardTests"), value: "198", note: t("boardTestsNote") },
+    { label: t("boardTests"), value: "0", note: t("boardTestsNote") },
   ];
 
   return (

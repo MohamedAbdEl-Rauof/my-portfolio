@@ -1,8 +1,6 @@
 {
   "order": [
     "nova-medicals",
-    "queue-system",
-    "nova-dash",
     "nova-bill",
     "whatsapp-patient-platform",
     "lab-results-automation",
@@ -14,11 +12,8 @@
     "vcloud-control-panel",
     "vconnct-landing-pages",
     "tawteen",
-    "noor-dashboard",
     "cozy-loops",
     "ecommerce-platform",
-    "chat-app",
-    "property-management",
-    "hr-finger"
+    "chat-app"
   ]
 }

@@ -9,10 +9,10 @@
  * Design tokens.
  *
  * The palette comes from the subject matter: the amber LED digits of the
- * clinic queue-display boards in this portfolio's flagship project, on deep
- * ink navy. Amber also sits opposite the blue branding of every client
- * screenshot (Nova, Vconnct, Qriib), so covers read as photographs against it
- * instead of competing with the page.
+ * clinic display boards this developer builds for, on deep ink navy. Amber
+ * also sits opposite the blue branding of every client screenshot (Nova,
+ * Vconnct, Qriib), so covers read as photographs against it instead of
+ * competing with the page.
  *
  * `--signal` is the brand accent. shadcn's own `--accent` stays a neutral
  * hover fill so the two never collide.

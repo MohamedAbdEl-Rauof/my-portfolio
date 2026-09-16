@@ -51,8 +51,6 @@
       ],
       "projectSlugs": [
         "nova-medicals",
-        "queue-system",
-        "nova-dash",
         "nova-bill",
         "whatsapp-patient-platform",
         "lab-results-automation",

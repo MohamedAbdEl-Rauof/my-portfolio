@@ -27,8 +27,8 @@
   "status": "live",
   "category": "professional",
   "tags": ["saas", "dashboard", "realtime"],
-  "featured": false,
-  "order": 8,
+  "featured": true,
+  "order": 4,
   "cover": "/projects/qriib-app/cover.webp",
   "coverAlt": {
     "en": "The Qriib member dashboard showing upcoming meetings and recordings.",

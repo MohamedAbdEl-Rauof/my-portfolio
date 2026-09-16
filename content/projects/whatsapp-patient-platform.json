@@ -27,8 +27,8 @@
   "status": "internal",
   "category": "professional",
   "tags": ["healthcare", "automation"],
-  "featured": false,
-  "order": 5,
+  "featured": true,
+  "order": 3,
   "cover": "/projects/whatsapp-patient-platform/cover.webp",
   "coverAlt": {
     "en": "The shared Chatwoot inbox holding patient WhatsApp conversations.",

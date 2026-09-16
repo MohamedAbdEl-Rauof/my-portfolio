@@ -19,7 +19,7 @@
     "prebuild": "node scripts/validate-content.mts",
     "media:images": "node scripts/generate-images.mts",
     "media:covers": "node scripts/make-covers.mts",
-    "media:cards": "node scripts/make-system-cards.mts && node scripts/make-page-cards.mts",
+    "media:cards": "node scripts/make-page-cards.mts",
     "media:screenshots": "node scripts/capture-screenshots.mts",
     "media:videos": "node scripts/prepare-videos.mts",
     "media:og": "node scripts/make-og-images.mts"

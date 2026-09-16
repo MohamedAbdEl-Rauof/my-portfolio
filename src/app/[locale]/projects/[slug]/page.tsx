@@ -16,6 +16,7 @@ import { StackList } from "@/components/projects/StackList";
 import { StatusDot } from "@/components/projects/StatusDot";
 import { VideoPlayer } from "@/components/projects/VideoPlayer";
 import { Gallery } from "@/components/projects/Gallery";
+import { CaseStudy } from "@/components/projects/CaseStudy";
 import { GridGlow } from "@/components/background/GridGlow";
 import { getProject, getProjects, getProjectNeighbours } from "@/lib/content";
 import { formatRange } from "@/lib/format";
@@ -159,6 +160,14 @@ export default async function ProjectPage({
                 ))}
               </ul>
             </section>
+
+            {project.caseStudy ? (
+              <>
+                <Separator />
+                <CaseStudy caseStudy={project.caseStudy} locale={key} />
+                <Separator />
+              </>
+            ) : null}
 
             {project.video ? (
               <section className="space-y-4">

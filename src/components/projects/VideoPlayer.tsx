@@ -41,9 +41,9 @@ export function VideoPlayer({
           sizes="(min-width: 1024px) 60vw, 100vw"
           className="aspect-16/10 w-full object-cover object-top"
         />
-        <span className="absolute inset-0 flex items-center justify-center bg-background/45 transition-colors group-hover:bg-background/30">
+        <span className="absolute inset-0 flex items-center justify-center bg-[#0b1220]/45 transition-colors group-hover:bg-[#0b1220]/30">
           <span className="flex items-center gap-3 rounded-full bg-signal px-5 py-3 text-signal-foreground">
-            <Play className="size-5 rtl:-scale-x-100" aria-hidden="true" />
+            <Play className="size-5" aria-hidden="true" />
             <span className="text-sm font-medium">{t("watchDemo")}</span>
           </span>
         </span>

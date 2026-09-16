@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { getLocale } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { ArrowUpRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import type { Project } from "@/lib/schemas";
@@ -27,6 +27,7 @@ export async function ProjectCard({
   featured?: boolean;
 }) {
   const locale = (await getLocale()) as Locale;
+  const common = await getTranslations("common");
 
   return (
     <article className="group relative">
@@ -73,6 +74,13 @@ export async function ProjectCard({
           </p>
 
           <StackList ids={project.stack} limit={featured ? 5 : 3} />
+
+          {project.caseStudy ? (
+            <p className="eyebrow flex items-center gap-2 text-signal">
+              <span aria-hidden="true" className="h-px w-5 bg-signal" />
+              {common("readCaseStudy")}
+            </p>
+          ) : null}
         </div>
       </Link>
     </article>

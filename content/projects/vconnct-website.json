@@ -1,0 +1,58 @@
+{
+  "slug": "vconnct-website",
+  "title": {
+    "en": "Vconnct Website",
+    "ar": "موقع Vconnct"
+  },
+  "tagline": {
+    "en": "Marketing site and account entry point for an Arabic-first meetings platform.",
+    "ar": "موقع تسويقي ومدخل الحسابات لمنصة اجتماعات عربية الهوية."
+  },
+  "summary": {
+    "en": "I worked in the team that built the Vconnct website. My part was the single sign-on flow, the login and registration screens, several front-end components and the contact forms. I also integrated Strapi so the marketing team could change page content without a deploy.",
+    "ar": "عملت ضمن الفريق الذي بنى موقع Vconnct. كان نصيبي مسار تسجيل الدخول الموحّد (SSO)، وشاشات الدخول والتسجيل، وعدّة مكوّنات في الواجهة الأمامية، ونماذج التواصل. كما دمجت Strapi ليتمكّن فريق التسويق من تعديل محتوى الصفحات دون نشر جديد."
+  },
+  "role": {
+    "en": "Front-end developer in the website team",
+    "ar": "مطوّر واجهات أمامية ضمن فريق الموقع"
+  },
+  "client": {
+    "en": "Vconnct",
+    "ar": "Vconnct"
+  },
+  "timeline": {
+    "start": "2024-06",
+    "end": "2024-11"
+  },
+  "status": "live",
+  "category": "professional",
+  "tags": ["saas", "landing"],
+  "featured": false,
+  "order": 10,
+  "cover": "/projects/vconnct-website/cover.webp",
+  "coverAlt": {
+    "en": "The Vconnct website home page.",
+    "ar": "الصفحة الرئيسية لموقع Vconnct."
+  },
+  "gallery": [],
+  "links": {
+    "live": "https://vconnct.me"
+  },
+  "stack": ["typescript", "nextjs", "tailwindcss", "strapi", "css3"],
+  "highlights": [
+    {
+      "en": "I implemented single sign-on together with the login and registration screens that the rest of the product depends on.",
+      "ar": "نفّذت تسجيل الدخول الموحّد مع شاشتي الدخول والتسجيل اللتين يعتمد عليهما باقي المنتج."
+    },
+    {
+      "en": "I connected Strapi as the content source, so marketing copy and page sections change without a code deploy.",
+      "ar": "ربطت Strapi كمصدر للمحتوى، فتتغيّر النصوص التسويقية وأقسام الصفحات دون نشر شفرة جديدة."
+    },
+    {
+      "en": "I built the contact forms with validation and submission handling shared across several pages.",
+      "ar": "بنيت نماذج التواصل مع التحقّق ومعالجة الإرسال بشكل مشترك بين عدّة صفحات."
+    }
+  ],
+  "metrics": [],
+  "private": false
+}

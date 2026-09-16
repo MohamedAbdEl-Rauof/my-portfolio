@@ -1,0 +1,136 @@
+{
+  "slug": "nova-dash",
+  "title": {
+    "en": "Nova Dash",
+    "ar": "لوحة نوفا"
+  },
+  "tagline": {
+    "en": "The admin panel behind the clinic's WhatsApp bot",
+    "ar": "لوحة الإدارة خلف بوت واتساب في المجمع"
+  },
+  "summary": {
+    "en": "An Arabic admin panel where the medical complex manages its doctors, departments, services and schedules. The same records are served through an API-key protected endpoint that the WhatsApp bot reads, so a schedule edited here changes what the bot tells a patient.",
+    "ar": "لوحة إدارة عربية يدير بها المجمع الطبي أطباءه وأقسامه وخدماته وجداوله. تُقدَّم السجلات نفسها عبر واجهة برمجية محمية بمفتاح يقرأها بوت واتساب، فأي تعديل في الجدول هنا يغيّر ما يخبر به البوت المريض."
+  },
+  "role": {
+    "en": "Solo developer",
+    "ar": "مطوّر منفرد"
+  },
+  "client": {
+    "en": "Nova International Medical Complex, Jeddah",
+    "ar": "مجمع نوفا الدولي الطبي، جدة"
+  },
+  "timeline": {
+    "start": "2026-07",
+    "end": "2026-09"
+  },
+  "status": "internal",
+  "category": "professional",
+  "tags": ["healthcare", "dashboard", "automation", "rtl"],
+  "featured": true,
+  "order": 3,
+  "cover": "/projects/nova-dash/cover.webp",
+  "coverAlt": {
+    "en": "Title card for the Nova Dash admin panel",
+    "ar": "بطاقة تعريف لوحة إدارة نوفا"
+  },
+  "gallery": [],
+  "links": {},
+  "stack": [
+    "nextjs",
+    "react",
+    "typescript",
+    "supabase",
+    "postgresql",
+    "shadcn",
+    "tailwindcss",
+    "react-hook-form",
+    "zod",
+    "rest-apis",
+    "whatsapp-api",
+    "rtl",
+    "vercel"
+  ],
+  "highlights": [
+    {
+      "en": "One set of records serves two audiences: staff editing in the panel, and the WhatsApp bot reading the same data through a separate, API-key protected route.",
+      "ar": "مجموعة سجلات واحدة تخدم جمهورين: موظفون يحرّرون في اللوحة، وبوت واتساب يقرأ البيانات نفسها عبر مسار منفصل محمي بمفتاح."
+    },
+    {
+      "en": "Staff change what the bot says without touching the bot. Editing a doctor's schedule is a form, not a deployment.",
+      "ar": "يغيّر الموظفون ما يقوله البوت دون المساس به. تعديل جدول طبيب نموذج لا عملية نشر."
+    },
+    {
+      "en": "Built Arabic right to left throughout, because the people who use it every day work in Arabic.",
+      "ar": "مبنية بالكامل من اليمين إلى اليسار بالعربية، لأن من يستخدمها يوميًا يعملون بالعربية."
+    },
+    {
+      "en": "Sign-ups are disabled by design; the panel has the accounts the complex needs and no public way to create more.",
+      "ar": "التسجيل الذاتي معطّل عمدًا؛ للوحة الحسابات التي يحتاجها المجمع فقط، ولا سبيل عامًا لإنشاء غيرها."
+    }
+  ],
+  "metrics": [
+    {
+      "label": {
+        "en": "Record types managed",
+        "ar": "أنواع السجلات المُدارة"
+      },
+      "value": "5",
+      "note": {
+        "en": "Doctors, departments, services, schedules, bot settings",
+        "ar": "الأطباء، والأقسام، والخدمات، والجداول، وإعدادات البوت"
+      }
+    },
+    {
+      "label": {
+        "en": "Status",
+        "ar": "الحالة"
+      },
+      "value": "In production",
+      "note": {
+        "en": "Running on the complex's own subdomain",
+        "ar": "يعمل على نطاق فرعي خاص بالمجمع"
+      }
+    }
+  ],
+  "private": true,
+  "privateNote": {
+    "en": "The panel sits behind a staff login, so there is nothing useful to show at its public address. I can demonstrate it on a call.",
+    "ar": "اللوحة خلف تسجيل دخول للموظفين، فلا يوجد ما يستحق العرض على عنوانها العام. يسعدني عرضها في مكالمة."
+  },
+  "caseStudy": {
+    "problem": [
+      {
+        "en": "A WhatsApp bot answering questions about doctors and clinic hours is only as good as the data behind it, and that data changes constantly as schedules shift.",
+        "ar": "بوت واتساب الذي يجيب عن الأطباء وساعات العمل لا يساوي أكثر من البيانات خلفه، وتلك البيانات تتغير باستمرار مع تبدّل الجداول."
+      },
+      {
+        "en": "If updating it means editing code and redeploying, then in practice it stops being updated, and the bot starts telling patients things that are no longer true.",
+        "ar": "وإن كان تحديثها يعني تعديل الشيفرة وإعادة النشر، فإنها عمليًا تتوقف عن التحديث، ويبدأ البوت بإخبار المرضى بما لم يعد صحيحًا."
+      }
+    ],
+    "approach": [
+      {
+        "en": "The panel is the single place the data lives. Staff edit records through ordinary forms, validated before they save.",
+        "ar": "اللوحة هي المكان الوحيد الذي تعيش فيه البيانات. يحرّر الموظفون السجلات عبر نماذج عادية، تُفحص قبل الحفظ."
+      },
+      {
+        "en": "The bot does not share the panel's session. It reads a separate route authenticated by an API key, which keeps a machine integration from depending on a human login.",
+        "ar": "لا يشارك البوت جلسة اللوحة. يقرأ من مسار منفصل موثّق بمفتاح، ما يمنع تكامل الآلة من الاعتماد على تسجيل دخول بشري."
+      }
+    ],
+    "results": [
+      {
+        "en": "The panel is live on the complex's own subdomain, and the bot answers from records the staff maintain themselves.",
+        "ar": "اللوحة تعمل على نطاق المجمع الفرعي، ويجيب البوت من سجلات يحافظ عليها الموظفون بأنفسهم."
+      }
+    ],
+    "sections": [],
+    "lessons": [
+      {
+        "en": "Giving a machine its own authenticated route, rather than borrowing a user session, is a small decision at the start and the reason the integration never breaks on a password change.",
+        "ar": "منح الآلة مسارها الموثّق الخاص بدل استعارة جلسة مستخدم قرار صغير في البداية، وهو سبب ألا ينكسر التكامل عند تغيير كلمة مرور."
+      }
+    ]
+  }
+}

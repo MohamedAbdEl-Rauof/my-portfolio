@@ -1,0 +1,67 @@
+{
+  "slug": "cozy-loops",
+  "title": {
+    "en": "Cozy Loops",
+    "ar": "Cozy Loops"
+  },
+  "tagline": {
+    "en": "An online store for handmade work by artisans in Egypt and the Middle East.",
+    "ar": "متجر إلكتروني للأعمال اليدوية من حرفيّي مصر والشرق الأوسط."
+  },
+  "summary": {
+    "en": "Cozy Loops is a marketplace that sells handmade pieces from artisans across Egypt and the Middle East. I built the storefront: product catalogue, reviews, a cart that updates in real time, Stripe checkout and sign-in through email or Google. The interface is responsive down to small phone screens, where most of the traffic comes from.",
+    "ar": "Cozy Loops سوق يبيع القطع اليدوية لحرفيّين في مصر والشرق الأوسط. بنيت واجهة المتجر: كتالوج المنتجات، والمراجعات، وسلّة تتحدّث لحظيًا، ودفعًا عبر Stripe، وتسجيل دخول بالبريد أو عبر Google. والواجهة متجاوبة حتى شاشات الهواتف الصغيرة، ومنها يأتي معظم الزيارات."
+  },
+  "role": {
+    "en": "Front-end developer",
+    "ar": "مطوّر واجهات أمامية"
+  },
+  "timeline": {
+    "start": "2025-03",
+    "end": "2025-08"
+  },
+  "status": "live",
+  "category": "freelance",
+  "tags": ["ecommerce"],
+  "featured": false,
+  "order": 16,
+  "cover": "/projects/cozy-loops/cover.webp",
+  "coverAlt": {
+    "en": "The Cozy Loops storefront showing handmade products in a grid.",
+    "ar": "واجهة متجر Cozy Loops وهي تعرض المنتجات اليدوية في شبكة."
+  },
+  "gallery": [],
+  "video": {
+    "src": "/projects/cozy-loops/demo.mp4",
+    "poster": "/projects/cozy-loops/cover.webp"
+  },
+  "links": {
+    "live": "https://cozyloopstore.vercel.app"
+  },
+  "stack": [
+    "nextjs",
+    "react",
+    "typescript",
+    "tailwindcss",
+    "material-ui",
+    "react-hook-form",
+    "stripe",
+    "socketio"
+  ],
+  "highlights": [
+    {
+      "en": "The cart updates over a socket connection, so quantity and stock changes appear without reloading the page.",
+      "ar": "تتحدّث السلّة عبر اتصال socket، فتظهر تغييرات الكمية والمخزون دون إعادة تحميل الصفحة."
+    },
+    {
+      "en": "Checkout runs through Stripe, and customers sign in with email or Google.",
+      "ar": "يتمّ الدفع عبر Stripe، ويسجّل العملاء الدخول بالبريد أو عبر Google."
+    },
+    {
+      "en": "Product pages carry customer reviews and ratings that feed the catalogue's sorting and filters.",
+      "ar": "تحمل صفحات المنتجات مراجعات العملاء وتقييماتهم، وتغذّي بدورها ترتيب الكتالوج وعوامل التصفية."
+    }
+  ],
+  "metrics": [],
+  "private": false
+}

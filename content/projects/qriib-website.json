@@ -1,0 +1,62 @@
+{
+  "slug": "qriib-website",
+  "title": {
+    "en": "Qriib Marketing Website",
+    "ar": "الموقع التسويقي لـ Qriib"
+  },
+  "tagline": {
+    "en": "The public site for Qriib: VoIP calls, meetings, webinars and chat in one product.",
+    "ar": "الموقع العام لـ Qriib: مكالمات VoIP واجتماعات وندوات ودردشة في منتج واحد."
+  },
+  "summary": {
+    "en": "I built the public website for Qriib, the unified communications product from Tawteen Tech. The site presents the feature set across desktop and mobile and moves visitors toward sign-up and pricing. I focused on responsive layout, restrained animation and load time, since this is the first page most customers see.",
+    "ar": "بنيت الموقع العام لـ Qriib، منتج الاتصالات الموحّدة من Tawteen Tech. يعرض الموقع مجموعة الميزات على سطح المكتب والجوّال ويوجّه الزوّار نحو التسجيل والتسعير. وركّزت على التخطيط المتجاوب والحركة المنضبطة وزمن التحميل، لأن هذه أول صفحة يراها معظم العملاء."
+  },
+  "role": {
+    "en": "Front-end developer",
+    "ar": "مطوّر واجهات أمامية"
+  },
+  "client": {
+    "en": "Vconnct",
+    "ar": "Vconnct"
+  },
+  "timeline": {
+    "start": "2025-09",
+    "end": "2026-01"
+  },
+  "status": "live",
+  "category": "professional",
+  "tags": ["saas", "landing"],
+  "featured": false,
+  "order": 9,
+  "cover": "/projects/qriib-website/cover.webp",
+  "coverAlt": {
+    "en": "The Qriib website home page with its product feature sections.",
+    "ar": "الصفحة الرئيسية لموقع Qriib وأقسام ميزات المنتج فيها."
+  },
+  "gallery": [],
+  "video": {
+    "src": "/projects/qriib-website/demo.mp4",
+    "poster": "/projects/qriib-website/cover.webp"
+  },
+  "links": {
+    "live": "https://qriib.com"
+  },
+  "stack": ["nextjs", "react", "typescript", "tailwindcss"],
+  "highlights": [
+    {
+      "en": "The site covers VoIP calls, HD meetings, webinars, recording and scheduling as separate sections with their own entry points.",
+      "ar": "يغطّي الموقع مكالمات VoIP والاجتماعات عالية الدقة والندوات والتسجيل والجدولة كأقسام منفصلة لكلٍّ مدخله."
+    },
+    {
+      "en": "Every page is built mobile-first, since a large share of visitors arrive from a phone link.",
+      "ar": "بُنيت كل صفحة بمنهج الجوّال أولًا، لأن نسبة كبيرة من الزوّار يصلون من رابط على الهاتف."
+    },
+    {
+      "en": "Animation is limited to entrance transitions so the marketing pages stay fast on slow connections.",
+      "ar": "اقتصرت الحركة على انتقالات الظهور لتبقى الصفحات التسويقية سريعة على الاتصالات البطيئة."
+    }
+  ],
+  "metrics": [],
+  "private": false
+}

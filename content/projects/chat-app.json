@@ -1,0 +1,59 @@
+{
+  "slug": "chat-app",
+  "title": {
+    "en": "Real-Time Chat Application",
+    "ar": "تطبيق محادثة فوري"
+  },
+  "tagline": {
+    "en": "One-to-one and group messaging with typing indicators and file sharing.",
+    "ar": "مراسلة فردية وجماعية مع مؤشّرات الكتابة ومشاركة الملفات."
+  },
+  "summary": {
+    "en": "I built a chat application where messages, typing indicators and read receipts travel over a WebSocket connection instead of polling. Users hold private and group conversations, share files and images, and search their message history. Accounts and profiles are handled with JWT authentication over a MongoDB store.",
+    "ar": "بنيت تطبيق محادثة تنتقل فيه الرسائل ومؤشّرات الكتابة وإيصالات القراءة عبر اتصال WebSocket بدل الاستعلام المتكرّر. يجري المستخدمون محادثات فردية وجماعية، ويشاركون الملفات والصور، ويبحثون في سجلّ رسائلهم. وتُدار الحسابات والملفات الشخصية بمصادقة JWT فوق قاعدة بيانات MongoDB."
+  },
+  "role": {
+    "en": "Solo developer",
+    "ar": "مطوّر منفرد"
+  },
+  "timeline": {
+    "start": "2025-10",
+    "end": "2026-06"
+  },
+  "status": "live",
+  "category": "personal",
+  "tags": ["realtime"],
+  "featured": false,
+  "order": 19,
+  "cover": "/projects/chat-app/cover.webp",
+  "coverAlt": {
+    "en": "The chat interface with a conversation list beside an open thread.",
+    "ar": "واجهة المحادثة وبها قائمة المحادثات إلى جانب محادثة مفتوحة."
+  },
+  "gallery": [],
+  "video": {
+    "src": "/projects/chat-app/demo.mp4",
+    "poster": "/projects/chat-app/cover.webp"
+  },
+  "links": {
+    "live": "https://chat-app-pz4n.onrender.com",
+    "source": "https://github.com/MohamedAbdEl-Rauof/Chat-App"
+  },
+  "stack": ["react", "socketio", "nodejs", "mongodb", "material-ui", "jwt"],
+  "highlights": [
+    {
+      "en": "Messages, typing indicators and read receipts all ride the same Socket.io connection, so nothing polls the server.",
+      "ar": "تنتقل الرسائل ومؤشّرات الكتابة وإيصالات القراءة على اتصال Socket.io نفسه، فلا شيء يستعلم الخادم بشكل متكرّر."
+    },
+    {
+      "en": "Conversations can be one-to-one or group, and both accept file and image attachments.",
+      "ar": "قد تكون المحادثة فردية أو جماعية، وكلتاهما تقبل مرفقات الملفات والصور."
+    },
+    {
+      "en": "Message history is stored and searchable, so a user can find an old message without scrolling.",
+      "ar": "يُحفظ سجلّ الرسائل وهو قابل للبحث، فيجد المستخدم رسالة قديمة دون تمرير طويل."
+    }
+  ],
+  "metrics": [],
+  "private": false
+}

@@ -1,0 +1,175 @@
+{
+  "slug": "queue-system",
+  "title": {
+    "en": "Patient queue system",
+    "ar": "نظام طوابير المرضى"
+  },
+  "tagline": {
+    "en": "Reception, doctor consoles and floor displays that call numbers aloud in Arabic",
+    "ar": "استقبال ولوحات أطباء وشاشات طوابق تنادي الأرقام صوتيًا بالعربية"
+  },
+  "summary": {
+    "en": "A multi-clinic queue system for Nova International Medical Complex. Reception registers a patient by phone number and prints a ticket, doctors call and transfer patients from their own console, and screens on each floor announce the next number out loud in Arabic.",
+    "ar": "نظام طوابير متعدد العيادات لمجمع نوفا الدولي الطبي. يسجّل الاستقبال المريض برقم جواله ويطبع التذكرة، وينادي الأطباء المرضى وينقلونهم من لوحاتهم، وتعلن شاشات كل طابق الرقم التالي صوتيًا بالعربية."
+  },
+  "role": {
+    "en": "Solo developer, including the kiosk setup and handover documents",
+    "ar": "مطوّر منفرد، شمل إعداد الأكشاك ووثائق التسليم"
+  },
+  "client": {
+    "en": "Nova International Medical Complex, Jeddah",
+    "ar": "مجمع نوفا الدولي الطبي، جدة"
+  },
+  "timeline": {
+    "start": "2026-06",
+    "end": "2026-07"
+  },
+  "status": "internal",
+  "category": "professional",
+  "tags": ["healthcare", "realtime", "rtl", "dashboard"],
+  "featured": true,
+  "order": 2,
+  "cover": "/projects/queue-system/cover.webp",
+  "coverAlt": {
+    "en": "Title card for the patient queue system",
+    "ar": "بطاقة تعريف نظام طوابير المرضى"
+  },
+  "gallery": [],
+  "links": {},
+  "stack": [
+    "nextjs",
+    "react",
+    "typescript",
+    "supabase",
+    "postgresql",
+    "next-intl",
+    "shadcn",
+    "tailwindcss",
+    "jwt",
+    "recharts",
+    "dnd-kit",
+    "tts",
+    "playwright",
+    "vitest",
+    "rtl",
+    "i18n"
+  ],
+  "highlights": [
+    {
+      "en": "Floor displays update over Supabase realtime, so a number called in a consulting room appears on the screen outside without anyone refreshing anything.",
+      "ar": "تُحدَّث شاشات الطوابق عبر Supabase realtime، فيظهر الرقم المنادى داخل غرفة الكشف على الشاشة في الخارج دون أن يحدّث أحد أي صفحة."
+    },
+    {
+      "en": "The displays speak. Each called number is announced in Arabic through text to speech, because a waiting room full of patients is not all watching the screen.",
+      "ar": "الشاشات تتكلم. يُعلَن كل رقم منادى بالعربية عبر تحويل النص إلى كلام، لأن صالة انتظار مليئة بالمرضى لا ينظر جميع من فيها إلى الشاشة."
+    },
+    {
+      "en": "Three roles see three different applications: reception registers and prints, doctors call, skip and transfer, and administrators manage clinics, floors, staff and reports.",
+      "ar": "ثلاثة أدوار ترى ثلاثة تطبيقات مختلفة: الاستقبال يسجّل ويطبع، والأطباء ينادون ويؤجّلون وينقلون، والإداريون يديرون العيادات والطوابق والموظفين والتقارير."
+    },
+    {
+      "en": "Role checks run in the proxy before a page renders, and a locale-prefixed path cannot slip past them.",
+      "ar": "تُفحص الصلاحيات في الوسيط قبل عرض أي صفحة، ولا يمكن لمسار يحمل بادئة لغة أن يتجاوزها."
+    },
+    {
+      "en": "Covered by 108 unit tests and 90 end-to-end tests, because the failure mode here is a waiting room that stops moving.",
+      "ar": "مغطّى بـ108 اختبارات وحدة و90 اختبارًا شاملًا، لأن الإخفاق هنا يعني صالة انتظار تتوقف عن التقدم."
+    }
+  ],
+  "metrics": [
+    {
+      "label": {
+        "en": "Automated tests",
+        "ar": "اختبارات آلية"
+      },
+      "value": "198",
+      "note": {
+        "en": "108 unit, 90 end to end",
+        "ar": "108 وحدة، و90 شاملة"
+      }
+    },
+    {
+      "label": {
+        "en": "Commits",
+        "ar": "إسهامات"
+      },
+      "value": "111",
+      "note": {
+        "en": "7 June to 30 July 2026",
+        "ar": "من 7 يونيو إلى 30 يوليو 2026"
+      }
+    },
+    {
+      "label": {
+        "en": "Applications in one system",
+        "ar": "تطبيقات في نظام واحد"
+      },
+      "value": "4",
+      "note": {
+        "en": "Reception, doctor, display, admin",
+        "ar": "الاستقبال، والطبيب، والشاشة، والإدارة"
+      }
+    }
+  ],
+  "private": true,
+  "privateNote": {
+    "en": "This runs inside the medical complex on its own server, so there is no public link and the screens are not shown here. I can walk you through it on a call.",
+    "ar": "يعمل هذا النظام داخل المجمع الطبي على خادمه الخاص، فلا يوجد رابط عام ولا تُعرض شاشاته هنا. يسعدني استعراضه معك في مكالمة."
+  },
+  "caseStudy": {
+    "problem": [
+      {
+        "en": "Patients queued by standing near a door and watching who went in. With several clinics on several floors, that meant crowding, arguments about turn order, and people missing their turn entirely.",
+        "ar": "كان المرضى ينتظرون بالوقوف قرب الباب ومراقبة من يدخل. ومع عدة عيادات في عدة طوابق، عنى ذلك ازدحامًا وخلافًا على الدور، وأشخاصًا يفوتهم دورهم تمامًا."
+      },
+      {
+        "en": "Commercial queue systems were quoted during procurement. Building it meant the complex owned the system, and that it could fit how these clinics actually work.",
+        "ar": "عُرضت أنظمة طوابير جاهزة أثناء الشراء. لكن بناءه داخليًا يعني أن يملك المجمع النظام، وأن يناسب طريقة عمل هذه العيادات فعلًا."
+      }
+    ],
+    "approach": [
+      {
+        "en": "The system is one application serving four surfaces. Reception, the doctor console, the floor display and the admin area share a database and a design system but show entirely different screens.",
+        "ar": "النظام تطبيق واحد يخدم أربع واجهات. الاستقبال ولوحة الطبيب وشاشة الطابق ومنطقة الإدارة تتشارك قاعدة البيانات ونظام التصميم، لكنها تعرض شاشات مختلفة تمامًا."
+      },
+      {
+        "en": "State moves through Supabase realtime rather than polling. When a doctor presses call, every screen subscribed to that floor already knows.",
+        "ar": "تنتقل الحالة عبر Supabase realtime لا بالاستطلاع الدوري. حين يضغط الطبيب على النداء، تكون كل شاشة مشتركة في ذلك الطابق قد عرفت بالفعل."
+      },
+      {
+        "en": "Authentication is a signed session token checked in the proxy, with the locale prefix stripped first so that a path like /ar/admin is gated exactly like /admin.",
+        "ar": "المصادقة رمز جلسة موقّع يُفحص في الوسيط، مع إزالة بادئة اللغة أولًا بحيث يُحمى مسار مثل /ar/admin تمامًا كما يُحمى /admin."
+      }
+    ],
+    "results": [
+      {
+        "en": "Patients sit down and wait for their number instead of standing by the door, and the number is announced as well as displayed.",
+        "ar": "يجلس المرضى وينتظرون أرقامهم بدل الوقوف عند الباب، ويُعلَن الرقم صوتيًا كما يُعرض على الشاشة."
+      },
+      {
+        "en": "The system shipped with a kiosk setup guide and a handover document, so the complex can run and recover it without me.",
+        "ar": "سُلّم النظام مع دليل إعداد الأكشاك ووثيقة تسليم، ليتمكن المجمع من تشغيله واستعادته دون الرجوع إليّ."
+      }
+    ],
+    "sections": [
+      {
+        "heading": {
+          "en": "The display is the product",
+          "ar": "الشاشة هي المنتج"
+        },
+        "body": [
+          {
+            "en": "Everything else in the system exists so that one screen on a wall is correct. It has no keyboard, nobody logs into it, and it may run untouched for weeks, so it has to recover from a dropped connection on its own and never show a stale number.",
+            "ar": "كل ما في النظام موجود ليكون ما على تلك الشاشة صحيحًا. لا لوحة مفاتيح لها، ولا يسجّل أحد الدخول إليها، وقد تعمل دون لمس لأسابيع، فعليها أن تتعافى وحدها من انقطاع الاتصال وألا تعرض رقمًا قديمًا أبدًا."
+          }
+        ]
+      }
+    ],
+    "lessons": [
+      {
+        "en": "Writing the handover document surfaced assumptions I had not noticed I was making, and changed the software before anyone read it.",
+        "ar": "كشفت كتابة وثيقة التسليم افتراضات لم أنتبه إلى أنني أبنيها، وغيّرت البرنامج قبل أن يقرأها أحد."
+      }
+    ]
+  }
+}

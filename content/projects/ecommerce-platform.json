@@ -1,0 +1,92 @@
+{
+  "slug": "ecommerce-platform",
+  "title": {
+    "en": "3legant store and admin",
+    "ar": "متجر 3legant ولوحة إدارته"
+  },
+  "tagline": {
+    "en": "A furniture store and the admin panel that runs it, built end to end",
+    "ar": "متجر أثاث ولوحة الإدارة التي تديره، مبنيان بالكامل"
+  },
+  "summary": {
+    "en": "A furniture and home-goods store built together with the panel that runs it. Shoppers browse the catalogue, filter it, read reviews, fill a cart and check out in three steps. Administrators manage products, stock, categories and orders from a separate dashboard with its own role check.",
+    "ar": "متجر أثاث ومستلزمات منزل بُني مع اللوحة التي تديره. يتصفح المتسوقون الكتالوج ويصفّونه ويقرأون المراجعات ويملأون السلة ويتمّون الشراء في ثلاث خطوات. ويدير المسؤولون المنتجات والمخزون والتصنيفات والطلبات من لوحة منفصلة لها فحص صلاحيات خاص."
+  },
+  "role": {
+    "en": "Solo developer",
+    "ar": "مطوّر منفرد"
+  },
+  "timeline": {
+    "start": "2024-12",
+    "end": "2026-06"
+  },
+  "status": "live",
+  "category": "personal",
+  "tags": ["ecommerce", "dashboard"],
+  "featured": false,
+  "order": 17,
+  "cover": "/projects/ecommerce-platform/cover.webp",
+  "coverAlt": {
+    "en": "The storefront home page next to the admin dashboard it is managed from.",
+    "ar": "الصفحة الرئيسية للمتجر إلى جانب لوحة الإدارة التي يُدار منها."
+  },
+  "gallery": [],
+  "links": {
+    "live": "https://e-commerce-platform-website.netlify.app",
+    "source": "https://github.com/MohamedAbdEl-Rauof/E-Commerce-Platform"
+  },
+  "stack": [
+    "nextjs",
+    "react",
+    "typescript",
+    "mongodb",
+    "nextauth",
+    "cloudinary",
+    "material-ui",
+    "tailwindcss",
+    "jwt"
+  ],
+  "highlights": [
+    {
+      "en": "Stock is written once and read by both surfaces, so an order placed in the store lowers the count the admin sees.",
+      "ar": "يُكتب المخزون مرة واحدة وتقرأه الواجهتان، فالطلب في المتجر يخفض الرصيد الذي يراه المسؤول."
+    },
+    {
+      "en": "Checkout runs in three steps, cart then shipping then payment, and keeps what was entered if the customer goes back a step.",
+      "ar": "يتم الشراء في ثلاث خطوات: السلة ثم الشحن ثم الدفع، مع الاحتفاظ بما أُدخل إذا رجع العميل خطوة."
+    },
+    {
+      "en": "Product images upload to Cloudinary, so the database stores a URL rather than a binary.",
+      "ar": "تُرفع صور المنتجات إلى Cloudinary، فتخزّن قاعدة البيانات رابطًا لا ملفًا ثنائيًا."
+    },
+    {
+      "en": "Role-based access keeps product and order editing away from customer accounts.",
+      "ar": "تُبعد الصلاحيات حسب الدور تعديلَ المنتجات والطلبات عن حسابات العملاء."
+    },
+    {
+      "en": "Built over 132 commits between December 2024 and June 2026, alongside full-time work.",
+      "ar": "بُني عبر 132 إسهامًا بين ديسمبر 2024 ويونيو 2026، بالتوازي مع عمل بدوام كامل."
+    }
+  ],
+  "metrics": [
+    {
+      "label": {
+        "en": "Commits",
+        "ar": "إسهامات"
+      },
+      "value": "132"
+    },
+    {
+      "label": {
+        "en": "Routes",
+        "ar": "مسارات"
+      },
+      "value": "24",
+      "note": {
+        "en": "Storefront and admin combined",
+        "ar": "المتجر ولوحة الإدارة معًا"
+      }
+    }
+  ],
+  "private": false
+}

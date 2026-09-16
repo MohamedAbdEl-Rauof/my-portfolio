@@ -1,0 +1,99 @@
+{
+  "slug": "vconnct-landing-pages",
+  "title": {
+    "en": "Vconnct Landing Pages",
+    "ar": "صفحات هبوط Vconnct"
+  },
+  "tagline": {
+    "en": "Five campaign landing pages for Vconnct, each aimed at a different audience.",
+    "ar": "خمس صفحات هبوط دعائية لـ Vconnct، كلٌّ منها موجّه لجمهور مختلف."
+  },
+  "summary": {
+    "en": "I built five campaign landing pages for Vconnct: Invest in Tech, the VCloud developer page, an education page, an Ahl Al Quran page for Quran teachers, and a page comparing Vconnct with Zoom. Each one has its own copy, sections and call to action on a shared component base. None of the five is hosted any more, so the recording and screenshots below are the remaining record.",
+    "ar": "بنيت خمس صفحات هبوط دعائية لـ Vconnct: الاستثمار في التقنية، وصفحة VCloud للمطوّرين، وصفحة تعليمية، وصفحة أهل القرآن لمعلّمي القرآن، وصفحة تقارن Vconnct بـ Zoom. لكل صفحة نصوصها وأقسامها ودعوتها للإجراء فوق قاعدة مكوّنات مشتركة. ولم تعد أيٌّ من الخمس مستضافة، فالتسجيل واللقطات أدناه هي السجلّ المتبقّي."
+  },
+  "role": {
+    "en": "Front-end developer",
+    "ar": "مطوّر واجهات أمامية"
+  },
+  "client": {
+    "en": "Vconnct",
+    "ar": "Vconnct"
+  },
+  "timeline": {
+    "start": "2024-07",
+    "end": "2025-05"
+  },
+  "status": "archived",
+  "category": "professional",
+  "tags": ["landing", "saas", "rtl"],
+  "featured": false,
+  "order": 13,
+  "cover": "/projects/vconnct-landing-pages/cover.webp",
+  "coverAlt": {
+    "en": "The Invest in Tech landing page, one of the five Vconnct campaign pages.",
+    "ar": "صفحة هبوط «الاستثمار في التقنية»، إحدى صفحات Vconnct الدعائية الخمس."
+  },
+  "gallery": [
+    {
+      "src": "/projects/vconnct-landing-pages/gallery-1.webp",
+      "alt": {
+        "en": "The VCloud landing page, aimed at developers integrating the audio and video API.",
+        "ar": "صفحة هبوط VCloud، الموجّهة للمطوّرين الذين يدمجون واجهة الصوت والفيديو البرمجية."
+      }
+    },
+    {
+      "src": "/projects/vconnct-landing-pages/gallery-2.webp",
+      "alt": {
+        "en": "The Education landing page, aimed at schools running online classrooms in Arabic.",
+        "ar": "صفحة الهبوط التعليمية، الموجّهة للمدارس التي تدير فصولًا افتراضية بالعربية."
+      }
+    },
+    {
+      "src": "/projects/vconnct-landing-pages/gallery-3.webp",
+      "alt": {
+        "en": "The Ahl Al Quran landing page, aimed at Quran teachers and their students.",
+        "ar": "صفحة هبوط «أهل القرآن»، الموجّهة لمعلّمي القرآن وطلابهم."
+      }
+    },
+    {
+      "src": "/projects/vconnct-landing-pages/gallery-4.webp",
+      "alt": {
+        "en": "The comparison landing page setting Vconnct against Zoom feature by feature.",
+        "ar": "صفحة هبوط المقارنة التي تضع Vconnct في مقابل Zoom ميزةً بميزة."
+      }
+    }
+  ],
+  "video": {
+    "src": "/projects/vconnct-landing-pages/demo.mp4",
+    "poster": "/projects/vconnct-landing-pages/cover.webp"
+  },
+  "links": {},
+  "stack": [
+    "typescript",
+    "nextjs",
+    "tailwindcss",
+    "radix-ui",
+    "react-hook-form"
+  ],
+  "highlights": [
+    {
+      "en": "Five pages share one set of section components, so a hero, pricing block or feature grid was built once and reused.",
+      "ar": "تتشارك الصفحات الخمس مجموعة واحدة من مكوّنات الأقسام، فبُني قسم البطل وكتلة التسعير وشبكة الميزات مرة واحدة وأُعيد استخدامها."
+    },
+    {
+      "en": "The education and Ahl Al Quran pages are laid out right to left, with Arabic typography and mirrored components.",
+      "ar": "صُمّمت صفحتا التعليم وأهل القرآن من اليمين إلى اليسار، بخطوط عربية ومكوّنات معكوسة."
+    },
+    {
+      "en": "The comparison page argues a single point, that an Arabic-first tool beats a translated one, and every section supports it.",
+      "ar": "تدافع صفحة المقارنة عن فكرة واحدة، أن الأداة العربية الأصل تتفوّق على المترجَمة، وكل قسم فيها يخدمها."
+    },
+    {
+      "en": "The client stopped hosting all five pages, so none of them has a live URL today.",
+      "ar": "أوقف العميل استضافة الصفحات الخمس جميعًا، فلا يوجد اليوم رابط مباشر لأيٍّ منها."
+    }
+  ],
+  "metrics": [],
+  "private": false
+}

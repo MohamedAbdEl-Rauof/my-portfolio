@@ -1,0 +1,24 @@
+{
+  "entries": [
+    {
+      "institution": {
+        "en": "Modern University for Technology and Information",
+        "ar": "جامعة الحداثة للتكنولوجيا والمعلومات"
+      },
+      "degree": {
+        "en": "BSc in Computer Science",
+        "ar": "بكالوريوس علوم الحاسب"
+      },
+      "start": "2020",
+      "end": "2024",
+      "location": {
+        "en": "Cairo, Egypt",
+        "ar": "القاهرة، مصر"
+      },
+      "note": {
+        "en": "Recognised for excellence in the final-year project.",
+        "ar": "تقدير التميّز في مشروع التخرج."
+      }
+    }
+  ]
+}

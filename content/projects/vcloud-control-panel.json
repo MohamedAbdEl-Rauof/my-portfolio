@@ -1,0 +1,69 @@
+{
+  "slug": "vcloud-control-panel",
+  "title": {
+    "en": "VCloud Control Panel",
+    "ar": "لوحة تحكم VCloud"
+  },
+  "tagline": {
+    "en": "Developer console for the Vconnct meeting API: keys, usage and payments.",
+    "ar": "واجهة المطوّرين لواجهة Vconnct البرمجية: المفاتيح والاستخدام والمدفوعات."
+  },
+  "summary": {
+    "en": "I worked on the control panel developers used to reach the Vconnct meeting API. My part was single sign-on, the login and registration flow, and the payment integrations for Stripe, Fawry and Paymob, including receipt and invoice generation after a successful payment. The vcloud.vconnct.me address now serves the Qriib login, so the panel is no longer reachable.",
+    "ar": "عملت على لوحة التحكم التي كان المطوّرون يصلون عبرها إلى واجهة Vconnct البرمجية للاجتماعات. كان نصيبي تسجيل الدخول الموحّد، ومسار الدخول والتسجيل، وتكاملات الدفع مع Stripe و Fawry و Paymob، بما فيها إصدار الإيصالات والفواتير بعد إتمام الدفع. وصار عنوان vcloud.vconnct.me يعرض الآن صفحة دخول Qriib، فلم تعد اللوحة متاحة."
+  },
+  "role": {
+    "en": "Front-end developer, authentication and payments",
+    "ar": "مطوّر واجهات أمامية، المصادقة والمدفوعات"
+  },
+  "client": {
+    "en": "Vconnct",
+    "ar": "Vconnct"
+  },
+  "timeline": {
+    "start": "2024-09",
+    "end": "2025-03"
+  },
+  "status": "archived",
+  "category": "professional",
+  "tags": ["saas", "dashboard"],
+  "featured": false,
+  "order": 12,
+  "cover": "/projects/vcloud-control-panel/cover.webp",
+  "coverAlt": {
+    "en": "The VCloud control panel showing API usage and billing.",
+    "ar": "لوحة تحكم VCloud وبها استخدام الواجهة البرمجية والفوترة."
+  },
+  "gallery": [],
+  "links": {},
+  "stack": [
+    "typescript",
+    "nextjs",
+    "tailwindcss",
+    "strapi",
+    "vuexy",
+    "stripe",
+    "fawry",
+    "paymob"
+  ],
+  "highlights": [
+    {
+      "en": "I integrated three payment gateways side by side, Stripe for cards abroad and Fawry and Paymob for Egyptian customers.",
+      "ar": "دمجت ثلاث بوّابات دفع جنبًا إلى جنب: Stripe للبطاقات خارج مصر، و Fawry و Paymob للعملاء في مصر."
+    },
+    {
+      "en": "Receipts and invoices are generated automatically once a payment settles, instead of being issued by hand.",
+      "ar": "تُصدَر الإيصالات والفواتير تلقائيًا بمجرد تسوية الدفعة، بدلًا من إصدارها يدويًا."
+    },
+    {
+      "en": "I built the single sign-on, login and registration flow shared with the other Vconnct surfaces.",
+      "ar": "بنيت مسار تسجيل الدخول الموحّد والدخول والتسجيل المشترك مع باقي واجهات Vconnct."
+    },
+    {
+      "en": "The vcloud.vconnct.me address now redirects to the Qriib login, so the panel has no public URL left.",
+      "ar": "صار عنوان vcloud.vconnct.me يعرض الآن صفحة دخول Qriib، فلم يبقَ للّوحة رابط عام."
+    }
+  ],
+  "metrics": [],
+  "private": false
+}

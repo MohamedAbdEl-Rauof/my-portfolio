@@ -1,0 +1,60 @@
+{
+  "slug": "vconnct-dashboard",
+  "title": {
+    "en": "Vconnct Dashboard",
+    "ar": "لوحة تحكم Vconnct"
+  },
+  "tagline": {
+    "en": "Meeting room management and subscriptions for Vconnct account holders.",
+    "ar": "إدارة غرف الاجتماعات والاشتراكات لأصحاب حسابات Vconnct."
+  },
+  "summary": {
+    "en": "I built the customer dashboard for Vconnct, where account holders create, edit and delete meeting rooms and manage their subscription. It covered room settings, participant permissions and the billing screens. The product line moved to Qriib, so this dashboard is no longer served at a public address.",
+    "ar": "بنيت لوحة تحكم العملاء في Vconnct، حيث ينشئ أصحاب الحسابات غرف الاجتماعات ويعدّلونها ويحذفونها ويديرون اشتراكهم. وغطّت اللوحة إعدادات الغرف وصلاحيات المشاركين وشاشات الفوترة. وقد انتقل خط المنتج إلى Qriib، فلم تعد هذه اللوحة متاحة على عنوان عام."
+  },
+  "role": {
+    "en": "Front-end developer",
+    "ar": "مطوّر واجهات أمامية"
+  },
+  "client": {
+    "en": "Vconnct",
+    "ar": "Vconnct"
+  },
+  "timeline": {
+    "start": "2024-08",
+    "end": "2025-01"
+  },
+  "status": "archived",
+  "category": "professional",
+  "tags": ["saas", "dashboard"],
+  "featured": false,
+  "order": 11,
+  "cover": "/projects/vconnct-dashboard/cover.webp",
+  "coverAlt": {
+    "en": "The Vconnct dashboard listing meeting rooms and subscription details.",
+    "ar": "لوحة تحكم Vconnct وبها قائمة غرف الاجتماعات وتفاصيل الاشتراك."
+  },
+  "gallery": [],
+  "video": {
+    "src": "/projects/vconnct-dashboard/demo.mp4",
+    "poster": "/projects/vconnct-dashboard/cover.webp"
+  },
+  "links": {},
+  "stack": ["react", "tailwindcss", "material-ui", "react-hook-form", "stripe"],
+  "highlights": [
+    {
+      "en": "Users create, rename and delete meeting rooms and set per-room access rules from one list view.",
+      "ar": "ينشئ المستخدمون غرف الاجتماعات ويعيدون تسميتها ويحذفونها ويضبطون قواعد الوصول لكل غرفة من عرض قائمة واحد."
+    },
+    {
+      "en": "Subscription screens show the current plan, renewal date and payment history through Stripe.",
+      "ar": "تعرض شاشات الاشتراك الباقة الحالية وتاريخ التجديد وسجلّ المدفوعات عبر Stripe."
+    },
+    {
+      "en": "The product moved to Qriib and the dashboard address is no longer live, so the recording above is the only surviving view.",
+      "ar": "انتقل المنتج إلى Qriib ولم يعد عنوان اللوحة يعمل، فالتسجيل أعلاه هو العرض الوحيد الباقي."
+    }
+  ],
+  "metrics": [],
+  "private": false
+}

@@ -1,0 +1,164 @@
+{
+  "slug": "nova-bill",
+  "title": {
+    "en": "Nova Bill",
+    "ar": "نوفا بِل"
+  },
+  "tagline": {
+    "en": "Lab invoicing that satisfies the Saudi tax authority and cannot quietly be altered",
+    "ar": "فوترة مختبرية تفي بمتطلبات هيئة الزكاة والضريبة ولا يمكن تعديلها بصمت"
+  },
+  "summary": {
+    "en": "A management and invoicing system for the dental laboratory at Nova International Medical Complex. It issues simplified tax invoices that meet ZATCA requirements, links credit notes to the invoices they correct, and keeps an audit trail that no role can delete from.",
+    "ar": "نظام إدارة وفوترة لمعمل الأسنان في مجمع نوفا الدولي الطبي. يُصدر فواتير ضريبية مبسّطة تفي بمتطلبات هيئة الزكاة والضريبة، ويربط إشعارات الدائن بالفواتير التي تصحّحها، ويحتفظ بسجل تدقيق لا يستطيع أي دور الحذف منه."
+  },
+  "role": {
+    "en": "Solo developer",
+    "ar": "مطوّر منفرد"
+  },
+  "client": {
+    "en": "Nova Dental Lab, Jeddah",
+    "ar": "معمل نوفا للأسنان، جدة"
+  },
+  "timeline": {
+    "start": "2026-05",
+    "end": "2026-08"
+  },
+  "status": "internal",
+  "category": "professional",
+  "tags": ["healthcare", "compliance", "dashboard", "rtl"],
+  "featured": true,
+  "order": 4,
+  "cover": "/projects/nova-bill/cover.webp",
+  "coverAlt": {
+    "en": "The Nova Bill invoice screen in Arabic",
+    "ar": "شاشة الفواتير في نوفا بِل بالعربية"
+  },
+  "gallery": [],
+  "video": {
+    "src": "/projects/nova-bill/demo.mp4",
+    "poster": "/projects/nova-bill/cover.webp"
+  },
+  "links": {},
+  "stack": [
+    "nextjs",
+    "react",
+    "typescript",
+    "supabase",
+    "postgresql",
+    "shadcn",
+    "tailwindcss",
+    "react-hook-form",
+    "zod",
+    "zatca",
+    "jspdf",
+    "exceljs",
+    "rtl"
+  ],
+  "highlights": [
+    {
+      "en": "Invoices carry the QR code ZATCA requires, encoded in the TLV format the specification defines, so a tax inspector can scan one and read the seller, the VAT number, the timestamp and the totals.",
+      "ar": "تحمل الفواتير رمز QR الذي تشترطه هيئة الزكاة والضريبة، مرمّزًا بصيغة TLV المحدّدة في المواصفة، فيستطيع المفتّش مسحه وقراءة البائع والرقم الضريبي والتوقيت والإجماليات."
+    },
+    {
+      "en": "Each invoice is hashed and chained to the one before it, so altering an old invoice breaks every hash after it rather than passing unnoticed.",
+      "ar": "تُجزَّأ كل فاتورة وتُربط بسابقتها تشفيريًا، فتعديل فاتورة قديمة يكسر كل جزء لاحق بدل أن يمرّ دون ملاحظة."
+    },
+    {
+      "en": "Nothing is ever deleted. A mistake is corrected by a credit note that points at the original, which is what an audit trail means in practice.",
+      "ar": "لا يُحذف شيء أبدًا. يُصحَّح الخطأ بإشعار دائن يشير إلى الفاتورة الأصلية، وهذا هو معنى سجل التدقيق عمليًا."
+    },
+    {
+      "en": "Four roles, from administrator to employee, get per-page create, read, update and delete permissions enforced by row level security in the database, not only in the interface.",
+      "ar": "أربعة أدوار، من المدير إلى الموظف، لكلٍّ صلاحيات إنشاء وقراءة وتعديل وحذف لكل صفحة، مفروضة بأمان مستوى الصف في قاعدة البيانات لا في الواجهة وحدها."
+    },
+    {
+      "en": "Accountants get a posting workflow and a tax report, and every table exports to PDF or Excel, because that is how the finance office actually works.",
+      "ar": "للمحاسبين مسار ترحيل وتقرير ضريبي، وكل جدول يُصدَّر إلى PDF أو Excel، لأن هكذا يعمل قسم المالية فعلًا."
+    }
+  ],
+  "metrics": [
+    {
+      "label": {
+        "en": "Roles with distinct permissions",
+        "ar": "أدوار بصلاحيات متمايزة"
+      },
+      "value": "4"
+    },
+    {
+      "label": {
+        "en": "Pages in the system",
+        "ar": "صفحات في النظام"
+      },
+      "value": "12"
+    },
+    {
+      "label": {
+        "en": "Invoices deletable by any role",
+        "ar": "فواتير يمكن لأي دور حذفها"
+      },
+      "value": "0",
+      "note": {
+        "en": "Corrections go through credit notes",
+        "ar": "تتم التصحيحات عبر إشعارات دائن"
+      }
+    }
+  ],
+  "private": true,
+  "privateNote": {
+    "en": "This handles a real business's invoices, so it is not publicly reachable and the recording uses demonstration data. I can walk through it on a call.",
+    "ar": "يتعامل هذا النظام مع فواتير منشأة حقيقية، فهو غير متاح للعموم والتسجيل يستخدم بيانات تجريبية. يسعدني استعراضه في مكالمة."
+  },
+  "caseStudy": {
+    "problem": [
+      {
+        "en": "The lab invoiced its clinic clients on spreadsheets. Totals were recalculated by hand, outstanding balances were whatever the last person remembered, and a corrected invoice was simply an edited file.",
+        "ar": "كان المعمل يفوتر عيادات عملائه على جداول بيانات. تُحسب الإجماليات يدويًا، وتكون الأرصدة المستحقة ما يتذكره آخر شخص، والفاتورة المصحّحة مجرد ملف عُدِّل."
+      },
+      {
+        "en": "Saudi e-invoicing rules are not optional, and they are specific: a defined QR payload, invoice integrity, and records that survive an audit.",
+        "ar": "قواعد الفوترة الإلكترونية في السعودية ليست اختيارية، وهي محدّدة: حمولة QR معرّفة، وسلامة الفاتورة، وسجلات تصمد أمام التدقيق."
+      }
+    ],
+    "approach": [
+      {
+        "en": "I treated the tax specification as the schema rather than as a feature. The QR payload, the field lengths and the hash chain were built first, and the interface was fitted around what a compliant invoice has to contain.",
+        "ar": "تعاملت مع المواصفة الضريبية كمخطط بيانات لا كميزة. بُنيت حمولة QR وأطوال الحقول وسلسلة التجزئة أولًا، ثم رُكّبت الواجهة حول ما يجب أن تحتويه فاتورة مطابقة."
+      },
+      {
+        "en": "Deletion was removed from the design entirely. Every correction is an additional record that references what it corrects, which is both the legal requirement and the only honest way to represent a mistake.",
+        "ar": "أُزيل الحذف من التصميم كليًا. كل تصحيح سجل إضافي يشير إلى ما يصحّحه، وهو المتطلب القانوني والطريقة الصادقة الوحيدة لتمثيل الخطأ."
+      },
+      {
+        "en": "Permissions live in the database. Row level security means a request with the wrong role gets nothing back even if it bypasses the interface completely.",
+        "ar": "الصلاحيات في قاعدة البيانات. يعني أمان مستوى الصف أن طلبًا بدور خاطئ لا يحصل على شيء حتى لو تجاوز الواجهة تمامًا."
+      }
+    ],
+    "results": [
+      {
+        "en": "The lab issues compliant tax invoices, tracks partial payments against each clinic's balance automatically, and can produce the tax report the accountant needs without assembling it by hand.",
+        "ar": "يصدر المعمل فواتير ضريبية مطابقة، ويتابع الدفعات الجزئية مقابل رصيد كل عيادة تلقائيًا، وينتج التقرير الضريبي الذي يحتاجه المحاسب دون تجميعه يدويًا."
+      }
+    ],
+    "sections": [
+      {
+        "heading": {
+          "en": "Compliance is a data-model decision, not a checkbox",
+          "ar": "الامتثال قرار في نموذج البيانات لا خانة تُعلَّم"
+        },
+        "body": [
+          {
+            "en": "It is tempting to treat a rule like ZATCA's as a formatting step applied on the way to the printer. It is not. Hash chaining only means anything if nothing can be edited behind it, and that constraint reaches every table, every mutation and every role in the system.",
+            "ar": "من المغري التعامل مع قاعدة كقاعدة هيئة الزكاة والضريبة كخطوة تنسيق تُطبَّق في الطريق إلى الطابعة. وليست كذلك. لا تعني سلسلة التجزئة شيئًا إن أمكن تعديل ما خلفها، وهذا القيد يمتد إلى كل جدول وكل تعديل وكل دور في النظام."
+          }
+        ]
+      }
+    ],
+    "lessons": [
+      {
+        "en": "Designing a system that cannot delete forces you to decide what a mistake actually is. That question turned out to shape the whole data model.",
+        "ar": "تصميم نظام لا يستطيع الحذف يجبرك على تحديد ما هو الخطأ فعلًا. تبيّن أن ذلك السؤال هو ما شكّل نموذج البيانات بأكمله."
+      }
+    ]
+  }
+}

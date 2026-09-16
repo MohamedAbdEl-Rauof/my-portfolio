@@ -1,0 +1,64 @@
+{
+  "slug": "ai-auto-reply-assistant",
+  "title": {
+    "en": "AI Auto-Reply Assistant",
+    "ar": "مساعد الرد الآلي بالذكاء الاصطناعي"
+  },
+  "tagline": {
+    "en": "A Typebot assistant that answers routine patient questions day and night.",
+    "ar": "مساعد على Typebot يجيب أسئلة المرضى الروتينية ليلًا ونهارًا."
+  },
+  "summary": {
+    "en": "I built an assistant in Typebot that answers the questions patients ask most: opening hours, services, directions and how to book. It replies instantly and hands the conversation to a human agent as soon as the question goes beyond what it covers. It sits on the same WhatsApp channel as the Chatwoot inbox, so a handover keeps the full history.",
+    "ar": "بنيت مساعدًا على Typebot يجيب الأسئلة الأكثر تكرارًا لدى المرضى: مواعيد العمل والخدمات والوصول وكيفية الحجز. يردّ فورًا ويحوّل المحادثة إلى موظف بشري فور تجاوز السؤال ما يغطيه. ويعمل على قناة WhatsApp نفسها المرتبطة بصندوق وارد Chatwoot، فيحتفظ التحويل بالسجلّ كاملًا."
+  },
+  "role": {
+    "en": "Solo developer and system owner",
+    "ar": "مطوّر ومسؤول النظام منفردًا"
+  },
+  "client": {
+    "en": "Nova International Medical Complex, Jeddah",
+    "ar": "مجمع نوفا الدولي الطبي، جدة"
+  },
+  "timeline": {
+    "start": "2026-06",
+    "end": "2026-07"
+  },
+  "status": "internal",
+  "category": "professional",
+  "tags": ["healthcare", "automation", "ai"],
+  "featured": false,
+  "order": 7,
+  "cover": "/projects/ai-auto-reply-assistant/cover.webp",
+  "coverAlt": {
+    "en": "The Typebot conversation flow behind the patient auto-reply assistant.",
+    "ar": "مسار المحادثة في Typebot خلف مساعد الرد الآلي للمرضى."
+  },
+  "gallery": [],
+  "video": {
+    "src": "/projects/ai-auto-reply-assistant/demo.mp4",
+    "poster": "/projects/ai-auto-reply-assistant/cover.webp"
+  },
+  "links": {},
+  "stack": ["typebot", "whatsapp-api", "webhooks"],
+  "highlights": [
+    {
+      "en": "The bot covers hours, services, directions and booking guidance, which is most of what the front desk was retyping every day.",
+      "ar": "يغطّي البوت مواعيد العمل والخدمات والوصول وإرشادات الحجز، وهي معظم ما كان مكتب الاستقبال يعيد كتابته يوميًا."
+    },
+    {
+      "en": "Anything outside its script is escalated to a human agent instead of being answered with a guess.",
+      "ar": "يُصعَّد أي شيء خارج نصّه إلى موظف بشري بدلًا من الإجابة بالتخمين."
+    },
+    {
+      "en": "It runs on the complex's verified WhatsApp number, so patients get the same replies after working hours.",
+      "ar": "يعمل على رقم WhatsApp الموثّق للمجمع، فيحصل المرضى على الردود نفسها بعد ساعات العمل."
+    }
+  ],
+  "metrics": [],
+  "private": true,
+  "privateNote": {
+    "en": "This is an internal system with no public URL, so the screens here use seeded data. I can walk through the live system on request.",
+    "ar": "هذا نظام داخلي بلا رابط عام، لذا تعرض اللقطات هنا بيانات تجريبية. يسعدني تقديم جولة على النظام الحقيقي عند الطلب."
+  }
+}

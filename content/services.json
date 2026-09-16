@@ -1,0 +1,52 @@
+{
+  "items": [
+    {
+      "id": "web-apps",
+      "icon": "code",
+      "title": {
+        "en": "Web applications",
+        "ar": "تطبيقات الويب"
+      },
+      "body": {
+        "en": "Dashboards, portals and public sites built end to end in Next.js, from the interface down to the database and the deploy.",
+        "ar": "لوحات تحكم وبوابات ومواقع عامة أبنيها كاملة بـ Next.js، من الواجهة إلى قاعدة البيانات والنشر."
+      }
+    },
+    {
+      "id": "automation",
+      "icon": "workflow",
+      "title": {
+        "en": "Automation and AI",
+        "ar": "الأتمتة والذكاء الاصطناعي"
+      },
+      "body": {
+        "en": "Workflows that remove manual steps: lab results sent on their own, WhatsApp conversations in one inbox, routine questions answered around the clock.",
+        "ar": "مسارات عمل تُلغي الخطوات اليدوية: نتائج مختبر تُرسل تلقائيًا، ومحادثات واتساب في صندوق واحد، وأسئلة متكررة تُجاب على مدار الساعة."
+      }
+    },
+    {
+      "id": "bilingual",
+      "icon": "languages",
+      "title": {
+        "en": "Arabic-first products",
+        "ar": "منتجات عربية أولًا"
+      },
+      "body": {
+        "en": "Right-to-left interfaces that are designed in Arabic rather than translated into it, with the English version a first-class citizen too.",
+        "ar": "واجهات من اليمين إلى اليسار مصمَّمة بالعربية لا مترجَمة إليها، مع نسخة إنجليزية بالمستوى نفسه."
+      }
+    },
+    {
+      "id": "compliance",
+      "icon": "shield",
+      "title": {
+        "en": "Compliance and quality",
+        "ar": "الامتثال والجودة"
+      },
+      "body": {
+        "en": "ZATCA e-invoicing, accessibility, structured data and the kind of SEO migration that keeps a site's traffic when its URLs change.",
+        "ar": "الفوترة الإلكترونية وفق هيئة الزكاة والضريبة، وإتاحة الوصول، والبيانات المنظّمة، وهجرة SEO تحافظ على زيارات الموقع عند تغيّر روابطه."
+      }
+    }
+  ]
+}

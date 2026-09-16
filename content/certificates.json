@@ -1,0 +1,102 @@
+{
+  "items": [
+    {
+      "id": "mcit-react-web-developer",
+      "title": {
+        "en": "Software development — React web developer",
+        "ar": "تطوير البرمجيات — مطوّر ويب React"
+      },
+      "issuer": {
+        "en": "Ministry of Communications and Information Technology",
+        "ar": "وزارة الاتصالات وتقنية المعلومات"
+      },
+      "date": "2024-10",
+      "image": "/certificates/DEPICertificate.jpeg",
+      "skills": ["react", "javascript", "nodejs", "mongodb"]
+    },
+    {
+      "id": "mti-graduation",
+      "title": {
+        "en": "Bachelor's degree in computer science",
+        "ar": "بكالوريوس علوم الحاسب"
+      },
+      "issuer": {
+        "en": "Modern University for Technology and Information",
+        "ar": "جامعة الحداثة للتكنولوجيا والمعلومات"
+      },
+      "date": "2024-06",
+      "image": "/certificates/graduateCertificate.jpeg",
+      "skills": []
+    },
+    {
+      "id": "hackerrank-react",
+      "title": {
+        "en": "React certification",
+        "ar": "شهادة React"
+      },
+      "issuer": {
+        "en": "HackerRank",
+        "ar": "HackerRank"
+      },
+      "date": "2025-10",
+      "image": "/certificates/ReactHackerRankCertificate.png",
+      "skills": ["react", "javascript"]
+    },
+    {
+      "id": "innovegypt",
+      "title": {
+        "en": "InnovEgypt — innovation and entrepreneurship",
+        "ar": "InnovEgypt — برنامج الابتكار وريادة الأعمال"
+      },
+      "issuer": {
+        "en": "Technology Innovation and Entrepreneurship Center (TIEC)",
+        "ar": "مركز ابتكار وريادة الأعمال التقنية (TIEC)"
+      },
+      "date": "2023-12",
+      "image": "/certificates/innovEgyptCertificate.png",
+      "skills": []
+    },
+    {
+      "id": "iti-php",
+      "title": {
+        "en": "Developing web applications using PHP",
+        "ar": "تطوير تطبيقات الويب باستخدام PHP"
+      },
+      "issuer": {
+        "en": "Information Technology Institute (ITI)",
+        "ar": "معهد تكنولوجيا المعلومات (ITI)"
+      },
+      "date": "2023-08",
+      "image": "/certificates/ITICertificate.jpeg",
+      "skills": []
+    },
+    {
+      "id": "zewail-ai",
+      "title": {
+        "en": "Introduction to artificial intelligence",
+        "ar": "مقدمة في الذكاء الاصطناعي"
+      },
+      "issuer": {
+        "en": "Zewail City University and Impact Platform",
+        "ar": "جامعة زويل سيتي ومنصة Impact"
+      },
+      "date": "2023-08",
+      "image": "/certificates/zewailCertificate.jpeg",
+      "skills": []
+    },
+    {
+      "id": "meshwary",
+      "title": {
+        "en": "Meshwary — life and career skills",
+        "ar": "مشواري — المهارات الحياتية والمهنية"
+      },
+      "issuer": {
+        "en": "Ministry of Youth and Sports with UNICEF",
+        "ar": "وزارة الشباب والرياضة واليونيسف"
+      },
+      "date": "2020-01",
+      "image": "/certificates/meshwareCertificate.jpeg",
+      "skills": []
+    }
+  ]
+}

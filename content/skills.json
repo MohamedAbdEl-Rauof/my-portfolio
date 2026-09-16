@@ -1,0 +1,96 @@
+{
+  "groups": [
+    {
+      "id": "frontend",
+      "label": {
+        "en": "Front end",
+        "ar": "الواجهات الأمامية"
+      },
+      "items": [
+        "react",
+        "nextjs",
+        "typescript",
+        "javascript",
+        "redux-toolkit",
+        "zustand",
+        "rtl"
+      ]
+    },
+    {
+      "id": "backend",
+      "label": {
+        "en": "Back end and data",
+        "ar": "الخوادم والبيانات"
+      },
+      "items": [
+        "nodejs",
+        "express",
+        "rest-apis",
+        "mongodb",
+        "postgresql",
+        "supabase",
+        "jwt",
+        "zod"
+      ]
+    },
+    {
+      "id": "automation",
+      "label": {
+        "en": "Automation and AI",
+        "ar": "الأتمتة والذكاء الاصطناعي"
+      },
+      "items": [
+        "n8n",
+        "typebot",
+        "chatwoot",
+        "whatsapp-api",
+        "webhooks",
+        "docker"
+      ]
+    },
+    {
+      "id": "ui",
+      "label": {
+        "en": "Interface systems",
+        "ar": "أنظمة الواجهة"
+      },
+      "items": [
+        "tailwindcss",
+        "shadcn",
+        "radix-ui",
+        "material-ui",
+        "framer-motion"
+      ]
+    },
+    {
+      "id": "standards",
+      "label": {
+        "en": "Standards and compliance",
+        "ar": "المعايير والامتثال"
+      },
+      "items": ["zatca", "i18n", "a11y", "seo", "schema-org"]
+    },
+    {
+      "id": "workflow",
+      "label": {
+        "en": "Workflow",
+        "ar": "أدوات العمل"
+      },
+      "items": ["git", "github", "vercel", "playwright", "vitest"]
+    }
+  ],
+  "marquee": [
+    "react",
+    "nextjs",
+    "typescript",
+    "nodejs",
+    "tailwindcss",
+    "postgresql",
+    "mongodb",
+    "shadcn",
+    "express",
+    "git",
+    "radix-ui",
+    "javascript"
+  ]
+}

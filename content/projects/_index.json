@@ -1,0 +1,24 @@
+{
+  "order": [
+    "nova-medicals",
+    "queue-system",
+    "nova-dash",
+    "nova-bill",
+    "whatsapp-patient-platform",
+    "lab-results-automation",
+    "ai-auto-reply-assistant",
+    "qriib-app",
+    "qriib-website",
+    "vconnct-website",
+    "vconnct-dashboard",
+    "vcloud-control-panel",
+    "vconnct-landing-pages",
+    "tawteen",
+    "noor-dashboard",
+    "cozy-loops",
+    "ecommerce-platform",
+    "chat-app",
+    "property-management",
+    "hr-finger"
+  ]
+}

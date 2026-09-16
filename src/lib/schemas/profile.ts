@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { Bilingual } from "./shared";
+import { Bilingual } from "./shared.ts";
 
 export const SocialLink = z.object({
   id: z.enum(["github", "linkedin", "email", "instagram", "facebook", "x"]),

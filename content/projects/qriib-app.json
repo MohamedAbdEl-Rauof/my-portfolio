@@ -1,0 +1,74 @@
+{
+  "slug": "qriib-app",
+  "title": {
+    "en": "Qriib Web App and Admin Portal",
+    "ar": "تطبيق Qriib ولوحة الإدارة"
+  },
+  "tagline": {
+    "en": "Two connected portals: a member web app and an organisation control centre.",
+    "ar": "بوّابتان متصلتان: تطبيق ويب للأعضاء ومركز تحكّم للمؤسسة."
+  },
+  "summary": {
+    "en": "I built both surfaces of the Qriib product. Members use the web app to start or schedule meetings, join by ID or link, manage recordings and read their calendar. Organisation owners use the admin portal to watch meeting activity, assign licences, handle billing and plan changes, set workspace storage and run webinars.",
+    "ar": "بنيت واجهتي منتج Qriib معًا. يستخدم الأعضاء تطبيق الويب لبدء الاجتماعات أو جدولتها، والانضمام عبر مُعرّف أو رابط، وإدارة التسجيلات، وقراءة تقويمهم. ويستخدم مالكو المؤسسة لوحة الإدارة لمتابعة نشاط الاجتماعات، وتوزيع التراخيص، وإدارة الفوترة وتغيير الباقات، وضبط مساحة التخزين، وتشغيل الندوات."
+  },
+  "role": {
+    "en": "Front-end developer in the product team",
+    "ar": "مطوّر واجهات أمامية ضمن فريق المنتج"
+  },
+  "client": {
+    "en": "Vconnct",
+    "ar": "Vconnct"
+  },
+  "timeline": {
+    "start": "2025-06",
+    "end": "2026-03"
+  },
+  "status": "live",
+  "category": "professional",
+  "tags": ["saas", "dashboard", "realtime"],
+  "featured": false,
+  "order": 8,
+  "cover": "/projects/qriib-app/cover.webp",
+  "coverAlt": {
+    "en": "The Qriib member dashboard showing upcoming meetings and recordings.",
+    "ar": "لوحة عضو Qriib وبها الاجتماعات القادمة والتسجيلات."
+  },
+  "gallery": [],
+  "video": {
+    "src": "/projects/qriib-app/demo.mp4",
+    "poster": "/projects/qriib-app/cover.webp"
+  },
+  "links": {
+    "live": "https://qriib.me"
+  },
+  "stack": [
+    "nextjs",
+    "react",
+    "typescript",
+    "express",
+    "material-ui",
+    "react-hook-form",
+    "stripe"
+  ],
+  "highlights": [
+    {
+      "en": "The member app covers instant meetings, scheduling, joining by ID or link, recordings and the calendar in one interface.",
+      "ar": "يغطّي تطبيق الأعضاء الاجتماعات الفورية والجدولة والانضمام بمُعرّف أو رابط والتسجيلات والتقويم في واجهة واحدة."
+    },
+    {
+      "en": "The admin portal handles licence assignment, billing and plan upgrades, workspace storage limits and webinar oversight.",
+      "ar": "تتولّى لوحة الإدارة توزيع التراخيص والفوترة وترقية الباقات وحدود التخزين والإشراف على الندوات."
+    },
+    {
+      "en": "Both portals share one component library and design system, so a change to a form or table lands in both.",
+      "ar": "تتشارك البوّابتان مكتبة مكوّنات ونظام تصميم واحدًا، فيصل أي تغيير في نموذج أو جدول إليهما معًا."
+    },
+    {
+      "en": "I wired Stripe checkout and plan changes into the admin billing screens.",
+      "ar": "ربطت دفع Stripe وتغيير الباقات بشاشات الفوترة في لوحة الإدارة."
+    }
+  ],
+  "metrics": [],
+  "private": false
+}

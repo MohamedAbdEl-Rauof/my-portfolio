@@ -1,0 +1,133 @@
+{
+  "roles": [
+    {
+      "company": {
+        "en": "Nova International Medical Complex",
+        "ar": "مجمع نوفا الدولي الطبي"
+      },
+      "role": {
+        "en": "Full-stack developer and IT systems lead",
+        "ar": "مطوّر ويب متكامل ورئيس أنظمة تقنية المعلومات"
+      },
+      "start": "2026-04",
+      "end": null,
+      "location": {
+        "en": "Jeddah, Saudi Arabia",
+        "ar": "جدة، المملكة العربية السعودية"
+      },
+      "summary": {
+        "en": "I own the complex's internal systems and IT. I build the software, automate clinical and administrative workflows, and integrate the messaging and AI tools that save the team hours every day.",
+        "ar": "أتولّى أنظمة المجمع الداخلية وتقنية المعلومات. أبني البرمجيات، وأُؤتمت سير العمل السريري والإداري، وأدمج أدوات المراسلة والذكاء الاصطناعي التي توفّر على الفريق ساعات كل يوم."
+      },
+      "highlights": [
+        {
+          "en": "Rebuilt the public website on Next.js, replacing a dead WordPress site and recovering 74 legacy URLs.",
+          "ar": "أعدت بناء الموقع العام بـ Next.js بديلًا عن موقع WordPress متوقف، مع استرجاع 74 رابطًا قديمًا."
+        },
+        {
+          "en": "Built Nova Bill, a ZATCA-compliant invoicing system with hash-chained invoices and role-based access.",
+          "ar": "بنيت Nova Bill، نظام فوترة متوافق مع هيئة الزكاة والضريبة بفواتير مترابطة تشفيريًا وصلاحيات حسب الدور."
+        },
+        {
+          "en": "Built a multi-clinic patient queue system with realtime floor displays that call numbers aloud in Arabic.",
+          "ar": "بنيت نظام طوابير للمرضى متعدد العيادات بشاشات طوابق فورية تنادي الأرقام صوتيًا بالعربية."
+        },
+        {
+          "en": "Verified the complex's official WhatsApp Business number and centralised patient conversations on Chatwoot.",
+          "ar": "وثّقت رقم المجمع الرسمي على WhatsApp Business ووحّدت محادثات المرضى على Chatwoot."
+        },
+        {
+          "en": "Automated lab result delivery with n8n, so results reach patients without being sent by hand.",
+          "ar": "أتمتت تسليم نتائج المختبر بـ n8n، لتصل النتائج إلى المرضى دون إرسال يدوي."
+        },
+        {
+          "en": "Led vendor research and quote comparison for the hospital information system and queue system procurement.",
+          "ar": "قُدت بحث المورّدين ومقارنة عروض الأسعار لاقتناء نظام معلومات المستشفى ونظام الطوابير."
+        },
+        {
+          "en": "Named by management as the owner of IT and social account security across the complex.",
+          "ar": "كُلِّفت من الإدارة بمسؤولية أمن تقنية المعلومات وحسابات التواصل الاجتماعي عبر المجمع."
+        }
+      ],
+      "projectSlugs": [
+        "nova-medicals",
+        "queue-system",
+        "nova-dash",
+        "nova-bill",
+        "whatsapp-patient-platform",
+        "lab-results-automation",
+        "ai-auto-reply-assistant"
+      ]
+    },
+    {
+      "company": {
+        "en": "Vconnct",
+        "ar": "Vconnct"
+      },
+      "role": {
+        "en": "Front-end / full-stack developer",
+        "ar": "مطوّر واجهات أمامية / ويب متكامل"
+      },
+      "start": "2024-06",
+      "end": "2026-03",
+      "location": {
+        "en": "Cairo, Egypt",
+        "ar": "القاهرة، مصر"
+      },
+      "summary": {
+        "en": "Built the product and marketing surfaces for an Arabic-first real-time communication platform and its clients.",
+        "ar": "بنيت واجهات المنتج والتسويق لمنصة تواصل فوري عربية الهوية ولعملائها."
+      },
+      "highlights": [
+        {
+          "en": "Implemented single sign-on, registration, and multi-gateway payments through Stripe, Fawry and Paymob, with automated invoicing.",
+          "ar": "نفّذت تسجيل الدخول الموحّد والتسجيل وبوابات الدفع المتعددة عبر Stripe و Fawry و Paymob مع إصدار الفواتير تلقائيًا."
+        },
+        {
+          "en": "Delivered the Qriib web app and admin portal covering meetings, webinars, licences and billing.",
+          "ar": "سلّمت تطبيق Qriib ولوحة الإدارة، شاملة الاجتماعات والندوات والتراخيص والفوترة."
+        },
+        {
+          "en": "Built client dashboards and marketing sites, integrating Strapi for dynamic content across several landing pages.",
+          "ar": "بنيت لوحات تحكم ومواقع تسويقية للعملاء، ودمجت Strapi لإدارة المحتوى عبر عدة صفحات هبوط."
+        }
+      ],
+      "projectSlugs": [
+        "qriib-app",
+        "qriib-website",
+        "vconnct-website",
+        "vconnct-dashboard",
+        "vcloud-control-panel",
+        "vconnct-landing-pages",
+        "tawteen"
+      ]
+    },
+    {
+      "company": {
+        "en": "Information Technology Institute (ITI)",
+        "ar": "معهد تكنولوجيا المعلومات (ITI)"
+      },
+      "role": {
+        "en": "Full-stack development trainee",
+        "ar": "متدرّب تطوير ويب متكامل"
+      },
+      "start": "2023-06",
+      "end": "2023-08",
+      "location": {
+        "en": "Cairo, Egypt",
+        "ar": "القاهرة، مصر"
+      },
+      "summary": {
+        "en": "Intensive summer training in full-stack web development, run by Egypt's Ministry of Communications.",
+        "ar": "تدريب صيفي مكثّف في تطوير الويب المتكامل، بإشراف وزارة الاتصالات المصرية."
+      },
+      "highlights": [
+        {
+          "en": "Completed the full-stack track and shipped the capstone project.",
+          "ar": "أتممت المسار المتكامل وسلّمت مشروع التخرج."
+        }
+      ],
+      "projectSlugs": []
+    }
+  ]
+}

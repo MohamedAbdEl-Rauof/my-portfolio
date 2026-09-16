@@ -1,0 +1,72 @@
+{
+  "slug": "tawteen",
+  "title": {
+    "en": "Tawteen",
+    "ar": "توطين"
+  },
+  "tagline": {
+    "en": "Site for an Arab initiative building technology alternatives made in the region.",
+    "ar": "موقع مبادرة عربية لبناء بدائل تقنية تُصنع داخل المنطقة."
+  },
+  "summary": {
+    "en": "Tawteen is an Arab initiative for independent technology built inside the region, in Arabic and on the region's own terms. I built its website: the manifesto pages, the initiative's programmes, and the forms and content model behind them. The domain tawteen.tech now redirects to qriib.com, so the Tawteen site itself no longer exists.",
+    "ar": "توطين مبادرة عربية لبناء تقنية مستقلّة داخل المنطقة، بالعربية وبشروط المنطقة نفسها. بنيت موقعها: صفحات البيان التأسيسي، وبرامج المبادرة، والنماذج ونموذج المحتوى خلفها. ونطاق tawteen.tech يحوّل الآن إلى qriib.com، فلم يعد موقع توطين نفسه موجودًا."
+  },
+  "role": {
+    "en": "Front-end developer",
+    "ar": "مطوّر واجهات أمامية"
+  },
+  "client": {
+    "en": "Vconnct",
+    "ar": "Vconnct"
+  },
+  "timeline": {
+    "start": "2025-02",
+    "end": "2025-08"
+  },
+  "status": "archived",
+  "category": "professional",
+  "tags": ["landing", "rtl"],
+  "featured": false,
+  "order": 14,
+  "cover": "/projects/tawteen/cover.webp",
+  "coverAlt": {
+    "en": "The Tawteen home page presenting the initiative in Arabic.",
+    "ar": "الصفحة الرئيسية لموقع توطين وهي تعرّف بالمبادرة بالعربية."
+  },
+  "gallery": [],
+  "video": {
+    "src": "/projects/tawteen/demo.mp4",
+    "poster": "/projects/tawteen/cover.webp"
+  },
+  "links": {},
+  "stack": [
+    "typescript",
+    "nextjs",
+    "tailwindcss",
+    "radix-ui",
+    "react-hook-form",
+    "strapi",
+    "wordpress"
+  ],
+  "highlights": [
+    {
+      "en": "The whole site is right to left and written in Arabic first, which is the point the initiative is making.",
+      "ar": "الموقع كله من اليمين إلى اليسار ومكتوب بالعربية أولًا، وهي الفكرة التي تقوم عليها المبادرة."
+    },
+    {
+      "en": "Strapi holds the initiative's articles and programme pages so the editorial team publishes without a developer.",
+      "ar": "يحتفظ Strapi بمقالات المبادرة وصفحات البرامج ليتمكّن فريق التحرير من النشر دون مطوّر."
+    },
+    {
+      "en": "A WordPress blog runs alongside the Next.js site for the initiative's longer written material.",
+      "ar": "تعمل مدوّنة WordPress بجانب موقع Next.js للمواد المكتوبة الأطول للمبادرة."
+    },
+    {
+      "en": "tawteen.tech now redirects to qriib.com, so there is no Tawteen site left to link to.",
+      "ar": "يحوّل tawteen.tech الآن إلى qriib.com، فلم يبقَ موقع لتوطين يمكن الربط إليه."
+    }
+  ],
+  "metrics": [],
+  "private": false
+}

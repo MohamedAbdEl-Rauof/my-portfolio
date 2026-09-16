@@ -5,3 +5,5 @@ pnpm-lock.yaml
 public/data
 # Generated
 public/icons
+# Source recordings and photo masters, regenerated into public/ by scripts/
+media-sources

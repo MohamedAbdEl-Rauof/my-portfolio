@@ -1,0 +1,298 @@
+{
+  "slug": "nova-medicals",
+  "title": {
+    "en": "Nova Medicals",
+    "ar": "موقع مجمع نوفا الطبي"
+  },
+  "tagline": {
+    "en": "A dead WordPress site replaced with an Arabic-first medical website",
+    "ar": "موقع WordPress متوقف استُبدل بموقع طبي عربي الهوية"
+  },
+  "summary": {
+    "en": "Nova International Medical Complex is a 24/7 medical complex in Jeddah. Its old WordPress site had stopped working, taking years of indexed pages down with it. I rebuilt the site on Next.js, recovered the lost URLs from web archives, and moved the domain over in a planned cutover.",
+    "ar": "مجمع نوفا الدولي الطبي مجمع طبي يعمل 24 ساعة في جدة. توقّف موقعه القديم على WordPress عن العمل، وسقطت معه صفحات مفهرسة تراكمت عبر سنوات. أعدت بناء الموقع بـ Next.js، واستعدت الروابط المفقودة من أرشيف الويب، ونقلت النطاق في تحويل مخطط له."
+  },
+  "role": {
+    "en": "Solo developer, from the blueprint to the DNS cutover",
+    "ar": "مطوّر منفرد، من المخطط الأولي حتى تحويل النطاق"
+  },
+  "client": {
+    "en": "Nova International Medical Complex, Jeddah",
+    "ar": "مجمع نوفا الدولي الطبي، جدة"
+  },
+  "timeline": {
+    "start": "2026-08",
+    "end": "2026-09"
+  },
+  "status": "live",
+  "category": "professional",
+  "tags": ["healthcare", "rtl", "compliance"],
+  "featured": true,
+  "order": 1,
+  "cover": "/projects/nova-medicals/cover.webp",
+  "coverAlt": {
+    "en": "The Nova Medicals home page, showing the clinic exterior behind an Arabic headline",
+    "ar": "الصفحة الرئيسية لموقع نوفا، وتظهر فيها واجهة المجمع خلف عنوان عربي"
+  },
+  "gallery": [
+    {
+      "src": "/projects/nova-medicals/gallery-1.webp",
+      "alt": {
+        "en": "The booking page",
+        "ar": "صفحة حجز المواعيد"
+      },
+      "caption": {
+        "en": "Booking runs through WhatsApp, which is where patients already are.",
+        "ar": "الحجز يتم عبر واتساب، حيث يوجد المرضى أصلًا."
+      }
+    },
+    {
+      "src": "/projects/nova-medicals/gallery-2.webp",
+      "alt": {
+        "en": "The departments listing",
+        "ar": "صفحة الأقسام الطبية"
+      },
+      "caption": {
+        "en": "Eighteen departments, each a typed content record rather than a hand-built page.",
+        "ar": "ثمانية عشر قسمًا، كل منها سجل محتوى موصوف لا صفحة مبنية يدويًا."
+      }
+    },
+    {
+      "src": "/projects/nova-medicals/gallery-3.webp",
+      "alt": {
+        "en": "The doctors listing",
+        "ar": "صفحة الفريق الطبي"
+      },
+      "caption": {
+        "en": "Twenty-six physicians, with every bio and credential rebuilt from the real CV.",
+        "ar": "ستة وعشرون طبيبًا، أُعيدت كتابة كل نبذة ومؤهل من السيرة الذاتية الحقيقية."
+      }
+    },
+    {
+      "src": "/projects/nova-medicals/gallery-4.webp",
+      "alt": {
+        "en": "The blog index",
+        "ar": "صفحة المدونة"
+      },
+      "caption": {
+        "en": "Articles and news in MDX, sharing the same typed pipeline as the rest of the site.",
+        "ar": "المقالات والأخبار بصيغة MDX، ضمن المسار الموصوف نفسه الذي يخدم باقي الموقع."
+      }
+    }
+  ],
+  "links": {
+    "live": "https://nova-medicals.com"
+  },
+  "stack": [
+    "nextjs",
+    "react",
+    "typescript",
+    "tailwindcss",
+    "next-intl",
+    "zod",
+    "mdx",
+    "resend",
+    "framer-motion",
+    "sharp",
+    "schema-org",
+    "seo",
+    "a11y",
+    "i18n",
+    "rtl",
+    "vercel"
+  ],
+  "highlights": [
+    {
+      "en": "Recovered 74 legacy URLs from Wayback Machine sitemaps and mapped them page for page, with a script that checks all 74 against production after every deploy.",
+      "ar": "استعدت 74 رابطًا قديمًا من خرائط موقع Wayback Machine وربطتها صفحةً بصفحة، مع سكربت يتحقق من الـ74 جميعها في بيئة الإنتاج بعد كل نشر."
+    },
+    {
+      "en": "Built the site Arabic-first with the locale in a cookie, so both languages serve from one URL and the layout mirrors through logical CSS properties alone.",
+      "ar": "بنيت الموقع بالعربية أولًا مع حفظ اللغة في كوكي، فتُخدَم اللغتان من رابط واحد وينعكس التخطيط بخصائص CSS المنطقية وحدها."
+    },
+    {
+      "en": "Content lives as Zod-validated JSON and MDX, and any record still flagged as a placeholder fails the production build instead of reaching a patient.",
+      "ar": "المحتوى ملفات JSON و MDX موثّقة بـ Zod، وأي سجل ما زال مؤقتًا يُفشل بناء الإنتاج بدلًا من أن يصل إلى مريض."
+    },
+    {
+      "en": "Social cards render at build time from a dedicated route tree, laying out Arabic text right to left with the brand's own typography.",
+      "ar": "تُولَّد بطاقات المشاركة وقت البناء من شجرة مسارات مخصّصة، تُخرِج النص العربي من اليمين إلى اليسار بخطوط الهوية نفسها."
+    },
+    {
+      "en": "Took the site from four axe violations to zero, and caught a pause-control failure on the auto-scrolling rows that no automated tool reported.",
+      "ar": "خفّضت مخالفات axe من أربع إلى صفر، والتقطت عطلًا في التحكم بإيقاف الصفوف المتحركة لم يُبلّغ عنه أي فاحص آلي."
+    }
+  ],
+  "metrics": [
+    {
+      "label": {
+        "en": "Lighthouse, booking page",
+        "ar": "Lighthouse، صفحة الحجز"
+      },
+      "value": "98",
+      "note": {
+        "en": "Measured on production, 6 September 2026",
+        "ar": "قياس في بيئة الإنتاج، 6 سبتمبر 2026"
+      }
+    },
+    {
+      "label": {
+        "en": "Accessibility, best practices, SEO",
+        "ar": "الإتاحة وأفضل الممارسات وتحسين الظهور"
+      },
+      "value": "100",
+      "note": {
+        "en": "On every page measured",
+        "ar": "في كل صفحة جرى قياسها"
+      }
+    },
+    {
+      "label": {
+        "en": "Cumulative layout shift",
+        "ar": "إزاحة التخطيط التراكمية"
+      },
+      "value": "0"
+    },
+    {
+      "label": {
+        "en": "Legacy URLs recovered",
+        "ar": "روابط قديمة مستعادة"
+      },
+      "value": "74"
+    },
+    {
+      "label": {
+        "en": "Build to launch",
+        "ar": "من البداية إلى الإطلاق"
+      },
+      "value": "5 weeks",
+      "note": {
+        "en": "136 commits, 4 August to 6 September 2026",
+        "ar": "136 إسهامًا، من 4 أغسطس إلى 6 سبتمبر 2026"
+      }
+    }
+  ],
+  "private": false,
+  "caseStudy": {
+    "problem": [
+      {
+        "en": "The complex had a WordPress site that had stopped serving. Patients searching for the clinic by name landed on nothing, and years of indexed pages, departments, doctors, articles, were returning errors.",
+        "ar": "كان للمجمع موقع على WordPress توقّف عن العمل. المرضى الذين يبحثون عن المجمع بالاسم لا يجدون شيئًا، وسنوات من الصفحات المفهرسة — أقسام وأطباء ومقالات — تُرجع أخطاء."
+      },
+      {
+        "en": "Nothing could be exported from the old installation. The only record of what those URLs had been was in the Wayback Machine.",
+        "ar": "لم يكن بالإمكان تصدير أي شيء من التنصيب القديم. السجل الوحيد لتلك الروابط كان في أرشيف Wayback Machine."
+      },
+      {
+        "en": "The audience reads Arabic first. A site translated into Arabic as an afterthought would have been the wrong product, however good the English version looked.",
+        "ar": "الجمهور يقرأ بالعربية أولًا. موقع تُرجم إلى العربية لاحقًا كان سيكون المنتج الخطأ، مهما بدت النسخة الإنجليزية جيدة."
+      }
+    ],
+    "approach": [
+      {
+        "en": "I wrote the blueprint before any code: the sitemap, the design tokens, the performance budget, and what each page had to accomplish. It stayed the reference for five weeks and is still in the repository.",
+        "ar": "كتبت المخطط قبل أي سطر برمجي: خريطة الموقع، ورموز التصميم، وميزانية الأداء، وما يجب أن تحقّقه كل صفحة. ظل المرجع طوال خمسة أسابيع وما زال في المستودع."
+      },
+      {
+        "en": "Arabic came first in the architecture, not just the copy. The locale lives in a cookie so both languages share one URL, and every spacing utility is logical, so the layout mirrors instead of being re-laid out.",
+        "ar": "جاءت العربية أولًا في البنية لا في النص فقط. تُحفظ اللغة في كوكي فتتشارك اللغتان رابطًا واحدًا، وكل أداة تباعد منطقية، فينعكس التخطيط بدل إعادة بنائه."
+      },
+      {
+        "en": "Content became data. Departments, doctors, insurers and vacancies are JSON records validated by Zod; articles are MDX. Pages render records, so a typo cannot exist in one language only.",
+        "ar": "صار المحتوى بيانات. الأقسام والأطباء وشركات التأمين والوظائف سجلات JSON موثّقة بـ Zod، والمقالات بصيغة MDX. تعرض الصفحات سجلات، فلا يمكن أن يوجد خطأ مطبعي في لغة دون الأخرى."
+      },
+      {
+        "en": "I reconstructed the old URL map from archived sitemaps and wrote a script that asserts every redirect against the live site, so a deploy that breaks one is caught the same day.",
+        "ar": "أعدت بناء خريطة الروابط القديمة من خرائط الموقع المؤرشفة، وكتبت سكربتًا يتحقق من كل تحويل مقابل الموقع الحي، فيُكتشف أي نشر يكسر تحويلًا في اليوم نفسه."
+      }
+    ],
+    "results": [
+      {
+        "en": "The site launched on 6 September 2026 with a written cutover runbook and a rollback plan. All 74 legacy URLs resolve to their new pages.",
+        "ar": "أُطلق الموقع في 6 سبتمبر 2026 بدليل تحويل مكتوب وخطة تراجع. جميع الروابط القديمة الـ74 تصل إلى صفحاتها الجديدة."
+      },
+      {
+        "en": "Lighthouse on production reached 98 on the booking page and 95 on department and article pages, with 100 for accessibility, best practices and SEO on every page measured, and no layout shift anywhere.",
+        "ar": "بلغ Lighthouse في بيئة الإنتاج 98 في صفحة الحجز و95 في صفحات الأقسام والمقالات، مع 100 للإتاحة وأفضل الممارسات وتحسين الظهور في كل صفحة قيست، ودون أي إزاحة في التخطيط."
+      },
+      {
+        "en": "Twenty-five types of structured data describe the clinic to search engines, covering the complex itself, its physicians, its procedures and its job postings.",
+        "ar": "خمسة وعشرون نوعًا من البيانات المنظّمة تصف المجمع لمحركات البحث، وتغطي المجمع نفسه وأطباءه وإجراءاته الطبية ووظائفه المعلنة."
+      }
+    ],
+    "sections": [
+      {
+        "heading": {
+          "en": "Performance was won back one cause at a time",
+          "ar": "استُعيد الأداء سببًا واحدًا في كل مرة"
+        },
+        "body": [
+          {
+            "en": "The first production measurement was not good enough, so I measured again after each fix rather than changing several things at once and hoping.",
+            "ar": "لم يكن القياس الأول في بيئة الإنتاج جيدًا بما يكفي، فأعدت القياس بعد كل إصلاح بدلًا من تغيير عدة أشياء دفعة واحدة والأمل في النتيجة."
+          }
+        ],
+        "bullets": [
+          {
+            "en": "The logo was a 114 KB PNG. Serving a 660-pixel WebP brought it to roughly 16 KB on a phone.",
+            "ar": "كان الشعار ملف PNG بحجم 114 كيلوبايت. خفّضه تقديم نسخة WebP بعرض 660 بكسل إلى نحو 16 كيلوبايت على الهاتف."
+          },
+          {
+            "en": "Hero slides two to five were deferred until after hydration; only the first one blocks the largest paint.",
+            "ar": "أُجّلت شرائح الواجهة من الثانية إلى الخامسة إلى ما بعد الترطيب، فلا تحجب سوى الأولى أكبر عنصر مرئي."
+          },
+          {
+            "en": "Google Tag Manager was costing five to ten points until it was moved to load last.",
+            "ar": "كان Google Tag Manager يكلّف من خمس إلى عشر نقاط حتى نُقل ليُحمَّل أخيرًا."
+          },
+          {
+            "en": "The home page listed twenty-eight doctors; trimming it to eight cut the DOM from 1,482 nodes to 1,204.",
+            "ar": "كانت الصفحة الرئيسية تعرض ثمانية وعشرين طبيبًا؛ تقليصها إلى ثمانية خفّض شجرة DOM من 1,482 عقدة إلى 1,204."
+          }
+        ]
+      },
+      {
+        "heading": {
+          "en": "An automated pass is a floor, not a certificate",
+          "ar": "الفحص الآلي أرضية لا شهادة"
+        },
+        "body": [
+          {
+            "en": "Automated testing took the site from four accessibility violations to zero. That was the starting point of the audit, not the end of it.",
+            "ar": "أوصل الفحص الآلي الموقع من أربع مخالفات إتاحة إلى صفر. كانت تلك نقطة بداية التدقيق لا نهايته."
+          },
+          {
+            "en": "Reading the results by hand found an auto-scrolling row with no way to stop it, which fails a WCAG criterion that no scanner flagged, and two contrast problems the scanner had only marked as uncertain. The client later chose to remove the motion toggle, and that remains a recorded, accepted gap rather than a quiet one.",
+            "ar": "كشفت القراءة اليدوية للنتائج صفًا متحركًا تلقائيًا لا سبيل لإيقافه، وهو إخفاق في معيار WCAG لم يشر إليه أي فاحص، ومشكلتي تباين لم يصنّفهما الفاحص إلا كغير مؤكدتين. اختار العميل لاحقًا إزالة مفتاح إيقاف الحركة، وبقي ذلك ثغرة مسجّلة ومقبولة لا مسكوتًا عنها."
+          }
+        ]
+      },
+      {
+        "heading": {
+          "en": "Medical content that cannot quietly be wrong",
+          "ar": "محتوى طبي لا يمكن أن يخطئ بصمت"
+        },
+        "body": [
+          {
+            "en": "A placeholder on a restaurant site is embarrassing. A placeholder on a doctor's page is a patient reading an invented credential, so the build refuses to ship one.",
+            "ar": "النص المؤقت في موقع مطعم محرج. أما في صفحة طبيب فهو مريض يقرأ مؤهلًا مختلقًا، ولذلك يرفض البناء إصداره."
+          },
+          {
+            "en": "Every one of the twenty-six physician records was rebuilt from an actual CV after an audit found templated biographies attached to real, named doctors. The aggregate rating was also removed, deliberately, to stay within Google's review-snippet policy.",
+            "ar": "أُعيد بناء كل سجل من سجلات الأطباء الستة والعشرين من سيرة ذاتية حقيقية بعد أن كشف تدقيق نبذًا نمطية منسوبة إلى أطباء حقيقيين بأسمائهم. كما أُزيل التقييم الإجمالي عمدًا للبقاء ضمن سياسة Google لمقتطفات التقييمات."
+          }
+        ]
+      }
+    ],
+    "lessons": [
+      {
+        "en": "Measuring after every single change is slower than batching fixes, and it is the only way to know which change actually paid.",
+        "ar": "القياس بعد كل تغيير على حدة أبطأ من تجميع الإصلاحات، وهو الطريق الوحيد لمعرفة أي تغيير أتى بالنتيجة فعلًا."
+      },
+      {
+        "en": "The checks worth writing are the ones that run without being remembered. The redirect script and the placeholder gate both catch problems on a day when nobody is looking for them.",
+        "ar": "الفحوص الجديرة بالكتابة هي التي تعمل دون أن يتذكرها أحد. سكربت التحويلات وبوابة النصوص المؤقتة يلتقطان المشكلات في يوم لا يبحث فيه أحد عنها."
+      }
+    ]
+  }
+}

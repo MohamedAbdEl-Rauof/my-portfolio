@@ -1,0 +1,68 @@
+{
+  "slug": "lab-results-automation",
+  "title": {
+    "en": "Lab Results Automation",
+    "ar": "أتمتة نتائج المختبر"
+  },
+  "tagline": {
+    "en": "Finalised lab results reach patients without anyone sending them by hand.",
+    "ar": "نتائج المختبر النهائية تصل إلى المرضى دون أن يرسلها أحد يدويًا."
+  },
+  "summary": {
+    "en": "I built an n8n workflow that picks up finalised laboratory results and delivers them to the right patient automatically. Before this, a staff member sent every result by hand, which was slow and easy to get wrong. The workflow connects the lab's output to the complex's messaging channels over webhooks and REST calls, with conditional routing for results that need a human to look first.",
+    "ar": "بنيت سير عمل بـ n8n يلتقط نتائج المختبر النهائية ويسلّمها إلى المريض الصحيح تلقائيًا. قبل ذلك كان أحد الموظفين يرسل كل نتيجة يدويًا، وهو أمر بطيء وسهل الخطأ. يربط سير العمل مخرجات المختبر بقنوات المراسلة في المجمع عبر webhooks ونداءات REST، مع توجيه شرطي للنتائج التي تحتاج مراجعة بشرية أولًا."
+  },
+  "role": {
+    "en": "Solo developer and system owner",
+    "ar": "مطوّر ومسؤول النظام منفردًا"
+  },
+  "client": {
+    "en": "Nova International Medical Complex, Jeddah",
+    "ar": "مجمع نوفا الدولي الطبي، جدة"
+  },
+  "timeline": {
+    "start": "2026-06",
+    "end": "2026-07"
+  },
+  "status": "internal",
+  "category": "professional",
+  "tags": ["healthcare", "automation"],
+  "featured": false,
+  "order": 6,
+  "cover": "/projects/lab-results-automation/cover.webp",
+  "coverAlt": {
+    "en": "The n8n workflow that routes finalised lab results to patients.",
+    "ar": "سير عمل n8n الذي يوجّه نتائج المختبر النهائية إلى المرضى."
+  },
+  "gallery": [],
+  "video": {
+    "src": "/projects/lab-results-automation/demo.mp4",
+    "poster": "/projects/lab-results-automation/cover.webp"
+  },
+  "links": {},
+  "stack": ["n8n", "rest-apis", "webhooks", "docker"],
+  "highlights": [
+    {
+      "en": "A webhook fires the moment a result is marked final, so delivery no longer waits for someone to check the lab system.",
+      "ar": "يُطلَق webhook لحظة اعتماد النتيجة كنهائية، فلم يعد التسليم ينتظر أن يفتح أحدهم نظام المختبر."
+    },
+    {
+      "en": "The workflow matches each result to the patient record and sends it on the channel that patient already uses.",
+      "ar": "يطابق سير العمل كل نتيجة مع سجلّ المريض ويرسلها عبر القناة التي يستخدمها المريض بالفعل."
+    },
+    {
+      "en": "Conditional branches hold back results that need a clinician's review instead of pushing them out automatically.",
+      "ar": "تحتجز الفروع الشرطية النتائج التي تحتاج مراجعة طبيب بدلًا من إرسالها تلقائيًا."
+    },
+    {
+      "en": "Failed sends raise a notification rather than disappearing, so staff can see exactly which result did not go out.",
+      "ar": "ترفع محاولات الإرسال الفاشلة إشعارًا بدل أن تختفي، فيرى الموظفون بالضبط أي نتيجة لم تُرسَل."
+    }
+  ],
+  "metrics": [],
+  "private": true,
+  "privateNote": {
+    "en": "This is an internal system with no public URL, so the screens here use seeded data. I can walk through the live system on request.",
+    "ar": "هذا نظام داخلي بلا رابط عام، لذا تعرض اللقطات هنا بيانات تجريبية. يسعدني تقديم جولة على النظام الحقيقي عند الطلب."
+  }
+}

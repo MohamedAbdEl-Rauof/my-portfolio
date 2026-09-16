@@ -1,0 +1,68 @@
+{
+  "slug": "whatsapp-patient-platform",
+  "title": {
+    "en": "WhatsApp Patient Communication Platform",
+    "ar": "منصة تواصل المرضى عبر WhatsApp"
+  },
+  "tagline": {
+    "en": "Centralised WhatsApp support for a medical complex, built on Chatwoot.",
+    "ar": "دعم مركزي للمرضى عبر WhatsApp لمجمع طبي، مبني على Chatwoot."
+  },
+  "summary": {
+    "en": "I verified the complex's landline as an official WhatsApp Business number and built a patient support platform on top of Chatwoot. Every incoming conversation now arrives in one shared inbox where staff answer together, reuse saved replies and route cases to the right team. Messaging from personal phones was replaced by a workflow the complex can audit.",
+    "ar": "وثّقت رقم المجمع الأرضي كرقم WhatsApp Business رسمي، وبنيت منصة لدعم المرضى فوق Chatwoot. صارت كل محادثة واردة تصل إلى صندوق وارد مشترك واحد يردّ عليه الفريق معًا، مستخدمًا الردود المحفوظة وتوجيه الحالات إلى القسم المناسب. وحلّ هذا محل المراسلة من الهواتف الشخصية بسير عمل يمكن للمجمع تدقيقه."
+  },
+  "role": {
+    "en": "Solo developer and system owner",
+    "ar": "مطوّر ومسؤول النظام منفردًا"
+  },
+  "client": {
+    "en": "Nova International Medical Complex, Jeddah",
+    "ar": "مجمع نوفا الدولي الطبي، جدة"
+  },
+  "timeline": {
+    "start": "2026-05",
+    "end": "2026-06"
+  },
+  "status": "internal",
+  "category": "professional",
+  "tags": ["healthcare", "automation"],
+  "featured": false,
+  "order": 5,
+  "cover": "/projects/whatsapp-patient-platform/cover.webp",
+  "coverAlt": {
+    "en": "The shared Chatwoot inbox holding patient WhatsApp conversations.",
+    "ar": "صندوق الوارد المشترك في Chatwoot وبه محادثات المرضى على WhatsApp."
+  },
+  "gallery": [],
+  "video": {
+    "src": "/projects/whatsapp-patient-platform/demo.mp4",
+    "poster": "/projects/whatsapp-patient-platform/cover.webp"
+  },
+  "links": {},
+  "stack": ["chatwoot", "whatsapp-api", "docker", "nodejs", "webhooks"],
+  "highlights": [
+    {
+      "en": "I took the complex's existing landline through WhatsApp Business verification, so patients write to the number already printed on the clinic's signage.",
+      "ar": "أخذت رقم المجمع الأرضي القائم عبر توثيق WhatsApp Business، فصار المرضى يراسلون الرقم نفسه المطبوع على لافتات المجمع."
+    },
+    {
+      "en": "I self-hosted Chatwoot in Docker and connected it to the WhatsApp Business API through webhooks.",
+      "ar": "استضفت Chatwoot ذاتيًا عبر Docker وربطته بواجهة WhatsApp Business البرمجية عبر webhooks."
+    },
+    {
+      "en": "Saved replies and inbox routing give every agent the same wording for hours, services and booking questions.",
+      "ar": "توفّر الردود المحفوظة وتوجيه صندوق الوارد صياغة موحّدة لكل موظف في أسئلة المواعيد والخدمات والحجز."
+    },
+    {
+      "en": "Conversations are assigned, tagged and kept in one history, so nothing depends on a staff member's personal phone any more.",
+      "ar": "تُسنَد المحادثات وتُوسَم وتُحفظ في سجلّ واحد، فلم يعد أي شيء معتمدًا على الهاتف الشخصي لأحد الموظفين."
+    }
+  ],
+  "metrics": [],
+  "private": true,
+  "privateNote": {
+    "en": "This is an internal system with no public URL, so the screens here use seeded data. I can walk through the live system on request.",
+    "ar": "هذا نظام داخلي بلا رابط عام، لذا تعرض اللقطات هنا بيانات تجريبية. يسعدني تقديم جولة على النظام الحقيقي عند الطلب."
+  }
+}

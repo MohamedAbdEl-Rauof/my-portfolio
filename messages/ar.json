@@ -46,7 +46,19 @@
     "experience": "الخبرة",
     "ctaTitle": "لديك مشروع أو فرصة عمل؟",
     "ctaBody": "واتساب أسرع وسيلة للوصول إليّ، وأرد عادةً في اليوم نفسه.",
-    "whatsappMessage": "مرحبًا محمد، اطّلعت على ملفك الشخصي وأرغب في التواصل معك."
+    "whatsappMessage": "مرحبًا محمد، اطّلعت على ملفك الشخصي وأرغب في التواصل معك.",
+    "boardLive": "في بيئة الإنتاج",
+    "boardLighthouse": "Lighthouse",
+    "boardLighthouseNote": "الأداء والإتاحة وتحسين الظهور على nova-medicals.com",
+    "boardRedirects": "روابط قديمة مستعادة",
+    "boardRedirectsNote": "تُفحص في بيئة الإنتاج بعد كل نشر",
+    "boardTests": "اختبارات آلية",
+    "boardTestsNote": "في نظام طوابير المرضى",
+    "servicesLead": "أربعة أنواع من العمل، كلها سُلّمت لا جُرّبت.",
+    "stackLead": "ما أعمل به، مرتّبًا حسب موقعه في النظام.",
+    "experienceLead": "دوران اثنان، والأنظمة التي أنتجها كل منهما.",
+    "viewAllWork": "استعرض كل الأعمال",
+    "readMore": "المزيد عني"
   },
   "projects": {
     "title": "الأعمال",

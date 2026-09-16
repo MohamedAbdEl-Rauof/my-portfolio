@@ -90,6 +90,16 @@ export default async function LocaleLayout({
       suppressHydrationWarning
       className={`${bricolage.variable} ${instrument.variable} ${jetbrains.variable} ${readex.variable}`}
     >
+      <head>
+        {/*
+          Scroll reveals render their starting state into the server HTML, so
+          without JavaScript those sections would sit at `opacity: 0` forever.
+          This is the one case where the content has to be forced back.
+        */}
+        <noscript>
+          <style>{`[data-reveal]{opacity:1!important;transform:none!important}`}</style>
+        </noscript>
+      </head>
       <body className="flex min-h-dvh flex-col">
         <ThemeProvider>
           <NextIntlClientProvider>

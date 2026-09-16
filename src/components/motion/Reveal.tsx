@@ -6,10 +6,10 @@ import type { ReactNode } from "react";
 /**
  * Reveals its children once, when they scroll into view.
  *
- * Content is never hidden at rest: the initial state only offsets and fades,
- * and when the visitor asks for reduced motion the element renders plainly.
- * A `whileInView` that starts at `opacity: 0` with JavaScript disabled would
- * leave the page blank, which is why the rest state stays visible in CSS.
+ * The initial state is rendered into the server HTML, so with JavaScript
+ * disabled these elements would stay at `opacity: 0` and the section would be
+ * blank. The `data-reveal` attribute exists for the `<noscript>` rule in the
+ * layout, which forces them visible in that case.
  */
 export function Reveal({
   children,
@@ -26,6 +26,7 @@ export function Reveal({
 
   return (
     <motion.div
+      data-reveal=""
       className={className}
       initial={{ opacity: 0, y: 16 }}
       whileInView={{ opacity: 1, y: 0 }}

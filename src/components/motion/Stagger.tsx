@@ -23,6 +23,7 @@ export function Stagger({
 
   return (
     <motion.div
+      data-reveal=""
       className={className}
       initial="hidden"
       whileInView="visible"
@@ -50,6 +51,7 @@ export function StaggerItem({
 
   return (
     <motion.div
+      data-reveal=""
       className={className}
       variants={{
         hidden: { opacity: 0, y: 12 },

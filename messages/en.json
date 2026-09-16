@@ -46,7 +46,19 @@
     "experience": "Experience",
     "ctaTitle": "Have a project or a role in mind?",
     "ctaBody": "WhatsApp reaches me fastest. I usually reply the same day.",
-    "whatsappMessage": "Hello Mohamed, I saw your portfolio and would like to talk with you."
+    "whatsappMessage": "Hello Mohamed, I saw your portfolio and would like to talk with you.",
+    "boardLive": "In production",
+    "boardLighthouse": "Lighthouse",
+    "boardLighthouseNote": "Performance, accessibility, SEO on nova-medicals.com",
+    "boardRedirects": "Legacy URLs recovered",
+    "boardRedirectsNote": "Checked against production after every deploy",
+    "boardTests": "Automated tests",
+    "boardTestsNote": "Across the patient queue system",
+    "servicesLead": "Four kinds of work, all of it shipped rather than prototyped.",
+    "stackLead": "What I reach for, grouped by where it sits in a system.",
+    "experienceLead": "Two roles, and the systems each one produced.",
+    "viewAllWork": "See all work",
+    "readMore": "More about me"
   },
   "projects": {
     "title": "Work",

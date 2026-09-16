@@ -1,0 +1,208 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* Dark is the default theme, so the variant keys off an explicit .dark class
+   set by next-themes rather than the media query. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/*
+ * Design tokens.
+ *
+ * The palette comes from the subject matter: the amber LED digits of the
+ * clinic queue-display boards in this portfolio's flagship project, on deep
+ * ink navy. Amber also sits opposite the blue branding of every client
+ * screenshot (Nova, Vconnct, Qriib), so covers read as photographs against it
+ * instead of competing with the page.
+ *
+ * `--signal` is the brand accent. shadcn's own `--accent` stays a neutral
+ * hover fill so the two never collide.
+ */
+:root {
+  --radius: 0.625rem;
+
+  --background: #f5f7fb;
+  --foreground: #0b1220;
+  --card: #ffffff;
+  --card-foreground: #0b1220;
+  --popover: #ffffff;
+  --popover-foreground: #0b1220;
+  --primary: #0b1220;
+  --primary-foreground: #f5f7fb;
+  --secondary: #edf0f6;
+  --secondary-foreground: #0b1220;
+  --muted: #edf0f6;
+  --muted-foreground: #5b6578;
+  --accent: #edf0f6;
+  --accent-foreground: #0b1220;
+  --destructive: #c0392b;
+  --border: #dde3ee;
+  --input: #dde3ee;
+  --ring: #9a6700;
+
+  /* Brand */
+  --signal: #9a6700;
+  --signal-foreground: #ffffff;
+  --signal-soft: rgb(154 103 0 / 10%);
+  --signal-rgb: 154 103 0;
+  --live: #1b8f5a;
+}
+
+.dark {
+  --background: #0b1220;
+  --foreground: #e8ecf5;
+  --card: #111b2e;
+  --card-foreground: #e8ecf5;
+  --popover: #111b2e;
+  --popover-foreground: #e8ecf5;
+  --primary: #e8ecf5;
+  --primary-foreground: #0b1220;
+  --secondary: #172238;
+  --secondary-foreground: #e8ecf5;
+  --muted: #172238;
+  --muted-foreground: #8c97af;
+  --accent: #172238;
+  --accent-foreground: #e8ecf5;
+  --destructive: #f87171;
+  --border: rgb(255 255 255 / 8%);
+  --input: rgb(255 255 255 / 12%);
+  --ring: #f5b841;
+
+  /* Brand */
+  --signal: #f5b841;
+  --signal-foreground: #0b1220;
+  --signal-soft: rgb(245 184 65 / 12%);
+  --signal-rgb: 245 184 65;
+  --live: #3ddc97;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-signal: var(--signal);
+  --color-signal-foreground: var(--signal-foreground);
+  --color-signal-soft: var(--signal-soft);
+  --color-live: var(--live);
+
+  --font-display: var(--font-bricolage), var(--font-instrument), system-ui, sans-serif;
+  --font-sans: var(--font-instrument), system-ui, sans-serif;
+  --font-arabic: var(--font-readex), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
+
+  /* Fluid type scale — one clamp per step, no per-breakpoint overrides. */
+  --text-xs: clamp(0.75rem, 0.72rem + 0.15vw, 0.813rem);
+  --text-xs--line-height: 1.5;
+  --text-sm: clamp(0.875rem, 0.84rem + 0.17vw, 0.938rem);
+  --text-sm--line-height: 1.55;
+  --text-base: clamp(1rem, 0.96rem + 0.2vw, 1.063rem);
+  --text-base--line-height: 1.6;
+  --text-lg: clamp(1.125rem, 1.08rem + 0.22vw, 1.188rem);
+  --text-lg--line-height: 1.55;
+  --text-xl: clamp(1.25rem, 1.2rem + 0.25vw, 1.313rem);
+  --text-xl--line-height: 1.35;
+  --text-2xl: clamp(1.5rem, 1.42rem + 0.4vw, 1.625rem);
+  --text-2xl--line-height: 1.3;
+  --text-3xl: clamp(1.875rem, 1.75rem + 0.6vw, 2.125rem);
+  --text-3xl--line-height: 1.25;
+  --text-4xl: clamp(2.25rem, 2.05rem + 1vw, 2.75rem);
+  --text-4xl--line-height: 1.15;
+  --text-5xl: clamp(2.75rem, 2.4rem + 1.8vw, 3.75rem);
+  --text-5xl--line-height: 1.1;
+  --text-6xl: clamp(3.25rem, 2.7rem + 2.8vw, 4.75rem);
+  --text-6xl--line-height: 1.05;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+
+  --shadow-glow:
+    0 0 0 1px rgb(var(--signal-rgb) / 0.25),
+    0 8px 40px -12px rgb(var(--signal-rgb) / 0.35);
+
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+
+  --container-content: 1180px;
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Arabic pages switch the whole family; Readex Pro carries Latin too, so
+     mixed strings stay in one voice. */
+  html[lang="ar"] body,
+  html[lang="ar"] .font-display {
+    font-family: var(--font-arabic);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    background-color: rgb(var(--signal-rgb) / 0.3);
+  }
+}
+
+@layer utilities {
+  /* Numbers, URLs, code and stack names stay left-to-right inside Arabic text. */
+  .ltr,
+  [dir="rtl"] .numeric {
+    direction: ltr;
+    unicode-bidi: isolate;
+  }
+
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+
+  .bg-grid {
+    background-image:
+      linear-gradient(rgb(var(--signal-rgb) / 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(var(--signal-rgb) / 0.06) 1px, transparent 1px);
+    background-size: 40px 40px;
+    mask-image: radial-gradient(ellipse at top, black 40%, transparent 75%);
+  }
+
+  .glass {
+    background-color: color-mix(in oklab, var(--card) 72%, transparent);
+    backdrop-filter: blur(12px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

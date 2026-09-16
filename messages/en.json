@@ -1,0 +1,122 @@
+{
+  "common": {
+    "loading": "Loading",
+    "error": "Something went wrong",
+    "retry": "Try again",
+    "viewAll": "View all",
+    "readCaseStudy": "Read the case study",
+    "visitSite": "Visit site",
+    "viewSource": "View source",
+    "close": "Close"
+  },
+  "nav": {
+    "home": "Home",
+    "work": "Work",
+    "about": "About",
+    "contact": "Contact",
+    "menu": "Menu",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "a11y": {
+    "skipToContent": "Skip to content",
+    "toggleTheme": "Switch to {mode} mode",
+    "themeLight": "light",
+    "themeDark": "dark",
+    "switchLanguage": "Switch language to Arabic",
+    "pauseMarquee": "Pause the logo animation",
+    "playMarquee": "Resume the logo animation",
+    "homeLink": "Mohamed Abd El-Raouf, home"
+  },
+  "home": {
+    "badge": "Open to work · Jeddah, Saudi Arabia",
+    "name": "Mohamed Abd El-Raouf",
+    "headline": "I build bilingual web systems that run in production.",
+    "intro": "Full-stack developer working in React and Next.js, end to end: interface, API, database, deployment. I lead the digital systems of an international medical complex in Jeddah, from a ZATCA-compliant invoicing system to WhatsApp patient communication and automations that save the team hours every day.",
+    "primaryCta": "Start a WhatsApp chat",
+    "cv": "Curriculum vitae",
+    "cvEnglish": "English",
+    "cvArabic": "Arabic",
+    "photoAlt": "Portrait of Mohamed Abd El-Raouf",
+    "signalBoard": "Live systems",
+    "selectedWork": "Selected work",
+    "selectedWorkLead": "Systems in daily use by real teams, not demos.",
+    "services": "What I do",
+    "stack": "Stack",
+    "experience": "Experience",
+    "ctaTitle": "Have a project or a role in mind?",
+    "ctaBody": "WhatsApp reaches me fastest. I usually reply the same day.",
+    "whatsappMessage": "Hello Mohamed, I saw your portfolio and would like to talk with you."
+  },
+  "projects": {
+    "title": "Work",
+    "subtitle": "Production systems, client work and personal builds. Each one shipped and solving a real problem.",
+    "filterLabel": "Filter by category",
+    "all": "All",
+    "professional": "Professional",
+    "freelance": "Freelance",
+    "personal": "Personal",
+    "count": "{count, plural, =0 {No projects} one {# project} other {# projects}}",
+    "empty": "No projects in this category",
+    "emptyHint": "Choose another category to see more work."
+  },
+  "project": {
+    "role": "Role",
+    "client": "Client",
+    "timeline": "Timeline",
+    "status": "Status",
+    "present": "Present",
+    "statusLive": "Live",
+    "statusInternal": "Internal",
+    "statusArchived": "Archived",
+    "statusInProgress": "In progress",
+    "stack": "Stack",
+    "highlights": "Highlights",
+    "problem": "The problem",
+    "approach": "The approach",
+    "results": "Results",
+    "lessons": "What I would carry forward",
+    "gallery": "Screens",
+    "watchDemo": "Watch the walkthrough",
+    "privateTitle": "Internal system",
+    "next": "Next project",
+    "previous": "Previous project",
+    "backToWork": "Back to work"
+  },
+  "about": {
+    "title": "About",
+    "lead": "Full-stack developer in Jeddah, building bilingual products for healthcare and SaaS teams.",
+    "experience": "Experience",
+    "education": "Education",
+    "certificates": "Certificates",
+    "issued": "Issued",
+    "skillsShown": "Skills",
+    "viewCertificate": "View certificate"
+  },
+  "contact": {
+    "title": "Contact",
+    "lead": "WhatsApp is the fastest way to reach me. I usually reply the same day.",
+    "composerTitle": "Write your message",
+    "composerHint": "This opens WhatsApp with your message ready to send. Nothing is stored here.",
+    "yourName": "Your name",
+    "yourMessage": "Message",
+    "openWhatsApp": "Open WhatsApp",
+    "email": "Email",
+    "location": "Location",
+    "locationValue": "Jeddah, Saudi Arabia",
+    "defaultMessage": "Hello Mohamed, I saw your portfolio and would like to talk with you."
+  },
+  "footer": {
+    "tagline": "Full-stack developer, Jeddah.",
+    "builtWith": "Built with Next.js and Tailwind CSS.",
+    "rights": "All rights reserved.",
+    "sections": "Sections",
+    "elsewhere": "Elsewhere"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "subtitle": "That page does not exist. The work and the contact details are one click away.",
+    "backHome": "Back to home",
+    "seeWork": "See the work"
+  }
+}

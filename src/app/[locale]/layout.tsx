@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 import {
   Bricolage_Grotesque,
   Instrument_Sans,
@@ -10,6 +10,11 @@ import {
 } from "next/font/google";
 import { routing, dirFor, type Locale } from "@/i18n/routing";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
+import { SkipLink } from "@/components/layout/SkipLink";
+import { WhatsAppFab } from "@/components/layout/WhatsAppFab";
+import { getProfile, whatsappUrl } from "@/lib/content";
 import { absoluteUrl } from "@/lib/config/site";
 import "../globals.css";
 
@@ -75,6 +80,9 @@ export default async function LocaleLayout({
   // Opts every page under this layout into static rendering.
   setRequestLocale(locale);
 
+  const profile = getProfile();
+  const t = await getTranslations("home");
+
   return (
     <html
       lang={locale}
@@ -82,9 +90,19 @@ export default async function LocaleLayout({
       suppressHydrationWarning
       className={`${bricolage.variable} ${instrument.variable} ${jetbrains.variable} ${readex.variable}`}
     >
-      <body>
+      <body className="flex min-h-dvh flex-col">
         <ThemeProvider>
-          <NextIntlClientProvider>{children}</NextIntlClientProvider>
+          <NextIntlClientProvider>
+            <SkipLink />
+            <Header />
+            <div id="main" className="flex-1">
+              {children}
+            </div>
+            <Footer />
+            <WhatsAppFab
+              href={whatsappUrl(profile.whatsapp, t("whatsappMessage"))}
+            />
+          </NextIntlClientProvider>
         </ThemeProvider>
       </body>
     </html>

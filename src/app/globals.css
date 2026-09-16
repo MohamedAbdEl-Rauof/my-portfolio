@@ -99,7 +99,8 @@
   --color-signal-soft: var(--signal-soft);
   --color-live: var(--live);
 
-  --font-display: var(--font-bricolage), var(--font-instrument), system-ui, sans-serif;
+  --font-display:
+    var(--font-bricolage), var(--font-instrument), system-ui, sans-serif;
   --font-sans: var(--font-instrument), system-ui, sans-serif;
   --font-arabic: var(--font-readex), system-ui, sans-serif;
   --font-mono: var(--font-jetbrains), ui-monospace, monospace;
@@ -180,6 +181,34 @@
 
   .tabular {
     font-variant-numeric: tabular-nums;
+  }
+
+  /*
+   * Small capitalised label above a heading.
+   *
+   * Latin gets the monospace, uppercase, wide-tracked treatment. Arabic gets
+   * none of it: its letterforms join, so tracking pulls a word apart into
+   * disconnected glyphs, and it has no letter case to raise. A Latin run inside
+   * an Arabic page opts back in by adding `.ltr`.
+   */
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    line-height: 1.5;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+  }
+
+  html[lang="ar"] .eyebrow {
+    font-family: var(--font-arabic);
+    text-transform: none;
+    letter-spacing: normal;
+  }
+
+  html[lang="ar"] .eyebrow.ltr {
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
   }
 
   .bg-grid {

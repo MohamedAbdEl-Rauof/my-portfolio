@@ -10,7 +10,7 @@ export default function RootNotFound() {
     <html lang="ar" dir="rtl">
       <body>
         <main className="mx-auto flex min-h-dvh max-w-(--container-content) flex-col justify-center gap-6 px-4 py-24">
-          <p className="font-mono text-6xl font-medium text-signal tabular">
+          <p className="tabular font-mono text-6xl font-medium text-signal">
             404
           </p>
           <h1 className="font-display text-3xl font-semibold">

@@ -1,0 +1,7 @@
+.next
+node_modules
+pnpm-lock.yaml
+# Legacy v1 data, kept verbatim until the Phase 2 content migration consumes it
+public/data
+# Generated
+public/icons

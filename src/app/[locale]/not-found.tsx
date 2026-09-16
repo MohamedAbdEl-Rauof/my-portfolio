@@ -6,7 +6,7 @@ export default async function NotFound() {
 
   return (
     <main className="mx-auto flex min-h-dvh max-w-(--container-content) flex-col justify-center gap-6 px-4 py-24">
-      <p className="font-mono text-6xl font-medium text-signal tabular">404</p>
+      <p className="tabular font-mono text-6xl font-medium text-signal">404</p>
       <h1 className="font-display text-3xl font-semibold">{t("title")}</h1>
       <p className="max-w-[60ch] text-muted-foreground">{t("subtitle")}</p>
       <div className="flex flex-wrap gap-4">

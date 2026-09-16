@@ -1,0 +1,38 @@
+{
+  "name": { "en": "Mohamed Abd El-Raouf", "ar": "محمد عبد الرؤوف" },
+  "shortName": { "en": "Mohamed", "ar": "محمد" },
+  "initials": "MA",
+  "headline": {
+    "en": "Full-stack developer, web apps, automation and AI",
+    "ar": "مطوّر ويب متكامل — تطبيقات، أتمتة، وذكاء اصطناعي"
+  },
+  "location": { "en": "Jeddah, Saudi Arabia", "ar": "جدة، السعودية" },
+  "email": "mohamedabdelrauof112@gmail.com",
+  "whatsapp": "966569447804",
+  "whatsappDisplay": "+966 56 944 7804",
+  "photo": "/profile.webp",
+  "availability": true,
+  "cv": { "en": "/cv/cv-en.pdf", "ar": "/cv/cv-ar.pdf" },
+  "socials": [
+    {
+      "id": "github",
+      "label": "GitHub",
+      "url": "https://github.com/MohamedAbdEl-Rauof"
+    },
+    {
+      "id": "linkedin",
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/mohamed-abd-el-raouf-6b5b3b235"
+    },
+    {
+      "id": "email",
+      "label": "Email",
+      "url": "mailto:mohamedabdelrauof112@gmail.com"
+    },
+    {
+      "id": "instagram",
+      "label": "Instagram",
+      "url": "https://www.instagram.com/mohamed.abdelrauoff"
+    }
+  ]
+}

@@ -13,16 +13,19 @@ export type NavItem = { href: string; label: string };
 export function NavLinks({
   items,
   className,
+  label,
   onNavigate,
 }: {
   items: NavItem[];
   className?: string;
+  /** Distinguishes this navigation from others on the page. */
+  label: string;
   onNavigate?: () => void;
 }) {
   const pathname = usePathname();
 
   return (
-    <nav className={className}>
+    <nav aria-label={label} className={className}>
       {items.map((item) => {
         const active =
           item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);

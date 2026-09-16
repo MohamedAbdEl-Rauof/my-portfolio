@@ -26,6 +26,7 @@ export async function Header() {
 
         <NavLinks
           items={items}
+          label={t("menu")}
           className="ms-6 hidden items-center gap-6 md:flex"
         />
 

@@ -1,0 +1,6 @@
+Readex Pro and JetBrains Mono are licensed under the SIL Open Font License 1.1.
+They are vendored here because the social-card renderer needs font data as a
+buffer, which next/font does not expose.
+
+Readex Pro:     https://fonts.google.com/specimen/Readex+Pro
+JetBrains Mono: https://fonts.google.com/specimen/JetBrains+Mono

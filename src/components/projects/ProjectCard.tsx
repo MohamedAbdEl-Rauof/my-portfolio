@@ -20,14 +20,18 @@ export async function ProjectCard({
   project,
   priority = false,
   featured = false,
+  headingLevel = "h3",
 }: {
   project: Project;
   /** Set on the first card so the grid's largest image is not lazy-loaded. */
   priority?: boolean;
   featured?: boolean;
+  /** Must follow the heading that precedes the grid, with no level skipped. */
+  headingLevel?: "h2" | "h3";
 }) {
   const locale = (await getLocale()) as Locale;
   const common = await getTranslations("common");
+  const Heading = headingLevel;
 
   return (
     <article className="group relative">
@@ -53,14 +57,14 @@ export async function ProjectCard({
         <div className="space-y-4 p-5">
           <div className="flex items-start justify-between gap-3">
             <div className="space-y-1">
-              <h3
+              <Heading
                 className={cn(
                   "font-display font-semibold text-balance",
                   featured ? "text-2xl" : "text-xl",
                 )}
               >
                 {project.title[locale]}
-              </h3>
+              </Heading>
               <StatusDot status={project.status} />
             </div>
             <ArrowUpRight

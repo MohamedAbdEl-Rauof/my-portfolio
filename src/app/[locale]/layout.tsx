@@ -14,21 +14,31 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { SkipLink } from "@/components/layout/SkipLink";
 import { WhatsAppFab } from "@/components/layout/WhatsAppFab";
-import { getProfile, whatsappUrl } from "@/lib/content";
+import {
+  getProfile,
+  getSkills,
+  getEducation,
+  resolveTech,
+  whatsappUrl,
+} from "@/lib/content";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { personSchema, websiteSchema } from "@/lib/seo/jsonLd";
 import { absoluteUrl } from "@/lib/config/site";
 import "../globals.css";
 
 const bricolage = Bricolage_Grotesque({
   variable: "--font-bricolage",
   subsets: ["latin"],
-  weight: ["500", "600", "800"],
+  weight: ["600", "800"],
   display: "swap",
+  preload: false,
 });
 
 const instrument = Instrument_Sans({
   variable: "--font-instrument",
   subsets: ["latin"],
   display: "swap",
+  preload: false,
 });
 
 const jetbrains = JetBrains_Mono({
@@ -44,9 +54,9 @@ const jetbrains = JetBrains_Mono({
 const readex = Readex_Pro({
   variable: "--font-readex",
   subsets: ["arabic", "latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  // Four weights, not five: nothing on the site sets 300.
+  weight: ["400", "500", "600", "700"],
   display: "swap",
-  preload: false,
 });
 
 export const viewport: Viewport = {
@@ -59,9 +69,32 @@ export const viewport: Viewport = {
   ],
 };
 
-export const metadata: Metadata = {
-  metadataBase: new URL(absoluteUrl()),
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const profile = getProfile();
+  const key = locale as Locale;
+
+  return {
+    metadataBase: new URL(absoluteUrl()),
+    // Page titles are short names; this appends who the site belongs to.
+    title: {
+      default: `${profile.name[key]} — ${profile.headline[key]}`,
+      template: `%s — ${profile.name[key]}`,
+    },
+    description: profile.headline[key],
+    authors: [{ name: profile.name.en, url: absoluteUrl(`/${key}`) }],
+    creator: profile.name.en,
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: { index: true, follow: true, "max-image-preview": "large" },
+    },
+  };
+}
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -82,13 +115,35 @@ export default async function LocaleLayout({
 
   const profile = getProfile();
   const t = await getTranslations("home");
+  const key = locale as Locale;
+
+  /*
+   * Only reference the faces the page will actually render.
+   *
+   * Readex Pro carries both Arabic and Latin, and `html[lang="ar"]` switches the
+   * whole body to it, so on an Arabic page Bricolage and Instrument would be
+   * downloaded and then used for almost nothing. Leaving their variables
+   * undefined lets the font fall through to the next family in the stack and
+   * keeps roughly 70 KB off the Arabic pages.
+   */
+  const fontVariables =
+    key === "ar"
+      ? `${readex.variable} ${jetbrains.variable}`
+      : `${bricolage.variable} ${instrument.variable} ${jetbrains.variable}`;
+
+  // Named skills give the Person schema something concrete to describe rather
+  // than a generic job title.
+  const knowsAbout = resolveTech(
+    getSkills().groups.flatMap((group) => group.items),
+  ).map((item) => item.name);
+  const alumniOf = getEducation().entries[0].institution.en;
 
   return (
     <html
       lang={locale}
       dir={dirFor(locale as Locale)}
       suppressHydrationWarning
-      className={`${bricolage.variable} ${instrument.variable} ${jetbrains.variable} ${readex.variable}`}
+      className={fontVariables}
     >
       <head>
         {/*
@@ -103,11 +158,20 @@ export default async function LocaleLayout({
       <body className="flex min-h-dvh flex-col">
         <ThemeProvider>
           <NextIntlClientProvider>
+            <JsonLd
+              data={personSchema({
+                profile,
+                locale: key,
+                knowsAbout,
+                alumniOf,
+              })}
+            />
+            <JsonLd data={websiteSchema({ profile, locale: key })} />
             <SkipLink />
             <Header />
-            <div id="main" className="flex-1">
+            <main id="main" className="flex-1">
               {children}
-            </div>
+            </main>
             <Footer />
             <WhatsAppFab
               href={whatsappUrl(profile.whatsapp, t("whatsappMessage"))}

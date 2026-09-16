@@ -8,9 +8,12 @@ import { ProjectCard } from "./ProjectCard";
 export function ProjectGrid({
   projects,
   leadCount = 2,
+  headingLevel = "h3",
 }: {
   projects: Project[];
   leadCount?: number;
+  /** Passed through to each card; see ProjectCard. */
+  headingLevel?: "h2" | "h3";
 }) {
   const lead = projects.slice(0, leadCount);
   const rest = projects.slice(leadCount);
@@ -25,6 +28,7 @@ export function ProjectGrid({
               project={project}
               featured
               priority={index === 0}
+              headingLevel={headingLevel}
             />
           ))}
         </div>
@@ -33,7 +37,11 @@ export function ProjectGrid({
       {rest.length > 0 ? (
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {rest.map((project) => (
-            <ProjectCard key={project.slug} project={project} />
+            <ProjectCard
+              key={project.slug}
+              project={project}
+              headingLevel={headingLevel}
+            />
           ))}
         </div>
       ) : null}

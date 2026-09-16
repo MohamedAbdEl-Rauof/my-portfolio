@@ -31,19 +31,19 @@
   --secondary: #edf0f6;
   --secondary-foreground: #0b1220;
   --muted: #edf0f6;
-  --muted-foreground: #5b6578;
+  --muted-foreground: #555f72;
   --accent: #edf0f6;
   --accent-foreground: #0b1220;
   --destructive: #c0392b;
   --border: #dde3ee;
   --input: #dde3ee;
-  --ring: #9a6700;
+  --ring: #7d5300;
 
   /* Brand */
-  --signal: #9a6700;
+  --signal: #7d5300;
   --signal-foreground: #ffffff;
-  --signal-soft: rgb(154 103 0 / 10%);
-  --signal-rgb: 154 103 0;
+  --signal-soft: rgb(125 83 0 / 10%);
+  --signal-rgb: 125 83 0;
   --live: #1b8f5a;
 }
 

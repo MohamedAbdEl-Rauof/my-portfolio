@@ -60,6 +60,7 @@ export function MobileNav({
             height, but every item in this sheet is tapped. */}
         <NavLinks
           items={items}
+          label={title}
           className="flex flex-col px-4 text-base [&>a]:flex [&>a]:min-h-11 [&>a]:items-center"
           onNavigate={() => setOpen(false)}
         />

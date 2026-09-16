@@ -19,7 +19,7 @@ export function GridGlow({ className }: { className?: string }) {
         className="absolute start-1/2 -top-40 h-[520px] w-[820px] -translate-x-1/2 rounded-full blur-3xl"
         style={{
           background:
-            "radial-gradient(circle, rgb(var(--signal-rgb) / 0.16), transparent 70%)",
+            "radial-gradient(circle, rgb(var(--signal-rgb) / 0.13), transparent 70%)",
         }}
       />
     </div>

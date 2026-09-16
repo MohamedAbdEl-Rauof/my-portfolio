@@ -48,7 +48,7 @@ export default async function KitPage({
   setRequestLocale(locale);
 
   return (
-    <main className="relative mx-auto max-w-(--container-content) space-y-12 px-4 py-16">
+    <div className="relative mx-auto max-w-(--container-content) space-y-12 px-4 py-16">
       <GridGlow />
 
       <section className="space-y-4">
@@ -124,6 +124,6 @@ export default async function KitPage({
           </Card>
         </div>
       </section>
-    </main>
+    </div>
   );
 }

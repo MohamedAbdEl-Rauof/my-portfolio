@@ -49,7 +49,7 @@
     "whatsappMessage": "Hello Mohamed, I saw your portfolio and would like to talk with you.",
     "boardLive": "In production",
     "boardLighthouse": "Lighthouse",
-    "boardLighthouseNote": "Performance, accessibility, SEO on nova-medicals.com",
+    "boardLighthouseNote": "Performance, accessibility and SEO, measured on production",
     "boardRedirects": "Legacy URLs recovered",
     "boardRedirectsNote": "Checked against production after every deploy",
     "boardTests": "Automated tests",
